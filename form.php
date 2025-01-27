@@ -177,7 +177,7 @@
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Encarregado de Dados Pessoais</h4>
-            <a href="privacyPolicies.html">Políticas de privacidade</a>
+            
             <p><strong>Nome:</strong> Ingrid Quirino Ribeiro</p>
             <p><strong>Email:</strong> dpo@mdradvocacia.com</p>
 
@@ -188,7 +188,7 @@
     </div>
 
     <div class="container copyright text-center">
-      <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong></p>
+      <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong> - <a href="privacyPolicies.html">Políticas de privacidade</a></p>
       <div class="credits">
         Designed by <a href="https://mdradvocacia.com/" target="_blank">MDR Advocacia</a>
       </div>
