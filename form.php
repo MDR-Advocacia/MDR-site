@@ -6,11 +6,11 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>MDR Advocacia</title>
   <meta name="description" content="Escritório full service especialista em atendimentos de intituições bancárias">
-  <meta name="keywords" content="MDR,MARCOS DELLI RODRIGUES, ADVOCACIA, DELLI, NATAL, ADVOGADOS, ADVOGADA, CAPIM MACIO "> 
+  <meta name="keywords" content="MDR,MARCOS DELLI RODRIGUES, ADVOCACIA, DELLI, NATAL, ADVOGADOS, ADVOGADA, CAPIM MACIO ">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon"> 
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> 
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -69,6 +69,7 @@
     <!-- Work with Us Section -->
     <section class="contact-form-section">
       <div class="container" data-aos="fade-up">
+
         <form class="php-email-form" method="POST" action="envia.php" enctype="multipart/form-data">
           <fieldset>
 
@@ -111,6 +112,16 @@
               <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
 
+            <?php
+            if (isset($_GET['status'])) {
+              if ($_GET['status'] == 'success') {
+                echo '<div class="alert alert-success text-center" role="alert">Mensagem enviada com sucesso!</div>';
+              } elseif ($_GET['status'] == 'error') {
+                echo '<div class="alert alert-danger text-center" role="alert">Ocorreu um erro ao enviar a mensagem. Tente novamente.</div>';
+              }
+            }
+            ?>
+
           </fieldset>
         </form>
       </div>
@@ -133,7 +144,7 @@
               <a href="https://www.linkedin.com/company/mdradvocacia/" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-  
+
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Links úteis</h4>
             <ul>
@@ -143,7 +154,7 @@
               <li><a href="#">Trabalhe conosco</a></li>
             </ul>
           </div>
-  
+
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Nossos serviços</h4>
             <ul>
@@ -154,7 +165,7 @@
               <li><a href="service5.html">Planejamento Sucessório</a></li>
             </ul>
           </div>
-  
+
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contate-nos</h4>
             <p><strong>Matriz:</strong> R. Des. José Gomes da Costa, 1975, Capim Macio, Natal</p>
@@ -163,19 +174,19 @@
             <p><strong>Whatsapp:</strong> 84 99996-0201</p>
             <p><strong>Email:</strong> contato@mdradvocacia.com</p>
           </div>
-  
+
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Encarregado de Dados Pessoais</h4>
             <a href="privacyPolicies.html">Políticas de privacidade</a>
             <p><strong>Nome:</strong> Ingrid Quirino Ribeiro</p>
             <p><strong>Email:</strong> dpo@mdradvocacia.com</p>
-            
+
           </div>
-  
+
         </div>
       </div>
     </div>
-  
+
     <div class="container copyright text-center">
       <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong></p>
       <div class="credits">
