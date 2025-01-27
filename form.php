@@ -72,7 +72,15 @@
 
         <form class="php-email-form" method="POST" action="envia.php" enctype="multipart/form-data">
           <fieldset>
-
+            <?php
+            if (isset($_GET['status'])) {
+              if ($_GET['status'] == 'success') {
+                echo '<div class="alert alert-success text-center" role="alert">Mensagem enviada com sucesso!</div>';
+              } elseif ($_GET['status'] == 'error') {
+                echo '<div class="alert alert-danger text-center" role="alert">Ocorreu um erro ao enviar a mensagem. Tente novamente.</div>';
+              }
+            }
+            ?>
             <legend style="text-align: center;">Venha fazer parte do nosso time</legend>
 
             <div class="row mb-3">
@@ -108,19 +116,22 @@
               </div>
             </div>
 
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="concordo" name="concordo" required style="margin-right: 10px;">
+                  <label class="form-check-label text-start" for="concordo">
+                    De acordo com a lei 12.965/2014 e 13.709/2018, autorizo este site a enviar comunicações por e-mail ou qualquer outro meio e concordo com a sua política de privacidade.
+                  </label>
+                </div>
+              </div>
+            </div>
             <div class="text-center">
               <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
 
-            <?php
-            if (isset($_GET['status'])) {
-              if ($_GET['status'] == 'success') {
-                echo '<div class="alert alert-success text-center" role="alert">Mensagem enviada com sucesso!</div>';
-              } elseif ($_GET['status'] == 'error') {
-                echo '<div class="alert alert-danger text-center" role="alert">Ocorreu um erro ao enviar a mensagem. Tente novamente.</div>';
-              }
-            }
-            ?>
+
+
 
           </fieldset>
         </form>
@@ -177,7 +188,7 @@
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Encarregado de Dados Pessoais</h4>
-            
+
             <p><strong>Nome:</strong> Ingrid Quirino Ribeiro</p>
             <p><strong>Email:</strong> dpo@mdradvocacia.com</p>
 
