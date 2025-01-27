@@ -88,7 +88,7 @@
             <div class="row mb-3">
               <div class="col-md-12">
                 <label for="assunto">Vaga desejada</label>
-                <input id="assunto" name="assunto" type="text" class="form-control" placeholder="Informe o assunto da mensagem" required>
+                <input id="assunto" name="assunto" type="text" class="form-control" placeholder="Informe a vaga desejada" required>
               </div>
             </div>
 
@@ -164,10 +164,12 @@
             <p><strong>Email:</strong> contato@mdradvocacia.com</p>
           </div>
   
-          <div class="col-lg-2 col-md-6 footer-contact">
+          <div class="col-lg-2 col-md-6 footer-links">
             <h4>Encarregado de Dados Pessoais</h4>
+            <a href="privacyPolicies.html">Políticas de privacidade</a>
             <p><strong>Nome:</strong> Ingrid Quirino Ribeiro</p>
             <p><strong>Email:</strong> dpo@mdradvocacia.com</p>
+            
           </div>
   
         </div>

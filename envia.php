@@ -8,7 +8,8 @@
  $nome = $_POST['nome'];
  $replyto = $_POST['replyto']; // Email que será respondido
  $mensagem_form = $_POST['mensagem'];
- $assunto = "Curriculo enviado via site - $nome";
+ $vaga = $_POST['assunto'];
+ $assunto = "Curriculo enviado via site - $vaga  - $nome";
   
  /* Destinatário e remetente - EDITAR SOMENTE ESTE BLOCO DO CÓDIGO */
  $to = "recrutamento@mdradvocacia.com";
