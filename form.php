@@ -76,8 +76,8 @@
             if (isset($_GET['status'])) {
               if ($_GET['status'] == 'success') {
                 echo '<div class="alert alert-success text-center" role="alert">Mensagem enviada com sucesso!</div>';
-              } elseif ($_GET['status'] == 'error') {
-                echo '<div class="alert alert-danger text-center" role="alert">Ocorreu um erro ao enviar a mensagem. Tente novamente.</div>';
+              } elseif ($_GET['status'] == 'invalid_file') {
+                echo '<div class="alert alert-danger text-center" role="alert">Ocorreu um erro ao enviar a mensagem. Verifique se foi enviado um arquivo em PDF e tente novamente.</div>';
               }
             }
             ?>
@@ -104,8 +104,8 @@
             <div class="row mb-3">
               <div class="col-md-12">
                 <label for="arquivo">Anexo</label>
-                <input id="arquivo" name="arquivo" type="file" class="form-control">
-                <small class="form-text text-muted">2MB por mensagem</small>
+                <input id="arquivo" name="arquivo" type="file" class="form-control" accept="application/pdf" maxlength="2097152">
+                <small class="form-text text-muted">PDF com até 2MB</small>
               </div>
             </div>
 

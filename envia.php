@@ -1,6 +1,3 @@
-<!-- Layout -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
 <?php
 
 /* Valores recebidos do formulário  */
@@ -14,6 +11,12 @@ $assunto = "Curriculo enviado via site - $vaga  - $nome";
 /* Destinatário e remetente - EDITAR SOMENTE ESTE BLOCO DO CÓDIGO */
 $to = "recrutamento@mdradvocacia.com";
 $remetente = "rildon@mdradvocacia.com"; // Deve ser um email válido do domínio
+
+/* Verifica se o arquivo é um PDF */
+if (!empty($arquivo['name']) && $arquivo['type'] !== 'application/pdf') {
+    header("Location: form.php?status=invalid_file");
+    exit();
+}
 
 /* Cabeçalho da mensagem  */
 $boundary = "XYZ-" . date("dmYis") . "-ZYX";
@@ -35,25 +38,23 @@ $corpo_mensagem = "
  ";
 
 /* Função que codifica o anexo para poder ser enviado na mensagem  */
-if (file_exists($arquivo["tmp_name"]) and !empty($arquivo)) {
-
-    $fp = fopen($_FILES["arquivo"]["tmp_name"], "rb"); // Abri o arquivo enviado.
-    $anexo = fread($fp, filesize($_FILES["arquivo"]["tmp_name"])); // Le o arquivo aberto na linha anterior
-    $anexo = base64_encode($anexo); // Codifica os dados com MIME para o e-mail 
-    fclose($fp); // Fecha o arquivo aberto anteriormente
-    $anexo = chunk_split($anexo); // Divide a variável do arquivo em pequenos pedaços para poder enviar
-    $mensagem = "--$boundary\n"; // Nas linhas abaixo possuem os parâmetros de formatação e codificação, juntamente com a inclusão do arquivo anexado no corpo da mensagem
+if (!empty($arquivo["tmp_name"])) {
+    $fp = fopen($arquivo["tmp_name"], "rb");
+    $anexo = fread($fp, filesize($arquivo["tmp_name"]));
+    fclose($fp);
+    $anexo = chunk_split(base64_encode($anexo));
+    
+    $mensagem = "--$boundary\n";
     $mensagem .= "Content-Transfer-Encoding: 8bits\n";
     $mensagem .= "Content-Type: text/html; charset=\"utf-8\"\n\n";
     $mensagem .= "$corpo_mensagem\n";
     $mensagem .= "--$boundary\n";
-    $mensagem .= "Content-Type: " . $arquivo["type"] . "\n";
+    $mensagem .= "Content-Type: application/pdf\n";
     $mensagem .= "Content-Disposition: attachment; filename=\"" . $arquivo["name"] . "\"\n";
     $mensagem .= "Content-Transfer-Encoding: base64\n\n";
     $mensagem .= "$anexo\n";
     $mensagem .= "--$boundary--\r\n";
-} else // Caso não tenha anexo
-{
+} else {
     $mensagem = "--$boundary\n";
     $mensagem .= "Content-Transfer-Encoding: 8bits\n";
     $mensagem .= "Content-Type: text/html; charset=\"utf-8\"\n\n";
@@ -62,12 +63,10 @@ if (file_exists($arquivo["tmp_name"]) and !empty($arquivo)) {
 
 /* Função que envia a mensagem  */
 if (mail($to, $assunto, $mensagem, $headers)) {
-    // Redireciona para a página form.php após o envio bem-sucedido
     header("Location: form.php?status=success");
-    exit(); // Certifique-se de sair do script após o redirecionamento
+    exit();
 } else {
-    // Redireciona para a página form.php com status de erro
     header("Location: form.php?status=error");
-    exit(); // Certifique-se de sair do script após o redirecionamento
+    exit();
 }
 ?>
