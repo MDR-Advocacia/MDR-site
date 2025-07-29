@@ -74,9 +74,7 @@
         <div class="watch-video-container">
           <a href="https://youtu.be/hqCj1MFdeBA" class="glightbox btn-brand"><i class="bi bi-play-circle-fill"></i><span>Assista ao vídeo</span></a>
         </div>
-        <div class="diversity-intro-image">
-            <img src="assets/img/diversidade/23.png" alt="Ilustração sobre igualdade racial" class="pillar-image">
-        </div>
+
     </div>
 
     <div class="diversity-pillars" data-aos="fade-up" data-aos-delay="100">
@@ -97,7 +95,7 @@
           <h3>Inclusão LGBTQIA+</h3>
           <p>Garantimos um ambiente de trabalho seguro, acolhedor e respeitoso para todos.</p>
           <img src="assets/img/diversidade/22-transparente.png" alt="Ilustração sobre inclusão LGBTQIA+" class="pillar-image">
-      </div>
+
     </div>
   </div>
 </section>
