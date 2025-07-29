@@ -65,7 +65,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="diversity-section-box p-4 mb-5" style="background-color: #f8f9fa; border-left: 5px solid var(--accent-color, #007bff);">
-                    <h2 class="h4" style="color: var(--accent-color, #007bff);">Diversidade e Inclusão: Venha somar sua trajetória à nossa!</h2>
+                    <h2 class="h4" style="color: var(--accent-color, #007bff);">Venha somar sua trajetória à nossa!</h2>
                     <p>Acreditamos que um time com trajetórias diversas enriquece nossa cultura, impulsiona a inovação e fortalece o crescimento coletivo. Valorizamos a empatia e a colaboração que nascem de diferentes perspectivas.</p>
                     <p>Por isso, estamos com <strong>vagas afirmativas abertas para pessoas negras, indígenas, LGBTQIAPN+, pessoas com deficiência e de outros grupos historicamente minorizados.</strong></p>
                     <p class="mb-0">Se você se identifica com esses valores e quer construir um ambiente de trabalho mais justo e inovador, venha fazer parte do nosso time!</p>
@@ -83,7 +83,7 @@
               }
             }
             ?>
-            <legend style="text-align: center;">Venha fazer parte do nosso time</legend>
+            
 
             <div class="row mb-3">
               <div class="col-md-6">
