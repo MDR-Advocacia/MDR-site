@@ -14,9 +14,29 @@
   .member-card { background: #fff; border: 1px solid #eee; border-radius: 8px; text-align: center; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .member-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
   .member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid #c5b358; }
+  .watch-video-container {text-align: center;margin: 2rem 0;}
+  .btn-brand:hover {color: #ffffff;transform: translateY(-3px);box-shadow: 0 6px 20px rgba(197, 179, 88, 0.4); /* Sombra dourada no hover */}
+  .btn-brand i {font-size: 1.5rem;margin-right: 10px;}
+  .btn-brand {
+      background-color: #c5b358; /* Cor dourada principal */
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 50px; /* Formato de pílula */
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex; /* Para alinhar o ícone e o texto */
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+    
+
 </style>
 
-<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/diversidade/back-teste.jpg);">
+<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/diversidade/back-diversity.jpg);">
   <div class="container">
     <h1>Comitê de Diversidade</h1>
     <nav class="breadcrumbs">
@@ -35,6 +55,9 @@
         <p style="max-width: 800px; margin: 0 auto 2rem auto;">
             Acreditamos que um ambiente plural enriquece nossas perspectivas e fortalece nossa capacidade de inovar e entregar soluções jurídicas de excelência.
         </p>
+        <div class="watch-video-container">
+          <a href="https://youtu.be/hqCj1MFdeBA" class="glightbox btn-brand"><i class="bi bi-play-circle-fill"></i><span>Assista ao vídeo</span></a>
+        </div>
         <div class="diversity-intro-image">
             <img src="assets/img/diversidade/23.png" alt="Ilustração sobre igualdade racial" class="pillar-image">
         </div>
