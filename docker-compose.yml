@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  site:
+    # Constrói a imagem a partir do Dockerfile na pasta atual
+    build: .
+    
+    # Mapeia a porta 8080 do seu computador para a porta 80 do contêiner
+    ports:
+      - "8080:80"
+      
+    # Espelha a pasta atual para dentro da pasta do Apache no contêiner
+    volumes:
+      - ./:/var/www/html
+      
+    # ---- LINHA ADICIONADA PARA CORRIGIR O ERRO "FORBIDDEN" ----
+    # Este comando é executado quando o contêiner inicia:
+    # 1. 'chown -R www-data:www-data /var/www/html': Define o Apache como dono de todos os arquivos.
+    # 2. '&& apache2-foreground': Inicia o servidor Apache.
+    command: >
+      sh -c "chown -R www-data:www-data /var/www/html && apache2-foreground"
