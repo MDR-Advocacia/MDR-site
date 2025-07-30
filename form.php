@@ -2,7 +2,7 @@
 
 <main class="main">
 
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg.jpg);">
+    <div class="page-title dark-background" data-aos="fade" >
       <div class="container">
         <h1>Trabalhe conosco</h1>
         <nav class="breadcrumbs">

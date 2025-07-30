@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg3.jpg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg4.jpg);">
       <div class="container">
         <h1>Nossa atuação</h1>
         <nav class="breadcrumbs">

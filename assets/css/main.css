@@ -954,6 +954,8 @@ section,
   color: var(--accent-color);
 }
 
+
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -2551,4 +2553,88 @@ button:hover {
     font-style: italic;
     font-size: 0.9rem;
     color: #555;
+}
+
+/* ====== INÍCIO DOS AJUSTES DE CONSISTÊNCIA DE FONTE ====== */
+#diversidade .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333; /* Cor padrão para títulos de seção */
+}
+
+#diversidade .section-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #555; /* Cor padrão para subtítulos/parágrafos */
+    line-height: 1.7;
+}
+/* ========================================================== */
+
+/* Reutilizando e adaptando estilos do modal da equipe */
+.modal-backdrop.show { opacity: 0.7; }
+.modal-content { border-radius: 8px; border: none; box-shadow: 0 5px 25px rgba(0,0,0,0.2); }
+.modal-body { padding: 2rem; }
+.modal-header { border-bottom: none; padding: 1rem 1rem 0 0; }
+.btn-close { background-size: 0.8rem; opacity: 0.8; }
+
+/* Títulos e textos dentro do modal de diversidade */
+.modal-committee-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #c5b358; /* Título em dourado */
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.modal-committee-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.modal-committee-text, .modal-committee-list li {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem; /* Espaçamento entre parágrafos e itens de lista */
+}
+.modal-committee-list {
+    list-style: none;
+    padding-left: 0;
+}
+.modal-committee-list li::before {
+    content: "✔";
+    color: #c5b358;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Estilo para os novos cards dos comitês */
+.committee-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+.committee-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.committee-card .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.committee-card .card-body {
+    padding: 1.5rem;
+}
+.committee-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
 }
