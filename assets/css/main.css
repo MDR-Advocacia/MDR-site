@@ -809,17 +809,7 @@ section,
   color: var(--default-color);
 }
 
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 13px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Why Us Section
