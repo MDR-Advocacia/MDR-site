@@ -35,7 +35,7 @@
 
 </style>
 
-<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/diversidade/back-diversity.jpg);">
+<div class="page-title dark-background" data-aos="fade" >
   <div class="container">
     <h1>Comitês de Diversidade</h1>
     <nav class="breadcrumbs">
