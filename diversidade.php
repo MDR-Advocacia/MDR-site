@@ -50,7 +50,7 @@
 <section id="diversidade" class="section">
   <div class="container">
     <div data-aos="fade-up" class="text-center">
-      <h2 class="section-title">Nossos Comitês de Diversidade e Inclusão</h2>
+      <h2 class="section-title">Nosso Comitê de Diversidade e Inclusão</h2>
       <p class="section-subtitle" style="max-width: 800px; margin: 0 auto 3rem auto;">
         Acreditamos que a diversidade de ideias, origens e experiências é o motor para a inovação. Nossos comitês são grupos de afinidade dedicados a promover um ambiente de trabalho cada vez mais justo, inclusivo e plural.
       </p>
@@ -158,7 +158,7 @@
       <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
       <div class="modal-body">
         <h2 class="modal-committee-title">LGBTQIAPN+</h2>
-        <p class="modal-committee-text">Estamos dando passos concretos em direção a um ambiente mais inclusivo, diverso e acolhedor para pessoas LGBTQIA+. Acreditamos que a valorização das identidades é fundamental para fortalecer uma cultura organizacional baseada no respeito e na equidade.</p>
+        <p class="modal-committee-text">Estamos dando passos concretos em direção a um ambiente mais inclusivo, diverso e acolhedor para pessoas LGBTQIAPN+. Acreditamos que a valorização das identidades é fundamental para fortalecer uma cultura organizacional baseada no respeito e na equidade.</p>
         <p class="modal-committee-text">Essas iniciativas refletem nosso compromisso contínuo com a construção de uma cultura mais inclusiva e respeitosa, dentro e fora da organização, em alinhamento com o Objetivo de Desenvolvimento Sustentável 10 – Redução das Desigualdades, que propõe promover a inclusão social, econômica e política de todas as pessoas, independentemente de sua orientação sexual ou qualquer outra condição.</p>
       </div>
     </div>

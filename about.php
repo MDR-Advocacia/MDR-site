@@ -236,15 +236,19 @@
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Bruna Costa Ribeiro</h2>
-            <h5 class="modal-profile-role">Sócia</h5>
+            <h5 class="modal-profile-role">Sócia e CEO</h5>
             <div class="modal-profile-bio">
-                <span class="bio-item"><strong>Graduação:</strong> Química Industrial, Universidade Estadual da Paraíba (UEPB), 2011</span>
-                <span class="bio-item"><strong>Outra graduação:</strong> Direito, Faculdade Maurício de Nassau de Natal, 2019</span>
-                <span class="bio-item"><strong>Pós-graduação:</strong> Direito Previdenciário, Faculdade Legale (Faleg), 2022</span>
-                <span class="bio-item"><strong>Outro:</strong> Mestranda em Direito Ambiental e Novos Direitos, Universidade de Caxias do Sul (UCS), 2024</span>
-                <span class="bio-item"><strong>Idiomas:</strong> Espanhol, Inglês</span>
-                <span class="bio-item"><strong>Atuação:</strong> Bancário e Financeiro, Cível, Família e Sucessões</span>
-            </div>
+                <span class="bio-item"><strong>Doutorado:</strong>Doutoranda em Direito, Universidade de Caxias do Sul (UCS), 2025.</span>
+                <span class="bio-item"><strong>Mestrado</strong> Direito Ambiental e Novos Direitos, Universidade de Caxias do Sul (UCS), 2025.</span>
+                <span class="bio-item"><strong>Graduação:</strong>  Química Industrial, Universidade Estadual da Paraíba (UEPB), 2011</span>
+                <span class="bio-item"><strong>Outra Graduação:</strong> Direito, Faculdade de Maurício de Natal, 2019.</span>
+                <span class="bio-item"><strong>Pós Graduação:</strong> Gestão de Escritórios e Departamentos Jurídicos e em Direito da Seguridade Social Previdenciário e Prática Previdenciária, ambas pela Legale, em 2022; Petróleo e Gás pela Universidade Potiguar (UNP), 2017.</span>
+                <span class="bio-item"><strong>Pesquisadora:</strong> Direito; Economia e Desenvolvimento; Créditos de Carbono.</span> 
+                <span class="bio-item"><strong>Atuação:</strong>Bancário e Financeiro; Empresarial; Cível; Família e Sucessões.</span>
+                <span class="bio-item"><strong>Outros :</strong> Palestrante; Autora de livros e artigos; Presidente da Comissão de Direito Bancário da OAB/RN - Triênio 2025/2027.</span>
+                <span class="bio-item"><strong>Idiomas:</strong> Inglês e Espanhol.</span>
+            
+              </div>
             <div class="modal-social-links">
                 <a href="https://www.instagram.com/brunacostaribeiro_/" target="_blank"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/bruna-costa-ribeiro-947345149/" target="_blank"><i class="bi bi-linkedin"></i></a>
