@@ -303,7 +303,7 @@
     </div>
     <section class="contact-section animar-ao-rolar">
     <div class="container">
-        <h2>Fale com nosso time ou deixe sua avaliação</h2>
+        <h2>Negocie Conosco!</h2>
         <div class="contact-options">
             
             <div class="contact-option">
