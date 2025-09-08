@@ -291,11 +291,6 @@
                 <h5>Állan Daniel Torres Soares</h5>
                 <p>Assistente Jurídico</p>
             </div>
-            <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Dennis Carvalho de Farias e Azevedo">
-                <h5>Dennis Carvalho de Farias e Azevedo</h5>
-                <p>Assistente Jurídico</p>
-            </div>
              <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/placeholder.jpg" alt="Felipa Galvão da Mota Liz Saraiva">
                 <h5>Felipa Galvão da Mota Liz Saraiva</h5>
@@ -320,6 +315,11 @@
                 <img src="assets/img/colaboradores/placeholder.jpg" alt="Rafael Sampaio Bezerra">
                 <h5>Rafael Sampaio Bezerra</h5>
                 <p>Assistente Jurídico</p>
+            </div>
+                        <div class="collaborator-card animar-ao-rolar">
+                <img src="assets/img/colaboradores/placeholder.jpg" alt="Luana de Araujo">
+                <h5>Luana de Araújo Alvez</h5>
+                <p>Assistente Jurídica</p>
             </div>
         </div>
     </section>
@@ -381,17 +381,12 @@
     </section>
     
     <section class="team-section">
-        <div class="section-title-wrapper animar-ao-rolar"><h2>Outros Cargos</h2></div>
+        <div class="section-title-wrapper animar-ao-rolar"><h2>Negociador</h2></div>
         <div class="team-grid">
             <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/placeholder.jpg" alt="Eliezer Nascimento de Souza">
                 <h5>Eliezer Nascimento de Souza</h5>
                 <p>Negociador</p>
-            </div>
-            <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Luana de Araújo Alves">
-                <h5>Luana de Araújo Alves</h5>
-                <p>Assistente</p>
             </div>
         </div>
     </section>
@@ -458,4 +453,5 @@
 </a>
 <?php 
   include 'footer.php'; 
+
 ?>
