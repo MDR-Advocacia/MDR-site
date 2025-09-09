@@ -241,12 +241,6 @@
                 <p class="sector">OAB/RN 23.467</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Melissa Cristine de Oliveira e Santos">
-                <h5>Melissa Cristine de Oliveira e Santos</h5>
-                <p>Advogada</p>
-                <p class="sector">OAB/RN 22.188 </p>
-            </div>
-            <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/placeholder.jpg" alt="Nayara de Souza Xavier">
                 <h5>Nayara de Souza Xavier</h5>
                 <p>Advogada</p>
