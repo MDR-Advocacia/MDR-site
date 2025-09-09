@@ -65,7 +65,7 @@
             <div class="icon flex-shrink-0"><i class="bi bi-cash-coin" style="color: #b29d55;"></i></div>
             <div>
               <h4 class="title">Recuperação de Crédito</h4>
-              <p class="description">Mais do que uma simples empresa de cobrança, atuamos como parceiros estratégicos do seu negócio. Nosso compromisso é com o resultado, recuperando seus ativos de forma ética e eficiente, enquanto protegemos o valor mais importante: a sua marca.</p>
+              <p class="description">No nosso escritório, atuamos como parceiros estratégicos do seu negócio. Nosso compromisso é com o resultado, recuperando seus ativos de forma ética e eficiente, enquanto protegemos o valor mais importante: a sua marca.</p>
               <a href="recuperacao-credito.php" class="readmore stretched-link"><span>Saiba mais</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div></div>
