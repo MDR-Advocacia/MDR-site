@@ -61,6 +61,13 @@
               <p class="description">Nós reconhecemos a importância de proteger o patrimônio e garantir a segurança financeira dos nossos clientes. Também somos especialistas em oferecer serviços personalizados em seguros, com uma abordagem moderna para proporcionar tranquilidade e proteção para o presente e para o futuro.</p>
               <a href="service6.php" class="readmore stretched-link"><span>Saiba mais</span><i class="bi bi-arrow-right"></i></a>
             </div>
+          </div><div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="bi bi-cash-coin" style="color: #b29d55;"></i></div>
+            <div>
+              <h4 class="title">Recuperação de Crédito</h4>
+              <p class="description">No nosso escritório, atuamos como parceiros estratégicos do seu negócio. Nosso compromisso é com o resultado, recuperando seus ativos de forma ética e eficiente, enquanto protegemos o valor mais importante: a sua marca.</p>
+              <a href="recuperacao-credito.php" class="readmore stretched-link"><span>Saiba mais</span><i class="bi bi-arrow-right"></i></a>
+            </div>
           </div></div>
 
       </div>

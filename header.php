@@ -30,17 +30,17 @@
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <a href="index.php" class="logo d-flex align-items-center">
-                <img src="assets/img/logo.png" alt="">
+                <img src="assets/img/logo.png" alt="Logo MDR Advocacia">
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="index.php">Home<br></a></li>
-                    <li><a href="about.php">O escritório</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="services.php">Atuação</a></li>
-                    <li><a href="diversidade.php" >Diversidade</a></li>
-                    <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
+                    <li><a href="diversidade.php">Diversidade</a></li>
+                    <li><a href="recuperacao-credito.php">Recuperação de Crédito</a></li>
                     <li><a href="form.php">Trabalhe conosco</a></li>
+                    <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
