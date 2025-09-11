@@ -37,8 +37,14 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="services.php">Atuação</a></li>
+<<<<<<< HEAD
                     <li><a href="diversidade.php">Diversidade</a></li>
                     <li><a href="recuperacao-credito.php">Recuperação de Crédito</a></li>
+=======
+                    <li><a href="recuperacao-credito.php">Recuperação de Crédito</a></li>
+                    <li><a href="diversidade.php" >Diversidade</a></li>
+                    <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
+>>>>>>> b8fc670a6680f2f403d19c537b89677adc8f3efa
                     <li><a href="form.php">Trabalhe conosco</a></li>
                     <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
                 </ul>
