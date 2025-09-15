@@ -102,8 +102,8 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="diversity-section-box p-4 mb-5" style="background-color: #f8f9fa; border-left: 5px solid var(--accent-color, #007bff);">
-                        <h2 class="h4" style="color: var(--accent-color, #007bff);">Venha somar sua trajetória à nossa!</h2>
+                    <div class="diversity-section-box p-4 mb-5" style="background-color: #f8f9fa; border-left: 5px solid #b29d55;">
+                        <h2 class="h4" style="color: #b29d55;">Venha somar sua trajetória à nossa!</h2>
                         <p>Acreditamos que equipes formadas por pessoas com diferentes experiências, histórias e pontos de vista enriquecem nossa cultura, impulsionam a inovação e fortalecem o crescimento coletivo. Valorizamos a empatia, o respeito e a colaboração como pilares de um ambiente mais justo e inspirador.</p>
                         <p>Estamos com vagas abertas para todas as pessoas que compartilham desses valores — inclusive oportunidades afirmativas para pessoas negras, indígenas, LGBTQIAPN+, com deficiência e de outros grupos historicamente minorizados.</strong></p>
                         <p class="mb-0">Se você busca um lugar onde sua trajetória é valorizada e pode gerar impacto positivo, o nosso time é o seu lugar!</p>
