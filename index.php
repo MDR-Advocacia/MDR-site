@@ -56,7 +56,7 @@
                 <div class="col-xl-5">
                     <br>
                     <div class="watch-video-container" data-aos="fade-up" data-aos-delay="200">
-                        <a href="https://www.youtube.com/watch?v=gF2ZvY7DpKs" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle-fill"></i><span>CONHEÇA A MDR ADVOCACIA!</span></a>
+                        <a href="https://www.youtube.com/watch?v=gF2ZvY7DpKs" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle-fill me-2"></i><span>CONHEÇA A MDR ADVOCACIA!</span></a>
                     </div>
                 </div>
             </div>
