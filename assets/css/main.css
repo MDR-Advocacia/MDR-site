@@ -56,7 +56,7 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: #b29d55;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -696,7 +696,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: #b29d55;
   left: 0;
   right: 0;
   bottom: 0;
@@ -810,10 +810,54 @@ section,
 }
 
 
+/* --- Melhorias Visuais para a Seção 'Sobre' --- */
 
+
+#about.section {
+    
+    padding: 80px 50px; 
+}
+
+#about .container {
+    background-color: #f7f7f7; 
+    padding: 40px;             /* Adicionamos um espaçamento interno para o conteúdo não colar nas bordas */
+    border-radius: 15px;       
+}
+
+/* 2. Adiciona uma linha de destaque abaixo do título */
+#about .section-title h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #b29d55; /* Cor dourada do tema */
+    margin: 10px auto 0;
+}
+
+/* 3. Estiliza os itens da lista para alinhamento com ícones */
+#about .content ul {
+    list-style: none;
+    padding: 0;
+}
+#about .content ul li {
+    padding: 0 0 15px 30px; /* Aumenta o espaçamento e abre espaço para o ícone */
+    position: relative;
+}
+#about .content ul i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+    color: #b29d55; /* Cor dourada do tema */
+}
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
+#about .img-fluid { /* para deixar a borda das fotos da seção do escritorio*/
+    border-radius: 15px;
+    height: 100%;      
+    object-fit: cover;
+}
 .why-us .img-bg {
   min-height: 500px;
   position: relative;
@@ -821,6 +865,7 @@ section,
 
 .why-us .img-bg img {
   position: absolute;
+  border-radius: 15px;
   inset: 0;
   display: block;
   width: 100%;
@@ -831,6 +876,7 @@ section,
 
 .why-us .slides {
   background-color: color-mix(in srgb, var(--default-color), transparent 97%);
+  border-radius: 15px;
 }
 
 .why-us h3 {

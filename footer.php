@@ -57,7 +57,7 @@
     </div>
 
     <div class="container copyright text-center">
-        <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong> - <a href="privacyPolicies.html">Políticas de privacidade</a></p>
+        <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong> - <a href="privacyPolicies.php">Políticas de privacidade</a></p>
         <div class="credits">
             Designed by <a href="https://mdradvocacia.com/" target="_blank">MDR Advocacia</a>
         </div>
