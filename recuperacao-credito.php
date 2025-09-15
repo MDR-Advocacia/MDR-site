@@ -422,7 +422,7 @@
         });
     });
 </script>
-<a href="https://wa.me/5584000000000" class="floating-whatsapp" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+<a href="https://wa.me/5584999960201" class="floating-whatsapp" target="_blank" aria-label="Fale conosco pelo WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 <?php 
