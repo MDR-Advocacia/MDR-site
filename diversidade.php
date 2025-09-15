@@ -31,21 +31,103 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
   }
+
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container Principal - AGORA CENTRALIZADO */
+.page-title-video {
+    position: relative;
+    overflow: hidden;
+    height: 60vh; /* Define uma altura, ex: 60% da tela */
+    color: white;
     
+    /* Alinhamento central */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Vídeo de Fundo */
+.video-background {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Camada Escura (Overlay) */
+.video-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* Conteúdo (Título e Breadcrumbs) */
+.page-title-video .container {
+    position: relative;
+    z-index: 3;
+}
+
+.page-title-video h1 {
+    font-size: 48px; /* Aumentei um pouco para mais destaque */
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    
+    /* APLICA A ANIMAÇÃO DE SUBIDA */
+    animation: riseUp 1s ease-out forwards;
+}
+
+/* Estilos para o menu 'Home / Diversidade' (Breadcrumbs) */
+.page-title-video .breadcrumbs ol {
+    display: flex;
+    justify-content: center; /* Centraliza os breadcrumbs também */
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: riseUp 1s ease-out 0.2s forwards; /* Animação com um pequeno atraso */
+    opacity: 0; /* Começa invisível para a animação funcionar */
+}
+.page-title-video .breadcrumbs ol li+li { padding-left: 10px; }
+.page-title-video .breadcrumbs ol li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.8); }
+.page-title-video .breadcrumbs a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: 0.3s; }
+.page-title-video .breadcrumbs a:hover { color: #fff; }
 
 </style>
 
-<div class="page-title dark-background" data-aos="fade" >
-  <div class="container">
-    <h1>Comitês de Diversidade</h1>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.php">Home</a></li>
-        <li class="current">Diversidade</li>
-      </ol>
-    </nav>
-  </div>
-</div>
+    <div class="page-title-video dark-background">
+      <div class="video-overlay"></div>
+      <video autoplay loop muted playsinline class="video-background">
+        <source src="assets/video/video-diversidade.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+      <div class="container" data-aos="fade">
+        <h1>Comitês de Diversidade</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.php">Home</a></li>
+            <li class="current">Diversidade</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
 
 <section id="diversidade" class="section">
   <div class="container">
