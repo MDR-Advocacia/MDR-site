@@ -246,37 +246,37 @@
                 <p class="sector">OAB/RN 22.864</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Arlisson Pereira da Silva">
+                <img src="assets/img/colaboradores/Arlisson Pereira .jpg" alt="Arlisson Pereira da Silva">
                 <h5>Arlisson Pereira da Silva</h5>
                 <p>Advogado</p>
                 <p class="sector"></p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Brígida Brenda Faustino de Oliveira">
+                <img src="assets/img/colaboradores/Brígida Brenda Faustino de Oliveira.jpg" alt="Brígida Brenda Faustino de Oliveira">
                 <h5>Brígida Brenda Faustino de Oliveira</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 22.086</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="José Leonardo de Araújo Jales">
+                <img src="assets/img/colaboradores/José Leonardo de Araujo Jales.jpg" alt="José Leonardo de Araújo Jales">
                 <h5>José Leonardo de Araújo Jales</h5>
                 <p>Advogado</p>
                 <p class="sector">OAB/RN 21.259</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Luana dos Santos Silva">
+                <img src="assets/img/colaboradores/Luana Silva.jpg" alt="Luana dos Santos Silva">
                 <h5>Luana dos Santos Silva</h5>
                 <p>Advogada</p>
                 <p class="sector"></p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Marcos Vinícius Cruz Bezerra">
+                <img src="assets/img/colaboradores/Marcos Bezerra.jpg" alt="Marcos Vinícius Cruz Bezerra">
                 <h5>Marcos Vinícius Cruz Bezerra</h5>
                 <p>Advogado</p>
                 <p class="sector">OAB/RN 23.235</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Maria Gabrielly Silva Rodrigues Azevedo">
+                <img src="assets/img/colaboradores/Maria Gabrielly Rodrigues.jpg" alt="Maria Gabrielly Silva Rodrigues Azevedo">
                 <h5>Maria Gabrielly S. R. Azevedo</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 21.601</p>
@@ -294,7 +294,7 @@
                 <p class="sector">OAB/RN 23.467</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Nayara de Souza Xavier">
+                <img src="assets/img/colaboradores/nayara.png" alt="Nayara de Souza Xavier">
                 <h5>Nayara de Souza Xavier</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 18.481</p>
@@ -306,13 +306,13 @@
                 <p class="sector">OAB/RN 20.475</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Thaise de Bessa da Silva">
+                <img src="assets/img/colaboradores/Thaise de Bessa.jpg" alt="Thaise de Bessa da Silva">
                 <h5>Thaise de Bessa da Silva</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 21.981</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Vitória Machado Domingo">
+                <img src="assets/img/colaboradores/Vitória Machado.jpg" alt="Vitória Machado Domingo">
                 <h5>Vitória Machado Domingo</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 22.021</p>
