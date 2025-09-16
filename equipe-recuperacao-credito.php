@@ -282,7 +282,7 @@
                 <p class="sector">OAB/RN 21.601</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Maria Laiza Barbosa de Farias">
+                <img src="assets/img/colaboradores/maria laiza.jpg" alt="Maria Laiza Barbosa de Farias">
                 <h5>Maria Laiza Barbosa de Farias</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 22.986</p>
@@ -380,7 +380,7 @@
                 <p>Estagiária</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Letícia Fortunato de Sousa">
+                <img src="assets/img/colaboradores/leticia.jpg" alt="Letícia Fortunato de Sousa">
                 <h5>Letícia Fortunato de Sousa</h5>
                 <p>Estagiária</p>
             </div>
