@@ -241,7 +241,7 @@
             </div>
             <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/andrielly.jpg" alt="ANDRIELLY DUARTE DE FARIAS">
-                <h5>ANDRIELLY DUARTE DE FARIAS</h5>
+                <h5>Andrielly Duarte De Farias</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 22.864</p>
             </div>
@@ -263,12 +263,12 @@
                 <p>Advogado</p>
                 <p class="sector">OAB/RN 21.259</p>
             </div>
-            <div class="collaborator-card animar-ao-rolar">
+            <!-- <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/Luana Silva.jpg" alt="Luana dos Santos Silva">
                 <h5>Luana dos Santos Silva</h5>
                 <p>Advogada</p>
                 <p class="sector"></p>
-            </div>
+            </div> -->
             <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/Marcos Bezerra.jpg" alt="Marcos Vinícius Cruz Bezerra">
                 <h5>Marcos Vinícius Cruz Bezerra</h5>
@@ -338,11 +338,11 @@
                 <h5>Állan Daniel Torres Soares</h5>
                 <p>Assistente Jurídico</p>
             </div>
-             <div class="collaborator-card animar-ao-rolar">
+                <!-- <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/placeholder.jpg" alt="Felipa Galvão da Mota Liz Saraiva">
                 <h5>Felipa Galvão da Mota Liz Saraiva</h5>
                 <p>Assistente Jurídica</p>
-            </div>
+            </div> -->
             <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/Gustavo Abdias.jpg" alt="Gustavo Silva Abdias">
                 <h5>Gustavo Silva Abdias</h5>
