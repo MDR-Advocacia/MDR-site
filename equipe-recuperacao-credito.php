@@ -234,13 +234,13 @@
         <div class="section-title-wrapper animar-ao-rolar"><h2>Advogados(as)</h2></div>
         <div class="team-grid">
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Algacy Chaves de Almeida Júnior">
+                <img src="assets/img/colaboradores/algacy.jpg" alt="Algacy Chaves de Almeida Júnior">
                 <h5>Algacy Chaves de Almeida Júnior</h5>
                 <p>Advogado</p>
                 <p class="sector">OAB/RN 22.573</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="ANDRIELLY DUARTE DE FARIAS">
+                <img src="assets/img/colaboradores/andrielly.jpg" alt="ANDRIELLY DUARTE DE FARIAS">
                 <h5>ANDRIELLY DUARTE DE FARIAS</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 22.864</p>
@@ -288,7 +288,7 @@
                 <p class="sector">OAB/RN 22.986</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Maria Victoria Pereira Dantas">
+                <img src="assets/img/colaboradores/Maria Victória.jpg" alt="Maria Victoria Pereira Dantas">
                 <h5>Maria Victoria Pereira Dantas</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 23.467</p>
@@ -300,7 +300,7 @@
                 <p class="sector">OAB/RN 18.481</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Tathianna Ribeiro da Silva Lemos">
+                <img src="assets/img/colaboradores/tathianna.jpg" alt="Tathianna Ribeiro da Silva Lemos">
                 <h5>Tathianna Ribeiro da Silva Lemos</h5>
                 <p>Advogada</p>
                 <p class="sector">OAB/RN 20.475</p>
@@ -324,17 +324,17 @@
         <div class="section-title-wrapper animar-ao-rolar"><h2>Assistentes Jurídicos</h2></div>
         <div class="team-grid">
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Aléxia Marinne Maia Fernandes">
+                <img src="assets/img/colaboradores/Aléxia Marinne Fernandes.jpg" alt="Aléxia Marinne Maia Fernandes">
                 <h5>Aléxia Marinne Maia Fernandes</h5>
                 <p>Assistente Jurídica</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Alexandre Victor da Silva Lima">
+                <img src="assets/img/colaboradores/ALEXANDRE LIMA.jpg" alt="Alexandre Victor da Silva Lima">
                 <h5>Alexandre Victor da Silva Lima</h5>
                 <p>Assistente Jurídico</p>
             </div>
              <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Állan Daniel Torres Soares">
+                <img src="assets/img/colaboradores/Állan Daniel Torres Soares.jpg" alt="Állan Daniel Torres Soares">
                 <h5>Állan Daniel Torres Soares</h5>
                 <p>Assistente Jurídico</p>
             </div>
@@ -344,27 +344,27 @@
                 <p>Assistente Jurídica</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Gustavo Silva Abdias">
+                <img src="assets/img/colaboradores/Gustavo Abdias.jpg" alt="Gustavo Silva Abdias">
                 <h5>Gustavo Silva Abdias</h5>
                 <p>Assistente Jurídico</p>
             </div>
              <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Marcelli Gomes do Nascimento">
+                <img src="assets/img/colaboradores/MARCELLI NASCIMENTO .jpg" alt="Marcelli Gomes do Nascimento">
                 <h5>Marcelli Gomes do Nascimento</h5>
                 <p>Assistente Jurídica</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Marcus vinícius Fernandes Gomes">
+                <img src="assets/img/colaboradores/Marcus Vinícius F. Gomes.jpg" alt="Marcus vinícius Fernandes Gomes">
                 <h5>Marcus Vinícius Fernandes Gomes</h5>
                 <p>Assistente Jurídico</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Rafael Sampaio Bezerra">
+                <img src="assets/img/colaboradores/Rafael Bezerra.jpg" alt="Rafael Sampaio Bezerra">
                 <h5>Rafael Sampaio Bezerra</h5>
                 <p>Assistente Jurídico</p>
             </div>
                         <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Luana de Araujo">
+                <img src="assets/img/colaboradores/Luana de Araújo Alves.jpg" alt="Luana de Araujo">
                 <h5>Luana de Araújo Alvez</h5>
                 <p>Assistente Jurídica</p>
             </div>
@@ -375,7 +375,7 @@
         <div class="section-title-wrapper animar-ao-rolar"><h2>Estagiários(as)</h2></div>
         <div class="team-grid">
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Débora Regina Azevedo de Oliveira">
+                <img src="assets/img/colaboradores/Débora Oliveira.jpg" alt="Débora Regina Azevedo de Oliveira">
                 <h5>Débora Regina Azevedo de Oliveira</h5>
                 <p>Estagiária</p>
             </div>
@@ -385,42 +385,42 @@
                 <p>Estagiária</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Luiz Eduardo Oliveira da Silva">
+                <img src="assets/img/colaboradores/Luiz Eduardo Oliveira.jpg" alt="Luiz Eduardo Oliveira da Silva">
                 <h5>Luiz Eduardo Oliveira da Silva</h5>
                 <p>Estagiário</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Maria Eduarda Guedes Cavalcante">
+                <img src="assets/img/colaboradores/Maria Eduarda Guedes.jpg" alt="Maria Eduarda Guedes Cavalcante">
                 <h5>Maria Eduarda Guedes Cavalcante</h5>
                 <p>Estagiária</p>
             </div>
              <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Marília Gabriela Andrade Freitas">
+                <img src="assets/img/colaboradores/Marília Gabriela Andrade Freitas.jpg" alt="Marília Gabriela Andrade Freitas">
                 <h5>Marília Gabriela Andrade Freitas</h5>
                 <p>Estagiária</p>
             </div>
              <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Mateus Rodrigues de Brito">
+                <img src="assets/img/colaboradores/Mateus Brito.jpg" alt="Mateus Rodrigues de Brito">
                 <h5>Mateus Rodrigues de Brito</h5>
                 <p>Estagiário</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="PAULO GUILHERME MORAIS DE ALMEIDA">
-                <h5>PAULO GUILHERME MORAIS DE ALMEIDA</h5>
+                <img src="assets/img/colaboradores/paulo almeida.jpg" alt="PAULO GUILHERME MORAIS DE ALMEIDA">
+                <h5>Paulo Guilherme Morais De Almeida</h5>
                 <p>Estagiário</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Paulo Fernando Cisneiros Da Costa Reis Neto">
+                <img src="assets/img/colaboradores/Paulo Reis.jpg" alt="Paulo Fernando Cisneiros Da Costa Reis Neto">
                 <h5>Paulo Fernando C. C. Reis Neto</h5>
                 <p>Estagiário</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="SUENIA BEATRIZ LIMA DE CARVALHO DA SILVA">
-                <h5>SUENIA BEATRIZ L. C. DA SILVA</h5>
+                <img src="assets/img/colaboradores/Suenia Beatriz.jpg" alt="SUENIA BEATRIZ LIMA DE CARVALHO DA SILVA">
+                <h5>Suenia Beatriz L. C. Da Silva</h5>
                 <p>Estagiária</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Suemy Medeiros Ferreira">
+                <img src="assets/img/colaboradores/Suemy Medeiros .jpg" alt="Suemy Medeiros Ferreira">
                 <h5>Suemy Medeiros Ferreira</h5>
                 <p>Estagiária</p>
             </div>
@@ -431,7 +431,7 @@
         <div class="section-title-wrapper animar-ao-rolar"><h2>Negociador</h2></div>
         <div class="team-grid">
             <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Eliezer Nascimento de Souza">
+                <img src="assets/img/colaboradores/Eliezer Souza.jpg" alt="Eliezer Nascimento de Souza">
                 <h5>Eliezer Nascimento de Souza</h5>
                 <p>Negociador</p>
             </div>
