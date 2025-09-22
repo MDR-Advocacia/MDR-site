@@ -338,11 +338,11 @@
                 <h5>Állan Daniel Torres Soares</h5>
                 <p>Assistente Jurídico</p>
             </div>
-                <!-- <div class="collaborator-card animar-ao-rolar">
-                <img src="assets/img/colaboradores/placeholder.jpg" alt="Felipa Galvão da Mota Liz Saraiva">
+                <div class="collaborator-card animar-ao-rolar">
+                <img src="assets/img/colaboradores/assistentes j/felipa.jpg" alt="Felipa Galvão da Mota Liz Saraiva">
                 <h5>Felipa Galvão da Mota Liz Saraiva</h5>
                 <p>Assistente Jurídica</p>
-            </div> -->
+            </div>
             <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/assistentes j/gustavo.png" alt="Gustavo Silva Abdias">
                 <h5>Gustavo Silva Abdias</h5>
