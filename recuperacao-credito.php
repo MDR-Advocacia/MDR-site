@@ -90,7 +90,7 @@
     /* Estilos do Conteúdo */
     .section-content { padding: 50px 15px; }
     .intro-section { display: flex; align-items: center; gap: 40px; max-width: 1100px; margin: 50px auto; flex-wrap: wrap; }
-    .intro-section .image-container { flex: 1; min-width: 300px; }
+    .intro-section .image-container { flex: 1; min-width: 450px; }
     .intro-section .image-container img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     .intro-section .text-container { flex: 1.5; min-width: 300px; text-align: left; font-size: 16px; line-height: 1.7; }
     
@@ -215,11 +215,11 @@
     <div class="section-content">
       <div class="intro-section animar-ao-rolar">
         <div class="image-container">
-            <img src="assets/img/supervisores/equiperec.jpg" alt="Equipe de Recuperação de Crédito">
+            <img src="assets/img/supervisores/image.png" alt="Equipe de Recuperação de Crédito">
         </div>
         <div class="text-container">
             <p>
-                O núcleo de Recuperação de Crédito da MDR Advocacia é especializado em reaver ativos financeiros, transformando dívidas em liquidez de forma estratégica e segura. Compreendemos que a inadimplência é um desafio crítico que impacta diretamente o fluxo de caixa e a estabilidade do seu negócio.
+                O núcleo de Recuperação de Crédito da MDR Advocacia é especializado em reaver ativos financeiros, transformando dívidas em liquidez de forma estratégica e segura.
             </p>
             <p>
                  Aliamos a expertise jurídica à <strong>tecnologia e análise de dados</strong>. Por meio de plataformas de gestão e Business Intelligence (BI), oferecemos aos nossos clientes dashboards para acompanhamento em tempo real dos indicadores de sucesso e do status de cada caso, garantindo total transparência e controle sobre o processo.
@@ -247,7 +247,7 @@
         
         <div class="professional-card animar-ao-rolar">
             <div class="profile-pic-container">
-                <img src="assets/img/socios/natalia-perfil.jpg" alt="Natália Ribeiro Linhares" class="profile-image">
+                <img src="assets/img/supervisores/natalia.png" alt="Natália Ribeiro Linhares" class="profile-image">
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/nat%C3%A1lia-linhares-a482b1267/" target="_blank" aria-label="LinkedIn de Natália Ribeiro Linhares"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
                     <a href="https://www.instagram.com/nataliarlinhares" target="_blank" aria-label="Instagram de Natália Ribeiro Linhares"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
@@ -267,10 +267,10 @@
         </div>
         <div class="professional-card animar-ao-rolar">
              <div class="profile-pic-container">
-                <img src="assets/img/supervisores/diego.jpg" alt="Diego Alves do Nascimento" class="profile-image">
+                <img src="assets/img/supervisores/diego.png" alt="Diego Alves do Nascimento" class="profile-image">
                 <div class="social-icons">
-                     <a href="#" target="_blank" aria-label="LinkedIn de Diego Alves do Nascimento"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
-                     <a href="#" target="_blank" aria-label="Instagram de Diego Alves do Nascimento"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
+                     <a href="https://www.linkedin.com/in/diego-alves-7b1966288/" target="_blank" aria-label="LinkedIn de Diego Alves do Nascimento"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
+                     <a href="https://www.instagram.com/diegonscmto" target="_blank" aria-label="Instagram de Diego Alves do Nascimento"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
                      <a href="https://wa.me/5584999252170" target="_blank" aria-label="Whatsapp de Diego Alves do Nascimento"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M16.75,13.96C17.0,14.21 17.2,14.5 17.2,14.86C17.2,15.22 17.05,15.57 16.8,15.82C16.55,16.07 16.21,16.22 15.85,16.22C15.31,16.22 13.8,15.77 12.04,14.22C10,12.41 8.7,10.27 8.7,9.81C8.7,9.35 8.85,9 9.1,8.75C9.35,8.5 9.6,8.35 9.96,8.35C10.32,8.35 10.6,8.5 10.85,8.75C11.1,9 11.3,9.29 11.3,9.65C11.3,10.01 11.15,10.36 10.9,10.61L10.5,11.01C10.3,11.21 10.11,11.4 10.35,11.65C10.59,11.9 11.23,12.54 11.96,13.27C12.91,14.22 13.54,14.58 13.9,14.58C14.26,14.58 14.5,14.38 14.7,14.18L15.1,13.78C15.35,13.53 15.7,13.38 16.06,13.38C16.42,13.38 16.77,13.53 17.02,13.78L17.47,14.23C17.22,14.48 16.97,14.73 16.75,13.96M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"/></svg></a>
                 </div>
             </div>
@@ -288,7 +288,7 @@
 
         <div class="professional-card animar-ao-rolar">
             <div class="profile-pic-container">
-                <img src="assets/img/supervisores/anacarolina.jpg" alt="Ana Carolina Viana Nascimento" class="profile-image ana-carolina-img">
+                <img src="assets/img/supervisores/ana.png" alt="Ana Carolina Viana Nascimento" class="profile-image ana-carolina-img">
                 <div class="social-icons">
                      <a href="https://www.linkedin.com/in/ana-carolina-viana-nascimento-15845a372/" target="_blank" aria-label="LinkedIn de Ana Carolina"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
                      <a href="https://www.instagram.com/carolinaviaana" target="_blank" aria-label="Instagram de Ana Carolina"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
@@ -308,7 +308,7 @@
         </div>
         <div class="professional-card animar-ao-rolar">
             <div class="profile-pic-container">
-                <img src="assets/img/supervisores/Joa Vinícus Lucena Lopes.jpg" alt="João Vinícius Lucena Lopes" class="profile-image">
+                <img src="assets/img/supervisores/joao.png" alt="João Vinícius Lucena Lopes" class="profile-image">
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/jo%C3%A3o-vin%C3%ADcius-lucena-lopes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" aria-label="LinkedIn de João Vinícius Lucena Lopes"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
                     <a href="https://www.instagram.com/adv.joaoviniciuslopes?igsh=Mnd4anl6cmRjM2ox&utm_source=qr" target="_blank" aria-label="Instagram de João Vinícius Lucena Lopes"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
@@ -327,7 +327,7 @@
         </div>
                 <div class="professional-card animar-ao-rolar">
             <div class="profile-pic-container">
-                <img src="assets/img/supervisores/Melissa Oliveira.jpg" alt="Melissa" class="profile-image">
+                <img src="assets/img/supervisores/Melissa.png" alt="Melissa" class="profile-image">
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/melissa-oliveira-191440347/" target="_blank" aria-label="LinkedIn de Melissa"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
                     <a href="https://www.instagram.com/mel_oliveiraadv" target="_blank" aria-label="Instagram de Melissa"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
@@ -348,7 +348,7 @@
 
         <div class="professional-card animar-ao-rolar">
             <div class="profile-pic-container">
-                <img src="assets/img/supervisores/Sthéfanie Queiroz.jpg" alt="Sthéfanie de Melo Medeiros Queiroz" class="profile-image">
+                <img src="assets/img/supervisores/sthéfanie.png" alt="Sthéfanie de Melo Medeiros Queiroz" class="profile-image">
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/sthefaniequeiroz" target="_blank" aria-label="LinkedIn de Sthéfanie de Melo"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
                     <a href="https://www.instagram.com/sthefaniequeiroz/" target="_blank" aria-label="Instagram de Sthéfanie de Melo"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>

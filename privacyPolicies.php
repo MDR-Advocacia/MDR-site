@@ -116,7 +116,7 @@
     <div class="page-title-video dark-background">
       <div class="video-overlay"></div>
       <video autoplay loop muted playsinline class="video-background">
-        <source src="assets/video/diversidade.mp4" type="video/mp4">
+        <source src="assets/video/video-diversidade.mp4" type="video/mp4">
         Seu navegador não suporta vídeos em HTML5.
       </video>
       <div class="container" data-aos="fade">
