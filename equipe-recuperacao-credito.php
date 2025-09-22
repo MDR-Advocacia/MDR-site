@@ -249,7 +249,7 @@
                 <img src="assets/img/colaboradores/advogados/arlisson.png" alt="Arlisson Pereira da Silva">
                 <h5>Arlisson Pereira da Silva</h5>
                 <p>Advogado</p>
-                <p class="sector"></p>
+                <p class="sector">OAB/RN 21.965</p>
             </div>
             <div class="collaborator-card animar-ao-rolar">
                 <img src="assets/img/colaboradores/advogados/brigida.png" alt="Brígida Brenda Faustino de Oliveira">
