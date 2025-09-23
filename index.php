@@ -4,18 +4,50 @@
 /* Estilos para a seção Hero em tela cheia */
 .hero-fullscreen {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     position: relative;
-    display: flex; 
-    align-items: flex-end; 
-    justify-content: center; 
-    padding: 0 8% 50px 45%; 
-    overflow: hidden; 
-    text-align: center; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 8% 50px 45%; /* Padrão para telas maiores */
+    overflow: hidden;
+    text-align: center;
 }
 .hero-fullscreen video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; }
 .hero-fullscreen::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 2; }
 .hero-fullscreen .container { position: relative; z-index: 3; }
+
+/* Media query para tornar o padding responsivo em telas menores */
+@media (max-width: 991.98px) { /* Ajustado para telas menores que 992px (tamanho de desktop pequeno/tablet) */
+    .hero-fullscreen {
+        padding: 0 5% 50px 5%; /* Padding mais equilibrado para telas menores */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    }
+    .hero-fullscreen .col-xl-5 {
+        flex: 0 0 100%; /* Faz com que o elemento ocupe toda a largura */
+        max-width: 100%;
+    }
+    .watch-video-container {
+        text-align: center; /* Centraliza o botão */
+    }
+    .btn-watch-video {
+        font-size: 0.9rem; /* Opcional: diminui o tamanho da fonte do botão em telas menores */
+        padding: 10px 15px; /* Ajusta o padding do botão */
+    }
+}
+
+@media (max-width: 575.98px) { /* Para celulares */
+    .hero-fullscreen {
+        padding: 0 2% 30px 2%; /* Ainda menor padding para telas muito pequenas */
+    }
+    .btn-watch-video span {
+        font-size: 0.8rem; /* Garante que o texto se ajuste em telas menores */
+    }
+     .btn-watch-video i {
+        font-size: 1.2rem; /* Ajusta o ícone também */
+     }
+}
+
 
 /* Estilos para a seção "About" que foi adicionada */
 .about.section { padding: 60px 0; }
@@ -92,49 +124,53 @@
     </div>
 </section>
 
-    <section id="why-us" class="why-us section">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-xl-5 img-bg" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/img/why-us-bg2.jpg" alt="">
-                </div>
-                <div class="col-xl-7 slides position-relative" data-aos="fade-up" data-aos-delay="200">
-                    <div class="swiper init-swiper">
-                        <script type="application/json" class="swiper-config">
-                            {
-                                "loop": true, "speed": 600, "autoplay": {"delay": 5000}, "slidesPerView": "auto", "centeredSlides": true,
-                                "pagination": {"el": ".swiper-pagination", "type": "bullets", "clickable": true },
-                                "navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}
-                            }
-                        </script>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="item">
-                                    <h3 class="mb-3">Missão</h3>
-                                    <p> Prestar serviços jurídicos de qualidade, com ética, transparência e comprometimento. Trabalhamos para garantir que nossos clientes tenham seus direitos respeitados e sejam assistidos de maneira diligente, segura e eficiente.</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item">
-                                    <h3 class="mb-3">Visão</h3>
-                                    <p>Ser destaque pela excelência na prestação dos serviços jurídicos através da gestão de resultados.</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item">
-                                    <h3 class="mb-3">Valores</h3>
-                                    <p>Ética, transparência, respeito e profissionalismo, visando sempre o melhor interesse do cliente e a construção de relações de confiança e parceria com todos os envolvidos no negócio.</p>
-                                </div>
+<section id="why-us" class="why-us section">
+    <div class="container">
+        <div class="row g-0">
+
+            <div class="col-xl-7">
+                <img src="assets/img/why-us-bg2.jpg" class="img-fluid rounded" alt="Sócios da MDR Advocacia">
+            </div>
+
+            <div class="col-xl-5 slides position-relative" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                            "loop": true, "speed": 600, "autoplay": {"delay": 5000}, "slidesPerView": "auto", "centeredSlides": true,
+                            "pagination": {"el": ".swiper-pagination", "type": "bullets", "clickable": true },
+                            "navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}
+                        }
+                    </script>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <h3 class="mb-3">Missão</h3>
+                                <p>Prestar serviços jurídicos de qualidade, com ética, transparência e comprometimento. Trabalhamos para garantir que nossos clientes tenham seus direitos respeitados e sejam assistidos de maneira diligente, segura e eficiente.</p>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <h3 class="mb-3">Visão</h3>
+                                <p>Ser destaque pela excelência na prestação dos serviços jurídicos através da gestão de resultados.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <h3 class="mb-3">Valores</h3>
+                                <p>Ética, transparência, respeito e profissionalismo, visando sempre o melhor interesse do cliente e a construção de relações de confiança e parceria com todos os envolvidos no negócio.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="team" class="team section">
         <div class="container section-title" data-aos="fade-up">
