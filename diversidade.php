@@ -112,23 +112,17 @@
 
 </style>
 
-    <div class="page-title-video dark-background">
-      <div class="video-overlay"></div>
-      <video autoplay loop muted playsinline class="video-background">
-        <source src="assets/video/video-diversidade.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos em HTML5.
-      </video>
-      <div class="container" data-aos="fade">
-        <h1>Comitês de Diversidade</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.php">Home</a></li>
-            <li class="current">Diversidade</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-
+<div class="page-title dark-background" data-aos="fade" >
+  <div class="container">
+    <h1>Comitês de Diversidade</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="index.php">Home</a></li>
+        <li class="current">Diversidade</li>
+      </ol>
+    </nav>
+  </div>
+</div>
 <section id="diversidade" class="section">
   <div class="container">
     <div data-aos="fade-up" class="text-center">
