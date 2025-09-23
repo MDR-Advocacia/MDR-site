@@ -192,6 +192,52 @@
 .contact-option a.btn:hover {
     background-color: #9c8a4a;
 }
+/* --- REGRAS PARA RESPONSIVIDADE EM CELULARES --- */
+@media (max-width: 768px) {
+
+    /* Ajusta o título principal para não ficar tão grande */
+    .page-title-video h1 {
+        font-size: 32px;
+    }
+
+    /* Faz a imagem e o texto da introdução ficarem um sobre o outro */
+    .intro-section {
+        flex-direction: column; /* Altera a direção para vertical */
+        text-align: center;
+    }
+
+    .intro-section .image-container,
+    .intro-section .text-container {
+        min-width: 100%; /* Remove a largura mínima e ocupa todo o espaço */
+        text-align: left;
+    }
+
+    /* Garante que os itens da metodologia ocupem a largura total */
+    .methodology-item {
+        max-width: 100%;
+        min-width: unset; /* Remove a largura mínima */
+    }
+
+    /* O ajuste mais importante: empilha os cards de profissionais */
+    .professional-card {
+        flex-direction: column; /* Coloca a imagem e os detalhes em coluna */
+        align-items: center;   /* Centraliza o conteúdo */
+        text-align: center;
+    }
+
+    .professional-card-details {
+        min-width: 100%; /* Ocupa a largura toda */
+    }
+
+    /* Centraliza a lista de contatos do profissional */
+    .contact-list li {
+        justify-content: center;
+    }
+
+    .page-title-video {
+        height: 50vh; /* Diminui a altura do vídeo no celular */
+    }
+}
 </style>
 
 <main>
