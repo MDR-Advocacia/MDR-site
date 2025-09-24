@@ -235,19 +235,26 @@
     <div class="team-grid">
 
         <div class="collaborator-card animar-ao-rolar">
+            <img src="assets/img/colaboradores/assistentes j/alexandre.png" alt="Alexandre Victor da Silva Lima">
+            <h5>Alexandre Victor da Silva Lima</h5>
+            <p>Assistente Jurídico</p>
+        </div>
+
+        <div class="collaborator-card animar-ao-rolar">
             <img src="assets/img/colaboradores/assistentes j/aléxia.png" alt="Aléxia Marinne Maia Fernandes">
             <h5>Aléxia Marinne Maia Fernandes</h5>
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/alexandre.png" alt="Alexandre Victor da Silva Lima">
-            <h5>Alexandre Victor da Silva Lima</h5>
-            <p>Assistente Jurídico</p>
-        </div>
-        <div class="collaborator-card animar-ao-rolar">
             <img src="assets/img/colaboradores/assistentes j/állan.png" alt="Állan Daniel Torres Soares">
             <h5>Állan Daniel Torres Soares</h5>
             <p>Assistente Jurídico</p>
+        </div>
+        <div class="collaborator-card animar-ao-rolar">
+            <img src="assets/img/colaboradores/advogados/andressa.jpg" alt="ANDRIELLY DUARTE DE FARIAS">
+            <h5>Andressa Baranoski Mello</h5>
+            <p>Advogada</p>
+            <p class="sector">OAB/RN 22.722</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
             <img src="assets/img/colaboradores/advogados/andriely.png" alt="ANDRIELLY DUARTE DE FARIAS">
@@ -302,6 +309,12 @@
             <img src="assets/img/colaboradores/assistentes j/luana.png" alt="Luana de Araujo">
             <h5>Luana de Araújo Alvez</h5>
             <p>Assistente Jurídica</p>
+        </div>
+        <div class="collaborator-card animar-ao-rolar">
+            <img src="assets/img/colaboradores/advogados/Luana.png" alt="Luana Silva">
+            <h5>Luana dos Santos Silva</h5>
+            <p>Advogada</p>
+            <p class="sector">OAB/RN 22.797</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
             <img src="assets/img/colaboradores/estagiários(as)/luizeduardo.png" alt="Luiz Eduardo Oliveira da Silva">
@@ -379,13 +392,13 @@
             <p>Assistente Jurídico</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/suenia.png" alt="SUENIA BEATRIZ LIMA DE CARVALHO DA SILVA">
-            <h5>Suenia Beatriz L. C. Da Silva</h5>
+            <img src="assets/img/colaboradores/estagiários(as)/suemy.png" alt="Suemy Medeiros Ferreira">
+            <h5>Suemy Medeiros Ferreira</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/suemy.png" alt="Suemy Medeiros Ferreira">
-            <h5>Suemy Medeiros Ferreira</h5>
+            <img src="assets/img/colaboradores/estagiários(as)/suenia.png" alt="SUENIA BEATRIZ LIMA DE CARVALHO DA SILVA">
+            <h5>Suenia Beatriz L. C. Da Silva</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">

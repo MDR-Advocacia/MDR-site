@@ -265,13 +265,12 @@
         </div>
         <div class="text-container">
             <p>
-                O núcleo de Recuperação de Crédito da MDR Advocacia é especializado em reaver ativos financeiros, transformando dívidas em liquidez de forma estratégica e segura.
+                A Recuperação de Crédito do MDR Advocacia é especializado em reaver ativos financeiros, transformando dívidas em liquidez de forma estratégica e segura.
             </p>
             <p>
-                 Aliamos a expertise jurídica à <strong>tecnologia e análise de dados</strong>. Por meio de plataformas de gestão e Business Intelligence (BI), oferecemos aos nossos clientes dashboards para acompanhamento em tempo real dos indicadores de sucesso e do status de cada caso, garantindo total transparência e controle sobre o processo.
-            </p>
+                 Aliamos a expertise jurídica à <strong>tecnologia e análise de dados.</strong> Por meio de plataformas de gestão e Business Intelligence (BI), oferecemos aos nossos clientes dashboards para acompanhamento em tempo real dos indicadores de sucesso e do status de cada caso, garantindo total transparência e controle sobre o processo.
             <p>
-                Mais do que uma simples empresa de cobrança, atuamos como parceiros estratégicos do seu negócio. Nosso compromisso é com o resultado, recuperando seus ativos de forma ética e eficiente, enquanto protegemos o valor mais importante: <strong>a sua marca</strong>.
+                Mais do que uma simples empresa de cobrança, atuamos como parceiros estratégicos do seu negócio. Nosso compromisso é com o resultado, recuperando seus ativos de forma ética e eficiente, enquanto protegemos o valor mais importante: a sua marca.
             </p>
         </div>
       </div>
