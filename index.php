@@ -245,16 +245,7 @@
             <h2 class="modal-profile-title">Bruna Costa Ribeiro</h2>
             <h5 class="modal-profile-role">Sócia e CEO</h5>
             <div class="modal-profile-bio">
-                <span class="bio-item"><strong>Doutorado:</strong>Doutoranda em Direito, Universidade de Caxias do Sul (UCS), 2025.</span>
-                <span class="bio-item"><strong>Mestrado:</strong> Direito Ambiental e Novos Direitos, Universidade de Caxias do Sul (UCS), 2025.</span>
-                <span class="bio-item"><strong>Graduação:</strong>  Química Industrial, Universidade Estadual da Paraíba (UEPB), 2011</span>
-                <span class="bio-item"><strong>Outra Graduação:</strong> Direito, Faculdade de Maurício de Natal, 2019.</span>
-                <span class="bio-item"><strong>Pós Graduação:</strong> Gestão de Escritórios e Departamentos Jurídicos e em Direito da Seguridade Social Previdenciário e Prática Previdenciária, ambas pela Legale, em 2022; Petróleo e Gás pela Universidade Potiguar (UNP), 2017.</span>
-                <span class="bio-item"><strong>Pesquisadora:</strong> Direito; Economia e Desenvolvimento; Créditos de Carbono.</span> 
-                <span class="bio-item"><strong>Atuação:</strong>Bancário e Financeiro; Empresarial; Cível; Família e Sucessões.</span>
-                <span class="bio-item"><strong>Outros :</strong> Palestrante; Autora de livros e artigos; Presidente da Comissão de Direito Bancário da OAB/RN - Triênio 2025/2027.</span>
-                <span class="bio-item"><strong>Idiomas:</strong> Inglês e Espanhol.</span>
-            
+                <span class="bio-item">Bruna Costa Ribeiro é doutoranda em Direito e também mestre em Direito Ambiental e Novos Direitos. Possui pós-graduações em Gestão de Escritórios e Departamentos Jurídicos. Pesquisadora nas áreas de Direito, Economia e Desenvolvimento e Créditos de Carbono, atua com forte ênfase nos ramos Bancário e Financeiro, Empresarial, Cível, Família e Sucessões. Sócia e CEO da MDR Advocacia, lidera a premiada Célula de Negociações Humanizadas, bem como as equipes de ações contrárias, trazendo soluções consensuais, judiciais e extrajudiciais para nossos clientes. É palestrante, autora e organizadora de livros e artigos jurídicos, e atualmente preside a Comissão de Direito Bancário da OAB/RN (triênio 2025–2027). </span>
               </div>
             <div class="modal-social-links">
                 <a href="https://www.instagram.com/brunacostaribeiro_/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -282,12 +273,7 @@
             <h2 class="modal-profile-title">Marcos Delli Ribeiro</h2>
             <h5 class="modal-profile-role">Sócio Fundador</h5>
             <div class="modal-profile-bio">
-                <span class="bio-item"><strong>Graduação:</strong> Direito, Universidade Federal de Campina Grande (UFCG), 2004</span>
-                <span class="bio-item"><strong>Pós-graduação:</strong> Direito Processual Civil, Universidade Potiguar (UnP), 2005; Intensivos válidos para el Doctorado em Direito, Universidade de Buenos Aires (UBA), 2012; Intensivos válidos para el Doctorado em Direito, Universidade de Buenos Aires (UBA), 2013</span>
-                <span class="bio-item"><strong>Mestrado:</strong> Mestrando em Direito, Regulação e Desenvolvimento Sustentável, Centro Universitário de João Pessoa (Unipê), 2023</span>
-                <span class="bio-item"><strong>Outro:</strong> Extensão em LGPD, Pontifícia Universidade Católica (PUCRS), 2022; Doutorando em Direito, Universidade de Marília (Unimar), 2024</span>
-                <span class="bio-item"><strong>Idiomas:</strong> Espanhol, Inglês</span>
-                <span class="bio-item"><strong>Atuação:</strong> Bancário e Financeiro, Cível, Trabalhista</span>
+                <span class="bio-item">Marcos Delli Ribeiro Rodrigues é doutorando e mestre em Direito, também possuindo especialização em Processo Civil. Pesquisador em Direito e Desenvolvimento Sustentável, é escritor e autor do livro “Crédito Consignado: um privilégio ou malefício aos aposentados e pensionistas do INSS e aos beneficiários do BPC-LOAS?”. Sócio da MDR Advocacia, atua com foco nas áreas Empresarial, Bancária e Financeira. Professor de pós-graduação, exerce as funções de Conselheiro Federal da OAB (triênio 2025–2027) e de Presidente da Comissão Nacional de Direito Bancário da CFOAB (triênio 2025–2027). É palestrante, autor e organizador de livros e artigos jurídicos. </span>
             </div>
             <div class="modal-social-links">
               <a href="https://www.instagram.com/marcos_delli/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -315,12 +301,8 @@
             <h2 class="modal-profile-title">Rodrigo Cavalcanti</h2>
             <h5 class="modal-profile-role">Sócio</h5>
              <div class="modal-profile-bio">
-                <span class="bio-item"><strong>Graduação:</strong> Direito, Universidade Potiguar (UnP), 2003</span>
-                <span class="bio-item"><strong>Pós-graduação:</strong> Ministério Público, Direito e Cidadania, Universidade Potiguar (UnP), 2003; Direito Tributário, Universidade Anhanguera (Uniderp), 2011</span>
-                <span class="bio-item"><strong>Mestrado:</strong> Constituição e Garantia de Direitos, Universidade Federal do Rio Grande do Norte (UFRN), 2022</span>
-                <span class="bio-item"><strong>Outro:</strong> Doutorando em Direito, Universidade de Marília (Unimar), 2024</span>
-                <span class="bio-item"><strong>Idiomas:</strong> Espanhol, Inglês</span>
-                <span class="bio-item"><strong>Atuação:</strong> Bancário e Financeiro, Penal, Tributário</span>
+                <span class="bio-item">Rodrigo Cavalcanti é doutorando e mestre em Direito. Presidente da ANACRIM/RN e vice-diretor da Escola Superior da Advocacia (ESA/OAB/RN), é professor de Direito Penal em cursos de graduação e de pós-graduação. Coordena a Liga Acadêmica de Direito Penal Econômico da UFRN (LADPE) e atua como pesquisador e orientador no POTICRIM. Autor do livro Lavagem de Capitais: o combate à criminalidade econômica e a preservação dos direitos fundamentais, além de capítulos e artigos publicados, é palestrante e sócio da MDR Advocacia.</span>
+
             </div>
             <div class="modal-social-links">
                 <a href="https://www.instagram.com/profe.rodrigocavalcanti/" target="_blank" ><i class="bi bi-instagram"></i></a>
@@ -348,12 +330,8 @@
             <h2 class="modal-profile-title">Weuder Martins Câmara</h2>
             <h5 class="modal-profile-role">Sócio</h5>
             <div class="modal-profile-bio">
-                <span class="bio-item"><strong>Graduação:</strong> Direito, Universidade do Estado do Rio Grande do Norte (Uern), 2017</span>
-                <span class="bio-item"><strong>Pós-graduação:</strong> Advocacia Consultiva, Faculdade Legale (Faleg), 2022; Direito Privado, Faculdade Legale (Faleg), 2022</span>
-                <span class="bio-item"><strong>MBA:</strong> Licitações e Contratos, Instituto de Pós-Graduação & Graduação (Ipog), 2021</span>
-                <span class="bio-item"><strong>Mestrado:</strong> Constituição, Regulação e Desenvolvimento Econômico, Universidade Federal do Rio Grande do Norte (UFRN), 2022</span>
-                <span class="bio-item"><strong>Idiomas:</strong> Espanhol, Inglês</span>
-                <span class="bio-item"><strong>Atuação:</strong> Administrativo, Bancário e Financeiro, Regulatório</span>
+                <span class="bio-item">Weuder Martins Câmara é mestre em Direito e especialista em Licitações e Contratos. Sócio da MDR Advocacia, atua no Contencioso e Estratégico Cível, Bancário, Direito Público e Direito Digital. Pesquisador nas áreas de Constituição, Regulação e Desenvolvimento, apresentou estudo sobre o fenômeno da hiperjudicialização no Brasil e o uso de inovação e tecnologia no meio jurídico como reflexo do Open Justice. Professor universitário, lidera o Hit.Lab - setor de inovação do escritório, e carteiras de ações contrárias. É palestrante, autor e organizador de livros e artigos jurídicos.</span>
+
             </div>
             <div class="modal-social-links">
                 <a href="https://www.instagram.com/weuderm.adv/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -381,11 +359,7 @@
             <h2 class="modal-profile-title">Natália Ribeiro Linhares</h2>
             <h5 class="modal-profile-role">Sócia</h5>
             <div class="modal-profile-bio">
-                <span class="bio-item"><strong>Graduação:</strong> Ciências Jurídicas e Sociais, Universidade Federal de Campina Grande (UFCG), 2010</span>
-                <span class="bio-item"><strong>Pós-graduação:</strong> Direito Administrativo e Gestão Pública, Faculdades Integradas de Patos (FIP), 2016</span>
-                <span class="bio-item"><strong>Outro:</strong> Mestranda em Direito Ambiental e Sociedade, Universidade de Caxias do Sul (UCS), 2024</span>
-                <span class="bio-item"><strong>Idiomas:</strong> Espanhol, Inglês</span>
-                <span class="bio-item"><strong>Atuação:</strong> Cível, Direito Público, Trabalhista</span>
+                <span class="bio-item">Natália Ribeiro Linhares é doutoranda em Direito e mestre em Direito Ambiental e Sociedade, especialista em Direito Administrativo e Gestão Pública. Sócia da MDR Advocacia, atua no Contencioso e Estratégico Cível, Direito Público, Trabalhista e Bancário, liderando a área de recuperação de créditos. É palestrante, autora e organizadora de livros e artigos jurídicos, e exerce as funções de Conselheira Estadual e Ouvidora da Mulher da OAB/RN (triênio 2025–2027).</span>
             </div>
             <div class="modal-social-links">
                 <a href="https://www.instagram.com/nataliarlinhares/" target="_blank" ><i class="bi bi-instagram"></i></a>
