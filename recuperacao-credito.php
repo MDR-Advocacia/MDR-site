@@ -279,11 +279,11 @@
       <div class="methodology-grid">
         <div class="methodology-item animar-ao-rolar">
           <h4 style="font-size: 20px; margin-top: 0; margin-bottom: 15px; color: #333;">Atuação Extrajudicial</h4>
-          <p style="font-size: 15px; line-height: 1.6;">Priorizamos a resolução de conflitos de forma amigável. Utilizamos ferramentas de comunicação e negociação para alcançar acordos vantajosos, evitando o desgaste e os custos de um processo judicial.</p>
+          <p style="font-size: 15px; line-height: 1.6;">Buscamos soluções rápidas e eficazes por meio da negociação estratégica. Nosso objetivo é alcançar acordos vantajosos que preservem relações comerciais e reduzam gastos, evitando demandas e custos judiciais e desgastes.</p>
         </div>
         <div class="methodology-item animar-ao-rolar">
           <h4 style="font-size: 20px; margin-top: 0; margin-bottom: 15px; color: #333;">Atuação Judicial</h4>
-          <p style="font-size: 15px; line-height: 1.6;">Quando a via amigável se esgota, nossa equipe jurídica atua com as medidas judiciais cabíveis, incluindo a busca proativa por patrimônio para garantir o recebimento do crédito.</p>
+          <p style="font-size: 15px; line-height: 1.6;">Quando a negociação extrajudicial não é exitosa, nossa equipe jurídica atua de forma firme e proativa no âmbito judicial. Adotamos todas as medidas necessárias, incluindo a localização e constrição de patrimônio, para assegurar o recebimento do crédito e a efetividade da cobrança, via açao judicial cabivel.</p>
         </div>
       </div>
 
