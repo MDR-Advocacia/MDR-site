@@ -1,12 +1,18 @@
 <?php include 'header.php'; ?>
 
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg4.jpg);">
+<main class="main">
+
+    <div class="page-title dark-background" data-aos="fade" >
       <div class="container">
-        <h1>Nossa atuação</h1>
+        <h1>Nossa Atuação</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li class="current">Atuação</li>
+            <li class="current">Nossa Atuação</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
           </ol>
         </nav>
       </div>
