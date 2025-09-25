@@ -94,9 +94,43 @@
     .intro-section .image-container img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     .intro-section .text-container { flex: 1.5; min-width: 300px; text-align: left; font-size: 16px; line-height: 1.7; }
     
-    .methodology-title { text-align: center; font-size: 26px; font-weight: bold; margin-top: 60px; margin-bottom: 40px; }
-    .methodology-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1100px; margin: 0 auto; }
-    .methodology-item { flex: 1; min-width: 320px; max-width: 45%; padding: 30px; background-color: #f7f7f7; border-radius: 8px; border-top: 3px solid #b29d55; }
+/* Seu estilo original para o título e o grid */
+.methodology-title { 
+    text-align: center; 
+    font-size: 26px; 
+    font-weight: bold; 
+    margin-top: 60px; 
+    margin-bottom: 40px; 
+}
+.methodology-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: center; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.methodology-item { 
+    flex: 1; 
+    min-width: 320px; 
+    max-width: 45%; 
+    padding: 30px; 
+    background-color: #f7f7f7; 
+    border-radius: 8px; 
+    border-top: 3px solid #b29d55; 
+}
+
+/* esponsividade APENAS para telas pequenas */
+@media (max-width: 768px) {
+    .methodology-grid {
+        flex-direction: column; /* Empilha os itens verticalmente */
+    }
+
+    .methodology-item {
+        max-width: 100%; /* Faz cada item ocupar a largura total */
+    }
+}
 
     /* Estilos dos Cards de Profissionais */
     .related-professionals-title { font-size: 20px; font-weight: normal; color: #555; margin-top: 70px; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; max-width: 1100px; margin-left: auto; margin-right: auto; }
@@ -240,22 +274,18 @@
 }
 </style>
 
-<main>
-    <div class="page-title-video dark-background">
-        <div class="video-overlay"></div>
-        <video autoplay loop muted playsinline class="video-background">
-          <source src="assets/video/recuperacaodecredito.mp4" type="video/mp4">
-          Seu navegador não suporta vídeos em HTML5.
-        </video>
-        <div class="container">
-          <h1>Recuperação de Crédito</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="index.php">Home</a></li>
-              <li class="current">Recuperação de Crédito</li>
-            </ol>
-          </nav>
-        </div>
+<main class="main">
+
+    <div class="page-title dark-background" data-aos="fade" >
+      <div class="container">
+        <h1>Recuperação de Crédito</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.php">Home</a></li>
+            <li class="current">Recuperação de Crédito</li>
+          </ol>
+        </nav>
+      </div>
     </div>
 
     <div class="section-content">

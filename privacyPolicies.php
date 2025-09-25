@@ -111,20 +111,15 @@
 
 </style>
 
-    <main>
+<main class="main">
 
-    <div class="page-title-video dark-background">
-      <div class="video-overlay"></div>
-      <video autoplay loop muted playsinline class="video-background">
-        <source src="" type="video/mp4">
-        Seu navegador não suporta vídeos em HTML5.
-      </video>
-      <div class="container" data-aos="fade">
-        <h1>Políticas de privacidade</h1>
+    <div class="page-title dark-background" data-aos="fade" >
+      <div class="container">
+        <h1>Políticas de Privacidade</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li class="current">Políticas de privacidade</li>
+            <li class="current">Políticas de Privacidade</li>
           </ol>
         </nav>
       </div>

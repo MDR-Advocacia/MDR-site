@@ -217,17 +217,18 @@
 }
 </style>
 
-<main>
-    <div class="video-header-container">
-        <div class="video-overlay"></div>
-        <video autoplay loop muted playsinline class="video-background">
-          <source src="assets/video/recuperacaodecredito.mp4" type="video/mp4">
-          Seu navegador não suporta vídeos em HTML5.
-        </video>
-        <div class="video-header-content animar-ao-rolar">
-            <h1>Nossa Equipe de Recuperação de Crédito</h1>
+<main class="main">
 
-        </div>
+    <div class="page-title dark-background" data-aos="fade" >
+      <div class="container">
+        <h1>Nossa Equipe de Recuperação de Crédito</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.php">Home</a></li>
+            <li class="current">Equipe Recuperação de Crédito</li>
+          </ol>
+        </nav>
+      </div>
     </div>
 
 <section class="team-section">
@@ -480,7 +481,7 @@
         });
     });
 </script>
-<a href="https://wa.me/5584000000000" class="floating-whatsapp" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+<a href="https://wa.me/5584999960201" class="floating-whatsapp" target="_blank" aria-label="Fale conosco pelo WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 <?php 

@@ -102,24 +102,23 @@
             <h2>Um escritório jovem e moderno</h2>
         </div>
 
-        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-            
-            <div class="col-lg-5">
-                <img src="assets/img/why-us-bg.jpg" class="img-fluid" alt="Foto do escritório MDR">
-            </div>
+<div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+    
+    <div class="col-lg-5 col-md-12">
+        <img src="assets/img/why-us-bg.jpg" class="img-fluid" alt="Foto do escritório MDR">
+    </div>
 
-            <div class="col-lg-7">
-                <div class="content">
-                    <ul>
-                        <br>
-                        <li><span>A MDR Advocacia oferece soluções jurídicas diversificadas (full service), destacando-se como parceiros estratégicos comprometidos com o sucesso e crescimento dos negócios de seus clientes, garantindo segurança jurídica em um ambiente empresarial dinâmico.</span></li>
-                        <li><span>A empresa se diferencia pela alta qualidade técnica e excelência na prestação de serviços jurídicos, alinhando suas práticas aos pilares ESG, focados em responsabilidade ambiental, social e de governança.</span></li>
-                        <li><span>Cada serviço é realizado com rigor técnico, agilidade e um forte compromisso com a obtenção de resultados, refletindo a crença de que o sucesso da MDR está diretamente ligado ao sucesso de seus parceiros.</span></li>
-                    </ul>
-                </div>
-            </div>
-            
+    <div class="col-lg-7 col-md-12">
+        <div class="content">
+            <ul>
+                <li><span>A MDR Advocacia oferece soluções jurídicas diversificadas (full service), destacando-se como parceiros estratégicos comprometidos com o sucesso e crescimento dos negócios de seus clientes, garantindo segurança jurídica em um ambiente empresarial dinâmico.</span></li>
+                <li><span>A empresa se diferencia pela alta qualidade técnica e excelência na prestação de serviços jurídicos, alinhando suas práticas aos pilares ESG, focados em responsabilidade ambiental, social e de governança.</span></li>
+                <li><span>Cada serviço é realizado com rigor técnico, agilidade e um forte compromisso com a obtenção de resultados, refletindo a crença de que o sucesso da MDR está diretamente ligado ao sucesso de seus parceiros.</span></li>
+            </ul>
         </div>
+    </div>
+    
+</div>
 
     </div>
 </section>
