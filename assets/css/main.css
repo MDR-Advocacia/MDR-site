@@ -2725,3 +2725,784 @@ button:hover {
     position: relative;
     z-index: 3;
 }
+/*index.html*/
+/* Estilos para a seção Hero em tela cheia */
+.hero-fullscreen {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 8% 50px 45%; /* Padrão para telas maiores */
+    overflow: hidden;
+    text-align: center;
+}
+.hero-fullscreen video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 1; }
+.hero-fullscreen::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 2; }
+.hero-fullscreen .container { position: relative; z-index: 3; }
+
+/* Media query para tornar o padding responsivo em telas menores */
+@media (max-width: 991.98px) { /* Ajustado para telas menores que 992px (tamanho de desktop pequeno/tablet) */
+    .hero-fullscreen {
+        padding: 0 5% 50px 5%; /* Padding mais equilibrado para telas menores */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    }
+    .hero-fullscreen .col-xl-5 {
+        flex: 0 0 100%; /* Faz com que o elemento ocupe toda a largura */
+        max-width: 100%;
+    }
+    .watch-video-container {
+        text-align: center; /* Centraliza o botão */
+    }
+    .btn-watch-video {
+        font-size: 0.9rem; /* Opcional: diminui o tamanho da fonte do botão em telas menores */
+        padding: 10px 15px; /* Ajusta o padding do botão */
+    }
+}
+
+@media (max-width: 575.98px) { /* Para celulares */
+    .hero-fullscreen {
+        padding: 0 2% 30px 2%; /* Ainda menor padding para telas muito pequenas */
+    }
+    .btn-watch-video span {
+        font-size: 0.8rem; /* Garante que o texto se ajuste em telas menores */
+    }
+     .btn-watch-video i {
+        font-size: 1.2rem; /* Ajusta o ícone também */
+     }
+}
+
+
+/* Estilos para a seção "About" que foi adicionada */
+.about.section { padding: 60px 0; }
+.about .content h3 { font-weight: 700; font-size: 34px; color: #333; margin-bottom: 20px; }
+.about .content ul { list-style: none; padding: 0; }
+.about .content ul li { padding-bottom: 10px; }
+
+/* Estilos para os modais dos sócios */
+.modal-backdrop.show { opacity: 0.7; }
+.modal-content { border-radius: 10px; border: none; box-shadow: 0 5px 25px rgba(0,0,0,0.2); }
+.modal-body { padding: 2rem; }
+.modal-header { border-bottom: none; padding: 1rem 1rem 0 0; }
+.btn-close { background-size: 0.8rem; opacity: 0.8; }
+.modal-profile-image { width: 100%; max-width: 200px; height: auto; border-radius: 10px; border: 4px solid #c5b358; margin: 0 auto 1.5rem auto; display: block; }
+.modal-profile-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333; font-size: 2rem; margin-bottom: 0.25rem; }
+.modal-profile-role { font-family: 'Roboto', sans-serif; font-weight: 500; color: #c5b358; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+.modal-profile-bio { font-family: 'Roboto', sans-serif; color: #555; line-height: 1.7; }
+.bio-item { display: block; margin-bottom: 0.75rem; }
+.bio-item strong { color: #333; }
+.modal-social-links a { color: #333; font-size: 1.5rem; margin-right: 1rem; transition: color 0.3s ease; }
+.modal-social-links a:hover { color: #c5b358; }
+@media (max-width: 767px) {
+    .modal-profile-title { font-size: 1.5rem; }
+    .modal-body { padding: 1.5rem; }
+    .modal-profile-image { max-width: 150px; }
+}
+/*recuperacaodecredito.css*/
+
+
+@keyframes riseUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.page-title-video {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.video-background {
+    position: absolute; top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.video-overlay {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+.page-title-video .container {
+    position: relative;
+    z-index: 3;
+}
+.page-title-video h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    animation: riseUp 1s ease-out forwards;
+}
+.page-title-video .breadcrumbs ol {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: riseUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+}
+.page-title-video .breadcrumbs ol li+li { padding-left: 10px; }
+.page-title-video .breadcrumbs ol li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.8); }
+.page-title-video .breadcrumbs a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: 0.3s; }
+.page-title-video .breadcrumbs a:hover { color: #fff; }
+/* --- FIM DO CSS PADRÃO --- */
+    /* Estilos Gerais */
+    body {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: #333;
+        margin: 0;
+        background-color: #fff;
+    }
+    .animar-ao-rolar { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .animar-ao-rolar.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* Estilos do Cabeçalho de Vídeo */
+    .video-background-container { position: relative; overflow: hidden; padding: 150px 15px; color: white; text-align: center; }
+    .video-background { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); opacity: 1; z-index: 1; }
+    .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2; }
+    .video-foreground-content { position: relative; z-index: 3; }
+    .video-foreground-content h2 { font-size: 42px; font-weight: bold; margin: 0; color: #FFFFFF; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+    .page-title-video .breadcrumbs ol {
+    display: flex;
+    justify-content: center; /* Centraliza os breadcrumbs também */
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: riseUp 1s ease-out 0.2s forwards; /* Animação com um pequeno atraso */
+    opacity: 0; /* Começa invisível para a animação funcionar */
+}
+
+    /* Estilos do Conteúdo */
+    .section-content { padding: 50px 15px; }
+    .intro-section { display: flex; align-items: center; gap: 40px; max-width: 1100px; margin: 50px auto; flex-wrap: wrap; }
+    .intro-section .image-container { flex: 1; min-width: 450px; }
+    .intro-section .image-container img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .intro-section .text-container { flex: 1.5; min-width: 300px; text-align: left; font-size: 16px; line-height: 1.7; }
+    
+/* Seu estilo original para o título e o grid */
+.methodology-title { 
+    text-align: center; 
+    font-size: 26px; 
+    font-weight: bold; 
+    margin-top: 60px; 
+    margin-bottom: 40px; 
+}
+.methodology-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: center; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.methodology-item { 
+    flex: 1; 
+    min-width: 320px; 
+    max-width: 45%; 
+    padding: 30px; 
+    background-color: #f7f7f7; 
+    border-radius: 8px; 
+    border-top: 3px solid #b29d55; 
+}
+
+/* esponsividade APENAS para telas pequenas */
+@media (max-width: 768px) {
+    .methodology-grid {
+        flex-direction: column; /* Empilha os itens verticalmente */
+    }
+
+    .methodology-item {
+        max-width: 100%; /* Faz cada item ocupar a largura total */
+    }
+}
+
+    /* Estilos dos Cards de Profissionais */
+    .related-professionals-title { font-size: 20px; font-weight: normal; color: #555; margin-top: 70px; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .professionals-grid { max-width: 1100px; margin: 0 auto; }
+    .professional-card { display: flex; align-items: flex-start; gap: 30px; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #b29d55; }
+    .professional-card .profile-pic-container { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+    .profile-image { width: 150px; height: 150px; object-fit: cover; margin-bottom: 10px; border-radius: 50%; }
+    .ana-carolina-img { object-position: 20% 10%; }
+    .denize-medeiros-img { object-position: 20% 10%; }
+    .social-icons { display:flex; gap: 15px; }
+    .professional-card-details { flex: 1; min-width: 300px; }
+    .professional-card-details h4 { font-size: 24px; margin: 0 0 5px 0; }
+    .professional-card-details .title { margin: 0; font-size: 16px; color: #555; font-weight: bold; }
+    .professional-card-details .sector { margin: 5px 0 20px; font-size: 14px; color: #777; }
+    .professional-card-details hr { border: 0.5px solid #b29d55; margin: 10px 0; }
+    .contact-list { list-style: none; padding: 0; margin: 0; font-size: 14px; color: #555; }
+    .contact-list li { display: flex; align-items: center; margin-bottom: 10px; }
+    .contact-list span { color: #b29d55; margin-right: 10px; display: inline-flex; align-items: center; }
+    .contact-list .icon-svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* Botão para ver equipe completa */
+    .team-button-container { text-align: center; margin-top: 40px; }
+    .team-button { display: inline-block; padding: 12px 25px; background-color: #b29d55; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
+    .team-button:hover { background-color: #9c8a4a; }
+    /* --- Estilo do Botão Flutuante do WhatsApp --- */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 70px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.floating-whatsapp:hover {
+    color: white;
+    transform: scale(1.1);
+}
+/* --- Estilo da Seção Final de Contato --- */
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 60px 15px;
+    text-align: center;
+}
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.contact-option {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 300px;
+    text-align: center;
+}
+.contact-option i {
+    font-size: 40px;
+    color: #b29d55;
+    margin-bottom: 15px;
+}
+.contact-option h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.contact-option p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.contact-option a.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #b29d55;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.contact-option a.btn:hover {
+    background-color: #9c8a4a;
+}
+/* --- REGRAS PARA RESPONSIVIDADE EM CELULARES --- */
+@media (max-width: 768px) {
+
+    /* Ajusta o título principal para não ficar tão grande */
+    .page-title-video h1 {
+        font-size: 32px;
+    }
+
+    /* Faz a imagem e o texto da introdução ficarem um sobre o outro */
+    .intro-section {
+        flex-direction: column; /* Altera a direção para vertical */
+        text-align: center;
+    }
+
+    .intro-section .image-container,
+    .intro-section .text-container {
+        min-width: 100%; /* Remove a largura mínima e ocupa todo o espaço */
+        text-align: left;
+    }
+
+    /* Garante que os itens da metodologia ocupem a largura total */
+    .methodology-item {
+        max-width: 100%;
+        min-width: unset; /* Remove a largura mínima */
+    }
+
+    /* O ajuste mais importante: empilha os cards de profissionais */
+    .professional-card {
+        flex-direction: column; /* Coloca a imagem e os detalhes em coluna */
+        align-items: center;   /* Centraliza o conteúdo */
+        text-align: center;
+    }
+
+    .professional-card-details {
+        min-width: 100%; /* Ocupa a largura toda */
+    }
+
+    /* Centraliza a lista de contatos do profissional */
+    .contact-list li {
+        justify-content: center;
+    }
+
+    .page-title-video {
+        height: 50vh; /* Diminui a altura do vídeo no celular */
+    }
+}
+/*equiperecdecredito.css*/
+
+@keyframes riseUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.page-title-video {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.video-background {
+    position: absolute; top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.video-overlay {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+.page-title-video .container {
+    position: relative;
+    z-index: 3;
+}
+.page-title-video h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    animation: riseUp 1s ease-out forwards;
+}
+.page-title-video .breadcrumbs ol {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: riseUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+}
+.page-title-video .breadcrumbs ol li+li { padding-left: 10px; }
+.page-title-video .breadcrumbs ol li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.8); }
+.page-title-video .breadcrumbs a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: 0.3s; }
+.page-title-video .breadcrumbs a:hover { color: #fff; }
+    body {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: #333;
+        margin: 0;
+        background-color: #fff;
+    }
+    /* Estilos da Animação ao Rolar */
+    .animar-ao-rolar { 
+        opacity: 0; 
+        transform: translateY(50px); 
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+    }
+    .animar-ao-rolar.is-visible { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+
+    /* --- ESTILOS DO CABEÇALHO COM VÍDEO --- */
+    .video-header-container {
+      position: relative;
+      overflow: hidden;
+      padding: 120px 15px; /* Padding um pouco menor para um cabeçalho de página interna */
+      color: white;
+      text-align: center;
+    }
+    .video-background {
+      position: absolute;
+      top: 50%; left: 50%;
+      min-width: 100%; min-height: 100%;
+      width: auto; height: auto;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .video-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Overlay um pouco mais escuro */
+        z-index: 2;
+    }
+    .video-header-content {
+      position: relative;
+      z-index: 3;
+    }
+    .video-header-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .video-header-content p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* --- FIM DOS ESTILOS DO CABEÇALHO --- */
+
+    .team-section { padding: 60px 15px; }
+    .team-section h2 { text-align: center; font-size: 28px; margin-bottom: 40px; color: #333; border-bottom: 2px solid #b29d55; padding-bottom: 10px; display: inline-block; }
+    .section-title-wrapper { text-align: center; margin-bottom: 50px; }
+
+    .team-grid {
+    display: flex; /* Mudar de 'grid' para 'flex' */
+    flex-wrap: wrap; /* Permitir que os itens quebrem a linha */
+    justify-content: center; /* Centralizar os itens na linha */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+} 
+
+
+    .collaborator-card {
+    flex-basis: 250px; /* Define a largura base do card */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+    .collaborator-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .collaborator-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #eee; }
+    .collaborator-card h5 { margin: 10px 0 5px 0; font-size: 17px; }
+    .collaborator-card p { margin: 0; color: #b29d55; font-weight: bold; }
+    /* --- Estilo do Botão Flutuante do WhatsApp --- */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 70px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.floating-whatsapp:hover {
+    color: white;
+    transform: scale(1.1);
+}
+/* --- Estilo da Seção Final de Contato --- */
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 60px 15px;
+    text-align: center;
+}
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.contact-option {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 300px;
+    text-align: center;
+}
+.contact-option i {
+    font-size: 40px;
+    color: #b29d55;
+    margin-bottom: 15px;
+}
+.contact-option h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.contact-option p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.contact-option a.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #b29d55;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.contact-option a.btn:hover {
+    background-color: #9c8a4a;
+}
+/*Politica de privacidade*/
+
+  .diversity-intro-image { text-align: center; margin: 2rem 0 4rem 0; }
+  .diversity-intro-image img { max-width: 450px; width: 100%; }
+  .pillar { display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; padding-bottom: 1.5rem; }
+  .pillar p { flex-grow: 1; }
+  .pillar-image { width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin-top: 1.5rem; }
+  .pillar i { font-size: 3rem; color: #c5b358; margin-bottom: 1rem; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; }
+  .diversity-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center; }
+  .subsection-title { text-align: center; color: #333; margin-top: 4rem; margin-bottom: 2rem; font-weight: 600; }
+  .committee-members { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; justify-content: center; }
+  .member-card { background: #fff; border: 1px solid #eee; border-radius: 8px; text-align: center; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .member-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+  .member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid #c5b358; }
+  .watch-video-container {text-align: center;margin: 2rem 0;}
+  .btn-brand:hover {color: #ffffff;transform: translateY(-3px);box-shadow: 0 6px 20px rgba(197, 179, 88, 0.4); /* Sombra dourada no hover */}
+  .btn-brand i {font-size: 1.5rem;margin-right: 10px;}
+  .btn-brand {
+      background-color: #c5b358; /* Cor dourada principal */
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 50px; /* Formato de pílula */
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex; /* Para alinhar o ícone e o texto */
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container Principal - AGORA CENTRALIZADO */
+.page-title-video {
+    position: relative;
+    overflow: hidden;
+    height: 60vh; /* Define uma altura, ex: 60% da tela */
+    color: white;
+    
+    /* Alinhamento central */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Vídeo de Fundo */
+.video-background {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Camada Escura (Overlay) */
+.video-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* Conteúdo (Título e Breadcrumbs) */
+.page-title-video .container {
+    position: relative;
+    z-index: 3;
+}
+
+.page-title-video h1 {
+    font-size: 48px; /* Aumentei um pouco para mais destaque */
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    
+    /* APLICA A ANIMAÇÃO DE SUBIDA */
+    animation: riseUp 1s ease-out forwards;
+}
+
+/* Estilos para o menu 'Home / Diversidade' (Breadcrumbs) */
+.page-title-video .breadcrumbs ol {
+    display: flex;
+    justify-content: center; /* Centraliza os breadcrumbs também */
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: riseUp 1s ease-out 0.2s forwards; /* Animação com um pequeno atraso */
+    opacity: 0; /* Começa invisível para a animação funcionar */
+}
+.page-title-video .breadcrumbs ol li+li { padding-left: 10px; }
+.page-title-video .breadcrumbs ol li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.8); }
+.page-title-video .breadcrumbs a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: 0.3s; }
+.page-title-video .breadcrumbs a:hover { color: #fff; }
+
+/*Diversidade.css*/
+
+  .diversity-intro-image { text-align: center; margin: 2rem 0 4rem 0; }
+  .diversity-intro-image img { max-width: 450px; width: 100%; }
+  .pillar { display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; padding-bottom: 1.5rem; }
+  .pillar p { flex-grow: 1; }
+  .pillar-image { width: 100%; max-width: 250px; height: auto; border-radius: 8px; margin-top: 1.5rem; }
+  .pillar i { font-size: 3rem; color: #c5b358; margin-bottom: 1rem; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; }
+  .diversity-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center; }
+  .subsection-title { text-align: center; color: #333; margin-top: 4rem; margin-bottom: 2rem; font-weight: 600; }
+  .committee-members { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; justify-content: center; }
+  .member-card { background: #fff; border: 1px solid #eee; border-radius: 8px; text-align: center; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .member-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+  .member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid #c5b358; }
+  .watch-video-container {text-align: center;margin: 2rem 0;}
+  .btn-brand:hover {color: #ffffff;transform: translateY(-3px);box-shadow: 0 6px 20px rgba(197, 179, 88, 0.4); /* Sombra dourada no hover */}
+  .btn-brand i {font-size: 1.5rem;margin-right: 10px;}
+  .btn-brand {
+      background-color: #c5b358; /* Cor dourada principal */
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 50px; /* Formato de pílula */
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex; /* Para alinhar o ícone e o texto */
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container Principal - AGORA CENTRALIZADO */
+.page-title-video {
+    position: relative;
+    overflow: hidden;
+    height: 60vh; /* Define uma altura, ex: 60% da tela */
+    color: white;
+    
+    /* Alinhamento central */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Vídeo de Fundo */
+.video-background {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Camada Escura (Overlay) */
+.video-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* Conteúdo (Título e Breadcrumbs) */
+.page-title-video .container {
+    position: relative;
+    z-index: 3;
+}
+
+.page-title-video h1 {
+    font-size: 48px; /* Aumentei um pouco para mais destaque */
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    
+    /* APLICA A ANIMAÇÃO DE SUBIDA */
+    animation: riseUp 1s ease-out forwards;
+}
+
+/* Estilos para o menu 'Home / Diversidade' (Breadcrumbs) */
+.page-title-video .breadcrumbs ol {
+    display: flex;
+    justify-content: center; /* Centraliza os breadcrumbs também */
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: riseUp 1s ease-out 0.2s forwards; /* Animação com um pequeno atraso */
+    opacity: 0; /* Começa invisível para a animação funcionar */
+}
+.page-title-video .breadcrumbs ol li+li { padding-left: 10px; }
+.page-title-video .breadcrumbs ol li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.8); }
+.page-title-video .breadcrumbs a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: 0.3s; }
+.page-title-video .breadcrumbs a:hover { color: #fff; }
+
