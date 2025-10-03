@@ -24,7 +24,7 @@
     <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-            <h2>Um escritório jovem e moderno</h2>
+            <h2>Um escritório moderno</h2>
         </div>
 
 <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
