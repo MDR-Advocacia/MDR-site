@@ -88,19 +88,91 @@
 .swiper-description p { color: #6c757d; line-height: 1.7; }
 
 /* Seção de Destaque para Premiações (Separada) */
-.featured-awards-section { padding: 80px 0; background-color: #f0f0f0; }
-.featured-awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
-.featured-award-card { background-color: #fff; border-radius: 8px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-.featured-award-card img { max-width: 120px; margin-bottom: 20px; }
-.featured-award-card h4 { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
-.featured-award-card p { color: #6c757d; }
 
-/* Responsividade */
-@media (max-width: 992px) { .recognition-layout { grid-template-columns: 1fr; } }
-@media (max-width: 576px) { .seals-grid { grid-template-columns: repeat(2, 1fr); } }
+.featured-awards-section { 
+    padding: 80px 0; 
+    background-color: #f0f0f0; 
+}
+
+/* Novo layout para cada item de prêmio */
+.featured-award-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Coluna da imagem menor que a do texto */
+    gap: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    margin-bottom: 30px; 
+}
+
+.featured-award-item .award-image {
+    text-align: center;
+}
+
+.featured-award-item .award-image img {
+    max-width: 100%; /* Imagem ocupa a largura da coluna dela */
+    height: auto;
+    border-radius: 8px;
+}
+
+.featured-award-item .award-details h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.featured-award-item .award-details .award-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #b29d55; 
+    margin-bottom: 15px;
+    display: block;
+}
+
+.featured-award-item .award-details p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Responsividade para a nova seção */
+@media (max-width: 768px) {
+    .featured-award-item {
+        grid-template-columns: 1fr; /* Empilha a imagem e o texto */
+        text-align: center;
+    }
+}
+
+
 </style>
 
 <main>
+    <section class="featured-awards-section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Premiações em Destaque</h2>
+        </div>
+        
+        <div data-aos="fade-up">
+
+            <div class="featured-award-item">
+                <div class="award-image">
+                    <img src="assets/img/premios/Primeiro lugar banco do brasil.png" alt="Melhor performance Banco do Brasil">
+                </div>
+                <div class="award-details">
+                    <h3>Melhor Performance Geral</h3>
+                    <span class="award-subtitle">1º Lugar - Banco do Brasil</span>
+                    <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
+                </div>
+            </div>
+
+            </div>
+            
+            </div>
+    </div>
+</section>
     <section class="recognition-section">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -112,6 +184,7 @@
                 <div class="recognition-layout">
                     <div class="seals-grid">
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/analiseadvocacia.png" alt="Análise Advocacia"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/greatplace2025.png" alt="Análise Advocacia"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/SELO__SELO_REG_ADVOGADO.png" alt="Análise Regional Advogado"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/SELO__SELO_REG_ESCRITORIO.png" alt="Análise Regional Escritório"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo-certificado-escritorio-vertical.png" alt="AB2L Infinite"></a></div>
@@ -123,6 +196,11 @@
                                     <img src="assets/img/premios/analiseadvocacia.png" class="description-logo" alt="Análise Advocacia">
                                     <h3>Análise ADVOCACIA 2025</h3>
                                     <p>O MDR Advocacia foi reconhecido como um dos escritórios mais admirados do Rio Grande do Norte na 19ª edição do anuário @analise.editorial Advocacia 2025. Além disso, nosso sócio Marcos Délli Ribeiro Rodrigues foi destacado como um dos advogados mais admirados do estado e está entre os mais renomados do Brasil no setor bancário. A premiação, que reúne 1.150 escritórios e 2.814 advogados de todo o país, reforça o impacto crescente dos escritórios de advocacia na economia brasileira e sua relevância no cenário jurídico global. Esse reconhecimento é fruto do trabalho dedicado de toda a nossa equipe, que busca sempre a excelência no atendimento aos nossos clientes.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/greatplace2025.png" class="description-logo" alt="Análise Regional Advogado">
+                                    <h3>Great Place To Work 2025</h3>
+                                    <p>A MDR Advocacia conquistou, pelo segundo ano consecutivo, o selo de Great Place to Work (GPTW)! Esse selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais, atestando a qualidade da gestão de pessoas e a cultura organizacional que promovemos. Ser reconhecidos como GPTW significa que nossos colaboradores avaliam positivamente o dia a dia da MDR.</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="assets/img/premios/SELO__SELO_REG_ADVOGADO.png" class="description-logo" alt="Análise Regional Advogado">
@@ -163,8 +241,8 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="assets/img/premios/greatplacetowork.png" class="description-logo" alt="Great Place to Work">
-                                    <h3>Great Place To Work</h3>
-                                    <p>A MDR Advocacia conquistou, pelo segundo ano consecutivo, o selo de Great Place to Work (GPTW)! Esse selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais, atestando a qualidade da gestão de pessoas e a cultura organizacional que promovemos. Ser reconhecidos como GPTW significa que nossos colaboradores avaliam positivamente o dia a dia da MDR.</p>
+                                    <h3>Great Place To Work 2024</h3>
+                                    <p>A MDR Advocacia conquistou, o selo de Great Place to Work (GPTW)! Esse selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais, atestando a qualidade da gestão de pessoas e a cultura organizacional que promovemos. Ser reconhecidos como GPTW significa que nossos colaboradores avaliam positivamente o dia a dia da MDR.</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="assets/img/premios/infinite.png" class="description-logo" alt="AB2L Infinite 2024">
@@ -179,44 +257,7 @@
         </div>
     </section>
 
-    <section class="featured-awards-section">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Premiações em Destaque</h2>
-            </div>
-            <div class="featured-awards-grid" data-aos="fade-up">
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-mulher.png" alt="Análise Advocacia Mulher">
-                    <h4>1º Lugar Melhor Performance</h4>
-                    <p>Melhor Performance Geral Carteira entre 20 mil e 55 mil processos.</p>
-                </div>
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-regional.png" alt="Análise Advocacia Regional">
-                    <h4>1° Lugar em Improcedência</h4>
-                </div>
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-regional.png" alt="Análise Advocacia Regional">
-                    <h4>1° Lugar em Improcedência - Banco Réu</h4>
-                </div>
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-regional.png" alt="Análise Advocacia Regional">
-                    <h4>1° Lugar no Desafio Livelo</h4>
-                </div>
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-regional.png" alt="Análise Advocacia Regional">
-                    <h4>1° Lugar no Desafio Ourocap</h4>
-                </div>
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-regional.png" alt="Análise Advocacia Regional">
-                    <h4>1° Lugar em Acordos Cíveis</h4>
-                </div>
-                <div class="featured-award-card">
-                    <img src="assets/img/premios/analise-regional.png" alt="Análise Advocacia Regional">
-                    <h4>3° Lugar no Índice de Adequação do Risco Jurídico</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+
 </main>
 
 <script>
