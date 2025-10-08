@@ -14,9 +14,19 @@
     </div>
 
 <style>
-/* --- ESTILOS PARA PÁGINA DE PRÊMIOS --- */
-.recognition-section { padding: 60px 0; }
-.year-group { margin-bottom: 70px; }
+/* ===================================================================
+   CSS COMPLETO E ORGANIZADO PARA A PÁGINA
+   =================================================================== */
+
+/* --- ESTILOS GERAIS DA PÁGINA DE PRÊMIOS --- */
+.recognition-section,
+.featured-awards-section,
+.certificates-section {
+    padding: 60px 0;
+}
+.year-group { 
+    margin-bottom: 70px; 
+}
 .year-group h2 {
     font-size: 32px;
     font-weight: 700;
@@ -29,20 +39,61 @@
     color: #b29d55;
     border-bottom-color: #b29d55;
 }
+
+/* --- Seção: Premiações em Destaque --- */
+.featured-awards-section {
+    background-color: #f0f0f0; 
+}
+.featured-award-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    margin-bottom: 30px; 
+}
+.featured-award-item .award-image { 
+    text-align: center; 
+}
+.featured-award-item .award-image img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+.featured-award-item .award-details h3 { 
+    font-size: 24px; 
+    font-weight: 700; 
+    margin-bottom: 10px; 
+    color: #333; 
+}
+.featured-award-item .award-details .award-subtitle { 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #b29d55; 
+    margin-bottom: 15px; 
+    display: block; 
+}
+.featured-award-item .award-details p { 
+    color: #6c757d; 
+    line-height: 1.6; 
+}
+
+/* --- Seção: Reconhecimentos e Associações --- */
 .recognition-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
 }
-
-/* Grade de selos (esquerda) */
 .seals-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-.seal-item a { /* Estilo aplicado ao link */
+.seal-item a {
     background-color: #f7f7f7;
     border: 1px solid #eee;
     border-radius: 8px;
@@ -63,22 +114,18 @@
 .seal-item a:hover {
     transform: scale(1.05);
 }
-/* A classe de item ativo será adicionada via JS */
 .seal-item a.thumb-active {
     border-color: #b29d55;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-/* Carrossel de descrição (direita) */
 .description-carousel {
     background-color: #f7f7f7;
     border-radius: 8px;
     padding: 40px;
     min-height: 100%;
-    overflow: hidden; /* Importante para o Swiper */
+    overflow: hidden;
 }
 .swiper-description .swiper-slide {
-    /* O Swiper controla o display, não precisamos de 'display: none' */
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -87,92 +134,142 @@
 .swiper-description h3 { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #333; }
 .swiper-description p { color: #6c757d; line-height: 1.7; }
 
-/* Seção de Destaque para Premiações (Separada) */
-
-.featured-awards-section { 
-    padding: 80px 0; 
-    background-color: #f0f0f0; 
+/* --- Seção: Carrossel de Certificados --- */
+.certificates-section {
+    background-color: #f7f7f7;
 }
-
-/* Novo layout para cada item de prêmio */
-.featured-award-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Coluna da imagem menor que a do texto */
-    gap: 40px;
+.certificates-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #fff;
-    padding: 40px;
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    margin-bottom: 30px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: 320px; 
 }
-
-.featured-award-item .award-image {
+.certificate-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
-
-.featured-award-item .award-image img {
-    max-width: 100%; /* Imagem ocupa a largura da coluna dela */
-    height: auto;
-    border-radius: 8px;
-}
-
-.featured-award-item .award-details h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.featured-award-item .award-details .award-subtitle {
-    font-size: 16px;
-    font-weight: bold;
-    color: #b29d55; 
+.certificate-item img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer;
     margin-bottom: 15px;
-    display: block;
+}
+.certificate-item img:hover {
+    transform: scale(1.08);
+}
+.certificate-description {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    padding: 0 10px;
+}
+.certificates-swiper .swiper-pagination {
+    bottom: -15px; 
+}
+.certificates-swiper .swiper-pagination-bullet-active { 
+    background-color: #b29d55; 
+}
+.certificates-swiper .swiper-button-next,
+.certificates-swiper .swiper-button-prev { 
+    color: #b29d55; 
 }
 
-.featured-award-item .award-details p {
-    color: #6c757d;
-    line-height: 1.6;
+/* --- Componente: Modal (Lightbox de Imagem) --- */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.85); 
+    justify-content: center; 
+    align-items: center; 
+}
+.modal-content { 
+    margin: auto; 
+    display: block; 
+    max-width: 85%; 
+    max-height: 85vh; 
+    animation: zoomIn 0.3s ease-in-out; 
+}
+@keyframes zoomIn { 
+    from { transform: scale(0.8); opacity: 0; } 
+    to { transform: scale(1); opacity: 1; } 
+}
+.close-modal { 
+    position: absolute; 
+    top: 25px; right: 45px; 
+    color: #fff; font-size: 50px; 
+    font-weight: bold; 
+    transition: 0.3s; 
+    cursor: pointer; 
+}
+.close-modal:hover, 
+.close-modal:focus { 
+    color: #bbb; 
+    text-decoration: none; 
 }
 
-/* Responsividade para a nova seção */
-@media (max-width: 768px) {
-    .featured-award-item {
-        grid-template-columns: 1fr; /* Empilha a imagem e o texto */
-        text-align: center;
+/* ===================================================================
+   REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
+   =================================================================== */
+@media (max-width: 992px) {
+    /* Ajusta a seção de Reconhecimentos para 1 coluna */
+    .recognition-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    /* Transforma a grade de selos em uma linha flexível */
+    .seals-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
 
-
+@media (max-width: 768px) {
+    /* Ajusta a seção de Prêmios em Destaque para 1 coluna */
+    .featured-award-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
 </style>
 
 <main>
     <section class="featured-awards-section">
-    <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Premiações em Destaque</h2>
-        </div>
-        
-        <div data-aos="fade-up">
-
-            <div class="featured-award-item">
-                <div class="award-image">
-                    <img src="assets/img/premios/Primeiro lugar banco do brasil.png" alt="Melhor performance Banco do Brasil">
-                </div>
-                <div class="award-details">
-                    <h3>Melhor Performance Geral</h3>
-                    <span class="award-subtitle">1º Lugar - Banco do Brasil</span>
-                    <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
-                </div>
-            </div>
-
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Premiações em Destaque</h2>
             </div>
             
+            <div data-aos="fade-up">
+                <div class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/Primeiro lugar banco do brasil.png" alt="Melhor performance Banco do Brasil">
+                    </div>
+                    <div class="award-details">
+                        <h3>Melhor Performance Geral</h3>
+                        <span class="award-subtitle">1º Lugar - Banco do Brasil</span>
+                        <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
+                    </div>
+                </div>
             </div>
-    </div>
-</section>
+        </div>
+    </section>
+
     <section class="recognition-section">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -257,11 +354,88 @@
         </div>
     </section>
 
+    <section id="certificados-carousel" class="certificates-section">
+      <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+            <h2>Nossos Certificados</h2>
+        </div>
+
+        <div class="swiper certificates-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado1.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Desafio Ourocap 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado2.png" alt="Certificado 2" class="open-modal">
+                        <p class="certificate-description">1° Lugar em Acordos Cíveis(Ticket Médio - Economia) 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado3.png" alt="Certificado 3" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Desafio Livelo 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado4.png" alt="Certificado 4" class="open-modal">
+                        <p class="certificate-description">2° Lugar em Acordos Cíveis (% da Meta - Quantidade) 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado5.png" alt="Certificado 5" class="open-modal">
+                        <p class="certificate-description">2° Lugar em Acordos Trabalhistas (% da Meta - Quantidade) 2025</p>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado6.png" alt="Certificado 6" class="open-modal">
+                        <p class="certificate-description">3° Lugar no Índice de Adequação do Risco Jurídico 2025</p>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado7.png" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">1° Lugar na Improcedência Banco Réu (% da carteira) 2025</p>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado8.png" alt="Certificado 8" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Recupera terc 2025</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
 </main>
+
+<div id="certificateModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    
+    // --- LÓGICA PARA OS CARROSSÉIS DA SEÇÃO DE RECONHECIMENTOS ---
     function initCarousel(yearGroupId) {
         const yearGroup = document.getElementById(yearGroupId);
         if (!yearGroup) return;
@@ -276,6 +450,7 @@ document.addEventListener('DOMContentLoaded', function () {
             autoplay: { delay: 15000, disableOnInteraction: false },
             observer: true,
             observeParents: true,
+            autoHeight: true, // Adicionado para ajustar altura
         });
 
         sealLinks.forEach((sealLink, index) => {
@@ -304,163 +479,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initCarousel('year-2025');
     initCarousel('year-2024');
-});
-</script>
-<div id="certificateModal" class="modal">
-    <span class="close-modal">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
 
-
-<section id="certificados-carousel" class="certificates-section">
-    <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-            <h2>Nossos Certificados</h2>
-        </div>
-
-        <div class="swiper certificates-swiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado1.png" alt="Certificado 1" class="open-modal">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado2.png" alt="Certificado 2" class="open-modal">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado3.png" alt="Certificado 3" class="open-modal">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado4.png" alt="Certificado 4" class="open-modal">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado5.png" alt="Certificado 5" class="open-modal">
-                </div>
-                
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado6.png" alt="Certificado 6" class="open-modal">
-                </div>
-                
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado7.png" alt="Certificado 7" class="open-modal">
-                </div>
-                
-                <div class="swiper-slide">
-                    <img src="assets/img/premios/certificado8.png" alt="Certificado 8" class="open-modal">
-                </div>
-
-            </div>
-
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</section>
-
-<style>
-/* --- ESTILOS PARA O CARROSSEL (SIMPLIFICADO) --- */
-.certificates-section {
-    padding: 80px 0;
-    background-color: #f7f7f7;
-}
-
-.certificates-swiper .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    height: 250px;
-}
-
-.certificates-swiper .swiper-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    cursor: pointer; /* Indica que a imagem é clicável */
-}
-
-.certificates-swiper .swiper-slide img:hover {
-    transform: scale(1.08); /* Mantém o efeito visual de destaque */
-}
-
-/* Estilos Swiper */
-.certificates-swiper .swiper-pagination-bullet-active {
-    background-color: #b29d55;
-}
-.certificates-swiper .swiper-button-next,
-.certificates-swiper .swiper-button-prev {
-    color: #b29d55;
-}
-
-
-/* --- NOVOS ESTILOS PARA O MODAL --- */
-
-/* Fundo escuro do modal (overlay) */
-.modal {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fica fixo na tela */
-    z-index: 1000; /* Fica na frente de tudo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Permite scroll se a imagem for muito grande */
-    background-color: rgba(0,0,0,0.85); /* Fundo preto semi-transparente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-}
-
-/* A imagem dentro do modal */
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 85%;
-    max-height: 85vh; /* Limita a altura a 85% da altura da tela */
-    animation: zoomIn 0.3s ease-in-out; /* Efeito de zoom ao abrir */
-}
-
-/* Animação do zoom */
-@keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-/* Botão de fechar (X) */
-.close-modal {
-    position: absolute;
-    top: 25px;
-    right: 45px;
-    color: #fff;
-    font-size: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-    color: #bbb;
-    text-decoration: none;
-}
-</style>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Inicialização do Swiper 
+    // --- LÓGICA PARA O CARROSSEL DE CERTIFICADOS ---
     new Swiper('.certificates-swiper', {
         loop: true,
-        speed: 600,
+        speed: 500,
         autoplay: {
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: false,
         },
         slidesPerView: 'auto',
@@ -477,35 +502,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // --- NOVO: LÓGICA PARA O MODAL ---
-
-    // Pega os elementos do modal
+    // --- LÓGICA PARA O MODAL (LIGHTBOX) DOS CERTIFICADOS ---
     const modal = document.getElementById("certificateModal");
     const modalImg = document.getElementById("modalImage");
     const closeModal = document.querySelector(".close-modal");
-
-    // Pega todas as imagens que devem abrir o modal
     const certificateImages = document.querySelectorAll(".open-modal");
 
-    // Adiciona o evento de clique a cada imagem do certificado
     certificateImages.forEach(img => {
         img.onclick = function() {
-            modal.style.display = "flex"; // Mostra o modal (usei flex para centralizar)
-            modalImg.src = this.src; // Define o src da imagem do modal
+            modal.style.display = "flex";
+            modalImg.src = this.src;
         }
     });
 
-    // Função para fechar o modal
     function hideModal() {
         modal.style.display = "none";
     }
 
-    // Fecha o modal ao clicar no 'X'
     closeModal.onclick = hideModal;
 
-    // Fecha o modal ao clicar em qualquer lugar do fundo escuro
     modal.onclick = function(event) {
-        if (event.target === modal) { // Verifica se o clique foi no fundo e não na imagem
+        if (event.target === modal) {
             hideModal();
         }
     }
