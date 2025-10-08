@@ -306,5 +306,210 @@ document.addEventListener('DOMContentLoaded', function () {
     initCarousel('year-2024');
 });
 </script>
+<div id="certificateModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+
+<section id="certificados-carousel" class="certificates-section">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Nossos Certificados</h2>
+        </div>
+
+        <div class="swiper certificates-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado1.png" alt="Certificado 1" class="open-modal">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado2.png" alt="Certificado 2" class="open-modal">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado3.png" alt="Certificado 3" class="open-modal">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado4.png" alt="Certificado 4" class="open-modal">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado5.png" alt="Certificado 5" class="open-modal">
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado6.png" alt="Certificado 6" class="open-modal">
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado7.png" alt="Certificado 7" class="open-modal">
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="assets/img/premios/certificado8.png" alt="Certificado 8" class="open-modal">
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* --- ESTILOS PARA O CARROSSEL (SIMPLIFICADO) --- */
+.certificates-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.certificates-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: 250px;
+}
+
+.certificates-swiper .swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Indica que a imagem é clicável */
+}
+
+.certificates-swiper .swiper-slide img:hover {
+    transform: scale(1.08); /* Mantém o efeito visual de destaque */
+}
+
+/* Estilos Swiper */
+.certificates-swiper .swiper-pagination-bullet-active {
+    background-color: #b29d55;
+}
+.certificates-swiper .swiper-button-next,
+.certificates-swiper .swiper-button-prev {
+    color: #b29d55;
+}
+
+
+/* --- NOVOS ESTILOS PARA O MODAL --- */
+
+/* Fundo escuro do modal (overlay) */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1000; /* Fica na frente de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll se a imagem for muito grande */
+    background-color: rgba(0,0,0,0.85); /* Fundo preto semi-transparente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* A imagem dentro do modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 85vh; /* Limita a altura a 85% da altura da tela */
+    animation: zoomIn 0.3s ease-in-out; /* Efeito de zoom ao abrir */
+}
+
+/* Animação do zoom */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Botão de fechar (X) */
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+</style>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicialização do Swiper 
+    new Swiper('.certificates-swiper', {
+        loop: true,
+        speed: 600,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            576: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 30 },
+            1200: { slidesPerView: 4, spaceBetween: 30 }
+        }
+    });
+
+    // --- NOVO: LÓGICA PARA O MODAL ---
+
+    // Pega os elementos do modal
+    const modal = document.getElementById("certificateModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.querySelector(".close-modal");
+
+    // Pega todas as imagens que devem abrir o modal
+    const certificateImages = document.querySelectorAll(".open-modal");
+
+    // Adiciona o evento de clique a cada imagem do certificado
+    certificateImages.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "flex"; // Mostra o modal (usei flex para centralizar)
+            modalImg.src = this.src; // Define o src da imagem do modal
+        }
+    });
+
+    // Função para fechar o modal
+    function hideModal() {
+        modal.style.display = "none";
+    }
+
+    // Fecha o modal ao clicar no 'X'
+    closeModal.onclick = hideModal;
+
+    // Fecha o modal ao clicar em qualquer lugar do fundo escuro
+    modal.onclick = function(event) {
+        if (event.target === modal) { // Verifica se o clique foi no fundo e não na imagem
+            hideModal();
+        }
+    }
+});
+</script>
 
 <?php include 'footer.php'; ?>
