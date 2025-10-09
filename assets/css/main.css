@@ -3506,142 +3506,130 @@ button:hover {
 .page-title-video .breadcrumbs a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: 0.3s; }
 .page-title-video .breadcrumbs a:hover { color: #fff; }
 
-/*Premios e certificados (reconhecimento e associações)*/
+/* ===================================================================
+   CSS COMPLETO E ORGANIZADO PARA A PÁGINA
+   =================================================================== */
 
-/* --- ESTILOS PARA A SEÇÃO DE RECONHECIMENTOS --- */
-
-/* Layout principal com 2 colunas para DESKTOP */
-.recognition-layout {
-    display: flex;
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 40px; /* Espaço entre a coluna de selos e a de descrição */
-    margin-top: 30px;
+/* --- ESTILOS GERAIS DA PÁGINA DE PRÊMIOS --- */
+.recognition-section,
+.featured-awards-section,
+.certificates-section {
+    padding: 60px 0;
+}
+.year-group { 
+    margin-bottom: 70px; 
+}
+.year-group h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+.year-group.latest h2 {
+    color: #b29d55;
+    border-bottom-color: #b29d55;
 }
 
-/* Coluna da esquerda (grid de selos) */
-.seals-grid {
-    flex: 0 0 180px; /* Define uma largura fixa para esta coluna */
+/* --- Seção: Premiações em Destaque --- */
+.featured-awards-section {
+    background-color: #f0f0f0; 
+}
+.featured-award-item {
     display: grid;
-    gap: 20px; /* Espaço entre cada selo */
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    margin-bottom: 30px; 
+}
+.featured-award-item .award-image { 
+    text-align: center; 
+}
+.featured-award-item .award-image img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+.featured-award-item .award-details h3 { 
+    font-size: 24px; 
+    font-weight: 700; 
+    margin-bottom: 10px; 
+    color: #333; 
+}
+.featured-award-item .award-details .award-subtitle { 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #b29d55; 
+    margin-bottom: 15px; 
+    display: block; 
+}
+.featured-award-item .award-details p { 
+    color: #6c757d; 
+    line-height: 1.6; 
 }
 
-.seals-grid .seal-item a {
-    display: block;
-    padding: 10px;
+/* --- Seção: Reconhecimentos e Associações --- */
+.recognition-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+.seals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.seal-item a {
+    background-color: #f7f7f7;
     border: 1px solid #eee;
     border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
     transition: all 0.3s ease;
-    background-color: #fff;
+    cursor: pointer;
 }
-
-.seals-grid .seal-item img {
-    max-width: 100%;
-    filter: grayscale(100%); /* Deixa os logos cinzas por padrão */
-    opacity: 0.7;
-    transition: all 0.3s ease;
+.seal-item img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
-
-/* Efeito ao passar o mouse ou quando o selo está ativo */
-.seals-grid .seal-item a:hover img,
-.seals-grid .seal-item a.thumb-active img {
-    filter: grayscale(0%);
-    opacity: 1;
+.seal-item a:hover {
     transform: scale(1.05);
 }
-.seals-grid .seal-item a:hover,
-.seals-grid .seal-item a.thumb-active {
-    border-color: #b29d55; /* Cor dourada do tema */
+.seal-item a.thumb-active {
+    border-color: #b29d55;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-/* Coluna da direita (carrossel de descrição) */
 .description-carousel {
-    flex: 1; /* Ocupa o restante do espaço disponível */
-    background: #fff;
-    padding: 30px;
+    background-color: #f7f7f7;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 40px;
+    min-height: 100%;
+    overflow: hidden;
 }
-
-.description-carousel .description-logo {
-    max-height: 60px;
-    width: auto;
-    margin-bottom: 20px;
+.swiper-description .swiper-slide {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+.swiper-description .description-logo { max-width: 150px; margin-bottom: 20px; }
+.swiper-description h3 { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #333; }
+.swiper-description p { color: #6c757d; line-height: 1.7; }
 
-.description-carousel h3 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.description-carousel p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #555;
-}
-
-/* =================================================================== */
-/* --- VERSÃO FINAL E REFORÇADA PARA RESPONSIVIDADE --- */
-/* =================================================================== */
-@media (max-width: 992px) {
-
-    /* FORÇA o container principal a virar uma coluna */
-    .recognition-layout {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 30px;
-    }
-
-    /* * PONTO CRÍTICO:
-     * Aqui, desmontamos o grid de 5 colunas e o transformamos 
-     * em uma linha flexível que se ajusta ao conteúdo.
-    */
-    .seals-grid {
-        /* 1. Muda o display para flex, anulando o grid */
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        
-        /* 2. ZERA explicitamente as propriedades de grid que estão causando o problema */
-        grid-template-columns: none !important;
-        
-        /* 3. Garante que ocupe a largura total */
-        width: 100% !important;
-        max-width: 100% !important;
-        
-        /* 4. Zera outras propriedades que podem interferir */
-        margin: 0 auto 30px auto !important;
-        padding: 0 !important;
-        border: none !important;
-    }
-
-    /* Garante o tamanho e espaçamento dos selos */
-    .seals-grid .seal-item {
-        flex: 0 0 auto !important;
-        margin: 5px !important;
-    }
-
-    .seals-grid .seal-item img {
-      max-height: 50px !important;
-    }
-    
-    /* FORÇA a caixa de descrição a ter largura total */
-    .description-carousel {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-    }
-}
-
-/* --- ESTILOS PARA O CARROSSEL (AJUSTADO) --- */
+/* --- Seção: Carrossel de Certificados --- */
 .certificates-section {
-    padding: 80px 0;
     background-color: #f7f7f7;
 }
-
 .certificates-swiper .swiper-slide {
     display: flex;
     justify-content: center;
@@ -3650,52 +3638,103 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* MUDANÇA: Aumentamos a altura para caber a descrição */
     height: 320px; 
 }
-
-/* NOVO: Estilo para o container do item */
 .certificate-item {
-    text-align: center; /* Centraliza a imagem e o texto */
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
-
 .certificate-item img {
     max-width: 100%;
-    /* MUDANÇA: Ajustamos a altura máxima da imagem para dar espaço ao texto */
     max-height: 200px;
     object-fit: contain;
     transition: transform 0.3s ease;
     cursor: pointer;
-    margin-bottom: 15px; /* Espaço entre a imagem e a descrição */
+    margin-bottom: 15px;
 }
-
 .certificate-item img:hover {
     transform: scale(1.08);
 }
-
-
 .certificate-description {
     font-size: 15px;
     font-weight: 500;
-    color: rgba(0,0,0,0.85);
+    color: #333;
     margin: 0;
-    padding: 0 10px; /* Evita que o texto encoste nas bordas em telas menores */
+    padding: 0 10px;
 }
-/* --- AJUSTE DE POSIÇÃO DA PAGINAÇÃO --- */
 .certificates-swiper .swiper-pagination {
-    /* O valor negativo empurra as bolinhas para baixo, para fora da área principal do carrossel */
-    bottom: -7px; 
+    bottom: -15px; 
+}
+.certificates-swiper .swiper-pagination-bullet-active { 
+    background-color: #b29d55; 
+}
+.certificates-swiper .swiper-button-next,
+.certificates-swiper .swiper-button-prev { 
+    color: #b29d55; 
 }
 
-.certificates-swiper .swiper-pagination-bullet-active { background-color: #b29d55; }
-.certificates-swiper .swiper-button-next,
-.certificates-swiper .swiper-button-prev { color: #b29d55; }
-.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.85); justify-content: center; align-items: center; }
-.modal-content { margin: auto; display: block; max-width: 85%; max-height: 85vh; animation: zoomIn 0.3s ease-in-out; }
-@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.close-modal { position: absolute; top: 25px; right: 45px; color: #fff; font-size: 50px; font-weight: bold; transition: 0.3s; cursor: pointer; }
-.close-modal:hover, .close-modal:focus { color: #bbb; text-decoration: none; }
+/* --- Componente: Modal (Lightbox de Imagem) --- */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.85); 
+    justify-content: center; 
+    align-items: center; 
+}
+.modal-content { 
+    margin: auto; 
+    display: block; 
+    max-width: 85%; 
+    max-height: 85vh; 
+    animation: zoomIn 0.3s ease-in-out; 
+}
+@keyframes zoomIn { 
+    from { transform: scale(0.8); opacity: 0; } 
+    to { transform: scale(1); opacity: 1; } 
+}
+.close-modal { 
+    position: absolute; 
+    top: 25px; right: 45px; 
+    color: #fff; font-size: 50px; 
+    font-weight: bold; 
+    transition: 0.3s; 
+    cursor: pointer; 
+}
+.close-modal:hover, 
+.close-modal:focus { 
+    color: #bbb; 
+    text-decoration: none; 
+}
+
+/* ===================================================================
+   REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
+   =================================================================== */
+@media (max-width: 992px) {
+    /* Ajusta a seção de Reconhecimentos para 1 coluna */
+    .recognition-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    /* Transforma a grade de selos em uma linha flexível */
+    .seals-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta a seção de Prêmios em Destaque para 1 coluna */
+    .featured-award-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
