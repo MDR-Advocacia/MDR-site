@@ -92,6 +92,7 @@
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/SELO__SELO_REG_ADVOGADO.png" alt="Análise Regional Advogado"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/SELO__SELO_REG_ESCRITORIO.png" alt="Análise Regional Escritório"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo-certificado-escritorio-vertical.png" alt="AB2L Infinite"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo6.png" alt="D&I"></a></div>
                     </div>
                     <div class="description-carousel">
                         <div class="swiper swiper-description">
@@ -121,6 +122,11 @@
                                     <h3>AB2L Infinite De Inovação Jurídica 2025</h3>
                                     <p>Este ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica! Na ocasião, o sócio Weuder Martins palestrou sobre o tema “Transformação digital jurídica: como a IA está revolucionando as áreas de Legal Ops e Controladoria Jurídica”.</p>
                                 </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/selo6.png" class="description-logo" alt="D&I">
+                                    <h3>Análise Diversidade & Inclusão 2025</h3>
+                                    <p>No escritório MDR, acreditamos que a diversidade é fundamental para um futuro mais justo e igualitário. Pensando nisso, a equipe MDR criou o comitê “MDR Diversidade em Movimento”, com o objetivo de promover a inclusão de raça, etnia, gênero e pessoas com deficiência. Nosso compromisso é consolidar um ambiente de trabalho que reflita a diversidade da sociedade e garanta um espaço cada vez mais inclusivo para todos.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,6 +140,11 @@
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/fenalaw.png" alt="Fenalaw"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/greatplacetowork.png" alt="Great Place to Work"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/infinite.png" alt="AB2L Infinite 2024"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo1.png" alt="Mulher"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo2.png" alt="Saude e segurança"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo3.png" alt="esg"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo4.png" alt="cyber"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo5.png" alt="lgpd"></a></div>
                     </div>
                     <div class="description-carousel">
                         <div class="swiper swiper-description">
@@ -153,6 +164,33 @@
                                     <h3>AB2L Infinite De Inovação Jurídica 2024</h3>
                                     <p>No dia 30 de julho, a MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024. Este prêmio reflete nosso compromisso contínuo com a inovação e a excelência na prática jurídica.</p>
                                 </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/selo1.png" class="description-logo" alt="Intuix Mulher">
+                                    <h3>Livre de Violência Contra Mulher 2024 - Respeito,Equidade e Liberade</h3>
+                                    <p>Este selo reflete nosso compromisso ativo na construção de um ambiente de trabalho e uma sociedade onde o respeito, a equidade e a liberdade são pilares fundamentais. Adotamos políticas internas rigorosas e promovemos a conscientização para garantir que nossa empresa seja um espaço seguro e acolhedor para todas as mulheres, contribuindo para a erradicação da violência de gênero.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/selo2.png" class="description-logo" alt="Safety">
+                                    <h3>SAFETY 2024 - Saúde e Segurança Ocupacional</h3>
+                                    <p>A segurança e o bem-estar de nossos colaboradores são prioridades absolutas. A certificação SAFETY 2024 demonstra nossa excelência na implementação de práticas de Saúde e Segurança Ocupacional, seguindo as mais rigorosas normas para prevenir acidentes, reduzir riscos e promover um ambiente de trabalho saudável e produtivo para toda a nossa equipe.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/selo3.png" class="description-logo" alt="ESG">
+                                    <h3>ESG 2024 - Environmental,Social and Governance</h3>
+                                    <p>Este reconhecimento valida nossa dedicação aos princípios ESG (Ambiental, Social e Governança). Estamos comprometidos em operar de forma sustentável, minimizar nosso impacto ambiental, promover a responsabilidade social em nossas comunidades e manter os mais altos padrões de governança corporativa, gerando valor a longo prazo para a sociedade e nossos stakeholders.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/selo4.png" class="description-logo" alt="Segurança Cibernética">
+                                    <h3>SEGURANÇA CIBERNÉTICA 2024 - Proteção, Credibilidade e Responsabilidade</h3>
+                                    <p>Em um mundo cada vez mais digital, a proteção de dados é sinônimo de credibilidade. O selo de Segurança Cibernética 2024 atesta nosso investimento contínuo em tecnologias e processos robustos para proteger as informações de nossos clientes e da empresa contra ameaças digitais, assegurando a integridade, a confidencialidade e a responsabilidade no tratamento de dados.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/premios/selo5.png" class="description-logo" alt="LGPD">
+                                    <h3>LGPD 2024 - Lei Geral de Proteção de Dados</h3>
+                                    <p>A conformidade com a Lei Geral de Proteção de Dados (LGPD) é um pilar da nossa relação de confiança com clientes e parceiros. Esta certificação comprova que nossas operações estão totalmente alinhadas às exigências da LGPD, garantindo que os dados pessoais são tratados com a máxima segurança, transparência e respeito à privacidade.</p>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
