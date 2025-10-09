@@ -14,14 +14,17 @@
     </div>
 
 <main>
-    <section class="featured-awards-section">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Premiações em Destaque</h2>
-            </div>
-            
-            <div data-aos="fade-up">
-                <div class="featured-award-item">
+<section class="featured-awards-section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Premiações em Destaque</h2>
+        </div>
+        
+        <div class="featured-awards-layout" data-aos="fade-up">
+
+            <div class="award-display-area">
+                
+                <div id="award-bb" class="featured-award-item visible-award">
                     <div class="award-image">
                         <img src="assets/img/premios/Primeiro lugar banco do brasil.png" alt="Melhor performance Banco do Brasil">
                     </div>
@@ -31,9 +34,48 @@
                         <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
                     </div>
                 </div>
+
+                <div id="award-fenalaw" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/fenalaw.png" alt="Prêmio Fenalaw">
+                    </div>
+                    <div class="award-details">
+                        <h3>Prêmio Análise DNA+FENALAW</h3>
+                        <span class="award-subtitle">2º Lugar - Tecnologia</span>
+                        <p>Pelo segundo ano consecutivo, fomos premiados em segundo lugar na categoria Tecnologia no Prêmio Análise DNA + Fenalaw 2024...</p>
+                    </div>
+                </div>
+
+                <div id="award-gptw" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/greatplacetowork.png" alt="Selo Great Place to Work">
+                    </div>
+                    <div class="award-details">
+                        <h3>Selo Great Place to Work</h3>
+                        <span class="award-subtitle">Certificação Global</span>
+                        <p>Este selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais...</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="awards-list">
+                <a href="#" class="award-list-item active-award" data-target="award-bb">
+                    <h4>Melhor Performance Geral</h4>
+                    <span>1º Lugar - Banco do Brasil</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-fenalaw">
+                    <h4>Prêmio Análise DNA+FENALAW</h4>
+                    <span>2º Lugar - Tecnologia</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-gptw">
+                    <h4>Selo Great Place to Work</h4>
+                    <span>Certificação Global</span>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="recognition-section">
         <div class="container">

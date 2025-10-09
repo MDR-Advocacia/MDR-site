@@ -3738,3 +3738,95 @@ button:hover {
         text-align: center;
     }
 }
+/* ===================================================================
+   ESTILOS PARA A SEÇÃO DE PREMIAÇÕES EM DESTAQUE (VERSÃO CORRIGIDA)
+   =================================================================== */
+
+/* A REGRA MAIS IMPORTANTE: Cria as 2 colunas lado a lado */
+.featured-awards-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Coluna da esquerda 50% maior que a da direita */
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Área de exibição (esquerda) */
+.award-display-area .featured-award-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    position: sticky; /* Efeito "grudento" ao rolar a página */
+    top: 120px;
+}
+/* Área de exibição (esquerda) */
+
+.award-display-area .award-image img {
+    /* Define uma altura máxima para a imagem. Ajuste este valor se necessário. */
+    max-height: 500px; 
+    
+    /* Garante que a largura se ajuste para manter a proporção */
+    width: auto; 
+    
+    /* O resto das propriedades para garantir o alinhamento e visual */
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza a imagem */
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+
+/* Esconde todos os prêmios por padrão */
+.featured-award-item {
+    display: none;
+}
+/* Mostra apenas o prêmio que tiver a classe 'visible-award' */
+.featured-award-item.visible-award {
+    display: block; /* Alterado para block pois o grid está no pai */
+}
+
+/* Lista de prêmios (direita) */
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.award-list-item {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.award-list-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+.award-list-item span {
+    font-size: 14px;
+    color: #b29d55;
+}
+.award-list-item:hover {
+    border-color: #b29d55;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.award-list-item.active-award {
+    border-left: 5px solid #b29d55;
+    background-color: #f8f6f0;
+}
+
+
+/* --- RESPONSIVIDADE PARA ESTA SEÇÃO --- */
+@media (max-width: 992px) {
+    .featured-awards-layout {
+        grid-template-columns: 1fr; /* Vira uma coluna só no mobile */
+    }
+    .award-display-area .featured-award-item {
+        position: static; /* Remove o efeito "grudento" no mobile */
+    }
+}
