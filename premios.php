@@ -102,7 +102,7 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                     <span>Tecnologia</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-ATIVOS">
-                    <h4>ATIVOS - 2024</h4>
+                    <h4>Ativos - 2024</h4>
                     <span>MDR ADVOCACIA</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-bb3">
