@@ -35,46 +35,74 @@
                     </div>
                 </div>
 
-                <div id="award-fenalaw" class="featured-award-item">
-                    <div class="award-image">
-                        <img src="assets/img/premios/fenalaw.png" alt="Prêmio Fenalaw">
-                    </div>
-                    <div class="award-details">
-                        <h3>Prêmio Análise DNA+FENALAW</h3>
-                        <span class="award-subtitle">2º Lugar - Tecnologia</span>
-                        <p>Pelo segundo ano consecutivo, fomos premiados em segundo lugar na categoria Tecnologia no Prêmio Análise DNA + Fenalaw 2024...</p>
-                    </div>
-                </div>
-
                 <div id="award-gptw" class="featured-award-item">
                     <div class="award-image">
-                        <img src="assets/img/premios/greatplacetowork.png" alt="Selo Great Place to Work">
+                        <img src="assets/img/premios/ab2l (5).png" alt="AB2L Infinite 2025">
                     </div>
                     <div class="award-details">
-                        <h3>Selo Great Place to Work</h3>
-                        <span class="award-subtitle">Certificação Global</span>
+                        <h3>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2025</h3>
+                        <span class="award-subtitle">AB2L 2025</span>
                         <p>Este selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais...</p>
                     </div>
                 </div>
 
-            </div>
+                <div id="award-fenalaw" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/ab2l (1).png" alt="Prêmio AB2L Infinite 2024">
+                    </div>
+                    <div class="award-details">
+                        <h3>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2024</h3>
+                        <span class="award-subtitle">AB2L 2024</span>
+                        <p>Pelo segundo ano consecutivo, fomos premiados em segundo lugar na categoria Tecnologia no Prêmio Análise DNA + Fenalaw 2024...</p>
+                    </div>
+                </div>
 
-            <div class="awards-list">
+                <div id="award-ATIVOS" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/ativos.png" alt="Ativos">
+                    </div>
+                    <div class="award-details">
+                        <h3>Prêmio 1° Semestre de 2024 - Lote 4</h3>
+                        <span class="award-subtitle">ATIVOS - MDR ADVOCACIA</span>
+                        <p>Pelo segundo ano consecutivo, fomos premiados em segundo lugar na categoria Tecnologia no Prêmio Análise DNA + Fenalaw 2024...</p>
+                    </div>
+                </div>
+
+                <div id="award-bb3" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/performance.png" alt="bb">
+                    </div>
+                    <div class="award-details">
+                        <h3>Melhor Performance Geral - 2024</h3>
+                        <span class="award-subtitle">3º Lugar - Banco do Brasil</span>
+                        <p>Este selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais...</p>
+                    </div>
+                </div>
+
+            </div> <div class="awards-list">
                 <a href="#" class="award-list-item active-award" data-target="award-bb">
                     <h4>Melhor Performance Geral</h4>
                     <span>1º Lugar - Banco do Brasil</span>
                 </a>
-                <a href="#" class="award-list-item" data-target="award-fenalaw">
-                    <h4>Prêmio Análise DNA+FENALAW</h4>
-                    <span>2º Lugar - Tecnologia</span>
-                </a>
                 <a href="#" class="award-list-item" data-target="award-gptw">
-                    <h4>Selo Great Place to Work</h4>
-                    <span>Certificação Global</span>
+                    <h4>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2025</h4>
+                    <span>Tecnologia</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-fenalaw">
+                    <h4>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2024</h4>
+                    <span>Tecnologia</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-ATIVOS">
+                    <h4>ATIVOS - 2024</h4>
+                    <span>MDR ADVOCACIA</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-bb3">
+                    <h4>Melhor Performance Geral - 2024</h4>
+                    <span>3º Lugar - Banco do Brasil</span>
                 </a>
             </div>
-        </div>
-    </div>
+
+        </div> </div>
 </section>
 
     <section class="recognition-section">
