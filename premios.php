@@ -42,7 +42,9 @@
                     <div class="award-details">
                         <h3>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2025</h3>
                         <span class="award-subtitle">AB2L 2025</span>
-                        <p>Este selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais...</p>
+                        <p>AB2L, associação que reúne mais de 600 integrantes comprometidos em transformar o Direito no Brasil por meio de inovação, educação do mercado e fortalecimento do ecossistema jurídico.
+
+Este ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica!</p>
                     </div>
                 </div>
 
@@ -53,7 +55,10 @@
                     <div class="award-details">
                         <h3>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2024</h3>
                         <span class="award-subtitle">AB2L 2024</span>
-                        <p>Pelo segundo ano consecutivo, fomos premiados em segundo lugar na categoria Tecnologia no Prêmio Análise DNA + Fenalaw 2024...</p>
+                        <p>A MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024.
+
+Este prêmio reflete nosso compromisso contínuo com a inovação e a excelência na prática jurídica.
+</p>
                     </div>
                 </div>
 
@@ -64,7 +69,11 @@
                     <div class="award-details">
                         <h3>Prêmio 1° Semestre de 2024 - Lote 4</h3>
                         <span class="award-subtitle">ATIVOS - MDR ADVOCACIA</span>
-                        <p>Pelo segundo ano consecutivo, fomos premiados em segundo lugar na categoria Tecnologia no Prêmio Análise DNA + Fenalaw 2024...</p>
+                        <p>A MDR Advocacia marcou presença no Ativos Connect, em Brasília.
+
+O evento reuniu empresas de cobrança e escritórios de advocacia para debater os resultados do último semestre de 2023 e o primeiro de 2024, além de discutir estratégias para o futuro da Ativos S.A. Securitizadora.
+
+A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos dois semestres.</p>
                     </div>
                 </div>
 
@@ -75,7 +84,7 @@
                     <div class="award-details">
                         <h3>Melhor Performance Geral - 2024</h3>
                         <span class="award-subtitle">3º Lugar - Banco do Brasil</span>
-                        <p>Este selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais...</p>
+                        <p>Conquistamos o Terceiro lugar em performance geral , um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
                     </div>
                 </div>
 
