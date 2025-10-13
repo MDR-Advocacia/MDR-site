@@ -23,12 +23,12 @@
         </div>
         <div class="text-container">
             <p>
-                Na Recuperaçao de Credito do MDR Advocacia transformar dívidas em liquidez é nosso objetivo, a nossa  especialidade. Atuamos de forma estratégica, segura e inteligente para que cada real devido volte a gerar valor para o seu negócio.
+                Na Recuperação de Crédito do MDR Advocacia, transformar dívidas em liquidez é mais que nosso objetivo: é nossa especialidade. Atuamos de forma estratégica, segura e inteligente para que cada real devido volte a gerar valor para o seu negócio.
             </p>
             <p>
-                 Aliamos expertise jurídica à <strong>tecnologia de ponta.</strong> Com o apoio de Business Intelligence (BI) e plataformas de gestão, oferecemos dashboards interativos, que permitem acompanhar em tempo real o desempenho e o status de cada caso. Mais transparência, mais agilidade, mais controle em suas mãos.
+                 Aliamos expertise jurídica à <strong>tecnologia de ponta.</strong> Com o apoio de Business Intelligence (BI) e plataformas de gestão, oferecemos dashboards interativos que permitem acompanhar em tempo real o desempenho e o status de cada caso. Mais transparência, mais agilidade, mais controle em suas mãos.
             <p>
-                Não somos apenas um escritório de advocacia para recuperaçao de creditos. Somos parceiros do crescimento da sua empresa, recuperando ativos com ética, eficiência e inteligência, preservando sempre o que há de mais valioso: <strong>a sua marca.</strong>
+                Não somos apenas um escritório de advocacia para recuperação de créditos. Somos parceiros do crescimento da sua empresa, recuperando ativos com ética, eficiência e inteligência, preservando sempre o que há de mais valioso: <strong>a sua marca.</strong>
             </p>
         </div>
       </div>
