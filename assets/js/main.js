@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -36,7 +35,6 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
@@ -154,23 +152,29 @@
 
   });
 
+  /**
+   * Script para a seção de Prêmios
+   */
+  const awardLinks = document.querySelectorAll('.award-list-item');
+  const awardItems = document.querySelectorAll('.featured-award-item');
+
+  awardLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.dataset.target; // Pega o ID do alvo (ex: "award-bb")
+
+          // 1. Esconde todos os prêmios e desativa todos os links
+          awardItems.forEach(item => item.classList.remove('visible-award'));
+          awardLinks.forEach(l => l.classList.remove('active-award'));
+
+          // 2. Mostra o prêmio certo e ativa o link clicado
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.classList.add('visible-award');
+          }
+          this.classList.add('active-award');
+      });
+  });
+
 })();
-// --- VERSÃO SIMPLIFICADA PARA SEÇÃO DE PRÊMIOS ---
-const awardLinks = document.querySelectorAll('.award-list-item');
-const awardItems = document.querySelectorAll('.featured-award-item');
-
-awardLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const targetId = this.dataset.target; // Pega o ID do alvo (ex: "award-bb")
-
-        // 1. Esconde todos os prêmios e desativa todos os links
-        awardItems.forEach(item => item.classList.remove('visible-award'));
-        awardLinks.forEach(l => l.classList.remove('active-award'));
-
-        // 2. Mostra o prêmio certo e ativa o link clicado
-        document.getElementById(targetId).classList.add('visible-award');
-        this.classList.add('active-award');
-    });
-});
