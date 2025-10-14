@@ -130,7 +130,7 @@
         </div>
                 <div class="professional-card animar-ao-rolar">
             <div class="profile-pic-container">
-                <img src="assets/img/supervisores/Melissa.png" alt="Melissa" class="profile-image">
+                <img src="assets/img/supervisores/melissa.png" alt="Melissa" class="profile-image">
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/melissa-oliveira-191440347/" target="_blank" aria-label="LinkedIn de Melissa"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-3.06v8.37h3.06v-4.93c0-.83.06-1.66.57-2.12.51-.46 1.28-.48 1.76 0 .5.47.48 1.3.48 2.12v4.93h3.06zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69.75 1.68 1.68 0 0 0 0 1.88 1.68 1.68 0 0 0 1.69.74zm-1.44 9.94h3.06v-8.37H5.44v8.37z"/></svg></a>
                     <a href="https://www.instagram.com/mel_oliveiraadv" target="_blank" aria-label="Instagram de Melissa"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #555;"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>

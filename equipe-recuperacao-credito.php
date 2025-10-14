@@ -27,12 +27,12 @@
         </div>
 
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/aléxia.png" alt="Aléxia Marinne Maia Fernandes">
+            <img src="assets/img/colaboradores/assistentes j/alexia.png" alt="Aléxia Marinne Maia Fernandes">
             <h5>Aléxia Marinne Maia Fernandes</h5>
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/állan.png" alt="Állan Daniel Torres Soares">
+            <img src="assets/img/colaboradores/assistentes j/allan.png" alt="Állan Daniel Torres Soares">
             <h5>Állan Daniel Torres Soares</h5>
             <p>Assistente Jurídico</p>
         </div>
@@ -42,12 +42,12 @@
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.722</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="assets/img/colaboradores/advogados/andriely.png" alt="ANDRIELLY DUARTE DE FARIAS">
             <h5>Andrielly Duarte De Farias</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.864</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="assets/img/colaboradores/advogados/arlisson.png" alt="Arlisson Pereira da Silva">
             <h5>Arlisson Pereira da Silva</h5>
@@ -81,7 +81,7 @@
             <p>Assistente Jurídico</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/jose leonardo.png" alt="José Leonardo de Araújo Jales">
+            <img src="assets/img/colaboradores/advogados/joseleonardo.png" alt="José Leonardo de Araújo Jales">
             <h5>José Leonardo de Araújo Jales</h5>
             <p>Advogado</p>
             <p class="sector">OAB/RN 21.259</p>
@@ -97,7 +97,7 @@
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/Luana.png" alt="Luana Silva">
+            <img src="assets/img/colaboradores/advogados/luana.png" alt="Luana Silva">
             <h5>Luana dos Santos Silva</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.797</p>
@@ -113,7 +113,7 @@
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/marcos vinicius.png" alt="Marcos Vinícius Cruz Bezerra">
+            <img src="assets/img/colaboradores/advogados/marcosvinicius.png" alt="Marcos Vinícius Cruz Bezerra">
             <h5>Marcos Vinícius Cruz Bezerra</h5>
             <p>Advogado</p>
             <p class="sector">OAB/RN 23.235</p>
@@ -129,19 +129,19 @@
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/maria gabrielly.png" alt="Maria Gabrielly Silva Rodrigues Azevedo">
+            <img src="assets/img/colaboradores/advogados/mariagabrielly.png" alt="Maria Gabrielly Silva Rodrigues Azevedo">
             <h5>Maria Gabrielly S. R. Azevedo</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 21.601</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/maria laiza.png" alt="Maria Laiza Barbosa de Farias">
+            <img src="assets/img/colaboradores/advogados/marialaiza.png" alt="Maria Laiza Barbosa de Farias">
             <h5>Maria Laiza Barbosa de Farias</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.986</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/maria victoria.png" alt="Maria Victoria Pereira Dantas">
+            <img src="assets/img/colaboradores/advogados/mariavictoria.png" alt="Maria Victoria Pereira Dantas">
             <h5>Maria Victoria Pereira Dantas</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 23.467</p>

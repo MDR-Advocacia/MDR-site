@@ -26,7 +26,7 @@
                 
                 <div id="award-bb" class="featured-award-item visible-award">
                     <div class="award-image">
-                        <img src="assets/img/premios/Primeiro lugar banco do brasil.png" alt="Melhor performance Banco do Brasil">
+                        <img src="assets/img/premios/primeirobb.png" alt="Melhor performance Banco do Brasil">
                     </div>
                     <div class="award-details">
                         <h3>Melhor Performance Geral</h3>
@@ -37,10 +37,10 @@
 
                 <div id="award-gptw" class="featured-award-item">
                     <div class="award-image">
-                        <img src="assets/img/premios/ab2l (5).png" alt="AB2L Infinite 2025">
+                        <img src="assets/img/premios/ab2l_(5).png" alt="AB2L Infinite 2025">
                     </div>
                     <div class="award-details">
-                        <h3>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2025</h3>
+                        <h3>Prêmio AB2L Infinite de Inovação Jurídica 2025</h3>
                         <span class="award-subtitle">AB2L 2025</span>
                         <p>AB2L, associação que reúne mais de 600 integrantes comprometidos em transformar o Direito no Brasil por meio de inovação, educação do mercado e fortalecimento do ecossistema jurídico.
 
@@ -50,10 +50,10 @@ Este ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação
 
                 <div id="award-fenalaw" class="featured-award-item">
                     <div class="award-image">
-                        <img src="assets/img/premios/ab2l (1).png" alt="Prêmio AB2L Infinite 2024">
+                        <img src="assets/img/premios/ab2l_(1).png" alt="Prêmio AB2L Infinite 2024">
                     </div>
                     <div class="award-details">
-                        <h3>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2024</h3>
+                        <h3>Prêmio AB2L Infinite de Inovação Jurídica 2024</h3>
                         <span class="award-subtitle">AB2L 2024</span>
                         <p>A MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024.
 
@@ -88,17 +88,28 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                     </div>
                 </div>
 
+                <div id="award-bb4" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/ab2l_(6).png" alt="bb">
+                    </div>
+                    <div class="award-details">
+                        <h3>The Law Awards - 2024</h3>
+                        <span class="award-subtitle">Latin American Quality Institute</span>
+                        <p>O prêmio The Law Awards 2024 do Latin American Quality Institute (LAQI) foi realizado em Manaus, Brasil, em maio de 2024, e premiou escritórios de advocacia pela excelência em gestão, práticas empresariais e responsabilidade social. A cerimônia foi parte da LAQI Impact Summit – Brazil 2024, um evento que reúne líderes empresariais para discutir modelos de negócio e inovação. </p>
+                    </div>
+                </div>
+
             </div> <div class="awards-list">
                 <a href="#" class="award-list-item active-award" data-target="award-bb">
                     <h4>Melhor Performance Geral</h4>
                     <span>1º Lugar - Banco do Brasil</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-gptw">
-                    <h4>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2025</h4>
+                    <h4>Prêmio AB2L Infinite de Inovação Jurídica 2025</h4>
                     <span>Tecnologia</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-fenalaw">
-                    <h4>Prêmio AB2L INFINITE DE INOVAÇÃO JURÍDICA 2024</h4>
+                    <h4>Prêmio AB2L Infinite de Inovação Jurídica 2024</h4>
                     <span>Tecnologia</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-ATIVOS">
@@ -108,6 +119,10 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                 <a href="#" class="award-list-item" data-target="award-bb3">
                     <h4>Melhor Performance Geral - 2024</h4>
                     <span>3º Lugar - Banco do Brasil</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-bb4">
+                    <h4>The Law Awards - 2024</h4>
+                    <span>Latin American Quality Institute</span>
                 </a>
             </div>
 
@@ -126,8 +141,8 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                     <div class="seals-grid">
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/analiseadvocacia.png" alt="Análise Advocacia"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/greatplace2025.png" alt="Análise Advocacia"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/SELO__SELO_REG_ADVOGADO.png" alt="Análise Regional Advogado"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/SELO__SELO_REG_ESCRITORIO.png" alt="Análise Regional Escritório"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo_adv.png" alt="Análise Regional Advogado"></a></div>
+                        <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo_esc.png" alt="Análise Regional Escritório"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo-certificado-escritorio-vertical.png" alt="AB2L Infinite"></a></div>
                         <div class="seal-item"><a href="#" target="_blank"><img src="assets/img/premios/selo6.png" alt="D&I"></a></div>
                     </div>
@@ -145,12 +160,12 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                                     <p>A MDR Advocacia conquistou, pelo segundo ano consecutivo, o selo de Great Place to Work (GPTW)! Esse selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais, atestando a qualidade da gestão de pessoas e a cultura organizacional que promovemos. Ser reconhecidos como GPTW significa que nossos colaboradores avaliam positivamente o dia a dia da MDR.</p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="assets/img/premios/SELO__SELO_REG_ADVOGADO.png" class="description-logo" alt="Análise Regional Advogado">
+                                    <img src="assets/img/premios/selo_adv.png" class="description-logo" alt="Análise Regional Advogado">
                                     <h3>Análise ADVOCACIA REGIONAL 2025</h3>
                                     <p>Nosso sócio Marcos Delli conquistou o 3º lugar entre os advogados mais admirados da mesma região.</p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="assets/img/premios/SELO__SELO_REG_ESCRITORIO.png" class="description-logo" alt="Análise Regional Escritório">
+                                    <img src="assets/img/premios/selo_esc.png" class="description-logo" alt="Análise Regional Escritório">
                                     <h3>Análise ADVOCACIA REGIONAL 2025</h3>
                                     <p>Mais uma vez, nosso escritório é reconhecido por seu trabalho de excelência! Desta vez, compartilhamos que fomos destaque na @analise.editorial como o 4º escritório mais admirado do Nordeste.</p>
                                 </div>
