@@ -2696,18 +2696,6 @@ button:hover {
     overflow: hidden; /* Garante que o vídeo não ultrapasse as bordas */
 }
 
-.hero-fullscreen video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1; /* Deixa o vídeo no fundo */
-}
-
 /* Camada escura sobre o vídeo para facilitar a leitura do texto */
 .hero-fullscreen::before {
     content: "";
@@ -2795,9 +2783,20 @@ button:hover {
 .modal-social-links a { color: #333; font-size: 1.5rem; margin-right: 1rem; transition: color 0.3s ease; }
 .modal-social-links a:hover { color: #c5b358; }
 @media (max-width: 767px) {
-    .modal-profile-title { font-size: 1.5rem; }
+    .modal-profile-title {
+        font-size: 1.5rem;
+        white-space: normal; 
+    }
     .modal-body { padding: 1.5rem; }
     .modal-profile-image { max-width: 150px; }
+    .modal-profile-bio {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        -webkit-hyphens: auto;
+        -webkit-text-size-adjust: 50%;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
 }
 /*recuperacaodecredito.css*/
 
@@ -2815,14 +2814,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-.video-background {
-    position: absolute; top: 50%; left: 50%;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+
 }
 .video-overlay {
     position: absolute; top: 0; left: 0;
@@ -2869,7 +2861,6 @@ button:hover {
 
     /* Estilos do Cabeçalho de Vídeo */
     .video-background-container { position: relative; overflow: hidden; padding: 150px 15px; color: white; text-align: center; }
-    .video-background { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); opacity: 1; z-index: 1; }
     .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2; }
     .video-foreground-content { position: relative; z-index: 3; }
     .video-foreground-content h2 { font-size: 42px; font-weight: bold; margin: 0; color: #FFFFFF; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
@@ -3086,14 +3077,6 @@ button:hover {
     justify-content: center;
     text-align: center;
 }
-.video-background {
-    position: absolute; top: 50%; left: 50%;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
 .video-overlay {
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
@@ -3150,15 +3133,7 @@ button:hover {
       padding: 120px 15px; /* Padding um pouco menor para um cabeçalho de página interna */
       color: white;
       text-align: center;
-    }
-    .video-background {
-      position: absolute;
-      top: 50%; left: 50%;
-      min-width: 100%; min-height: 100%;
-      width: auto; height: auto;
-      object-fit: cover;
-      transform: translate(-50%, -50%);
-      z-index: 1;
+
     }
     .video-overlay {
         position: absolute;
@@ -3342,17 +3317,6 @@ button:hover {
     text-align: center;
 }
 
-/* Vídeo de Fundo */
-.video-background {
-    position: absolute;
-    top: 50%; left: 50%;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
 /* Camada Escura (Overlay) */
 .video-overlay {
     position: absolute;
@@ -3451,17 +3415,6 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-/* Vídeo de Fundo */
-.video-background {
-    position: absolute;
-    top: 50%; left: 50%;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 /* Camada Escura (Overlay) */
@@ -3680,7 +3633,7 @@ button:hover {
 .modal { 
     display: none; 
     position: fixed; 
-    z-index: 1060; 
+    z-index: 1070; 
     left: 0; top: 0; 
     width: 100%; height: 100%; 
     overflow: auto; 
@@ -3824,13 +3777,13 @@ button:hover {
 /* --- RESPONSIVIDADE PARA ESTA SEÇÃO --- */
 @media (max-width: 992px) {
     .featured-awards-layout {
-        grid-template-columns: 1fr; /* Vira uma coluna só no mobile */
+        grid-template-columns: 1fr; 
     }
     .award-display-area .featured-award-item {
-        position: static; /* Remove o efeito "grudento" no mobile */
+        position: static; 
     }
 }
 /* Correção para Sobreposição do Modal */
 .modal {
-  z-index: 1060 !important;
+  z-index: 1070 !important;
 }
