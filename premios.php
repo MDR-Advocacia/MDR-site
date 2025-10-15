@@ -273,6 +273,27 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
 
                 <div class="swiper-slide">
                     <div class="certificate-item">
+                        <img src="assets/img/premios/certificado14.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Ranking da Frente Estratégica de Acordos Livelo 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado16.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Ranking da Frente Estratégica de Acordos Pontos Livelo Desafio Junino 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado15.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Ranking da Frente Estratégica de Acordos Ourocap Desafio Junino 2025</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
                         <img src="assets/img/premios/certificado1.png" alt="Certificado 1" class="open-modal">
                         <p class="certificate-description">1° Lugar no Desafio Ourocap 2025</p>
                     </div>
