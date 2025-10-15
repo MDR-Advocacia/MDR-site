@@ -274,7 +274,7 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                 <div class="swiper-slide">
                     <div class="certificate-item">
                         <img src="assets/img/premios/certificado14.png" alt="Certificado 1" class="open-modal">
-                        <p class="certificate-description">1° Lugar no Ranking da Frente Estratégica de Acordos Livelo 2025</p>
+                        <p class="certificate-description">1° Lugar no Ranking da Frente Estratégica de Acordos Livelo Desafio da Pátria 2025</p>
                     </div>
                 </div>
 
@@ -294,8 +294,43 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
 
                 <div class="swiper-slide">
                     <div class="certificate-item">
+                        <img src="assets/img/premios/certificado9.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">Certificado INTUIX - Livre de Violência contra Mulher</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado10.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">Certificado INTUIX - Saúde e Segurança Ocupacional</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado11.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">Certificado INTUIX ESG - Environmental, Social and Governance</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado12.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">Certificado INTUIX - Segurança Cibernética</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="assets/img/premios/certificado13.png" alt="Certificado 1" class="open-modal">
+                        <p class="certificate-description">Certificado INTUIX - LGPD Lei Geral de Proteção de Dados</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
                         <img src="assets/img/premios/certificado1.png" alt="Certificado 1" class="open-modal">
-                        <p class="certificate-description">1° Lugar no Desafio Ourocap 2025</p>
+                        <p class="certificate-description">1° Lugar no Desafio Ourocap no 1° Semestre de 2025</p>
                     </div>
                 </div>
 
@@ -309,7 +344,7 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                 <div class="swiper-slide">
                     <div class="certificate-item">
                         <img src="assets/img/premios/certificado3.png" alt="Certificado 3" class="open-modal">
-                        <p class="certificate-description">1° Lugar no Desafio Livelo 2025</p>
+                        <p class="certificate-description">1° Lugar no Desafio Livelo no 1° Semestre de 2025</p>
                     </div>
                 </div>
 
