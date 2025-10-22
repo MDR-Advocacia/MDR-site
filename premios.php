@@ -52,9 +52,7 @@
                     <div class="award-details">
                         <h3>Prêmio AB2L Infinite de Inovação Jurídica 2025</h3>
                         <span class="award-subtitle">AB2L 2025</span>
-                        <p>AB2L, associação que reúne mais de 600 integrantes comprometidos em transformar o Direito no Brasil por meio de inovação, educação do mercado e fortalecimento do ecossistema jurídico.
-
-Este ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica!</p>
+                        <p>Neste ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica! A AB2L reúne mais de 600 integrantes comprometidos em transformar o Direito no Brasil por meio da inovação, da educação do mercado e do fortalecimento do ecossistema jurídico.</p>
                     </div>
                 </div>
 
@@ -83,7 +81,7 @@ Este prêmio reflete nosso compromisso contínuo com a inovação e a excelênci
 
 O evento reuniu empresas de cobrança e escritórios de advocacia para debater os resultados do último semestre de 2023 e o primeiro de 2024, além de discutir estratégias para o futuro da Ativos S.A. Securitizadora.
 
-A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos dois semestres.</p>
+A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no primeiro semestre de 2024.</p>
                     </div>
                 </div>
 
@@ -94,7 +92,7 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                     <div class="award-details">
                         <h3>Melhor Performance Geral - 2024</h3>
                         <span class="award-subtitle">3º Lugar - Banco do Brasil</span>
-                        <p>Conquistamos o Terceiro lugar em performance geral , um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
+                        <p>Conquistamos o terceiro lugar em performance geral,um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
                     </div>
                 </div>
 
@@ -379,7 +377,7 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho nos 
                 <div class="swiper-slide">
                     <div class="certificate-item">
                         <img src="assets/img/premios/certificado8.png" alt="Certificado 8" class="open-modal">
-                        <p class="certificate-description">1° Lugar no Recupera terc 2025</p>
+                        <p class="certificate-description">1° Lugar no Recupera Terc 2025</p>
                     </div>
                 </div>
 

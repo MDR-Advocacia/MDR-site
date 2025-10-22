@@ -25,8 +25,10 @@
   <div class="container">
     <div data-aos="fade-up" class="text-center">
       <h2 class="section-title">Nosso Comitê de Diversidade e Inclusão</h2>
-      <p class="section-subtitle" style="max-width: 800px; margin: 0 auto 3rem auto;">
-        Acreditamos que a diversidade de ideias, origens e experiências é o motor para a inovação. Nossos comitês são grupos de afinidade dedicados a promover um ambiente de trabalho cada vez mais justo, inclusivo e plural.
+      <p>A diversidade no MDR não é um diferencial, é parte do que nos constitui. Para fortalecer esse compromisso, foi criado o MDR Diversidade em Movimento, um Comitê de Diversidade que busca transformar o ambiente de trabalho e a forma de enxergar o outro, promovendo respeito, acolhimento e ação concreta. </p>
+        <p>O comitê nasceu da escuta de demandas reais e organiza diferentes grupos de trabalho voltados a pautas como gênero, raça, LGBTQIAPN+, pessoas com deficiência e diversidade religiosa.
+
+Cada grupo desenvolve ações específicas para promover inclusão, representatividade e equidade, garantindo que todos possam existir com orgulho, ocupar espaços e participar plenamente. Nesse sentido, objetivo do MDR Diversidade em Movimento é fortalecer a cultura do escritório e gerar impacto coletivo, mostrando que diversidade transforma, inclusão fortalece e respeito sustenta.
       </p>
 
       <div class="watch-video-container">

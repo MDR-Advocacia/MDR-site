@@ -41,6 +41,7 @@
                     <h4>Contate-nos</h4>
                     <p><strong>Matriz:</strong> R. Des. José Gomes da Costa, 1975, Capim Macio, Natal</p>
                     <p><strong>Filial:</strong> Av. Campos Sales, 901, Petrópolis, Natal Sala 1707</p>
+                    <p><strong>CNPJ:</strong> 21.949.880/0001-17 </p>
                     <p><strong>Telefone:</strong> 84 2139-9916</p>
                     <p><strong>Whatsapp:</strong> 84 99996-0201</p>
                     <p><strong>Email:</strong> contato@mdradvocacia.com</p>
