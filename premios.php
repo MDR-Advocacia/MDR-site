@@ -39,9 +39,20 @@
                         <img src="assets/img/premios/primeirobb.png" alt="Melhor performance Banco do Brasil">
                     </div>
                     <div class="award-details">
-                        <h3>Melhor Performance Geral</h3>
-                        <span class="award-subtitle">1º Lugar - Banco do Brasil</span>
+                        <h3>Melhor Performance Geral - 1° Semestre</h3>
+                        <span class="award-subtitle">1º Lugar - Banco do Brasil - 1° Semestre</span>
                         <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
+                    </div>
+                </div>
+
+                <div id="award-bb2" class="featured-award-item"> 
+                    <div class="award-image">
+                        <img src="assets/img/premios/2semestrebb.png" alt="Melhor performance Banco do Brasil 2 semestre">
+                    </div>
+                    <div class="award-details">
+                        <h3>Melhor Performance Geral - 2° Semestre</h3>
+                        <span class="award-subtitle">1º Lugar - Banco do Brasil - 2° Semestre</span>
+                        <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos no 2° Semestre, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
                     </div>
                 </div>
 
@@ -63,10 +74,7 @@
                     <div class="award-details">
                         <h3>Prêmio AB2L Infinite de Inovação Jurídica 2024</h3>
                         <span class="award-subtitle">AB2L 2024</span>
-                        <p>A MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024.
-
-Este prêmio reflete nosso compromisso contínuo com a inovação e a excelência na prática jurídica.
-</p>
+                        <p>A MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024. Este prêmio reflete nosso compromisso contínuo com a inovação e a excelência na prática jurídica.</p>
                     </div>
                 </div>
 
@@ -77,11 +85,7 @@ Este prêmio reflete nosso compromisso contínuo com a inovação e a excelênci
                     <div class="award-details">
                         <h3>Prêmio 1° Semestre de 2024 - Lote 4</h3>
                         <span class="award-subtitle">ATIVOS - MDR ADVOCACIA</span>
-                        <p>A MDR Advocacia marcou presença no Ativos Connect, em Brasília.
-
-O evento reuniu empresas de cobrança e escritórios de advocacia para debater os resultados do último semestre de 2023 e o primeiro de 2024, além de discutir estratégias para o futuro da Ativos S.A. Securitizadora.
-
-A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no primeiro semestre de 2024.</p>
+                        <p>A MDR Advocacia marcou presença no Ativos Connect, em Brasília. O evento reuniu empresas de cobrança e escritórios de advocacia para debater os resultados do último semestre de 2023 e o primeiro de 2024, além de discutir estratégias para o futuro da Ativos S.A. Securitizadora. A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no primeiro semestre de 2024.</p>
                     </div>
                 </div>
 
@@ -109,7 +113,11 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no p
 
             </div> <div class="awards-list">
                 <a href="#" class="award-list-item active-award" data-target="award-bb">
-                    <h4>Melhor Performance Geral</h4>
+                    <h4>Melhor Performance Geral - 1° Semestre</h4>
+                    <span>1º Lugar - Banco do Brasil</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-bb2">
+                    <h4>Melhor Performance Geral - 2° Semestre</h4>
                     <span>1º Lugar - Banco do Brasil</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-gptw">
@@ -128,13 +136,14 @@ A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no p
                     <h4>Melhor Performance Geral - 2024</h4>
                     <span>3º Lugar - Banco do Brasil</span>
                 </a>
-                <a href="#" class="award-list-item" data-target="award-bb4">
+                 <a href="#" class="award-list-item" data-target="award-bb4">
                     <h4>The Law Awards - 2024</h4>
                     <span>Latin American Quality Institute</span>
                 </a>
             </div>
 
-        </div> </div>
+        </div>
+    </div>
 </section>
 
     <section class="recognition-section">
