@@ -177,4 +177,99 @@
       });
   });
 
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // --- LÓGICA PARA OS CARROSSÉIS DA SEÇÃO DE RECONHECIMENTOS ---
+    function initCarousel(yearGroupId) {
+        const yearGroup = document.getElementById(yearGroupId);
+        if (!yearGroup) return;
+
+        const descriptionSwiperEl = yearGroup.querySelector('.swiper-description');
+        const sealLinks = yearGroup.querySelectorAll('.seals-grid .seal-item a');
+
+        if (!descriptionSwiperEl || sealLinks.length === 0) return;
+
+        const swiper = new Swiper(descriptionSwiperEl, {
+            loop: true,
+            autoplay: { delay: 15000, disableOnInteraction: false },
+            observer: true,
+            observeParents: true,
+            autoHeight: true, // ajustar altura
+        });
+
+        sealLinks.forEach((sealLink, index) => {
+            sealLink.addEventListener('mouseenter', () => {
+                swiper.slideToLoop(index);
+            });
+            sealLink.addEventListener('click', (e) => {
+                if (sealLink.getAttribute('href') === '#') {
+                    e.preventDefault(); 
+                }
+                swiper.slideToLoop(index);
+            });
+        });
+
+        swiper.on('slideChange', function() {
+            sealLinks.forEach(link => link.classList.remove('thumb-active'));
+            if (sealLinks[swiper.realIndex]) {
+                sealLinks[swiper.realIndex].classList.add('thumb-active');
+            }
+        });
+
+        if (sealLinks.length > 0) {
+            sealLinks[0].classList.add('thumb-active');
+        }
+    }
+
+    initCarousel('year-2025');
+    initCarousel('year-2024');
+
+    // --- LÓGICA PARA O CARROSSEL DE CERTIFICADOS ---
+    new Swiper('.certificates-swiper', {
+        loop: true,
+        speed: 500,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            576: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 30 },
+            1200: { slidesPerView: 4, spaceBetween: 30 }
+        }
+    });
+
+    // --- LÓGICA PARA O MODAL (LIGHTBOX) DOS CERTIFICADOS ---
+    const modal = document.getElementById("certificateModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.querySelector(".close-modal");
+    const certificateImages = document.querySelectorAll(".open-modal");
+
+    certificateImages.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+        }
+    });
+
+    function hideModal() {
+        modal.style.display = "none";
+    }
+
+    closeModal.onclick = hideModal;
+
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    }
+});
+
 })();

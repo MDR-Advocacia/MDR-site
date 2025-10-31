@@ -30,23 +30,23 @@
     <div class="team-grid">
 
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/alexandre.png" alt="Alexandre Victor da Silva Lima">
+            <img src="https://i.imgur.com/g0CAmcv.png" alt="Alexandre Victor da Silva Lima">
             <h5>Alexandre Victor da Silva Lima</h5>
             <p>Assistente Jurídico</p>
         </div>
 
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/alexia.png" alt="Aléxia Marinne Maia Fernandes">
+            <img src="https://i.imgur.com/c83rxDc.png" alt="Aléxia Marinne Maia Fernandes">
             <h5>Aléxia Marinne Maia Fernandes</h5>
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/allan.png" alt="Állan Daniel Torres Soares">
+            <img src="https://i.imgur.com/JTSA0SV.png" alt="Állan Daniel Torres Soares">
             <h5>Állan Daniel Torres Soares</h5>
             <p>Assistente Jurídico</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/andressa.jpg" alt="ANDRIELLY DUARTE DE FARIAS">
+            <img src="https://i.imgur.com/TK9ZHYz.jpeg" alt="ANDRIELLY DUARTE DE FARIAS">
             <h5>Andressa Baranoski Mello</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.722</p>
@@ -58,162 +58,162 @@
             <p class="sector">OAB/RN 22.864</p>
         </div> -->
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/arlisson.png" alt="Arlisson Pereira da Silva">
+            <img src="https://i.imgur.com/shfL7BL.png" alt="Arlisson Pereira da Silva">
             <h5>Arlisson Pereira da Silva</h5>
             <p>Advogado</p>
             <p class="sector">OAB/RN 21.965</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/brigida.png" alt="Brígida Brenda Faustino de Oliveira">
+            <img src="https://i.imgur.com/hN2md5C.png" alt="Brígida Brenda Faustino de Oliveira">
             <h5>Brígida Brenda Faustino de Oliveira</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.086</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/debora.png" alt="Débora Regina Azevedo de Oliveira">
+            <img src="https://i.imgur.com/JbedTVf.png" alt="Débora Regina Azevedo de Oliveira">
             <h5>Débora Regina Azevedo de Oliveira</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/negociador/eliezer.png" alt="Eliezer Nascimento de Souza">
+            <img src="https://i.imgur.com/iP8j7HK.png" alt="Eliezer Nascimento de Souza">
             <h5>Eliezer Nascimento de Souza</h5>
             <p>Negociador</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/felipa.jpg" alt="Felipa Galvão da Mota Liz Saraiva">
+            <img src="https://i.imgur.com/WZHBXQu.jpeg" alt="Felipa Galvão da Mota Liz Saraiva">
             <h5>Felipa Galvão da Mota Liz Saraiva</h5>
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/gustavo.png" alt="Gustavo Silva Abdias">
+            <img src="https://i.imgur.com/eE0zuzG.png" alt="Gustavo Silva Abdias">
             <h5>Gustavo Silva Abdias</h5>
             <p>Assistente Jurídico</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/joseleonardo.png" alt="José Leonardo de Araújo Jales">
+            <img src="https://i.imgur.com/7B4BSVf.png" alt="José Leonardo de Araújo Jales">
             <h5>José Leonardo de Araújo Jales</h5>
             <p>Advogado</p>
             <p class="sector">OAB/RN 21.259</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/leticia.png" alt="Letícia Fortunato de Sousa">
+            <img src="https://i.imgur.com/miKxQp7.png" alt="Letícia Fortunato de Sousa">
             <h5>Letícia Fortunato de Sousa</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/luana.png" alt="Luana de Araujo">
+            <img src="https://i.imgur.com/4Nrzzcx.png" alt="Luana de Araujo">
             <h5>Luana de Araújo Alvez</h5>
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/luana.png" alt="Luana Silva">
+            <img src="https://i.imgur.com/4tgaopV.png" alt="Luana Silva">
             <h5>Luana dos Santos Silva</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.797</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/luizeduardo.png" alt="Luiz Eduardo Oliveira da Silva">
+            <img src="https://i.imgur.com/EYdRZ7C.png" alt="Luiz Eduardo Oliveira da Silva">
             <h5>Luiz Eduardo Oliveira da Silva</h5>
             <p>Estagiário</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/marcelli.png" alt="Marcelli Gomes do Nascimento">
+            <img src="https://i.imgur.com/awdPXCL.png" alt="Marcelli Gomes do Nascimento">
             <h5>Marcelli Gomes do Nascimento</h5>
             <p>Assistente Jurídica</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/marcosvinicius.png" alt="Marcos Vinícius Cruz Bezerra">
+            <img src="https://i.imgur.com/dIYwBJu.png" alt="Marcos Vinícius Cruz Bezerra">
             <h5>Marcos Vinícius Cruz Bezerra</h5>
             <p>Advogado</p>
             <p class="sector">OAB/RN 23.235</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/marcus.png" alt="Marcus vinícius Fernandes Gomes">
+            <img src="https://i.imgur.com/6FbyWF3.png" alt="Marcus vinícius Fernandes Gomes">
             <h5>Marcus Vinícius Fernandes Gomes</h5>
             <p>Assistente Jurídico</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/mariaeduarda.png" alt="Maria Eduarda Guedes Cavalcante">
+            <img src="https://i.imgur.com/FhRAiTo.png" alt="Maria Eduarda Guedes Cavalcante">
             <h5>Maria Eduarda Guedes Cavalcante</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/mariagabrielly.png" alt="Maria Gabrielly Silva Rodrigues Azevedo">
+            <img src="https://i.imgur.com/j58cJo1.png" alt="Maria Gabrielly Silva Rodrigues Azevedo">
             <h5>Maria Gabrielly S. R. Azevedo</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 21.601</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/marialaiza.png" alt="Maria Laiza Barbosa de Farias">
+            <img src="https://i.imgur.com/OuO7LmG.png" alt="Maria Laiza Barbosa de Farias">
             <h5>Maria Laiza Barbosa de Farias</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.986</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/mariavictoria.png" alt="Maria Victoria Pereira Dantas">
+            <img src="https://i.imgur.com/xn4vDaF.png" alt="Maria Victoria Pereira Dantas">
             <h5>Maria Victoria Pereira Dantas</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 23.467</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/mariliagabriela.png" alt="Marília Gabriela Andrade Freitas">
+            <img src="https://i.imgur.com/Q6NiZpf.png" alt="Marília Gabriela Andrade Freitas">
             <h5>Marília Gabriela Andrade Freitas</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/mateusbrito.png" alt="Mateus Rodrigues de Brito">
+            <img src="https://i.imgur.com/8TiuCrS.png" alt="Mateus Rodrigues de Brito">
             <h5>Mateus Rodrigues de Brito</h5>
             <p>Estagiário</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/nayara.png" alt="Nayara de Souza Xavier">
+            <img src="https://i.imgur.com/P7vFUWU.png" alt="Nayara de Souza Xavier">
             <h5>Nayara de Souza Xavier</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 18.481</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/pauloreis.png" alt="Paulo Fernando Cisneiros Da Costa Reis Neto">
+            <img src="https://i.imgur.com/xvq1kKZ.png" alt="Paulo Fernando Cisneiros Da Costa Reis Neto">
             <h5>Paulo Fernando C. C. Reis Neto</h5>
             <p>Estagiário</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/pauloalmeida.png" alt="PAULO GUILHERME MORAIS DE ALMEIDA">
+            <img src="https://i.imgur.com/ti6UeBt.png" alt="PAULO GUILHERME MORAIS DE ALMEIDA">
             <h5>Paulo Guilherme Morais De Almeida</h5>
             <p>Estagiário</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/assistentes j/rafael.png" alt="Rafael Sampaio Bezerra">
+            <img src="https://i.imgur.com/3uISLh6.png" alt="Rafael Sampaio Bezerra">
             <h5>Rafael Sampaio Bezerra</h5>
             <p>Assistente Jurídico</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/suemy.png" alt="Suemy Medeiros Ferreira">
+            <img src="https://i.imgur.com/ua5grdF.png" alt="Suemy Medeiros Ferreira">
             <h5>Suemy Medeiros Ferreira</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/estagiários(as)/suenia.png" alt="SUENIA BEATRIZ LIMA DE CARVALHO DA SILVA">
+            <img src="https://i.imgur.com/E4jdXe9.png" alt="SUENIA BEATRIZ LIMA DE CARVALHO DA SILVA">
             <h5>Suenia Beatriz L. C. Da Silva</h5>
             <p>Estagiária</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/tathianna.png" alt="Tathianna Ribeiro da Silva Lemos">
+            <img src="https://i.imgur.com/5HHZz7g.png" alt="Tathianna Ribeiro da Silva Lemos">
             <h5>Tathianna Ribeiro da Silva Lemos</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 20.475</p>
         </div>
         <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/thaise.png" alt="Thaise de Bessa da Silva">
+            <img src="https://i.imgur.com/WV9v1BP.png" alt="Thaise de Bessa da Silva">
             <h5>Thaise de Bessa da Silva</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 21.981</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
-            <img src="assets/img/colaboradores/advogados/vitoria.png" alt="Vitória Machado Domingo">
+        <!-- <div class="collaborator-card animar-ao-rolar">
+            <img src="https://i.imgur.com/0jDMB4S.png" alt="Vitória Machado Domingo">
             <h5>Vitória Machado Domingo</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 22.021</p>
-        </div>
+        </div> -->
 
     </div>
 </section>
