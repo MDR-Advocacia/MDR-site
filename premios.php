@@ -56,6 +56,18 @@
                     </div>
                 </div>
 
+                <div id="award-fenalaw2025" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="assets/img/premios/fenalaw2025.png" alt="FENALAW!!! ">
+                    </div>
+                    <div class="award-details">
+                        <h3>1° Lugar na Categoria Gestão</h3>
+                        <span class="award-subtitle">Fomos Ouro Na FENALAW - 2025</span>
+                        <p>Conquistamos o primeiro lugar  - Categoria Gestão
+Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
+                    </div>
+                </div>
+
                 <div id="award-gptw" class="featured-award-item">
                     <div class="award-image">
                         <img src="assets/img/premios/ab2l_(5).png" alt="AB2L Infinite 2025">
@@ -119,6 +131,10 @@
                 <a href="#" class="award-list-item" data-target="award-bb2">
                     <h4>Melhor Performance Geral - 2° Semestre</h4>
                     <span>1º Lugar - Banco do Brasil</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-fenalaw2025">
+                    <h4>1° Lugar na Categoria Gestão</h4>
+                    <span>Ouro Na FENALAW - 2025</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-gptw">
                     <h4>Prêmio AB2L Infinite de Inovação Jurídica 2025</h4>
