@@ -3527,6 +3527,42 @@ button:hover {
 }
 
 /* --- Seção: Reconhecimentos e Associações --- */
+/* --- ESTILOS PARA O MINI-CARROSSEL (NESTED SWIPER) --- */
+/* --- ESTILOS PARA OS SLIDES AGRUPADOS --- */
+.award-group-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+.award-sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 20px;
+    width: 100%;
+}
+.award-sub-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.award-sub-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #b29d55; /* Cor dourada */
+    margin-bottom: 10px;
+}
+.award-sub-item p {
+    font-size: 0.9rem;
+}
+
+/* Responsividade para o grid interno */
+@media (max-width: 576px) {
+    .award-sub-grid {
+        grid-template-columns: 1fr; /* Empilha os prêmios Prata/Bronze no celular */
+    }
+}
 .recognition-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;

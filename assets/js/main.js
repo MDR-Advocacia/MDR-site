@@ -7,7 +7,7 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+    if (!selectHeader || (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top'))) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
@@ -19,12 +19,14 @@
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+  if (mobileNavToggleBtn) {
+    function mobileNavToogle() {
+      document.querySelector('body').classList.toggle('mobile-nav-active');
+      mobileNavToggleBtn.classList.toggle('bi-list');
+      mobileNavToggleBtn.classList.toggle('bi-x');
+    }
+    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -69,16 +71,17 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+    window.addEventListener('load', toggleScrollTop);
+    document.addEventListener('scroll', toggleScrollTop);
+  }
 
   /**
    * Animation on scroll function and init
@@ -153,79 +156,83 @@
   });
 
   /**
-   * Script para a seção de Prêmios
+   * Script para a seção de Prêmios (Página Prêmios)
    */
   const awardLinks = document.querySelectorAll('.award-list-item');
   const awardItems = document.querySelectorAll('.featured-award-item');
 
-  awardLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-          e.preventDefault();
-
-          const targetId = this.dataset.target; // Pega o ID do alvo (ex: "award-bb")
-
-          // 1. Esconde todos os prêmios e desativa todos os links
-          awardItems.forEach(item => item.classList.remove('visible-award'));
-          awardLinks.forEach(l => l.classList.remove('active-award'));
-
-          // 2. Mostra o prêmio certo e ativa o link clicado
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            targetElement.classList.add('visible-award');
-          }
-          this.classList.add('active-award');
-      });
-  });
-
-document.addEventListener('DOMContentLoaded', function () {
-    
-    // --- LÓGICA PARA OS CARROSSÉIS DA SEÇÃO DE RECONHECIMENTOS ---
-    function initCarousel(yearGroupId) {
-        const yearGroup = document.getElementById(yearGroupId);
-        if (!yearGroup) return;
-
-        const descriptionSwiperEl = yearGroup.querySelector('.swiper-description');
-        const sealLinks = yearGroup.querySelectorAll('.seals-grid .seal-item a');
-
-        if (!descriptionSwiperEl || sealLinks.length === 0) return;
-
-        const swiper = new Swiper(descriptionSwiperEl, {
-            loop: true,
-            autoplay: { delay: 15000, disableOnInteraction: false },
-            observer: true,
-            observeParents: true,
-            autoHeight: true, // ajustar altura
-        });
-
-        sealLinks.forEach((sealLink, index) => {
-            sealLink.addEventListener('mouseenter', () => {
-                swiper.slideToLoop(index);
-            });
-            sealLink.addEventListener('click', (e) => {
-                if (sealLink.getAttribute('href') === '#') {
-                    e.preventDefault(); 
-                }
-                swiper.slideToLoop(index);
-            });
-        });
-
-        swiper.on('slideChange', function() {
-            sealLinks.forEach(link => link.classList.remove('thumb-active'));
-            if (sealLinks[swiper.realIndex]) {
-                sealLinks[swiper.realIndex].classList.add('thumb-active');
+  if (awardLinks.length > 0 && awardItems.length > 0) {
+    awardLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.dataset.target;
+            awardItems.forEach(item => item.classList.remove('visible-award'));
+            awardLinks.forEach(l => l.classList.remove('active-award'));
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.classList.add('visible-award');
             }
+            this.classList.add('active-award');
         });
+    });
+  }
 
-        if (sealLinks.length > 0) {
-            sealLinks[0].classList.add('thumb-active');
-        }
-    }
+  /**
+   * Lógica para a página de Prêmios e Certificados (Carrosséis)
+   */
+  
+  // --- LÓGICA PARA OS CARROSSÉIS DA SEÇÃO DE RECONHECIMENTOS ---
+  function initCarousel(yearGroupId) {
+      const yearGroup = document.getElementById(yearGroupId);
+      if (!yearGroup) return;
 
+      const descriptionSwiperEl = yearGroup.querySelector('.swiper-description');
+      const sealLinks = yearGroup.querySelectorAll('.seals-grid .seal-item a');
+
+      if (!descriptionSwiperEl || sealLinks.length === 0) return;
+
+      const swiper = new Swiper(descriptionSwiperEl, {
+          loop: true,
+          autoplay: { delay: 15000, disableOnInteraction: false },
+          observer: true,
+          observeParents: true,
+          autoHeight: true, // ajustar altura
+      });
+
+      sealLinks.forEach((sealLink, index) => {
+          sealLink.addEventListener('mouseenter', () => {
+              swiper.slideToLoop(index);
+          });
+          sealLink.addEventListener('click', (e) => {
+              if (sealLink.getAttribute('href') === '#') {
+                  e.preventDefault(); 
+              }
+              swiper.slideToLoop(index);
+          });
+      });
+
+      swiper.on('slideChange', function() {
+          sealLinks.forEach(link => link.classList.remove('thumb-active'));
+          if (sealLinks[swiper.realIndex]) {
+              sealLinks[swiper.realIndex].classList.add('thumb-active');
+          }
+      });
+
+      if (sealLinks.length > 0) {
+          sealLinks[0].classList.add('thumb-active');
+      }
+  }
+
+  // Verifica se estamos na página de prêmios antes de rodar
+  if (document.getElementById('year-2025')) {
     initCarousel('year-2025');
     initCarousel('year-2024');
+  }
 
-    // --- LÓGICA PARA O CARROSSEL DE CERTIFICADOS ---
-    new Swiper('.certificates-swiper', {
+  // --- LÓGICA PARA O CARROSSEL DE CERTIFICADOS ---
+  const certificatesSwiperEl = document.querySelector('.certificates-swiper');
+  if (certificatesSwiperEl) {
+    new Swiper(certificatesSwiperEl, {
         loop: true,
         speed: 500,
         autoplay: {
@@ -245,9 +252,11 @@ document.addEventListener('DOMContentLoaded', function () {
             1200: { slidesPerView: 4, spaceBetween: 30 }
         }
     });
+  }
 
-    // --- LÓGICA PARA O MODAL (LIGHTBOX) DOS CERTIFICADOS ---
-    const modal = document.getElementById("certificateModal");
+  // --- LÓGICA PARA O MODAL (LIGHTBOX) DOS CERTIFICADOS ---
+  const modal = document.getElementById("certificateModal");
+  if (modal) {
     const modalImg = document.getElementById("modalImage");
     const closeModal = document.querySelector(".close-modal");
     const certificateImages = document.querySelectorAll(".open-modal");
@@ -270,6 +279,6 @@ document.addEventListener('DOMContentLoaded', function () {
             hideModal();
         }
     }
-});
+  }
 
 })();

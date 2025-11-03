@@ -58,7 +58,7 @@
 
                 <div id="award-fenalaw2025" class="featured-award-item">
                     <div class="award-image">
-                        <img src="https://i.imgur.com/5rZowe6.png" alt="FENALAW!!! ">
+                        <img src="https://i.imgur.com/QCndqTP.jpeg" alt="FENALAW!!! ">
                     </div>
                     <div class="award-details">
                         <h3>1° Lugar na Categoria Gestão</h3>
@@ -162,61 +162,123 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
     </div>
 </section>
 
-    <section class="recognition-section">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Reconhecimentos e Associações</h2>
-            </div>
-            
-            <div id="year-2025" class="year-group latest" data-aos="fade-up">
-                <h2>2025</h2>
-                <div class="recognition-layout">
-                    <div class="seals-grid">
-                        <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/yuoonD9.png" alt="Análise Advocacia"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/IgMd3ey.png" alt="Análise Advocacia"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/TQOEOZ8.png" alt="Análise Regional Advogado"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/vnjufMa.png" alt="Análise Regional Escritório"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/IjhFary.png" alt="AB2L Infinite"></a></div>
-                        <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/QPwVPgc.png" alt="D&I"></a></div>
-                    </div>
-                    <div class="description-carousel">
-                        <div class="swiper swiper-description">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="https://i.imgur.com/yuoonD9.png" class="description-logo" alt="Análise Advocacia">
-                                    <h3>Análise ADVOCACIA 2025</h3>
-                                    <p>O MDR Advocacia foi reconhecido como um dos escritórios mais admirados do Rio Grande do Norte na 19ª edição do anuário @analise.editorial Advocacia 2025. Além disso, nosso sócio Marcos Délli Ribeiro Rodrigues foi destacado como um dos advogados mais admirados do estado e está entre os mais renomados do Brasil no setor bancário. A premiação, que reúne 1.150 escritórios e 2.814 advogados de todo o país, reforça o impacto crescente dos escritórios de advocacia na economia brasileira e sua relevância no cenário jurídico global. Esse reconhecimento é fruto do trabalho dedicado de toda a nossa equipe, que busca sempre a excelência no atendimento aos nossos clientes.</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://i.imgur.com/IgMd3ey.png" class="description-logo" alt="Análise Regional Advogado">
-                                    <h3>Great Place To Work 2025</h3>
-                                    <p>A MDR Advocacia conquistou, pelo segundo ano consecutivo, o selo de Great Place to Work (GPTW)! Esse selo é uma certificação global que reconhece empresas como ambientes de trabalho excepcionais, atestando a qualidade da gestão de pessoas e a cultura organizacional que promovemos. Ser reconhecidos como GPTW significa que nossos colaboradores avaliam positivamente o dia a dia da MDR.</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://i.imgur.com/TQOEOZ8.png" class="description-logo" alt="Análise Regional Advogado">
-                                    <h3>Análise ADVOCACIA REGIONAL 2025</h3>
-                                    <p>Nosso sócio Marcos Delli conquistou o 3º lugar entre os advogados mais admirados da mesma região.</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://i.imgur.com/vnjufMa.png" class="description-logo" alt="Análise Regional Escritório">
-                                    <h3>Análise ADVOCACIA REGIONAL 2025</h3>
-                                    <p>Mais uma vez, nosso escritório é reconhecido por seu trabalho de excelência! Desta vez, compartilhamos que fomos destaque na @analise.editorial como o 4º escritório mais admirado do Nordeste.</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://i.imgur.com/IjhFary.png" class="description-logo" alt="AB2L Infinite">
-                                    <h3>AB2L Infinite De Inovação Jurídica 2025</h3>
-                                    <p>Este ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica! Na ocasião, o sócio Weuder Martins palestrou sobre o tema “Transformação digital jurídica: como a IA está revolucionando as áreas de Legal Ops e Controladoria Jurídica”.</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://i.imgur.com/QPwVPgc.png" class="description-logo" alt="D&I">
-                                    <h3>Análise Diversidade & Inclusão 2025</h3>
-                                    <p>No escritório MDR, acreditamos que a diversidade é fundamental para um futuro mais justo e igualitário. Pensando nisso, a equipe MDR criou o comitê “MDR Diversidade em Movimento”, com o objetivo de promover a inclusão de raça, etnia, gênero e pessoas com deficiência. Nosso compromisso é consolidar um ambiente de trabalho que reflita a diversidade da sociedade e garanta um espaço cada vez mais inclusivo para todos.</p>
+<section class="recognition-section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Reconhecimentos e Associações</h2>
+        </div>
+        
+        <div id="year-2025" class="year-group latest" data-aos="fade-up">
+            <h2>2025</h2>
+            <div class="recognition-layout">
+                
+                <div class="seals-grid">
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/yuoonD9.png" alt="Análise Advocacia"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/IgMd3ey.png" alt="Great Place To Work"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/TQOEOZ8.png" alt="Análise Regional Advogado"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/vnjufMa.png" alt="Análise Regional Escritório"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/IjhFary.png" alt="AB2L Infinite"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/QPwVPgc.png" alt="D&I"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/bmuM2cG.png" alt="fenalaw-ouro"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/2MFfsBz.png" alt="fenalaw-prata"></a></div>
+                    <div class="seal-item"><a href="#" target="_blank"><img src="https://i.imgur.com/TH4Vbz9.png" alt="fenalaw-bronze"></a></div>
+                    
+                </div>
+
+                <div class="description-carousel">
+                    <div class="swiper swiper-description">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/yuoonD9.png" class="description-logo" alt="Análise Advocacia">
+                                <h3>Análise ADVOCACIA 2025</h3>
+                                <p>O MDR Advocacia foi reconhecido como um dos escritórios mais admirados do Rio Grande do Norte na 19ª edição do anuário @analise.editorial Advocacia 2025...</p>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/IgMd3ey.png" class="description-logo" alt="Great Place To Work">
+                                <h3>Great Place To Work 2025</h3>
+                                <p>A MDR Advocacia conquistou, pelo segundo ano consecutivo, o selo de Great Place to Work (GPTW)!...</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/TQOEOZ8.png" class="description-logo" alt="Análise Regional Advogado">
+                                <h3>Análise ADVOCACIA REGIONAL 2025</h3>
+                                <p>Nosso sócio Marcos Delli conquistou o 3º lugar entre os advogados mais admirados da mesma região.</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/vnjufMa.png" class="description-logo" alt="Análise Regional Escritório">
+                                <h3>Análise ADVOCACIA REGIONAL 2025</h3>
+                                <p>Mais uma vez, nosso escritório é reconhecido por seu trabalho de excelência! Fomos destaque como o 4º escritório mais admirado do Nordeste.</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/IjhFary.png" class="description-logo" alt="AB2L Infinite">
+                                <h3>AB2L Infinite De Inovação Jurídica 2025</h3>
+                                <p>Este ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica!...</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/QPwVPgc.png" class="description-logo" alt="D&I">
+                                <h3>Análise Diversidade & Inclusão 2025</h3>
+                                <p>No escritório MDR, acreditamos que a diversidade é fundamental para um futuro mais justo e igualitário...</p>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <img src="https://i.imgur.com/bmuM2cG.png" class="description-logo" alt="fenalaw-ouro">
+                                <h3>Ouro - Categoria Gestão</h3>
+                                <p>Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <h3 class="award-group-title">Fenalaw 2025 - Prêmios Prata</h3>
+                                <div class="award-sub-grid">
+                                    <div class="award-sub-item">
+                                        <img src="https://i.imgur.com/2MFfsBz.png" class="description-logo" alt="fenalaw-prata">
+                                        <h4>Prata - Categoria Gestão</h4>
+                                        <p>Case: Estruturação operacional e gestão de alta performance.</p>
+                                    </div>
+                                    <div class="award-sub-item">
+                                        <img src="https://i.imgur.com/a3cJqa8.png" class="description-logo" alt="fenalaw-prata">
+                                        <h4>Prata - Categoria Marketing</h4>
+                                        <p>Case: Direito em likes: Engajamento e humanização no Instagram.</p>
+                                    </div>
+                                    <div class="award-sub-item">
+                                        <img src="https://i.imgur.com/a3cJqa8.png" class="description-logo" alt="fenalaw-prata">
+                                        <h4>Prata - Categoria Diversidade e Inclusão</h4>
+                                        <p></p>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="swiper-slide">
+                                <h3 class="award-group-title">Fenalaw 2025 - Prêmios Bronze</h3>
+                                <div class="award-sub-grid">
+                                    <div class="award-sub-item">
+                                        <img src="https://i.imgur.com/6Ty4Igi.png" class="description-logo" alt="fenalaw-bronze">
+                                        <h4>Bronze - Categoria Tecnologia</h4>
+                                        <p>Case: OneSync – Sincronização e atualização de dados em massa.</p>
+                                    </div>
+                                    <div class="award-sub-item">
+                                        <img src="https://i.imgur.com/6Ty4Igi.png" class="description-logo" alt="fenalaw-bronze">
+                                        <h4>Bronze - Categoria Tecnologia</h4>
+                                        <p>Case: OneRequest – Automação inteligente para gestão de solicitações de assessorias jurídicas.</p>
+                                    </div>
+                                    <div class="award-sub-item">
+                                        <img src="https://i.imgur.com/TH4Vbz9.png" class="description-logo" alt="fenalaw-bronze">
+                                        <h4>Bronze - Categoria Marketing</h4>
+                                        <p>Case: O DNA do escritório em cada conteúdo: A internalização do marketing.</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
 
             <div id="year-2024" class="year-group" data-aos="fade-up">
                 <h2>2024</h2>
