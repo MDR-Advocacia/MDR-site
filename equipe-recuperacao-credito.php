@@ -181,11 +181,11 @@
             <h5>Paulo Guilherme Morais De Almeida</h5>
             <p>Estagiário</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/3uISLh6.png" alt="Rafael Sampaio Bezerra">
             <h5>Rafael Sampaio Bezerra</h5>
             <p>Assistente Jurídico</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/ua5grdF.png" alt="Suemy Medeiros Ferreira">
             <h5>Suemy Medeiros Ferreira</h5>
@@ -196,12 +196,12 @@
             <h5>Suenia Beatriz L. C. Da Silva</h5>
             <p>Estagiária</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/5HHZz7g.png" alt="Tathianna Ribeiro da Silva Lemos">
             <h5>Tathianna Ribeiro da Silva Lemos</h5>
             <p>Advogada</p>
             <p class="sector">OAB/RN 20.475</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/WV9v1BP.png" alt="Thaise de Bessa da Silva">
             <h5>Thaise de Bessa da Silva</h5>
