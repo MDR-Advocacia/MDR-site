@@ -1,6 +1,5 @@
-<?php 
-  include 'header.php'; 
-?>
+<?php include '../includes/header.php'; ?>
+
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -16,7 +15,7 @@
         <h1>Prêmios e Certificados</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="current">Prêmios e Certificados</li>
           </ol>
         </nav>
@@ -42,6 +41,17 @@
                         <h3>Melhor Performance Geral - 1° Semestre</h3>
                         <span class="award-subtitle">1º Lugar - Banco do Brasil - 1° Semestre</span>
                         <p>Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.</p>
+                    </div>
+                </div>
+
+                <div id="award-panama" class="featured-award-item">
+                    <div class="award-image">
+                        <img src="https://i.imgur.com/eXxWfsj.jpeg" alt="LAQI 2025">
+                    </div>
+                    <div class="award-details">
+                        <h3>LAQI 2025</h3>
+                        <span class="award-subtitle">Reconhecimento LAQI 2025</span>
+                        <p> O MDR Advocacia recebeu o Certificado de Reconhecimento LAQI 2025, uma distinção que reforça nosso compromisso com a excelência e a evolução constante.</p>
                     </div>
                 </div>
 
@@ -127,6 +137,10 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
                 <a href="#" class="award-list-item active-award" data-target="award-bb">
                     <h4>Melhor Performance Geral - 1° Semestre</h4>
                     <span>1º Lugar - Banco do Brasil</span>
+                </a>
+                <a href="#" class="award-list-item" data-target="award-panama">
+                    <h4>LAQI 2025</h4>
+                    <span>Presidents Choice Awards</span>
                 </a>
                 <a href="#" class="award-list-item" data-target="award-bb2">
                     <h4>Melhor Performance Geral - 2° Semestre</h4>
@@ -467,6 +481,71 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
                         <p class="certificate-description">1° Lugar no Recupera Terc 2025</p>
                     </div>
                 </div>
+                
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/3E8F0Pp.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">1° Lugar Acordos Cíveis Réu (% da meta - quantidade ) 1° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/0rYJuvz.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Índice de Adequação do Risco Jurídico - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                
+                
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/OET5xwv.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">1° Lugar em Acordos Cíveis (% da meta - quantidade ) - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/T8ZceHm.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Desafio Ourocap - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/ZS2Dwey.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">1° Lugar no Recupera Terc - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/O0K9xeN.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">2° Lugar no Acelera Terc - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/LD5Qz8I.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">2° Lugar Acordos Cíveis (Ticket Médio - Economia ) - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/jgvzNi0.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">2° Lugar na Improcedência Banco Réu - 2° Semestre de 2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="certificate-item">
+                        <img src="https://i.imgur.com/grUZdZO.jpeg" alt="Certificado 7" class="open-modal">
+                        <p class="certificate-description">3° Lugar em Acordos Planos Econômicos (% da meta) - 2° Semestre de 2024</p>
+                    </div>
+                </div>
 
             </div>
             <div class="swiper-pagination"></div>
@@ -481,4 +560,4 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
 </div>
 
 
-<?php include 'footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <style>
 /* Estilos gerais do modal */
@@ -46,7 +46,7 @@
         <h1>O escritório</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="current">O escritório</li>
           </ol>
         </nav>
@@ -391,4 +391,4 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

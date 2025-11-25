@@ -1,11 +1,11 @@
-<?php include 'header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <div class="page-title dark-background" data-aos="fade" >
   <div class="container">
     <h1>Comitês de Diversidade</h1>
     <nav class="breadcrumbs">
       <ol>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="current">Diversidade</li>
       </ol>
     </nav>
@@ -40,7 +40,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalGenero">
-          <img src="assets/img/diversidade/comite-generos.jpg" class="card-img-top" alt="Comitê de Diversidade de Gênero">
+          <img src="/assets/img/diversidade/comite-generos.jpg" class="card-img-top" alt="Comitê de Diversidade de Gênero">
           <div class="card-body">
             <h4 class="card-title">Equidade de Gênero</h4>
           </div>
@@ -49,7 +49,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalPCD">
-          <img src="assets/img/diversidade/comite-pcd.jpg" class="card-img-top" alt="Comitê de Inclusão de Pessoas com Deficiência (PCD)">
+          <img src="/assets/img/diversidade/comite-pcd.jpg" class="card-img-top" alt="Comitê de Inclusão de Pessoas com Deficiência (PCD)">
           <div class="card-body">
             <h4 class="card-title">Pessoas com Deficiência</h4>
           </div>
@@ -58,7 +58,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalRaca">
-          <img src="assets/img/diversidade/comite-racial.jpg" class="card-img-top" alt="Comitê de Diversidade de Raça">
+          <img src="/assets/img/diversidade/comite-racial.jpg" class="card-img-top" alt="Comitê de Diversidade de Raça">
           <div class="card-body">
             <h4 class="card-title">Igualdade Racial</h4>
           </div>
@@ -67,7 +67,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalLGBT">
-          <img src="assets/img/diversidade/comite-lgbt.jpg" class="card-img-top" alt="Comitê de Diversidade LGBTQIAPN+">
+          <img src="/assets/img/diversidade/comite-lgbt.jpg" class="card-img-top" alt="Comitê de Diversidade LGBTQIAPN+">
           <div class="card-body">
             <h4 class="card-title">LGBTQIAPN+</h4>
           </div>
@@ -76,7 +76,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalReligiosa">
-          <img src="assets/img/diversidade/comite-religiao.jpg" class="card-img-top" alt="Comitê de Diversidade Religiosa">
+          <img src="/assets/img/diversidade/comite-religiao.jpg" class="card-img-top" alt="Comitê de Diversidade Religiosa">
           <div class="card-body">
             <h4 class="card-title">Diversidade Religiosa</h4>
           </div>
@@ -86,7 +86,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
   </div>
 </section>
 
-<div class="modal fade" id="modalGenero" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true" style="background-image: url(assets/img/diversidade/comite-generos.jpg);">
+<div class="modal fade" id="modalGenero" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true" style="background-image: url(/assets/img/diversidade/comite-generos.jpg);">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -100,7 +100,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
   </div>
 </div>
 
-<div class="modal fade" id="modalPCD" tabindex="-1" aria-labelledby="modalPCDLabel" aria-hidden="true" style="background-image: url(assets/img/diversidade/comite-pcd.jpg);">
+<div class="modal fade" id="modalPCD" tabindex="-1" aria-labelledby="modalPCDLabel" aria-hidden="true" style="background-image: url(/assets/img/diversidade/comite-pcd.jpg);">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -114,7 +114,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
   </div>
 </div>
 
-<div class="modal fade" id="modalRaca" tabindex="-1" aria-labelledby="modalRacaLabel" aria-hidden="true" style="background-image: url(assets/img/diversidade/comite-racial.jpg);">
+<div class="modal fade" id="modalRaca" tabindex="-1" aria-labelledby="modalRacaLabel" aria-hidden="true" style="background-image: url(/assets/img/diversidade/comite-racial.jpg);">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -128,7 +128,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
   </div>
 </div>
 
-<div class="modal fade" id="modalLGBT" tabindex="-1" aria-labelledby="modalLGBTLabel" aria-hidden="true" style="background-image: url(assets/img/diversidade/comite-lgbt.jpg);">
+<div class="modal fade" id="modalLGBT" tabindex="-1" aria-labelledby="modalLGBTLabel" aria-hidden="true" style="background-image: url(/assets/img/diversidade/comite-lgbt.jpg);">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -141,7 +141,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
   </div>
 </div>
 
-<div class="modal fade" id="modalReligiosa" tabindex="-1" aria-labelledby="modalReligiosaLabel" aria-hidden="true" style="background-image: url(assets/img/diversidade/comite-religiao.jpg);">
+<div class="modal fade" id="modalReligiosa" tabindex="-1" aria-labelledby="modalReligiosaLabel" aria-hidden="true" style="background-image: url(/assets/img/diversidade/comite-religiao.jpg);">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -155,4 +155,4 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

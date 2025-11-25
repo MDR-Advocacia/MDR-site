@@ -1,4 +1,5 @@
-<?php include 'header.php'; ?>
+<?php include '../../includes/header.php'; ?>
+
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -14,7 +15,7 @@
         <h1>Comércio Internacional</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="current">Comércio Internacional</li>
           </ol>
         </nav>
@@ -107,7 +108,7 @@
                   Escritório de excelência, com profissionais extremamente qualificados.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.png" class="testimonial-img" alt="">
+                  <img src="/assets/img/testimonials/testimonials-1.png" class="testimonial-img" alt="">
                   <h3>Gabriel Abner</h3>
                   
                 </div>
@@ -121,7 +122,7 @@
                   O melhor e mais conceituado serviço de advocacia que conheço , Ótimos profissionais e um atendimento que não deixa a desejar em nada .
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.png" class="testimonial-img" alt="">
+                  <img src="/assets/img/testimonials/testimonials-2.png" class="testimonial-img" alt="">
                   <h3>Plinio Neto</h3>
                 </div>
               </div>
@@ -134,7 +135,7 @@
                   Atendimento com ótimos profissionais capacitados, ambiente aconchegante. Empresa organizada e ótima localização!
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.png" class="testimonial-img" alt="">
+                  <img src="/assets/img/testimonials/testimonials-3.png" class="testimonial-img" alt="">
                   <h3>Ana Virgínia</h3>
                 </div>
               </div>
@@ -147,7 +148,7 @@
                   Um local ótimo, tanto para atendimento quanto para trabalho. Incrível!
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.png" class="testimonial-img" alt="">
+                  <img src="/assets/img/testimonials/testimonials-4.png" class="testimonial-img" alt="">
                   <h3>Gabriela Rodrigues</h3>
                 </div>
               </div>
@@ -160,7 +161,7 @@
                   Atendimento maravilhoso,  desde o atendimento telefônico até o final. Todos atenciosos e prestativos.  Local de fácil localização,  com bom local para estacionar. Ambiente agradável de estar. Nota dez. Faz a gente sentir-se importante, acolhida e ouvida. Um exemplo a ser seguido. Parabéns!
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.png" class="testimonial-img" alt="">
+                  <img src="/assets/img/testimonials/testimonials-5.png" class="testimonial-img" alt="">
                   <h3>Neuza Mendonça</h3>
                 </div>
               </div>
@@ -170,4 +171,4 @@
 
       </div>
 
-    </section><?php include 'footer.php'; ?>
+<?php include '../../includes/footer.php'; ?>

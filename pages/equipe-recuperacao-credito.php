@@ -1,6 +1,4 @@
-<?php 
-  include 'header.php'; 
-?>
+<?php include '../includes/header.php'; ?>
 
 <main class="main">
   <div vw class="enabled">
@@ -18,7 +16,7 @@
         <h1>Nossa Equipe de Recuperação de Crédito</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="current">Equipe Recuperação de Crédito</li>
           </ol>
         </nav>
@@ -278,7 +276,4 @@
 <a href="https://wa.me/5584999960201" class="floating-whatsapp" target="_blank" aria-label="Fale conosco pelo WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
-<?php 
-  include 'footer.php'; 
-
-?>
+<?php include '../includes/footer.php'; ?>

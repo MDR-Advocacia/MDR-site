@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <main class="main">
   <div vw class="enabled">
@@ -16,7 +16,7 @@
         <h1>Políticas de Privacidade</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="current">Políticas de Privacidade</li>
           </ol>
         </nav>
@@ -49,4 +49,4 @@
     </section>
     </main>
 
-<?php include 'footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

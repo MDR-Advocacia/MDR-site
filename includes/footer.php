@@ -19,21 +19,21 @@
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Links úteis</h4>
                     <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">O escritório</a></li>
-                        <li><a href="services.php">Nossa atuação</a></li>
-                        <li><a href="trabalhe-conosco.php">Trabalhe conosco</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">O escritório</a></li>
+                        <li><a href="/pages/atuacao">Nossa atuação</a></li>
+                        <li><a href="/pages/trabalhe-conosco">Trabalhe conosco</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Nossos serviços</h4>
                     <ul>
-                        <li><a href="service1.php">Direito Bancário</a></li>
-                        <li><a href="service2.php">Direito Regulatório</a></li>
-                        <li><a href="service3.php">Direito Fiscal e Tributário</a></li>
-                        <li><a href="service4.php">Comércio Internacional</a></li>
-                        <li><a href="service5.php">Planejamento Sucessório</a></li>
+                        <li><a href="/direito-bancario">Direito Bancário</a></li>
+                        <li><a href="/direito-regulatorio">Direito Regulatório</a></li>
+                        <li><a href="/direito-fiscal">Direito Fiscal e Tributário</a></li>
+                        <li><a href="/comercio-internacional">Comércio Internacional</a></li>
+                        <li><a href="/planejamento-sucessorio">Planejamento Sucessório</a></li>
                     </ul>
                 </div>
 
@@ -58,7 +58,7 @@
     </div>
 
     <div class="container copyright text-center">
-        <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong> - <a href="privacyPolicies.php">Políticas de privacidade</a></p>
+        <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong> - <a href="privacyPolicies">Políticas de privacidade</a></p>
         <div class="credits">
             Designed by <a href="https://mdradvocacia.com/" target="_blank">MDR Advocacia</a>
         </div>
@@ -69,15 +69,15 @@
 
 <div id="preloader"></div>
 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 
 </body>
 
