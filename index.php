@@ -105,6 +105,32 @@
     </div>
 </section>
 
+<section id="news" class="news section light-background" style="background-color: #f9f9f9;">
+        <div class="container">
+            
+            <div class="section-title" data-aos="fade-up">
+                <h2>Últimas Notícias</h2>
+                <p>Fique por dentro das novidades e artigos da MDR Advocacia</p>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-12">
+                    
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-31829d59-ffed-46f7-94ae-a858a31aba77" data-elfsight-app-lazy></div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://www.linkedin.com/company/mdradvocacia/" target="_blank" class="btn-get-started" style="background-color: #0077b5; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; font-weight: 600; transition: 0.3s;">
+                    <i class="bi bi-linkedin me-2" style="font-size: 1.2rem;"></i> Seguir no LinkedIn
+                </a>
+            </div>
+
+        </div>
+    </section>
+
     <section id="team" class="team section">
         <div class="container section-title" data-aos="fade-up">
             <h2>Nosso time</h2>
