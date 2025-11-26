@@ -3823,3 +3823,13 @@ button:hover {
 .modal {
   z-index: 1070 !important;
 }
+.location .info-box h3 {
+    font-family: var(--heading-font);
+}
+.location iframe {
+    filter: grayscale(20%); /* Deixa o mapa levemente cinza para ficar mais elegante (opcional) */
+    transition: filter 0.3s;
+}
+.location iframe:hover {
+    filter: grayscale(0%); /* Fica colorido ao passar o mouse */
+}

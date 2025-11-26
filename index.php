@@ -331,4 +331,48 @@
   </div>
 </div>
 
+<section id="location" class="location section">
+        <div class="container" data-aos="fade-up">
+            
+            <div class="section-title">
+                <h2>Onde Estamos</h2>
+                <p>Venha nos fazer uma visita em nossa sede</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="info-box h-100 p-4" style="background: #f9f9f9; border-radius: 8px;">
+                        <h3 style="color: #b29d55; font-weight: 700; margin-bottom: 20px;">MDR Advocacia</h3>
+                        <p><strong>Endereço:</strong><br>
+                        R. Des. José Gomes da Costa, 1975<br>
+                        Capim Macio, Natal - RN<br>
+                        CEP: 59082-140</p>
+                        
+                        <p class="mt-4"><strong>Horário de Atendimento:</strong><br>
+                        Segunda a Sexta: 08:00 - 18:00</p>
+
+                        <a href="https://maps.app.goo.gl/s1q39cZ7D7e2v2E59" target="_blank" class="btn btn-sm mt-3" style="background-color: #b29d55; color: white;">
+                            <i class="bi bi-geo-alt-fill me-2"></i> Ver no Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div style="width: 100%; height: 100%; min-height: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.037437207656!2d-35.1980595!3d-5.866003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff467975d4b5%3A0x46d31a58d103d69a!2sMDR%20ADVOCACIA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 350px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 <?php include 'includes/footer.php'; ?>
