@@ -40,7 +40,7 @@
                     <li><a href="/premios">Prêmios e Certificados</a></li>
                     <li><a href="/diversidade">Diversidade</a></li>
                     <li><a href="/recuperacao-credito">Recuperação de Crédito</a></li>
-                    <li><a href="/trabalhe-conosco">Trabalhe conosco</a></li>
+                    <li><a href="/form.php">Trabalhe conosco</a></li>
                     <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
