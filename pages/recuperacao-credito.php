@@ -207,7 +207,7 @@
                 <i class="bi bi-whatsapp"></i>
                 <h4>WhatsApp Geral</h4>
                 <p>Prefere um contato mais rápido? Fale com nossa equipe pelo WhatsApp.</p>
-                <a href="https://wa.me/5584999960201" class="btn" target="_blank">Iniciar Conversa</a>
+                <a href="https://wa.me/5584996460642" class="btn" target="_blank">Iniciar Conversa</a>
             </div>
 
         </div>

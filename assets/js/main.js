@@ -225,6 +225,7 @@
 
   // Verifica se estamos na página de prêmios antes de rodar
   if (document.getElementById('year-2025')) {
+    initCarousel('year-2026');
     initCarousel('year-2025');
     initCarousel('year-2024');
   }

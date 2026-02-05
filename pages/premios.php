@@ -181,7 +181,48 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
         <div class="section-title" data-aos="fade-up">
             <h2>Reconhecimentos e Associações</h2>
         </div>
-        
+        <div id="year-2026" class="year-group latest" data-aos="fade-up">
+            <h2>2026</h2>
+            <div class="recognition-layout">
+                
+                <div class="seals-grid">
+                    
+                    <div class="seal-item">
+                        <a href="#" target="_blank">
+                            <img src="assets/img/premios/selo-analise-2026-escritorio.png" alt="Análise Advocacia 2026 - Escritório Indicado">
+                        </a>
+                    </div>
+
+                    <div class="seal-item">
+                        <a href="#" target="_blank">
+                            <img src="assets/img/premios/selo-analise-2026-advogado.png" alt="Análise Advocacia 2026 - Advogado Indicado">
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div class="description-carousel">
+                    <div class="swiper swiper-description">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide">
+                                <img src="assets/img/premios/selo-analise-2026-escritorio.png" class="description-logo" alt="Análise Advocacia">
+                                <h3>Análise Advocacia 2026 - Escritório Indicado</h3>
+                                <p>A MDR Advocacia foi destaque na pesquisa Análise Advocacia 2026, recebendo o selo de <strong>Escritório Indicado</strong>, reafirmando nosso compromisso com a excelência e a referência no mercado jurídico nacional.</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/premios/selo-analise-2026-advogado.png" class="description-logo" alt="Análise Advocacia">
+                                <h3>Análise Advocacia 2026 - Advogado Indicado</h3>
+                                <p>Nosso sócio <strong>Marcos Delli Ribeiro Rodrigues</strong> foi reconhecido como <strong>Advogado Indicado</strong> na pesquisa Análise Advocacia 2026, consolidando sua atuação de destaque e liderança na advocacia.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <div id="year-2025" class="year-group latest" data-aos="fade-up">
             <h2>2025</h2>
             <div class="recognition-layout">

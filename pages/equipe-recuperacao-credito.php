@@ -38,11 +38,11 @@
             <h5>Aléxia Marinne Maia Fernandes</h5>
             <p>Assistente Jurídica</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/JTSA0SV.png" alt="Állan Daniel Torres Soares">
             <h5>Állan Daniel Torres Soares</h5>
             <p>Assistente Jurídico</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/TK9ZHYz.jpeg" alt="ANDRIELLY DUARTE DE FARIAS">
             <h5>Andressa Baranoski Mello</h5>
@@ -93,11 +93,11 @@
             <p>Advogado</p>
             <p class="sector">OAB/RN 21.259</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/miKxQp7.png" alt="Letícia Fortunato de Sousa">
             <h5>Letícia Fortunato de Sousa</h5>
             <p>Estagiária</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/4Nrzzcx.png" alt="Luana de Araujo">
             <h5>Luana de Araújo Alvez</h5>
@@ -130,11 +130,11 @@
             <h5>Marcus Vinícius Fernandes Gomes</h5>
             <p>Assistente Jurídico</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/FhRAiTo.png" alt="Maria Eduarda Guedes Cavalcante">
             <h5>Maria Eduarda Guedes Cavalcante</h5>
             <p>Estagiária</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/j58cJo1.png" alt="Maria Gabrielly Silva Rodrigues Azevedo">
             <h5>Maria Gabrielly S. R. Azevedo</h5>
@@ -169,11 +169,11 @@
             <p>Advogada</p>
             <p class="sector">OAB/RN 18.481</p>
         </div>
-        <div class="collaborator-card animar-ao-rolar">
+        <!-- <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/xvq1kKZ.png" alt="Paulo Fernando Cisneiros Da Costa Reis Neto">
             <h5>Paulo Fernando C. C. Reis Neto</h5>
             <p>Estagiário</p>
-        </div>
+        </div> -->
         <div class="collaborator-card animar-ao-rolar">
             <img src="https://i.imgur.com/ti6UeBt.png" alt="PAULO GUILHERME MORAIS DE ALMEIDA">
             <h5>Paulo Guilherme Morais De Almeida</h5>
@@ -238,7 +238,7 @@
                 <i class="bi bi-whatsapp"></i>
                 <h4>WhatsApp Geral</h4>
                 <p>Prefere um contato mais rápido? Fale com nossa equipe pelo WhatsApp.</p>
-                <a href="https://wa.me/5584999960201" class="btn" target="_blank">Iniciar Conversa</a>
+                <a href="https://wa.me/5584996460642" class="btn" target="_blank">Iniciar Conversa</a>
             </div>
 
         </div>

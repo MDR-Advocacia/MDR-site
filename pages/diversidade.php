@@ -1,8 +1,130 @@
 <?php include '../includes/header.php'; ?>
 
-<div class="page-title dark-background" data-aos="fade" >
+<style>
+  /* Melhoria visual nos Cards dos Comitês */
+  .committee-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #fff;
+    height: 100%;
+  }
+
+  .committee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  .committee-card img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .committee-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .committee-card .card-body {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .committee-card .card-title {
+    font-weight: 700;
+    color: var(--heading-color, #333);
+    margin-bottom: 0;
+  }
+
+  /* Nova Seção de Vídeo */
+  .video-highlight {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  }
+
+  .video-thumbnail-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
+    aspect-ratio: 16/9;
+  }
+
+  .video-thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+
+  .video-thumbnail-wrapper:hover img {
+    opacity: 0.9;
+  }
+
+  /* Botão Play no meio da imagem */
+  .play-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--accent-color, #d9a520); /* Ajuste para a cor da sua marca */
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+
+  .video-thumbnail-wrapper:hover .play-icon-overlay {
+    background: #fff;
+    transform: translate(-50%, -50%) scale(1.1);
+    color: #000;
+  }
+
+  .btn-watch-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    background-color: var(--accent-color, #d9a520); /* Ajuste para a cor da sua marca */
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  .btn-watch-action:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  }
+</style>
+
+<div class="page-title dark-background" data-aos="fade">
   <div class="container">
-    <h1>Comitês de Diversidade</h1>
+    <h1>Diversidade</h1>
     <nav class="breadcrumbs">
       <ol>
         <li><a href="/">Home</a></li>
@@ -11,38 +133,59 @@
     </nav>
   </div>
 </div>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
   </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app'); 
-  </script>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app'); 
+</script>
+
 <section id="diversidade" class="section">
   <div class="container">
-    <div data-aos="fade-up" class="text-center">
-      <h2 class="section-title">Nosso Comitê de Diversidade e Inclusão</h2>
-      <p>A diversidade no MDR não é um diferencial, é parte do que nos constitui. Para fortalecer esse compromisso, foi criado o MDR Diversidade em Movimento, um Comitê de Diversidade que busca transformar o ambiente de trabalho e a forma de enxergar o outro, promovendo respeito, acolhimento e ação concreta. </p>
-        <p>O comitê nasceu da escuta de demandas reais e organiza diferentes grupos de trabalho voltados a pautas como gênero, raça, LGBTQIAPN+, pessoas com deficiência e diversidade religiosa.
-
-Cada grupo desenvolve ações específicas para promover inclusão, representatividade e equidade, garantindo que todos possam existir com orgulho, ocupar espaços e participar plenamente. Nesse sentido, objetivo do MDR Diversidade em Movimento é fortalecer a cultura do escritório e gerar impacto coletivo, mostrando que diversidade transforma, inclusão fortalece e respeito sustenta.
+    
+    <div data-aos="fade-up" class="text-center mx-auto" style="max-width: 900px;">
+      <h2 class="section-title mb-4">Nosso Comitê de Diversidade e Inclusão</h2>
+      <p class="lead mb-4" style="font-size: 1.1rem; line-height: 1.8;">
+        A diversidade no MDR não é um diferencial, é parte do que nos constitui. Para fortalecer esse compromisso, foi criado o <strong>MDR Diversidade em Movimento</strong>, um Comitê de Diversidade que busca transformar o ambiente de trabalho e a forma de enxergar o outro, promovendo respeito, acolhimento e ação concreta.
       </p>
-
-      <div class="watch-video-container">
-        <a href="https://youtu.be/hqCj1MFdeBA" class="glightbox btn-brand"><i class="bi bi-play-circle-fill"></i><span>Assista ao vídeo</span></a>
-      </div>
+      <p class="mb-5 text-muted">
+        O comitê nasceu da escuta de demandas reais e organiza diferentes grupos de trabalho voltados a pautas como gênero, raça, LGBTQIAPN+, pessoas com deficiência e diversidade religiosa. Cada grupo desenvolve ações específicas para promover inclusão, representatividade e equidade.
+      </p>
     </div>
 
-    <div class="row gy-4 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+    <div class="video-highlight" data-aos="zoom-in">
+        <div class="text-center mb-3">
+            <h3>Conheça nosso Comitê</h3>
+            <p class="text-muted">Veja como a diversidade transforma nossa advocacia</p>
+        </div>
+        
+        <div class="video-thumbnail-wrapper">
+            <img src="https://img.youtube.com/vi/Q-72lIY8QN8/maxresdefault.jpg" alt="Vídeo Manifesto Diversidade">
+            
+            <a href="https://youtu.be/Q-72lIY8QN8" class="glightbox play-icon-overlay">
+                <i class="bi bi-play-fill"></i>
+            </a>
+        </div>
+
+        <div class="text-center">
+            <a href="https://youtu.be/Q-72lIY8QN8" class="glightbox btn-watch-action">
+                <i class="bi bi-play-circle"></i> Assistir ao Vídeo Completo
+            </a>
+        </div>
+    </div>
+    <div class="row gy-4 justify-content-center mt-5" data-aos="fade-up" data-aos-delay="100">
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalGenero">
           <img src="/assets/img/diversidade/comite-generos.jpg" class="card-img-top" alt="Comitê de Diversidade de Gênero">
           <div class="card-body">
             <h4 class="card-title">Equidade de Gênero</h4>
+            <small class="text-muted">Clique para saber mais</small>
           </div>
         </div>
       </div>
@@ -52,6 +195,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
           <img src="/assets/img/diversidade/comite-pcd.jpg" class="card-img-top" alt="Comitê de Inclusão de Pessoas com Deficiência (PCD)">
           <div class="card-body">
             <h4 class="card-title">Pessoas com Deficiência</h4>
+             <small class="text-muted">Clique para saber mais</small>
           </div>
         </div>
       </div>
@@ -61,6 +205,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
           <img src="/assets/img/diversidade/comite-racial.jpg" class="card-img-top" alt="Comitê de Diversidade de Raça">
           <div class="card-body">
             <h4 class="card-title">Igualdade Racial</h4>
+             <small class="text-muted">Clique para saber mais</small>
           </div>
         </div>
       </div>
@@ -70,6 +215,7 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
           <img src="/assets/img/diversidade/comite-lgbt.jpg" class="card-img-top" alt="Comitê de Diversidade LGBTQIAPN+">
           <div class="card-body">
             <h4 class="card-title">LGBTQIAPN+</h4>
+             <small class="text-muted">Clique para saber mais</small>
           </div>
         </div>
       </div>
@@ -79,9 +225,11 @@ Cada grupo desenvolve ações específicas para promover inclusão, representati
           <img src="/assets/img/diversidade/comite-religiao.jpg" class="card-img-top" alt="Comitê de Diversidade Religiosa">
           <div class="card-body">
             <h4 class="card-title">Diversidade Religiosa</h4>
+             <small class="text-muted">Clique para saber mais</small>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>

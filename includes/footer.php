@@ -21,8 +21,9 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/">O escritório</a></li>
-                        <li><a href="/pages/atuacao">Nossa atuação</a></li>
-                        <li><a href="/pages/trabalhe-conosco">Trabalhe conosco</a></li>
+                        <li><a href="/atuacao">Nossa atuação</a></li>
+                        <li><a href="/trabalhe-conosco">Trabalhe conosco</a></li>
+                        <li><a href="/privacidade">Privacidade</a></li>
                     </ul>
                 </div>
 
@@ -49,7 +50,8 @@
 
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Encarregado de Dados Pessoais</h4>
-                    <p><strong>Nome:</strong> Ingrid Quirino Ribeiro</p>
+                    <p><strong>Titular:</strong> Ingrid Quirino Ribeiro</p>
+                    <p><strong>Substituto:</strong> Ricardo Luiz Paiva Medeiros</p>
                     <p><strong>Email:</strong> dpo@mdradvocacia.com</p>
                 </div>
 
@@ -57,11 +59,13 @@
         </div>
     </div>
 
-    <div class="container copyright text-center">
-        <p>© <span>Copyright</span> <span>Todos os direitos reservados</span> <strong class="px-1 sitename">MDR</strong> - <a href="privacyPolicies">Políticas de privacidade</a></p>
-        <div class="credits">
-            Designed by <a href="https://mdradvocacia.com/" target="_blank">MDR Advocacia</a>
-        </div>
+    <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1">MDR Advocacia</strong> <span>Todos os direitos reservados</span></p>
+    
+    <div class="credits mt-2">
+        <a href="/privacidade" style="color: #6c757d; font-size: 0.85rem; text-decoration: none; border-bottom: 1px dotted #6c757d;">
+            Aviso de Privacidade e Proteção de Dados
+        </a>
     </div>
 </footer>
 
