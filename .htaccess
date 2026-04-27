@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# 1. Se alguém digitar .php, remove visualmente (SEO)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# -------------------------------------------------------
+# REGRAS DE MASCARAMENTO DE PASTAS
+# -------------------------------------------------------
+
+# 2. Tenta achar o arquivo dentro de 'pages/servicos/'
+# Ex: Se acessar /direito-bancario, ele busca /pages/servicos/direito-bancario.php
+RewriteCond %{DOCUMENT_ROOT}/pages/servicos/$1.php -f
+RewriteRule ^([^/]+)/?$ pages/servicos/$1.php [L,QSA]
+
+# 3. Tenta achar o arquivo dentro de 'pages/'
+# Ex: Se acessar /premios, ele busca /pages/premios.php
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.php -f
+RewriteRule ^([^/]+)/?$ pages/$1.php [L,QSA]
+
+# 4. Se não achou nas pastas, procura na raiz (padrão)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L,QSA]
