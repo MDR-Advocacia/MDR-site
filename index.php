@@ -117,7 +117,7 @@
             <div class="col-12">
                 
                 <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-1a7d15da-a5d9-4b70-9e45-f0a79d770b07" data-elfsight-app-lazy></div>
+                <div class="elfsight-app-4900c1f0-a8ed-497e-8528-53e3baaf30aa" data-elfsight-app-lazy></div>
                 <!-- Trocar pela nova widget assim que atingir limite -->
                 </div>
         </div>
