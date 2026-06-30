@@ -1,12 +1,18 @@
+<?php
+$pageTitle = $pageTitle ?? 'MDR Advocacia';
+$pageDescription = $pageDescription ?? 'Escritório full service especialista em atendimentos de instituições bancárias';
+$pageKeywords = $pageKeywords ?? 'MDR, MARCOS DELLI RODRIGUES, ADVOCACIA, DELLI, NATAL, ADVOGADOS, ADVOGADA, CAPIM MACIO';
+$bodyClass = $bodyClass ?? 'index-page';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>MDR Advocacia</title>
-    <meta name="description" content="Escritório full service especialista em atendimentos de instituições bancárias">
-    <meta name="keywords" content="MDR,MARCOS DELLI RODRIGUES, ADVOCACIA, DELLI, NATAL, ADVOGADOS, ADVOGADA, CAPIM MACIO ">
+    <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($pageKeywords, ENT_QUOTES, 'UTF-8'); ?>">
 
     <link href="/assets/img/favicon.png" rel="icon">
     <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -24,7 +30,7 @@
     <link href="/assets/css/main.css?v=1.1" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body class="<?php echo htmlspecialchars($bodyClass, ENT_QUOTES, 'UTF-8'); ?>">
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -41,6 +47,7 @@
                     <li><a href="/diversidade">Diversidade</a></li>
                     <li><a href="/recuperacao-credito">Recuperação de Crédito</a></li>
                     <li><a href="https://recrutamentomdradvocia.vagas.solides.com.br/">Trabalhe conosco</a></li>
+                    <li><a href="/compliance">Integridade e Compliance</a></li>
                     <li><a href="/privacidade">Privacidade</a></li>
                     <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
                 </ul>

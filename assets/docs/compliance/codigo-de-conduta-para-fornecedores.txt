@@ -1,0 +1,157 @@
+1 
+ 
+Código de Conduta para Fornecedores 
+ 
+Marcos Delli Ribeiro Rodrigues Associados - MDR Advocacia 
+ 
+1. INTRODUÇÃO E PROPÓSITO 
+Este Código de Conduta para Fornecedores ("Código") estabelece os princípios éticos, as 
+regras de conduta e as obrigações mínimas exigidas pelo Marcos Delli Ribeiro Rodrigues 
+Associados ("Escritório") de todos os seus fornecedores, prestadores de serviços, 
+subcontratados e parceiros de negócio (coletivamente, "Fornecedores"). 
+Nosso Escritório, com alto volume de processos, especialmente em atuação para grandes 
+organizações, adere aos mais rigorosos padrões de ética, integridade, compliance, 
+sustentabilidade e proteção de dados . Este Código visa garantir que nossos 
+Fornecedores compartilhem e apliquem esses mesmos valores em suas operações e no 
+relacionamento conosco, em conformidade com: 
+a) Lei Geral de Proteção de Dados (LGPD) (Lei nº 13.709/2018); 
+b) Princípios do Pacto Global da ONU (Direitos Humanos, Trabalho, Meio Ambiente 
+e Anticorrupção); 
+c) Estatuto da Advocacia e o Código de Ética e Disciplina da OAB; 
+d) Legislação Anticorrupção (Lei nº 12.846/2013) e outras normas aplicáveis. 
+e) Convenção das Nações Unidas Contra a Corrupção (Decreto nº 5.687/2006). 
+2. Ética, Integridade e Compliance Empresarial 
+O Fornecedor deve conduzir seus negócios com integridade, honestidade e transparência, 
+mantendo um rigoroso programa de compliance próprio. 
+2.1. Combate à Corrupção e Suborno 
+a) Proibição: O Fornecedor, seus colaboradores e subcontratados estão estritamente 
+proibidos de oferecer, prometer, dar ou aceitar, direta ou indiretamente, qualquer 
+pagamento, presente, vantagem ou benefício indevido a qualquer pessoa, agente 
+público (nacional ou estr angeiro) ou a qualquer colaborador do Escritório, com o 
+objetivo de obter ou manter negócios, ou influenciar qualquer decisão.
+
+2 
+ 
+b) Presentes e Hospitalidades: Brindes, presentes ou hospitalidades só poderão ser 
+oferecidos ou aceitos se possuírem valor simbólico, não criarem a aparência de 
+influência indevida, estiverem de acordo com as políticas internas do Fornecedor e 
+do Escritório, e não infringirem a legisl ação ou o Código de Ética e Disciplina da 
+OAB. 
+2.2. Conflito de Interesses 
+a) O Fornecedor deve evitar qualquer situação que possa gerar um conflito de 
+interesses com o Escritório ou seus clientes. Caso um conflito potencial ou real seja 
+identificado, o Fornecedor deve comunicá-lo imediatamente ao Escritório. 
+b) Dever de Sigilo Profissional (OAB):  O Fornecedor deve respeitar o sigilo 
+profissional inerente à advocacia, abstendo -se de utilizar informações de clientes 
+ou do Escritório para fins alheios à execução do contrato. 
+3. PROTEÇÃO DE DADOS E CONFIDENCIALIDADE (LGPD) 
+Considerando que o Escritório lida com um grande volume de processos de clientes 
+organizações de grande porte, envolvendo dados pessoais de muitos titulares, a 
+conformidade com a LGPD é um requisito fundamental e inegociável. 
+3.1. Deveres Gerais na Relação de Tratamento de Dados 
+a) Finalidade: Os dados pessoais, inclusive aqueles sensíveis, devem ser tratados 
+pelo Fornecedor estritamente para os fins específicos previstos no contrato de 
+prestação de serviços. 
+b) Segurança: O Fornecedor é responsável por adotar medidas de segurança 
+técnicas e administrativas  aptas a proteger os dados pessoais de acessos não 
+autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, 
+comunicação ou qualquer forma de tratamento inadequado ou ilícito. Isso inclui 
+criptografia, controle de acesso e sigilo. 
+c) Princípios da LGPD: O Fornecedor deverá observar os princípios da LGPD, como 
+necessidade, transparência, livre acesso, qualidade dos dados e prestação de 
+contas (accountability). 
+3.2. Obrigações Específicas para Fornecedores (Controlador e/ou Operadores) 
+a) Conformidade: O Fornecedor deve tratar os dados pessoais em estrita 
+conformidade com as instruções lícitas do Escritório (Controlador) e com a LGPD. 
+b) Vazamentos e Incidentes: Em caso de incidentes de segurança, como acesso não 
+autorizado, vazamento ou perda de dados, o Fornecedor deverá notificar o Escritório
+
+3 
+ 
+imediatamente (em prazo máximo a ser especificado em contrato, usualmente 24 
+ou 48 horas), fornecendo detalhes do ocorrido para que o Escritório possa tomar as 
+providências cabíveis, incluindo a comunicação à Autoridade Nacional de Proteção 
+de Dados (ANPD) e aos titulares. 
+c) Subcontratação: A subcontratação de terceiros para o tratamento de dados 
+pessoais (ex: suboperadores) só será permitida mediante prévia e expressa 
+autorização do Escritório, e o Fornecedor deve garantir que o subcontratado cumpra 
+integralmente as obrigações de proteção de dados e segurança estabelecidas neste 
+Código e no contrato. 
+d) Retorno ou Eliminação:  Após o término do contrato, o Fornecedor deverá, 
+conforme a instrução do Escritório, devolver ou eliminar todos os dados pessoais e 
+confidenciais tratados em razão da relação comercial, comprovando a efetivação do 
+procedimento. 
+4. DIREITOS HUMANOS, TRABALHO E MEIO AMBIENTE (PACTO GLOBAL) 
+O Fornecedor deve praticar ou aderir aos 10 Princípios do Pacto Global da ONU. 
+4.1. Direitos Humanos e Condições de Trabalho 
+a) Não Discriminação e Assédio:  Garantir um ambiente de trabalho livre de 
+discriminação (raça, cor, gênero, orientação sexual, religião, origem) e de todas as 
+formas de assédio (moral ou sexual). 
+b) Trabalho Decente: Respeitar integralmente as leis trabalhistas, incluindo jornada de 
+trabalho, remuneração justa e o direito de associação e negociação coletiva. 
+c) Proibição: O Fornecedor está proibido de utilizar trabalho infantil  ou trabalho 
+forçado ou análogo à escravidão em qualquer parte de sua cadeia produtiva. 
+d) Saúde e Segurança:  Garantir um ambiente de trabalho seguro e saudável, 
+prevenindo acidentes e doenças ocupacionais, em conformidade com a legislação 
+aplicável. 
+4.2. Meio Ambiente 
+a) O Fornecedor deve adotar uma abordagem preventiva aos desafios ambientais, 
+promovendo maior responsabilidade ambiental e incentivando o desenvolvimento e 
+a difusão de tecnologias ambientalmente amigáveis. 
+b) Garantir o cumprimento de todas as leis e regulamentos ambientais aplicáveis às 
+suas operações, com gestão adequada de resíduos e uso eficiente de recursos.
+
+4 
+ 
+5. MONITORAMENTO E CONSEQUÊNCIAS DO DESCUMPRIMENTO 
+a) Auditorias e Monitoramento: O Escritório se reserva o direito de realizar auditorias 
+(incluindo em matéria de LGPD e Compliance) e solicitar documentação 
+comprobatória do Fornecedor para verificar o cumprimento deste Código. 
+b) Comunicação de Irregularidades: O Fornecedor tem a obrigação de comunicar ao 
+Escritório, qualquer violação a este Código, à legislação aplicável ou ao contrato. 
+c) Consequências: O descumprimento de quaisquer disposições deste Código será 
+considerado uma violação grave e poderá resultar na rescisão imediata do contrato, 
+sem prejuízo da aplicação de multas, indenizações e demais medidas legais 
+cabíveis. 
+Principais links que reforçam as orientações e normas jurídicas postas neste documento: 
+Lei Geral de Proteção de Dados (LGPD)  (Lei nº 13.709/2018) : 
+https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm 
+Princípios do Pacto Global da ONU  (Direitos Humanos, Trabalho, Meio Ambiente e 
+Anticorrupção): https://unglobalcompact.org/what-is-gc/mission/principles 
+Estatuto da Advocacia e o Código de Ética e Disciplina da OAB :  
+https://www.planalto.gov.br/ccivil_03/leis/l8906.htm 
+Legislação Anticorrupção  (Lei nº 12.846/2013) : 
+https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm 
+Convenção das Nações Unidas Contra a Corrupção - UNCAC (Decreto nº 5.687/2006): 
+https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/decreto/d5687.htm 
+ 
+Nota: Não é permitida a reprodução deste documento, sendo de uso interno do signatário 
+(fornecedor da MDR). 
+ 
+Versão 1.0
+
+5 
+ 
+6. APROVAÇÃO 
+ELABORAÇÃO DO DOCUMENTO:  
+● Comitê de Compliance e LGPD 
+● Data da Emissão: 8/6/2026 (Versão 1.0) 
+ 
+COMPLIANCE OFFICE: RICARDO LUIZ PAIVA MEDEIROS 
+ 
+APROVAÇÃO: 
+  
+  
+   
+  
+Nome: MARCOS DELLI RIBEIRO RODRIGUES 
+Cargo: SÓCIO FUNDADOR DO MDR ADVOCACIA 
+Data: 8 DE JUNHO DE 2026 
+  
+  
+  
+  
+  
+Nome: RICARDO LUIZ PAIVA MEDEIROS 
+Cargo: ADVOGADO COMPLIANCE OFFICE 
+Data: 8 DE JUNHO DE 2026

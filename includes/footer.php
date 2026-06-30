@@ -23,6 +23,7 @@
                         <li><a href="/">O escritório</a></li>
                         <li><a href="/atuacao">Nossa atuação</a></li>
                         <li><a href="https://recrutamentomdradvocia.vagas.solides.com.br/">Trabalhe conosco</a></li>
+                        <li><a href="/compliance">Integridade e Compliance</a></li>
                         <li><a href="/privacidade">Privacidade</a></li>
                     </ul>
                 </div>
