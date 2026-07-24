@@ -47,7 +47,7 @@ $bodyClass = $bodyClass ?? 'index-page';
                     <li><a href="/diversidade">Diversidade</a></li>
                     <li><a href="/recuperacao-credito">Recuperação de Crédito</a></li>
                     <li><a href="https://mdradvocacia.vagas.solides.com.br/">Trabalhe conosco</a></li>
-                    <li><a href="/privacidade">Compliance e Privacidade</a></li>
+                    <li><a href="/compliance-e-privacidade">Compliance e Privacidade</a></li>
                     <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -1,3 +1,3 @@
 <?php
-header('Location: /privacidade', true, 301);
+header('Location: /compliance-e-privacidade', true, 301);
 exit;

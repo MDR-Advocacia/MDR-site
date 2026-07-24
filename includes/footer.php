@@ -23,7 +23,7 @@
                         <li><a href="/">O escritório</a></li>
                         <li><a href="/atuacao">Nossa atuação</a></li>
                         <li><a href="https://mdradvocacia.vagas.solides.com.br/">Trabalhe conosco</a></li>
-                        <li><a href="/privacidade">Compliance e Privacidade</a></li>
+                        <li><a href="/compliance-e-privacidade">Compliance e Privacidade</a></li>
                     </ul>
                 </div>
 
@@ -63,7 +63,7 @@
     <p>© <span>Copyright</span> <strong class="px-1">MDR Advocacia</strong> <span>Todos os direitos reservados</span></p>
     
     <div class="credits mt-2">
-        <a href="/privacidade" style="color: #6c757d; font-size: 0.85rem; text-decoration: none; border-bottom: 1px dotted #6c757d;">
+        <a href="/compliance-e-privacidade" style="color: #6c757d; font-size: 0.85rem; text-decoration: none; border-bottom: 1px dotted #6c757d;">
             Compliance, Privacidade e Proteção de Dados
         </a>
     </div>

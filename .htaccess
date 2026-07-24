@@ -4,6 +4,11 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
 
+# URL oficial da pagina unificada de Compliance e Privacidade
+RewriteRule ^privacidade/?$ /compliance-e-privacidade [R=301,L,NE]
+RewriteRule ^compliance/?$ /compliance-e-privacidade [R=301,L,NE]
+RewriteRule ^compliance-e-privacidade/?$ pages/privacidade.php [L,QSA]
+
 # -------------------------------------------------------
 # REGRAS DE MASCARAMENTO DE PASTAS
 # -------------------------------------------------------
