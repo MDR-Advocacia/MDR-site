@@ -22,9 +22,8 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/">O escritório</a></li>
                         <li><a href="/atuacao">Nossa atuação</a></li>
-                        <li><a href="https://recrutamentomdradvocia.vagas.solides.com.br/">Trabalhe conosco</a></li>
-                        <li><a href="/compliance">Integridade e Compliance</a></li>
-                        <li><a href="/privacidade">Privacidade</a></li>
+                        <li><a href="https://mdradvocacia.vagas.solides.com.br/">Trabalhe conosco</a></li>
+                        <li><a href="/privacidade">Compliance e Privacidade</a></li>
                     </ul>
                 </div>
 
@@ -65,7 +64,7 @@
     
     <div class="credits mt-2">
         <a href="/privacidade" style="color: #6c757d; font-size: 0.85rem; text-decoration: none; border-bottom: 1px dotted #6c757d;">
-            Aviso de Privacidade e Proteção de Dados
+            Compliance, Privacidade e Proteção de Dados
         </a>
     </div>
 </footer>
