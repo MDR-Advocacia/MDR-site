@@ -14,7 +14,7 @@ Prévia independente de home, blog e três artigos demonstrativos, sem CMS, banc
 
 Aplicação própria no Coolify de homologação, repositório público em `develop`, base directory `/laboratorio`, build pack Dockerfile, arquivo `/Dockerfile`, porta 8080. Publicação manual neste primeiro ciclo; não habilitar deploys da main ou webhooks globais. O Dockerfile só copia arquivos estáticos para Nginx sem usuário root, sem build de Node/PHP/banco. Contexto pequeno via `.dockerignore`; os vídeos em Git LFS do projeto original não são usados.
 
-Limites previstos: 128 MiB de RAM, 128 MiB de memória+swap, 0,25 CPU, limite de processos e logs. Prévia protegida por autenticação HTTP do Coolify e HTTPS em domínio temporário. Credencial exclusiva do laboratório deve ficar fora do repositório; não reutilizar FTP/Coolify/GitHub. `robots.txt`, meta e cabeçalho pedem não indexação, que não substitui autenticação.
+Limites confirmados no Docker: 128 MiB de RAM, 128 MiB de memória+swap (sem swap adicional), 0,25 CPU e logs com 3 arquivos de até 10 MiB. O processo usa UID 101 e todas as capabilities foram removidas. Não há limite de PIDs aplicado; a versão instalada do Coolify não traduz esse parâmetro nas opções adicionais. Prévia protegida por autenticação HTTP do Coolify e HTTPS em domínio temporário. Credencial exclusiva do laboratório deve ficar fora do repositório; não reutilizar FTP/Coolify/GitHub. `robots.txt`, meta e cabeçalho pedem não indexação, que não substitui autenticação.
 
 Para revisar conteúdo, usar `/`, `/blog/` e os três artigos. Busca sem distinção de acento e filtros por categoria funcionam no navegador. Menu recolhido em telas pequenas. Conteúdo definitivo e painel editorial serão definidos posteriormente.
 
