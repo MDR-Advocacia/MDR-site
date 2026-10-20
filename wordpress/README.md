@@ -31,7 +31,7 @@ Credenciais de entrada na prévia e credenciais WordPress são distintas e ficam
 
 - Vídeo local verificado por SHA-256 contra o ativo original: `00f7df15c982f1ff73cba4fa9bb0fd71fa7669760c0fe29f797215901ec6dc12`. ~23 s, 1.882.701 bytes; sem textos sobrepostos, sem corte móvel, pausa e preferência por movimento reduzido. Esse pequeno arquivo regular dispensa LFS no novo build; o vídeo legado e suas regras não foram alterados.
 - E-mails externos, comentários, XML-RPC e application passwords desativados no laboratório. Sem analytics, pixels, fontes externas, mapas/feeds incorporados ou formulários públicos de coleta.
-- HTTPS e proteção HTTP Basic no proxy são obrigatórios; noindex é complementar e não substitui controle de acesso.
+- HTTPS e proteção HTTP Basic no Apache são obrigatórios para páginas e ativos; apenas `/healthz.php` revela o estado de saúde. O uso de Compose nesta versão do Coolify não aplicou o Basic Auth configurado no recurso; a aplicação impõe a proteção e recusa iniciar sem o hash. Noindex é complementar e não substitui controle de acesso.
 - Compromissos ESG, Pacto Global, políticas e serviços remetem às páginas institucionais do site atual. Não houve migração integral dessas páginas ou validação de documentos pela DPO. Marca Pacto Global não foi reproduzida antes do e-mail/revisão solicitado.
 - Recuperação/equipe de cobrança e integrações de negociação permanecem na frente de revisão; não houve importação de diretório desatualizado.
 - Biografias, dados do rodapé e premiações vieram do site original e precisam de confirmação editorial antes da produção. Não há certificação ISO nova publicada.
