@@ -80,91 +80,100 @@
       "id": "award-bb",
       "title": "Melhor Performance Geral - 1° Semestre",
       "subtitle": "1º Lugar - Banco do Brasil - 1° Semestre",
-      "image": "assets/img/premios/25sP8ch.webp",
+      "image": "assets/img/premios/premio-25sP8ch-estudio.webp",
       "description": "Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.",
       "year": null,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/25sP8ch.webp"
     },
     {
       "id": "award-panama",
       "title": "LAQI 2025",
       "subtitle": "Reconhecimento LAQI 2025",
-      "image": "assets/img/premios/eXxWfsj.webp",
+      "image": "assets/img/premios/premio-eXxWfsj-estudio.webp",
       "description": "O MDR Advocacia recebeu o Certificado de Reconhecimento LAQI 2025, uma distinção que reforça nosso compromisso com a excelência e a evolução constante.",
       "year": 2025,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/eXxWfsj.webp"
     },
     {
       "id": "award-bb2",
       "title": "Melhor Performance Geral - 2° Semestre",
       "subtitle": "1º Lugar - Banco do Brasil - 2° Semestre",
-      "image": "assets/img/premios/0weKyil.webp",
+      "image": "assets/img/premios/premio-0weKyil-estudio.webp",
       "description": "Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos no 2° Semestre, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.",
       "year": null,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/0weKyil.webp"
     },
     {
       "id": "award-fenalaw2025",
       "title": "1° Lugar na Categoria Gestão",
       "subtitle": "Fomos Ouro Na FENALAW - 2025",
-      "image": "assets/img/premios/QCndqTP.webp",
+      "image": "assets/img/premios/premio-QCndqTP-estudio.webp",
       "description": "Conquistamos o primeiro lugar - Categoria Gestão Case: HIT.Lab – Hub de Inovações Tecnológicas.",
       "year": 2025,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/QCndqTP.webp"
     },
     {
       "id": "award-gptw",
       "title": "Prêmio AB2L Infinite de Inovação Jurídica 2025",
       "subtitle": "AB2L 2025",
-      "image": "assets/img/premios/uGl9PK5.webp",
+      "image": "assets/img/premios/premio-uGl9PK5-estudio.webp",
       "description": "Neste ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica! A AB2L reúne mais de 600 integrantes comprometidos em transformar o Direito no Brasil por meio da inovação, da educação do mercado e do fortalecimento do ecossistema jurídico.",
       "year": 2025,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/uGl9PK5.webp"
     },
     {
       "id": "award-fenalaw",
       "title": "Prêmio AB2L Infinite de Inovação Jurídica 2024",
       "subtitle": "AB2L 2024",
-      "image": "assets/img/premios/xukxCS7.webp",
+      "image": "assets/img/premios/premio-xukxCS7-estudio.webp",
       "description": "A MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024. Este prêmio reflete nosso compromisso contínuo com a inovação e a excelência na prática jurídica.",
       "year": 2024,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/xukxCS7.webp"
     },
     {
       "id": "award-ATIVOS",
       "title": "Prêmio 1° Semestre de 2024 - Lote 4",
       "subtitle": "ATIVOS - MDR ADVOCACIA",
-      "image": "assets/img/premios/MfwyKBR.webp",
+      "image": "assets/img/premios/premio-MfwyKBR-estudio.webp",
       "description": "A MDR Advocacia marcou presença no Ativos Connect, em Brasília. O evento reuniu empresas de cobrança e escritórios de advocacia para debater os resultados do último semestre de 2023 e o primeiro de 2024, além de discutir estratégias para o futuro da Ativos S.A. Securitizadora. A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no primeiro semestre de 2024.",
       "year": 2024,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/MfwyKBR.webp"
     },
     {
       "id": "award-bb3",
       "title": "Melhor Performance Geral - 2024",
       "subtitle": "3º Lugar - Banco do Brasil",
-      "image": "assets/img/premios/lAGM1ZT.webp",
+      "image": "assets/img/premios/premio-lAGM1ZT-estudio.webp",
       "description": "Conquistamos o terceiro lugar em performance geral,um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.",
       "year": 2024,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/lAGM1ZT.webp"
     },
     {
       "id": "award-bb4",
       "title": "The Law Awards - 2024",
       "subtitle": "Latin American Quality Institute",
-      "image": "assets/img/premios/1rpTCP5.webp",
+      "image": "assets/img/premios/premio-1rpTCP5-estudio.webp",
       "description": "O prêmio The Law Awards 2024 do Latin American Quality Institute (LAQI) foi realizado em Manaus, Brasil, em maio de 2024, e premiou escritórios de advocacia pela excelência em gestão, práticas empresariais e responsabilidade social. A cerimônia foi parte da LAQI Impact Summit – Brazil 2024, um evento que reúne líderes empresariais para discutir modelos de negócio e inovação.",
       "year": 2024,
       "validity": null,
-      "source": "pages/premios.php, featured-award-item"
+      "source": "pages/premios.php, featured-award-item",
+      "original_image": "assets/img/premios/1rpTCP5.webp"
     }
   ],
   "contact": {

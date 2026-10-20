@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-20",
+  "tool": "image_gen built-in",
+  "purpose": "Tratamento fotográfico para avaliação da prévia privada. Originais preservados; imagens ilustrativas, não substituem certificados nem prova documental.",
+  "prompt": "Use case: precise-object-edit. Isolate ONLY the actual physical trophy; replace room/table/graphic background with seamless warm white (#f7f5f0) studio background and subtle contact shadow. Remove extra headline, floating badge and MDR logo OUTSIDE the trophy. Keep ORIGINAL trophy silhouette, geometry, materials, colors, engraved text, dates and logos ON the trophy exactly as photographed. No redesign, no correcting or inventing inscriptions. Replace room seen through holes/glass with neutral background. Center complete trophy upright, base visible, 10% margin top/bottom, square canvas.",
+  "assets": [
+    {
+      "award_id": "award-bb",
+      "original": "assets/img/premios/25sP8ch.webp",
+      "file": "wordpress/theme/assets/premio-25sP8ch-estudio.webp",
+      "sha256": "9cab4c65b03cacbf98d013f34ff5047ccca3ef674445166f296c4f6d64bee733",
+      "bytes": 37156,
+      "series": "Banco do Brasil — modelo e câmera comuns, recortes vazados; texto específico da foto original",
+      "master": "premio-0weKyil-estudio.webp"
+    },
+    {
+      "award_id": "award-panama",
+      "original": "assets/img/premios/eXxWfsj.webp",
+      "file": "wordpress/theme/assets/premio-eXxWfsj-estudio.webp",
+      "sha256": "fe29bec5e755f7de9e042796ebbf68fa1c3b9ef763c6858be0e4d0bc297b4aa5",
+      "bytes": 27758
+    },
+    {
+      "award_id": "award-bb2",
+      "original": "assets/img/premios/0weKyil.webp",
+      "file": "wordpress/theme/assets/premio-0weKyil-estudio.webp",
+      "sha256": "5ffb99f0869301c89ada2b661a8b07d675a5b51436f97f6632525e284528ae6e",
+      "bytes": 37064,
+      "series": "Banco do Brasil — modelo e câmera comuns, recortes vazados; texto específico da foto original",
+      "master": "premio-0weKyil-estudio.webp"
+    },
+    {
+      "award_id": "award-fenalaw2025",
+      "original": "assets/img/premios/QCndqTP.webp",
+      "file": "wordpress/theme/assets/premio-QCndqTP-estudio.webp",
+      "sha256": "0ab8e0c4b46e0daa5fcba457d5f60e9cd878f6637ab97847548b8bf512b8ade0",
+      "bytes": 31620
+    },
+    {
+      "award_id": "award-gptw",
+      "original": "assets/img/premios/uGl9PK5.webp",
+      "file": "wordpress/theme/assets/premio-uGl9PK5-estudio.webp",
+      "sha256": "07ce459ed1014158152311acd04c628d982039f975f6df9fd6aae056d728b4a4",
+      "bytes": 60096
+    },
+    {
+      "award_id": "award-fenalaw",
+      "original": "assets/img/premios/xukxCS7.webp",
+      "file": "wordpress/theme/assets/premio-xukxCS7-estudio.webp",
+      "sha256": "b15797d09ba23a9b9f0decd5c33bfb10e6d31ac2f407ed567ac08414085724cf",
+      "bytes": 44984
+    },
+    {
+      "award_id": "award-ATIVOS",
+      "original": "assets/img/premios/MfwyKBR.webp",
+      "file": "wordpress/theme/assets/premio-MfwyKBR-estudio.webp",
+      "sha256": "12e4b873144eb8962051011001af9af0835571faae0a957ea82f542f3c03fe1c",
+      "bytes": 22328
+    },
+    {
+      "award_id": "award-bb3",
+      "original": "assets/img/premios/lAGM1ZT.webp",
+      "file": "wordpress/theme/assets/premio-lAGM1ZT-estudio.webp",
+      "sha256": "79593503180f00fb011747e4ee53daf8423387643f734cbd9d829510b94abc99",
+      "bytes": 34978,
+      "series": "Banco do Brasil — modelo e câmera comuns, recortes vazados; texto específico da foto original",
+      "master": "premio-0weKyil-estudio.webp"
+    },
+    {
+      "award_id": "award-bb4",
+      "original": "assets/img/premios/1rpTCP5.webp",
+      "file": "wordpress/theme/assets/premio-1rpTCP5-estudio.webp",
+      "sha256": "23615f771f7daabbaf12751f997654713581ce424c0ce14295d9739ee3291aeb",
+      "bytes": 35120
+    }
+  ],
+  "bb_followup_prompt": "Image 1 is master standardized studio model; image 2 only inscription evidence. Keep model, proportions, angle, straight-on centered camera, blue base, yellow Banco do Brasil hollow logo and center fin, light, shadow and square framing identical to master. All cutouts show white background. Change only white centered base lettering to the exact text on corresponding source photo."
+}

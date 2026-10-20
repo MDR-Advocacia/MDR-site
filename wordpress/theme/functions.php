@@ -36,7 +36,7 @@ add_action('add_meta_boxes', function () {
     add_meta_box('mdr-details', 'Informações do cadastro', function ($post) {
         wp_nonce_field('mdr_details', 'mdr_nonce');
         $fields = $post->post_type === 'mdr_socio' ? ['role'=>'Função', 'instagram'=>'Link do Instagram', 'linkedin'=>'Link do LinkedIn'] : ['year'=>'Ano (deixar vazio se não confirmado)', 'subtitle'=>'Entidade, categoria ou validade'];
-        echo '<p>A foto é definida em “Imagem destacada”. O resumo aparece na home; o texto principal fica no perfil.</p>';
+        echo '<p>A foto é definida em “Imagem destacada”. O resumo aparece na janela do sócio na home; o texto principal fica no perfil completo.</p>';
         foreach ($fields as $key => $label) {
             echo '<p><label>' . esc_html($label) . '<br><input class="widefat" type="' . (in_array($key,['instagram','linkedin'],true) ? 'url' : 'text') . '" name="mdr_' . esc_attr($key) . '" value="' . esc_attr(get_post_meta($post->ID,'mdr_'.$key,true)) . '"></label></p>';
         }
@@ -54,10 +54,13 @@ add_action('save_post', function ($id) {
 function mdr_picture($id, $size='large', $class='') {
     if (has_post_thumbnail($id)) { echo get_the_post_thumbnail($id,$size,['class'=>$class,'loading'=>'lazy']); }
 }
+function mdr_social_icon($network, $url, $label) {
+    if (!$url || !in_array($network,['linkedin','instagram','facebook','whatsapp'],true)) { return; }
+    echo '<a class="social-icon" href="'.esc_url($url).'" target="_blank" rel="noopener noreferrer" aria-label="'.esc_attr($label).'" title="'.esc_attr($label).'"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="'.esc_url(mdr_asset('social-icons.svg').'#'.$network).'"></use></svg></a>';
+}
 function mdr_social($id) {
     foreach (['linkedin'=>'LinkedIn','instagram'=>'Instagram'] as $key=>$label) {
-        $url = get_post_meta($id,'mdr_'.$key,true);
-        if ($url) { echo '<a href="'.esc_url($url).'" target="_blank" rel="noopener noreferrer">'.esc_html($label).' <span aria-hidden="true">↗</span></a>'; }
+        mdr_social_icon($key,get_post_meta($id,'mdr_'.$key,true),$label.' de '.get_the_title($id));
     }
 }
 function mdr_post_card() { ?>

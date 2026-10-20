@@ -4,6 +4,7 @@ COPY --from=cli /usr/local/bin/wp /usr/local/bin/wp
 COPY theme /usr/src/wordpress/wp-content/themes/mdr
 COPY mu-plugins /usr/src/wordpress/wp-content/mu-plugins
 COPY seed /opt/mdr-seed
+COPY maintenance /opt/mdr-maintenance
 COPY php.ini /usr/local/etc/php/conf.d/mdr.ini
 COPY apache.conf /etc/apache2/conf-enabled/mdr.conf
 COPY entrypoint.sh /usr/local/bin/mdr-entrypoint
