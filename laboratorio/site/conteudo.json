@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "seguranca-juridica-e-negocios",
+    "category": "Negócios",
+    "title": "Segurança jurídica como parte da estratégia de negócio",
+    "excerpt": "Um espaço para conectar os temas do Direito às decisões e aos desafios das empresas.",
+    "cover": "negocios",
+    "read": "4 min"
+  },
+  {
+    "slug": "esg-em-perspectiva",
+    "category": "ESG",
+    "title": "ESG em perspectiva: compromissos que ganham espaço",
+    "excerpt": "Uma proposta de editoria para reunir reflexões sobre responsabilidade e governança.",
+    "cover": "esg",
+    "read": "3 min"
+  },
+  {
+    "slug": "direito-e-transformacao",
+    "category": "Institucional",
+    "title": "Direito, pessoas e transformação: uma conversa contínua",
+    "excerpt": "Conhecimento que aproxima o escritório de quem acompanha sua atuação.",
+    "cover": "institucional",
+    "read": "5 min"
+  }
+]
