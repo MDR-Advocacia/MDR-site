@@ -26,7 +26,7 @@ $bodyClass = $bodyClass ?? 'index-page';
     <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link href="/assets/css/main.css?v=1.4" rel="stylesheet">
+    <link href="/assets/css/main.css?v=1.5" rel="stylesheet">
 </head>
 
 <body class="<?php echo htmlspecialchars($bodyClass, ENT_QUOTES, 'UTF-8'); ?>">

@@ -3783,7 +3783,7 @@ section,
     display: grid;
     grid-template-columns: 1.5fr 1fr; /* Coluna da esquerda 50% maior que a da direita */
     gap: 50px;
-    align-items: flex-start;
+    align-items: stretch; /* Card e lista com a mesma altura */
 }
 
 /* Área de exibição (esquerda) */
@@ -3792,10 +3792,20 @@ section,
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    position: sticky; /* Efeito "grudento" ao rolar a página */
-    top: 120px;
+    margin-bottom: 0;
 }
-/* Área de exibição (esquerda) */
+/* O card ocupa a altura da lista; a imagem fica centralizada no espaço livre e o texto embaixo */
+.award-display-area .featured-award-item.visible-award {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.award-display-area .award-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .award-display-area .award-image img {
     /* Define uma altura máxima para a imagem. Ajuste este valor se necessário. */
@@ -3825,11 +3835,11 @@ section,
 .awards-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 .award-list-item {
     display: block;
-    padding: 20px;
+    padding: 12px 18px;
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 8px;
@@ -3837,13 +3847,13 @@ section,
     text-decoration: none;
 }
 .award-list-item h4 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #333;
-    margin: 0 0 5px 0;
+    margin: 0 0 4px 0;
 }
 .award-list-item span {
-    font-size: 14px;
+    font-size: 13px;
     color: #b29d55;
 }
 .award-list-item:hover {
@@ -3860,10 +3870,10 @@ section,
 /* --- RESPONSIVIDADE PARA ESTA SEÇÃO --- */
 @media (max-width: 992px) {
     .featured-awards-layout {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
-    .award-display-area .featured-award-item {
-        position: static; 
+    .award-display-area .featured-award-item.visible-award {
+        height: auto;
     }
 }
 /* Correção para Sobreposição do Modal */
