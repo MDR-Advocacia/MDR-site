@@ -1,0 +1,107 @@
+﻿AVISO DE PRIVACIDADE
+
+SUMÁRIO
+
+1.     IDENTIFICAÇÃO DO CONTROLADOR
+
+2.     OBJETIVO
+
+3.     DADOS COLETADOS e FINALIDADES
+
+4.     COMPARTILHAMENTO DE DADOS
+
+5.     RETENÇÃO E ELIMINAÇÃO DE DADOS
+
+6.     SEGURANÇA E PRIVACIDADE DESDE A CONCEPÇÃO
+
+7.     DIREITOS DOS TITULARES
+
+8.     ENCARREGADO PELO TRATAMENTO
+
+9.     APROVAÇÃO
+
+A MDR ADVOCACIA valoriza a privacidade e a proteção dos seus dados pessoais. Durante a utilização de nossos produtos e serviços, podem ser coletadas informações pessoais necessárias para viabilizar o atendimento, prestar serviços jurídicos, cumprir obrigações legais e aprimorar nossa atuação.
+
+Os dados são tratados com base na Lei Geral de Proteção de Dados Pessoais (LGPD – Lei nº 13.709/2018), de forma ética, segura e transparente, observando princípios como necessidade, finalidade e minimização. Ressaltamos que não realizamos a coleta de cookies para rastreamento de comportamento dos usuários em nosso site.
+
+Você, como titular de dados, tem garantidos os seus direitos de acesso, correção, revogação de consentimento, portabilidade e outras prerrogativas legais. Para exercer esses direitos ou esclarecer dúvidas, entre em contato com a nossa Encarregada de Proteção de Dados pelo e-mail: dpo@mdradvocacia.com. Para mais informações sobre como tratamos os seus dados, consulte o inventário de dados pessoais no website.
+
+1. IDENTIFICAÇÃO DO CONTROLADOR
+
+A MDR ADVOCACIA é um escritório especializado na prestação de serviços jurídicos e consultivos, atuando em diversas áreas do Direito, comprometido com a segurança, confidencialidade e uso adequado dos dados pessoais.
+
+2. OBJETIVO
+
+Este Aviso de Privacidade tem como finalidade informar, de forma clara e acessível, como a MDR ADVOCACIA realiza o tratamento de dados pessoais no exercício de suas atividades, esclarecendo quais dados são coletados, para quais finalidades, qual a base legal utilizada, com quem podem ser compartilhados, por quanto tempo são mantidos e quais medidas de segurança são adotadas.
+
+Além disso, tem por objetivo garantir que os titulares de dados conheçam seus direitos previstos na Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD) e a forma de exercê-los, promovendo a transparência, a confiança e a conformidade com a legislação aplicável.
+
+3. DADOS COLETADOS e FINALIDADES
+
+Ao utilizar os serviços e softwares da MDR ADVOCACIA o(a) titular de dados declara estar ciente e de acordo com os Termos de Uso e com a Política de Privacidade. Caso não concorde com os termos, recomendamos que não utilize os serviços oferecidos.
+
+A MDR ADVOCACIA realiza o tratamento de dados pessoais estritamente necessários para cumprir suas finalidades institucionais, que incluem: prestação de serviços jurídicos especializados, cumprimento de obrigações legais, representação em processos judiciais e administrativos, assessoria consultiva e regulatória, e demais atividades compatíveis com suas áreas de atuação.
+
+Os dados pessoais tratados podem ser coletados por meio dos softwares da MDR, site oficial, formulários físicos disponibilizados em eventos ou pontos de atendimento. O(a) titular é exclusivamente responsável pela veracidade, exatidão e atualidade das informações pessoais fornecidas. O fornecimento de dados falsos, desatualizados ou incompletos poderá comprometer a prestação adequada dos serviços e ensejar a adoção de medidas legais cabíveis, conforme a legislação vigente.
+
+A MDR ADVOCACIA poderá tratar dados biométricos (reconhecimento facial) exclusivamente para controle de acesso físico às suas instalações. O cadastro biométrico é facultativo, havendo alternativa de acesso não biométrica, e o tratamento observa medidas de segurança reforçadas, nos termos da Política de Privacidade e da Política de Segurança da Informação.
+
+Devido à natureza dinâmica e à complexidade das operações jurídicas realizadas, o inventário completo de dados pessoais — incluindo todas as categorias de dados, finalidades e bases legais — é mantido atualizado internamente, conforme exigido pelo art. 37 da LGPD. Além disso, a versão atualizada deste artefato está disponível no website da instituição. O acesso mais detalhado ao inventário poderá ser solicitado pelo titular dos dados ou pelas autoridades competentes, mediante requerimento formal.
+
+4. COMPARTILHAMENTO DE DADOS
+
+O compartilhamento de dados pessoais ocorre de forma limitada, mediante garantia de segurança e confidencialidade, e quando necessário para as finalidades legítimas do escritório. Os dados podem ser compartilhados com:
+
+Órgãos do Poder Judiciário, Ministério Público, órgãos reguladores e outras autoridades públicas;
+
+Escritórios correspondentes, peritos e auxiliares da justiça;
+
+Prestadores de serviços contratados (como consultorias, contabilidade, tecnologia da informação);
+
+Autoridades fiscais, quando exigido por obrigação legal.Prestadores de serviço essenciais para a execução da plataforma;
+
+Terceiros autorizados, com base em contrato e mediante salvaguardas de segurança e confidencialidade.
+
+A MDR ADVOCACIA não realiza transferência internacional de dados pessoais sem garantias adequadas e o cumprimento dos requisitos legais.
+
+5. RETENÇÃO E ELIMINAÇÃO DE DADOS
+
+Os dados são mantidos apenas pelo tempo necessário às finalidades informadas ou conforme exigido por lei. Após esse período, são anonimizados ou eliminados com segurança.
+
+6. SEGURANÇA E PRIVACIDADE DESDE A CONCEPÇÃO
+
+A plataforma adota o conceito de "privacy by design" e implementa:
+
+Criptografia de dados;
+
+Controle de acesso e autenticação robusta;
+
+Registros de logs;
+
+Proteção contra acessos não autorizados;
+
+Atualização e monitoramento contínuo das vulnerabilidades.
+
+Os dados pessoais tratados pela MDR ADVOCACIA são armazenados em infraestrutura de nuvem segura, com bancos de dados controlados pela própria instituição. São utilizadas soluções tecnológicas robustas que garantem a confidencialidade, integridade e autenticidade das informações, com base em boas práticas de segurança da informação. Todas as medidas são avaliadas de forma contínua, considerando os riscos envolvidos, o volume e a sensibilidade dos dados tratados em cada contexto
+
+7. DIREITOS DOS TITULARES
+
+O titular pode exercer seus direitos conforme o art. 18 da LGPD, incluindo:
+
+Confirmação dos dados;
+
+Acesso aos dados;
+
+Correção, bloqueio, exclusão e portabilidade;
+
+Revogação de consentimento;
+
+Informação sobre compartilhamento e uso de dados.
+
+As solicitações devem ser encaminhadas à Encarregada de Dados, através do e-mail dpo@mdradvocacia.com.
+
+8. ENCARREGADO PELO TRATAMENTO
+
+A Encarregada de Proteção de Dados da MDR ADVOCACIA pode ser contatada pelo e-mail: dpo@mdradvocacia.com.
+
+9. APROVAÇÃO
