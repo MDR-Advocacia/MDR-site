@@ -1,0 +1,1 @@
+<?php get_header(); ?><main id="conteudo" class="section"><p class="eyebrow">MDR Advocacia</p><h1>Página não encontrada.</h1><a class="button outline" href="<?php echo esc_url(home_url('/')); ?>">Voltar ao início ↗</a></main><?php get_footer(); ?>

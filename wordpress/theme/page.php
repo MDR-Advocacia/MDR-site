@@ -1,0 +1,1 @@
+<?php get_header(); ?><main id="conteudo"><?php while(have_posts()){the_post(); ?><article class="section article-page"><a class="breadcrumb" href="<?php echo esc_url(home_url('/')); ?>">← Início</a><h1><?php the_title(); ?></h1><div class="prose"><?php the_content(); ?></div></article><?php } ?></main><?php get_footer(); ?>

@@ -1,0 +1,74 @@
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: '${SERVICE_NAME_DB}:3306'
+      WORDPRESS_DB_NAME: mdr_wordpress
+      WORDPRESS_DB_USER: mdr_wordpress
+      WORDPRESS_DB_PASSWORD: '${MDR_DB_PASSWORD}'
+      SITE_URL: '${SERVICE_URL_WORDPRESS}'
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', getenv('SITE_URL'));
+        define('WP_SITEURL', getenv('SITE_URL'));
+        define('WP_ENVIRONMENT_TYPE', 'staging');
+        define('DISALLOW_FILE_EDIT', true);
+        define('DISALLOW_FILE_MODS', true);
+        define('AUTOMATIC_UPDATER_DISABLED', true);
+        define('WP_POST_REVISIONS', 30);
+        define('WP_MEMORY_LIMIT', '128M');
+        define('WP_MAX_MEMORY_LIMIT', '192M');
+        define('FORCE_SSL_ADMIN', true);
+    volumes:
+      - wordpress_data:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - '80'
+    mem_limit: 512m
+    memswap_limit: 512m
+    cpus: 0.75
+    pids_limit: 128
+    healthcheck:
+      test: ['CMD', 'curl', '-fsS', 'http://localhost/healthz.php']
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+  db:
+    image: mariadb:10.11.19
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: mdr_wordpress
+      MARIADB_USER: mdr_wordpress
+      MARIADB_PASSWORD: '${MDR_DB_PASSWORD}'
+      MARIADB_ROOT_PASSWORD: '${MDR_DB_ROOT_PASSWORD}'
+    command: ['--innodb-buffer-pool-size=96M', '--max-connections=25', '--performance-schema=OFF']
+    volumes:
+      - database_data:/var/lib/mysql
+    mem_limit: 384m
+    memswap_limit: 384m
+    cpus: 0.5
+    pids_limit: 96
+    healthcheck:
+      test: ['CMD', 'healthcheck.sh', '--connect', '--innodb_initialized']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+volumes:
+  wordpress_data:
+  database_data:

@@ -1,0 +1,2 @@
+# Small, verified publication asset (1.9 MB); deploy does not require Git LFS.
+hero-home.mp4 -filter -diff -merge -text

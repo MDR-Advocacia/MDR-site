@@ -1,0 +1,191 @@
+{
+  "source_date": "2026-10-20",
+  "source": "Conteúdo institucional do site original, referência main ddc8a0b; importação para revisão em laboratório privado, 20/10/2026.",
+  "home": {
+    "presentation": [
+      "A MDR Advocacia oferece soluções jurídicas diversificadas (full service), destacando-se como parceiros estratégicos comprometidos com o sucesso e crescimento dos negócios de seus clientes, garantindo segurança jurídica em um ambiente empresarial dinâmico.",
+      "A empresa se diferencia pela alta qualidade técnica e excelência na prestação de serviços jurídicos, alinhando suas práticas aos pilares ESG, focados em responsabilidade ambiental, social e de governança.",
+      "Cada serviço é realizado com rigor técnico, agilidade e um forte compromisso com a obtenção de resultados, refletindo a crença de que o sucesso da MDR está diretamente ligado ao sucesso de seus parceiros."
+    ],
+    "mission": "Prestar serviços jurídicos de qualidade, com ética, transparência e comprometimento. Trabalhamos para garantir que nossos clientes tenham seus direitos respeitados e sejam assistidos de maneira diligente, segura e eficiente.",
+    "vision": "Ser destaque pela excelência na prestação dos serviços jurídicos através da gestão de resultados.",
+    "values": "Ética, transparência, respeito e profissionalismo, visando sempre o melhor interesse do cliente e a construção de relações de confiança e parceria com todos os envolvidos no negócio.",
+    "photo": "assets/img/home/LuGPoCN.webp",
+    "partners_photo": "assets/img/home/5QTcAbK.webp"
+  },
+  "socios": [
+    {
+      "name": "Bruna Costa Ribeiro",
+      "role": "Sócia e CEO",
+      "bio": "Bruna Costa Ribeiro é doutoranda em Direito e também mestre em Direito Ambiental e Novos Direitos. Possui pós-graduações em Gestão de Escritórios e Departamentos Jurídicos. Pesquisadora nas áreas de Direito, Economia e Desenvolvimento e Créditos de Carbono, atua com forte ênfase nos ramos Bancário e Financeiro, Empresarial, Cível, Família e Sucessões. Sócia e CEO da MDR Advocacia, lidera a premiada Célula de Negociações Humanizadas, bem como as equipes de ações contrárias, trazendo soluções consensuais, judiciais e extrajudiciais para nossos clientes. É palestrante, autora e organizadora de livros e artigos jurídicos, e atualmente preside a Comissão de Direito Bancário da OAB/RN (triênio 2025–2027).",
+      "mini_bio": "Mestra em Direito Ambiental e Novos Direitos. Atua nas áreas Bancária e Financeira, Empresarial, Cível, Família e Sucessões. Lidera a Célula de Negociações Humanizadas e equipes de ações contrárias.",
+      "photo": "assets/img/socios/bruna-perfil.jpg",
+      "instagram": "https://www.instagram.com/brunacostaribeiro_/",
+      "linkedin": "https://www.linkedin.com/in/bruna-costa-ribeiro-947345149/",
+      "source": "index.php, modal de perfil"
+    },
+    {
+      "name": "Marcos Delli Ribeiro",
+      "role": "Sócio Fundador",
+      "bio": "Marcos Delli Ribeiro Rodrigues é doutorando e mestre em Direito, também possuindo especialização em Processo Civil. Pesquisador em Direito e Desenvolvimento Sustentável, é escritor e autor do livro “Crédito Consignado: um privilégio ou malefício aos aposentados e pensionistas do INSS e aos beneficiários do BPC-LOAS?”. Sócio da MDR Advocacia, atua com foco nas áreas Empresarial, Bancária e Financeira. Professor de pós-graduação, exerce as funções de Conselheiro Federal da OAB (triênio 2025–2027) e de Presidente da Comissão Nacional de Direito Bancário da CFOAB (triênio 2025–2027). É palestrante, autor e organizador de livros e artigos jurídicos.",
+      "mini_bio": "Mestre em Direito e especialista em Processo Civil. Atua nas áreas Empresarial, Bancária e Financeira, com experiência acadêmica como professor de pós-graduação e produção de livros e artigos jurídicos.",
+      "photo": "assets/img/socios/mdrPerfil.jpg",
+      "instagram": "https://www.instagram.com/marcos_delli/",
+      "linkedin": "https://www.linkedin.com/in/marcosdelliribeiromdradvocacia/",
+      "source": "index.php, modal de perfil"
+    },
+    {
+      "name": "Rodrigo Cavalcanti",
+      "role": "Sócio",
+      "bio": "Rodrigo Cavalcanti é doutorando e mestre em Direito. Presidente da ANACRIM/RN e vice-diretor da Escola Superior da Advocacia (ESA/OAB/RN), é professor de Direito Penal em cursos de graduação e de pós-graduação. Coordena a Liga Acadêmica de Direito Penal Econômico da UFRN (LADPE) e atua como pesquisador e orientador no POTICRIM. Autor do livro Lavagem de Capitais: o combate à criminalidade econômica e a preservação dos direitos fundamentais, além de capítulos e artigos publicados, é palestrante e sócio da MDR Advocacia.",
+      "mini_bio": "Mestre em Direito e professor de Direito Penal. Atua como pesquisador e autor na área de Direito Penal Econômico, com produção acadêmica sobre lavagem de capitais e preservação de direitos fundamentais.",
+      "photo": "assets/img/socios/rodrigo2-perfil.jpg",
+      "instagram": "https://www.instagram.com/profe.rodrigocavalcanti/",
+      "linkedin": "https://www.linkedin.com/in/rodrigo-cavalcanti-33651b31/",
+      "source": "index.php, modal de perfil"
+    },
+    {
+      "name": "Weuder Martins Câmara",
+      "role": "Sócio",
+      "bio": "Weuder Martins Câmara é mestre em Direito e especialista em Licitações e Contratos. Sócio da MDR Advocacia, atua no Contencioso e Estratégico Cível, Bancário, Direito Público e Direito Digital. Pesquisador nas áreas de Constituição, Regulação e Desenvolvimento, apresentou estudo sobre o fenômeno da hiperjudicialização no Brasil e o uso de inovação e tecnologia no meio jurídico como reflexo do Open Justice. Professor universitário, lidera o Hit.Lab - setor de inovação do escritório, e carteiras de ações contrárias. É palestrante, autor e organizador de livros e artigos jurídicos.",
+      "mini_bio": "Mestre em Direito e especialista em Licitações e Contratos. Atua no Contencioso e Estratégico Cível, Bancário, Direito Público e Digital. Lidera o Hit.Lab, setor de inovação do escritório.",
+      "photo": "assets/img/socios/weuder-perfil.jpg",
+      "instagram": "https://www.instagram.com/weuderm.adv/",
+      "linkedin": "https://www.linkedin.com/in/weuderm/",
+      "source": "index.php, modal de perfil"
+    },
+    {
+      "name": "Natália Ribeiro Linhares",
+      "role": "Sócia",
+      "bio": "Natália Ribeiro Linhares é doutoranda em Direito e mestre em Direito Ambiental e Sociedade, especialista em Direito Administrativo e Gestão Pública. Sócia da MDR Advocacia, atua no Contencioso e Estratégico Cível, Direito Público, Trabalhista e Bancário, liderando a área de recuperação de créditos. É palestrante, autora e organizadora de livros e artigos jurídicos, e exerce as funções de Conselheira Estadual e Ouvidora da Mulher da OAB/RN (triênio 2025–2027).",
+      "mini_bio": "Mestra em Direito Ambiental e Sociedade e especialista em Direito Administrativo e Gestão Pública. Atua no Contencioso e Estratégico Cível, Direito Público, Trabalhista e Bancário, liderando a recuperação de créditos.",
+      "photo": "assets/img/socios/natalia-perfil.jpg",
+      "instagram": "https://www.instagram.com/nataliarlinhares/",
+      "linkedin": "https://www.linkedin.com/in/nat%C3%A1lia-linhares-a482b1267/",
+      "source": "index.php, modal de perfil"
+    }
+  ],
+  "awards": [
+    {
+      "id": "award-gptw-2026",
+      "title": "Great Place To Work 2026",
+      "subtitle": "Certificada AGO 2026 - AGO 2027",
+      "image": "assets/img/gptw/selo-gptw-2026.png",
+      "description": "A MDR Advocacia conquistou o selo Great Place to Work, reconhecimento que reforça nosso compromisso com um ambiente de trabalho baseado em confiança, colaboração, respeito, desenvolvimento e valorização das pessoas.",
+      "year": 2026,
+      "validity": "AGO 2026 - AGO 2027",
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-bb",
+      "title": "Melhor Performance Geral - 1° Semestre",
+      "subtitle": "1º Lugar - Banco do Brasil - 1° Semestre",
+      "image": "assets/img/premios/25sP8ch.webp",
+      "description": "Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.",
+      "year": null,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-panama",
+      "title": "LAQI 2025",
+      "subtitle": "Reconhecimento LAQI 2025",
+      "image": "assets/img/premios/eXxWfsj.webp",
+      "description": "O MDR Advocacia recebeu o Certificado de Reconhecimento LAQI 2025, uma distinção que reforça nosso compromisso com a excelência e a evolução constante.",
+      "year": 2025,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-bb2",
+      "title": "Melhor Performance Geral - 2° Semestre",
+      "subtitle": "1º Lugar - Banco do Brasil - 2° Semestre",
+      "image": "assets/img/premios/0weKyil.webp",
+      "description": "Conquistamos o primeiro lugar em performance geral na carteira entre 20 mil e 55 mil processos no 2° Semestre, um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.",
+      "year": null,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-fenalaw2025",
+      "title": "1° Lugar na Categoria Gestão",
+      "subtitle": "Fomos Ouro Na FENALAW - 2025",
+      "image": "assets/img/premios/QCndqTP.webp",
+      "description": "Conquistamos o primeiro lugar - Categoria Gestão Case: HIT.Lab – Hub de Inovações Tecnológicas.",
+      "year": 2025,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-gptw",
+      "title": "Prêmio AB2L Infinite de Inovação Jurídica 2025",
+      "subtitle": "AB2L 2025",
+      "image": "assets/img/premios/uGl9PK5.webp",
+      "description": "Neste ano, conquistamos nossa terceira Certificação AB2L Infinite de Inovação Jurídica! A AB2L reúne mais de 600 integrantes comprometidos em transformar o Direito no Brasil por meio da inovação, da educação do mercado e do fortalecimento do ecossistema jurídico.",
+      "year": 2025,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-fenalaw",
+      "title": "Prêmio AB2L Infinite de Inovação Jurídica 2024",
+      "subtitle": "AB2L 2024",
+      "image": "assets/img/premios/xukxCS7.webp",
+      "description": "A MDR Advocacia foi reconhecida pela Associação Brasileira de Lawtechs e Legaltechs (AB2L) com o Certificado de Inovação Jurídica 2024. Este prêmio reflete nosso compromisso contínuo com a inovação e a excelência na prática jurídica.",
+      "year": 2024,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-ATIVOS",
+      "title": "Prêmio 1° Semestre de 2024 - Lote 4",
+      "subtitle": "ATIVOS - MDR ADVOCACIA",
+      "image": "assets/img/premios/MfwyKBR.webp",
+      "description": "A MDR Advocacia marcou presença no Ativos Connect, em Brasília. O evento reuniu empresas de cobrança e escritórios de advocacia para debater os resultados do último semestre de 2023 e o primeiro de 2024, além de discutir estratégias para o futuro da Ativos S.A. Securitizadora. A MDR Advocacia foi destaque, conquistando os prêmios de melhor desempenho no primeiro semestre de 2024.",
+      "year": 2024,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-bb3",
+      "title": "Melhor Performance Geral - 2024",
+      "subtitle": "3º Lugar - Banco do Brasil",
+      "image": "assets/img/premios/lAGM1ZT.webp",
+      "description": "Conquistamos o terceiro lugar em performance geral,um reconhecimento do nosso compromisso com a eficiência e resultados excepcionais para um de nossos maiores parceiros.",
+      "year": 2024,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    },
+    {
+      "id": "award-bb4",
+      "title": "The Law Awards - 2024",
+      "subtitle": "Latin American Quality Institute",
+      "image": "assets/img/premios/1rpTCP5.webp",
+      "description": "O prêmio The Law Awards 2024 do Latin American Quality Institute (LAQI) foi realizado em Manaus, Brasil, em maio de 2024, e premiou escritórios de advocacia pela excelência em gestão, práticas empresariais e responsabilidade social. A cerimônia foi parte da LAQI Impact Summit – Brazil 2024, um evento que reúne líderes empresariais para discutir modelos de negócio e inovação.",
+      "year": 2024,
+      "validity": null,
+      "source": "pages/premios.php, featured-award-item"
+    }
+  ],
+  "contact": {
+    "oab": "OAB/RN 502",
+    "cnpj": "21.949.880/0001-17",
+    "matrix": "R. Des. José Gomes da Costa, 1975, Capim Macio, Natal - RN",
+    "postal_code": "59082-140",
+    "branch": "Av. Campos Sales, 901, Petrópolis, Natal, Sala 1707",
+    "phone": "84 2139-9916",
+    "whatsapp": "84 99996-0201",
+    "email": "contato@mdradvocacia.com",
+    "hours": "Segunda a Sexta: 08:00 - 18:00",
+    "maps": "https://maps.app.goo.gl/s1q39cZ7D7e2v2E59",
+    "dpo_name": "Ingrid Quirino Ribeiro",
+    "dpo_substitute": "Ricardo Luiz Paiva Medeiros",
+    "dpo_email": "dpo@mdradvocacia.com",
+    "social": {
+      "facebook": "https://www.facebook.com/marcosdelliribeiro",
+      "instagram": "https://www.instagram.com/mdradvocacia/",
+      "linkedin": "https://www.linkedin.com/company/mdradvocacia/"
+    },
+    "source": "includes/footer.php e index.php#location"
+  }
+}
