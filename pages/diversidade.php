@@ -174,7 +174,7 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalGenero">
-          <img src="/assets/img/diversidade/comite-generos.jpg" class="card-img-top" alt="Comitê de Diversidade de Gênero">
+          <img loading="lazy" decoding="async" src="/assets/img/diversidade/comite-generos.jpg" class="card-img-top" alt="Comitê de Diversidade de Gênero">
           <div class="card-body">
             <h4 class="card-title">Equidade de Gênero</h4>
             <small class="text-muted">Clique para saber mais</small>
@@ -184,7 +184,7 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalPCD">
-          <img src="/assets/img/diversidade/comite-pcd.jpg" class="card-img-top" alt="Comitê de Inclusão de Pessoas com Deficiência (PCD)">
+          <img loading="lazy" decoding="async" src="/assets/img/diversidade/comite-pcd.jpg" class="card-img-top" alt="Comitê de Inclusão de Pessoas com Deficiência (PCD)">
           <div class="card-body">
             <h4 class="card-title">Pessoas com Deficiência</h4>
              <small class="text-muted">Clique para saber mais</small>
@@ -194,7 +194,7 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalRaca">
-          <img src="/assets/img/diversidade/comite-racial.jpg" class="card-img-top" alt="Comitê de Diversidade de Raça">
+          <img loading="lazy" decoding="async" src="/assets/img/diversidade/comite-racial.jpg" class="card-img-top" alt="Comitê de Diversidade de Raça">
           <div class="card-body">
             <h4 class="card-title">Igualdade Racial</h4>
              <small class="text-muted">Clique para saber mais</small>
@@ -204,7 +204,7 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalLGBT">
-          <img src="/assets/img/diversidade/comite-lgbt.jpg" class="card-img-top" alt="Comitê de Diversidade LGBTQIAPN+">
+          <img loading="lazy" decoding="async" src="/assets/img/diversidade/comite-lgbt.jpg" class="card-img-top" alt="Comitê de Diversidade LGBTQIAPN+">
           <div class="card-body">
             <h4 class="card-title">LGBTQIAPN+</h4>
              <small class="text-muted">Clique para saber mais</small>
@@ -214,7 +214,7 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="committee-card" data-bs-toggle="modal" data-bs-target="#modalReligiosa">
-          <img src="/assets/img/diversidade/comite-religiao.jpg" class="card-img-top" alt="Comitê de Diversidade Religiosa">
+          <img loading="lazy" decoding="async" src="/assets/img/diversidade/comite-religiao.jpg" class="card-img-top" alt="Comitê de Diversidade Religiosa">
           <div class="card-body">
             <h4 class="card-title">Diversidade Religiosa</h4>
              <small class="text-muted">Clique para saber mais</small>

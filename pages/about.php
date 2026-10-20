@@ -146,7 +146,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/socios/bruna-perfil.jpg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/socios/bruna-perfil.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#modalBrunaRibeiro"><i class="bi bi-arrows-fullscreen"></i></a>
                 </div>
@@ -161,7 +161,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/socios/mdrPerfil.jpg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/socios/mdrPerfil.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#modalMarcosDelli"><i class="bi bi-arrows-fullscreen"></i></a>
                 </div>
@@ -176,7 +176,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/socios/natalia-perfil.jpg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/socios/natalia-perfil.jpg" class="img-fluid" alt="">
                 <div class="social">
                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalNataliaLinhares"><i class="bi bi-arrows-fullscreen"></i></a>
                 </div>
@@ -192,7 +192,7 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
               <div class="team-member">
                 <div class="member-img">
-                  <img src="assets/img/socios/rodrigo2-perfil.jpg" class="img-fluid" alt="">
+                  <img loading="lazy" decoding="async" src="assets/img/socios/rodrigo2-perfil.jpg" class="img-fluid" alt="">
                   <div class="social">
                      <a href="#" data-bs-toggle="modal" data-bs-target="#modalRodrigoCavalcanti"><i class="bi bi-arrows-fullscreen"></i></a>
                   </div>
@@ -207,7 +207,7 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
               <div class="team-member">
                 <div class="member-img">
-                  <img src="assets/img/socios/weuder-perfil.jpg" class="img-fluid" alt="">
+                  <img loading="lazy" decoding="async" src="assets/img/socios/weuder-perfil.jpg" class="img-fluid" alt="">
                   <div class="social">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#modalWeuderMartins"><i class="bi bi-arrows-fullscreen"></i></a>
                   </div>
@@ -232,7 +232,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/bruna-perfil.jpg" class="modal-profile-image" alt="Bruna Costa Ribeiro">
+            <img loading="lazy" decoding="async" src="assets/img/socios/bruna-perfil.jpg" class="modal-profile-image" alt="Bruna Costa Ribeiro">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Bruna Costa Ribeiro</h2>
@@ -269,7 +269,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/mdrPerfil.jpg" class="modal-profile-image" alt="Marcos Delli Ribeiro">
+            <img loading="lazy" decoding="async" src="assets/img/socios/mdrPerfil.jpg" class="modal-profile-image" alt="Marcos Delli Ribeiro">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Marcos Delli Ribeiro</h2>
@@ -302,7 +302,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/rodrigo2-perfil.jpg" class="modal-profile-image" alt="Rodrigo Cavalcanti">
+            <img loading="lazy" decoding="async" src="assets/img/socios/rodrigo2-perfil.jpg" class="modal-profile-image" alt="Rodrigo Cavalcanti">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Rodrigo Cavalcanti</h2>
@@ -335,7 +335,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/weuder-perfil.jpg" class="modal-profile-image" alt="Weuder Martins Câmara">
+            <img loading="lazy" decoding="async" src="assets/img/socios/weuder-perfil.jpg" class="modal-profile-image" alt="Weuder Martins Câmara">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Weuder Martins Câmara</h2>
@@ -368,7 +368,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/natalia-perfil.jpg" class="modal-profile-image" alt="Natália Ribeiro Linhares">
+            <img loading="lazy" decoding="async" src="assets/img/socios/natalia-perfil.jpg" class="modal-profile-image" alt="Natália Ribeiro Linhares">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Natália Ribeiro Linhares</h2>

@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y sendmail
 # 3. CONFIGURAÇÕES DO APACHE (Essenciais para tirar o .php)
 
 # Habilita o módulo de reescrita de URL
-RUN a2enmod rewrite
+RUN a2enmod rewrite headers deflate
 
 # CORREÇÃO DO ERRO 500:
 # Altera a configuração do Apache para permitir que o arquivo .htaccess funcione.

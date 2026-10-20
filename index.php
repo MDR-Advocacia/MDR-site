@@ -4,8 +4,8 @@
 <main>
 
     <section id="hero" class="hero-fullscreen">
-        <video autoplay loop muted playsinline>
-            <source src="https://i.imgur.com/81mVlPy.mp4" type="video/mp4">
+        <video autoplay loop muted playsinline poster="/assets/img/home/hero-poster.webp">
+            <source src="/assets/video/hero-home.mp4" type="video/mp4">
             Seu navegador não suporta vídeos em HTML5.
         </video>
         <div class="container">
@@ -29,7 +29,7 @@
 <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
     
     <div class="col-lg-5 col-md-12">
-        <img src="https://i.imgur.com/LuGPoCN.jpeg" class="img-fluid" alt="Foto do escritório MDR">
+        <img loading="lazy" decoding="async" src="/assets/img/home/LuGPoCN.webp" class="img-fluid" alt="Foto do escritório MDR">
     </div>
 
     <div class="col-lg-7 col-md-12">
@@ -52,7 +52,7 @@
         <div class="row g-0">
 
             <div class="col-xl-7">
-                <img src="https://i.imgur.com/5QTcAbK.jpeg" class="img-fluid rounded" alt="Sócios da MDR Advocacia">
+                <img loading="lazy" decoding="async" src="/assets/img/home/5QTcAbK.webp" class="img-fluid rounded" alt="Sócios da MDR Advocacia">
             </div>
 
             <div class="col-xl-5 slides position-relative" data-aos="fade-up" data-aos-delay="200">
@@ -131,7 +131,7 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-member">
                         <div class="member-img">
-                            <img src="https://i.imgur.com/je1vIIy.jpeg" class="img-fluid" alt="">
+                            <img loading="lazy" decoding="async" src="/assets/img/home/je1vIIy.webp" class="img-fluid" alt="">
                             <div class="social"><a href="#" data-bs-toggle="modal" data-bs-target="#modalBrunaRibeiro"><i class="bi bi-arrows-fullscreen"></i></a></div>
                         </div>
                         <div class="member-info"><h4>Bruna Costa Ribeiro</h4><span>Sócia</span></div>
@@ -140,7 +140,7 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-member">
                         <div class="member-img">
-                            <img src="https://i.imgur.com/RUwBjJh.jpeg" class="img-fluid" alt="">
+                            <img loading="lazy" decoding="async" src="/assets/img/home/RUwBjJh.webp" class="img-fluid" alt="">
                             <div class="social"><a href="#" data-bs-toggle="modal" data-bs-target="#modalMarcosDelli"><i class="bi bi-arrows-fullscreen"></i></a></div>
                         </div>
                         <div class="member-info"><h4>Marcos Delli Ribeiro</h4><span>Sócio</span></div>
@@ -149,7 +149,7 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-member">
                         <div class="member-img">
-                            <img src="https://i.imgur.com/j2C18cS.jpeg" class="img-fluid" alt="">
+                            <img loading="lazy" decoding="async" src="/assets/img/home/j2C18cS.webp" class="img-fluid" alt="">
                             <div class="social"><a href="#" data-bs-toggle="modal" data-bs-target="#modalNataliaLinhares"><i class="bi bi-arrows-fullscreen"></i></a></div>
                         </div>
                         <div class="member-info"><h4>Natália Ribeiro Linhares</h4><span>Sócia</span></div>
@@ -159,7 +159,7 @@
                     <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
                         <div class="team-member">
                             <div class="member-img">
-                                <img src="https://i.imgur.com/zMld7va.jpeg" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="/assets/img/home/zMld7va.webp" class="img-fluid" alt="">
                                 <div class="social"><a href="#" data-bs-toggle="modal" data-bs-target="#modalRodrigoCavalcanti"><i class="bi bi-arrows-fullscreen"></i></a></div>
                             </div>
                             <div class="member-info"><h4>Rodrigo Cavalcanti</h4><span>Sócio</span></div>
@@ -168,7 +168,7 @@
                     <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
                         <div class="team-member">
                             <div class="member-img">
-                                <img src="https://i.imgur.com/IMME0y5.jpeg" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="/assets/img/home/IMME0y5.webp" class="img-fluid" alt="">
                                 <div class="social"><a href="#" data-bs-toggle="modal" data-bs-target="#modalWeuderMartins"><i class="bi bi-arrows-fullscreen"></i></a></div>
                             </div>
                             <div class="member-info"><h4>Weuder Martins Câmara</h4><span>Sócio</span></div>
@@ -189,7 +189,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/bruna-perfil.jpg" class="modal-profile-image" alt="Bruna Costa Ribeiro">
+            <img loading="lazy" decoding="async" src="assets/img/socios/bruna-perfil.jpg" class="modal-profile-image" alt="Bruna Costa Ribeiro">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Bruna Costa Ribeiro</h2>
@@ -217,7 +217,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/mdrPerfil.jpg" class="modal-profile-image" alt="Marcos Delli Ribeiro">
+            <img loading="lazy" decoding="async" src="assets/img/socios/mdrPerfil.jpg" class="modal-profile-image" alt="Marcos Delli Ribeiro">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Marcos Delli Ribeiro</h2>
@@ -245,7 +245,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/rodrigo2-perfil.jpg" class="modal-profile-image" alt="Rodrigo Cavalcanti">
+            <img loading="lazy" decoding="async" src="assets/img/socios/rodrigo2-perfil.jpg" class="modal-profile-image" alt="Rodrigo Cavalcanti">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Rodrigo Cavalcanti</h2>
@@ -274,7 +274,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/weuder-perfil.jpg" class="modal-profile-image" alt="Weuder Martins Câmara">
+            <img loading="lazy" decoding="async" src="assets/img/socios/weuder-perfil.jpg" class="modal-profile-image" alt="Weuder Martins Câmara">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Weuder Martins Câmara</h2>
@@ -303,7 +303,7 @@
       <div class="modal-body">
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="assets/img/socios/natalia-perfil.jpg" class="modal-profile-image" alt="Natália Ribeiro Linhares">
+            <img loading="lazy" decoding="async" src="assets/img/socios/natalia-perfil.jpg" class="modal-profile-image" alt="Natália Ribeiro Linhares">
           </div>
           <div class="col-md-8">
             <h2 class="modal-profile-title">Natália Ribeiro Linhares</h2>

@@ -213,19 +213,19 @@ include '../includes/header.php';
     <div class="esg-support-grid" data-aos="fade-up" data-aos-delay="250">
       <div class="esg-support-item">
         <div class="esg-support-image">
-          <img src="/assets/img/gptw/gptw-indice-de-confianca.png" alt="Material GPTW com índice de confiança">
+          <img loading="lazy" decoding="async" src="/assets/img/gptw/gptw-indice-de-confianca.png" alt="Material GPTW com índice de confiança">
         </div>
         <span>Confiança e clima organizacional</span>
       </div>
       <div class="esg-support-item">
         <div class="esg-support-image">
-          <img src="/assets/img/gptw/gptw-pessoas-excelentes.png" alt="Material GPTW sobre pessoas excelentes">
+          <img loading="lazy" decoding="async" src="/assets/img/gptw/gptw-pessoas-excelentes.png" alt="Material GPTW sobre pessoas excelentes">
         </div>
         <span>Pessoas no centro da cultura</span>
       </div>
       <div class="esg-support-item">
         <div class="esg-support-image">
-          <img src="/assets/img/gptw/gptw-certificacao-nacional.png" alt="Material GPTW sobre certificação nacional">
+          <img loading="lazy" decoding="async" src="/assets/img/gptw/gptw-certificacao-nacional.png" alt="Material GPTW sobre certificação nacional">
         </div>
         <span>Reconhecimento GPTW Brasil</span>
       </div>

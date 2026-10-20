@@ -79,9 +79,12 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    // Remove assim que o HTML estiver pronto; esperar o 'load' (todas as imagens) travava a página por vários segundos
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => preloader.remove());
+    } else {
       preloader.remove();
-    });
+    }
   }
 
   /**
@@ -288,7 +291,7 @@
     certificateImages.forEach(img => {
         img.onclick = function() {
             modal.style.display = "flex";
-            modalImg.src = this.src;
+            modalImg.src = this.dataset.full || this.src;
         }
     });
 
