@@ -22,20 +22,9 @@
 
             <div class="award-display-area">
 
-                <div id="award-pacto-global-2026" class="featured-award-item visible-award">
-                    <div class="award-image award-image-wide">
-                        <img src="/assets/img/pactoglobal/Imagem1.jpg" alt="Pacto Global da ONU - Rede Brasil">
-                    </div>
-                    <div class="award-details">
-                        <h3>Pacto Global da ONU</h3>
-                        <span class="award-subtitle">Participante do Pacto Global - Rede Brasil ONU</span>
-                        <p>A MDR Advocacia passou a integrar o Pacto Global - Rede Brasil ONU, reforçando seu compromisso institucional com princípios de sustentabilidade, direitos humanos, trabalho, meio ambiente e combate à corrupção.</p>
-                    </div>
-                </div>
-
-                <div id="award-gptw-2026" class="featured-award-item">
+                <div id="award-gptw-2026" class="featured-award-item visible-award">
                     <div class="award-image">
-                        <img src="/assets/img/pactoglobal/Imagem7.png" alt="Great Place to Work 2026">
+                        <img src="/assets/img/gptw/selo-gptw-2026.png" alt="Great Place to Work 2026">
                     </div>
                     <div class="award-details">
                         <h3>Great Place To Work 2026</h3>
@@ -145,11 +134,7 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
                 </div>
 
             </div> <div class="awards-list">
-                <a href="#" class="award-list-item active-award" data-target="award-pacto-global-2026">
-                    <h4>Pacto Global da ONU</h4>
-                    <span>Participante - Rede Brasil ONU</span>
-                </a>
-                <a href="#" class="award-list-item" data-target="award-gptw-2026">
+                <a href="#" class="award-list-item active-award" data-target="award-gptw-2026">
                     <h4>Great Place To Work 2026</h4>
                     <span>Certificada AGO 2026 - AGO 2027</span>
                 </a>
@@ -206,15 +191,9 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
                 
                 <div class="seals-grid">
 
-                    <div class="seal-item seal-item-wide">
-                        <a href="/pacto-global-gptw">
-                            <img src="/assets/img/pactoglobal/Imagem1.jpg" alt="Pacto Global da ONU - Rede Brasil">
-                        </a>
-                    </div>
-
                     <div class="seal-item">
-                        <a href="/pacto-global-gptw">
-                            <img src="/assets/img/pactoglobal/Imagem7.png" alt="Great Place To Work 2026">
+                        <a href="#" target="_blank">
+                            <img src="/assets/img/gptw/selo-gptw-2026.png" alt="Great Place To Work 2026">
                         </a>
                     </div>
                     
@@ -237,13 +216,7 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide">
-                                <img src="/assets/img/pactoglobal/Imagem1.jpg" class="description-logo description-logo-wide" alt="Pacto Global da ONU">
-                                <h3>Pacto Global da ONU - Rede Brasil</h3>
-                                <p>A MDR Advocacia integra o Pacto Global - Rede Brasil ONU, reafirmando seu engajamento com princípios universais ligados a direitos humanos, trabalho, meio ambiente e combate à corrupção.</p>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="/assets/img/pactoglobal/Imagem7.png" class="description-logo" alt="Great Place To Work 2026">
+                                <img src="/assets/img/gptw/selo-gptw-2026.png" class="description-logo" alt="Great Place To Work 2026">
                                 <h3>Great Place To Work 2026</h3>
                                 <p>A MDR Advocacia conquistou o selo Great Place to Work, certificação que reconhece ambientes de trabalho com alto nível de confiança, respeito, desenvolvimento e valorização das pessoas.</p>
                             </div>
@@ -456,14 +429,7 @@ Case: HIT.Lab – Hub de Inovações Tecnológicas.</p>
 
                 <div class="swiper-slide">
                     <div class="certificate-item">
-                        <img src="/assets/img/pactoglobal/Imagem1.jpg" alt="Pacto Global da ONU - Rede Brasil" class="open-modal certificate-logo-wide">
-                        <p class="certificate-description">Pacto Global - Participante da Rede Brasil ONU</p>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="certificate-item">
-                        <img src="/assets/img/pactoglobal/Imagem7.png" alt="Great Place To Work 2026" class="open-modal">
+                        <img src="/assets/img/gptw/selo-gptw-2026.png" alt="Great Place To Work 2026" class="open-modal">
                         <p class="certificate-description">Great Place To Work - Certificada AGO 2026 a AGO 2027</p>
                     </div>
                 </div>

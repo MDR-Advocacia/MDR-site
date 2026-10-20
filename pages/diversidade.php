@@ -128,6 +128,7 @@
     <nav class="breadcrumbs">
       <ol>
         <li><a href="/">Home</a></li>
+        <li>ESG</li>
         <li class="current">Diversidade</li>
       </ol>
     </nav>
@@ -138,7 +139,9 @@
   <div class="container">
     
     <div data-aos="fade-up" class="text-center mx-auto" style="max-width: 900px;">
-      <h2 class="section-title mb-4">Nosso Comitê de Diversidade e Inclusão</h2>
+      <div class="section-title pb-4">
+        <h2>Nosso Comitê de Diversidade e Inclusão</h2>
+      </div>
       <p class="lead mb-4" style="font-size: 1.1rem; line-height: 1.8;">
         A diversidade no MDR não é um diferencial, é parte do que nos constitui. Para fortalecer esse compromisso, foi criado o <strong>MDR Diversidade em Movimento</strong>, um Comitê de Diversidade que busca transformar o ambiente de trabalho e a forma de enxergar o outro, promovendo respeito, acolhimento e ação concreta.
       </p>

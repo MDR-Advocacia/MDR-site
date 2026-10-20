@@ -36,7 +36,7 @@ include '../includes/header.php';
 
   .compliance-channel-card {
     border: 1px solid rgba(27, 47, 69, 0.14);
-    border-left: 5px solid var(--accent-color, #c5b358);
+    border-left: 5px solid #b29d55;
     border-radius: 10px;
     background: #f8fbfc;
     padding: 1.5rem;
@@ -62,7 +62,7 @@ include '../includes/header.php';
   }
 
   .channel-kicker i {
-    color: var(--accent-color, #c5b358);
+    color: #b29d55;
   }
 
   .privacy-overview-card,
@@ -85,7 +85,7 @@ include '../includes/header.php';
   }
 
   .section-eyebrow {
-    color: var(--accent-color, #c5b358);
+    color: #b29d55;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -257,8 +257,8 @@ include '../includes/header.php';
 
   .doc-action:hover {
     color: #111;
-    background: var(--accent-color, #c5b358);
-    border-color: var(--accent-color, #c5b358);
+    background: #b29d55;
+    border-color: #b29d55;
   }
 
   .doc-modal-content {
@@ -291,12 +291,13 @@ include '../includes/header.php';
   }
 </style>
 
-<div class="page-title light-background" data-aos="fade" style="padding-top: 120px; padding-bottom: 40px;">
+<div class="page-title dark-background" data-aos="fade">
   <div class="container">
     <h1>Compliance e Privacidade</h1>
     <nav class="breadcrumbs">
       <ol>
         <li><a href="/">Home</a></li>
+        <li>ESG</li>
         <li class="current">Compliance e Privacidade</li>
       </ol>
     </nav>
@@ -304,6 +305,9 @@ include '../includes/header.php';
 </div>
 
 <section id="privacy-content" class="section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Privacidade, Proteção de Dados e Integridade</h2>
+  </div>
   <div class="container" data-aos="fade-up">
     <div class="row">
       <div class="col-lg-12 content">

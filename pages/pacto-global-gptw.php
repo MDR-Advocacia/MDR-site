@@ -7,38 +7,9 @@ include '../includes/header.php';
 ?>
 
 <style>
-  .esg-intro {
+  .section-title .esg-intro {
     max-width: 920px;
-    margin: 0 auto 3rem;
-    text-align: center;
-  }
-
-  .esg-page-title {
-    --default-color: #1b2f45;
-    --heading-color: #1b2f45;
-    color: #1b2f45;
-  }
-
-  .esg-page-title .breadcrumbs a {
-    color: var(--accent-color, #c5b358);
-  }
-
-  .esg-page-title .breadcrumbs .current {
-    color: #111;
-  }
-
-  .esg-page-title h1,
-  .esg-page-title .breadcrumbs,
-  .esg-page-title .breadcrumbs li {
-    color: #1b2f45 !important;
-  }
-
-  .esg-intro h2 {
-    color: var(--heading-color);
-    margin-bottom: 1rem;
-  }
-
-  .esg-intro p {
+    margin: 0 auto;
     color: color-mix(in srgb, var(--default-color), transparent 18%);
     font-size: 1.05rem;
     line-height: 1.8;
@@ -68,8 +39,8 @@ include '../includes/header.php';
   }
 
   .esg-logo-panel.full-bleed {
+    min-height: 0;
     padding: 0;
-    overflow: hidden;
   }
 
   .esg-logo-panel img {
@@ -85,13 +56,11 @@ include '../includes/header.php';
     max-height: 300px;
   }
 
+  /* Logo do Pacto Global exibida inteira, sem cortes, conforme diretriz de integridade da marca */
   .esg-logo-panel.full-bleed img {
     width: 100%;
-    height: 320px;
-    max-width: none;
+    height: auto;
     max-height: none;
-    object-fit: cover;
-    object-position: center;
   }
 
   .esg-achievement-body {
@@ -102,7 +71,7 @@ include '../includes/header.php';
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    color: var(--accent-color, #c5b358);
+    color: #b29d55;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -122,7 +91,7 @@ include '../includes/header.php';
 
   .esg-note {
     background: #f8fbfc;
-    border-left: 4px solid var(--accent-color, #c5b358);
+    border-left: 4px solid #b29d55;
     border-radius: 10px;
     color: color-mix(in srgb, var(--default-color), transparent 8%);
     font-size: 0.94rem;
@@ -188,13 +157,13 @@ include '../includes/header.php';
   }
 </style>
 
-<div class="page-title light-background esg-page-title" data-aos="fade" style="padding-top: 120px; padding-bottom: 40px;">
+<div class="page-title dark-background" data-aos="fade">
   <div class="container">
     <h1>Pacto Global e GPTW</h1>
     <nav class="breadcrumbs">
       <ol>
         <li><a href="/">Home</a></li>
-        <li><a href="#">ESG</a></li>
+        <li>ESG</li>
         <li class="current">Pacto Global e GPTW</li>
       </ol>
     </nav>
@@ -202,11 +171,11 @@ include '../includes/header.php';
 </div>
 
 <section id="pacto-global-gptw" class="section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Compromissos que fortalecem nossa agenda ESG</h2>
+    <p class="esg-intro">A MDR Advocacia reúne nesta página sua participação no Pacto Global da ONU e a certificação GPTW, iniciativas alinhadas ao nosso compromisso com governança, responsabilidade social, integridade e desenvolvimento humano.</p>
+  </div>
   <div class="container" data-aos="fade-up">
-    <div class="esg-intro">
-      <h2>Reconhecimentos que fortalecem nossa agenda ESG</h2>
-      <p>A MDR Advocacia celebra conquistas que reforçam nosso compromisso com governança, responsabilidade social, integridade, desenvolvimento humano e práticas institucionais alinhadas a padrões reconhecidos nacional e internacionalmente.</p>
-    </div>
 
     <div class="row gy-4">
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -229,7 +198,7 @@ include '../includes/header.php';
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
         <article class="esg-achievement-card">
           <div class="esg-logo-panel">
-            <img class="esg-gptw-seal" src="/assets/img/pactoglobal/Imagem7.png" alt="Selo Great Place to Work certificado agosto 2026 a agosto 2027">
+            <img class="esg-gptw-seal" src="/assets/img/gptw/selo-gptw-2026.png" alt="Selo Great Place to Work certificado agosto 2026 a agosto 2027">
           </div>
           <div class="esg-achievement-body">
             <div class="esg-kicker"><i class="bi bi-award"></i> Great Place to Work</div>
@@ -244,19 +213,19 @@ include '../includes/header.php';
     <div class="esg-support-grid" data-aos="fade-up" data-aos-delay="250">
       <div class="esg-support-item">
         <div class="esg-support-image">
-          <img src="/assets/img/pactoglobal/Imagem4.png" alt="Material GPTW com índice de confiança">
+          <img src="/assets/img/gptw/gptw-indice-de-confianca.png" alt="Material GPTW com índice de confiança">
         </div>
         <span>Confiança e clima organizacional</span>
       </div>
       <div class="esg-support-item">
         <div class="esg-support-image">
-          <img src="/assets/img/pactoglobal/Imagem5.png" alt="Material GPTW sobre pessoas excelentes">
+          <img src="/assets/img/gptw/gptw-pessoas-excelentes.png" alt="Material GPTW sobre pessoas excelentes">
         </div>
         <span>Pessoas no centro da cultura</span>
       </div>
       <div class="esg-support-item">
         <div class="esg-support-image">
-          <img src="/assets/img/pactoglobal/Imagem6.png" alt="Material GPTW sobre certificação nacional">
+          <img src="/assets/img/gptw/gptw-certificacao-nacional.png" alt="Material GPTW sobre certificação nacional">
         </div>
         <span>Reconhecimento GPTW Brasil</span>
       </div>
