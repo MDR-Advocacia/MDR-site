@@ -11,13 +11,17 @@ $secrets=json_decode(stream_get_contents(STDIN),true,512,JSON_THROW_ON_ERROR);
 if(!is_blog_installed()) {
     wp_install('MDR Advocacia — Laboratório', $secrets['admin_user'], 'laboratorio@example.invalid', false, '', $secrets['admin_password'], 'pt_BR');
 }
-if(get_option('mdr_seed_version')==='1.0.0') { echo json_encode(['status'=>'already_initialized']); exit; }
+if(get_option('mdr_seed_version')==='1.0.0') { flush_rewrite_rules(true); echo json_encode(['status'=>'already_initialized']); exit; }
 $admin=get_user_by('login',$secrets['admin_user']);
 if(!$admin){throw new RuntimeException('Administrador esperado não encontrado');}
 wp_set_current_user($admin->ID);
 $editor=get_user_by('login',$secrets['editor_user']);
 if(!$editor){$eid=wp_insert_user(['user_login'=>$secrets['editor_user'],'user_pass'=>$secrets['editor_password'],'user_email'=>'comunicacao@example.invalid','display_name'=>'Comunicação MDR','role'=>'editor']);if(is_wp_error($eid)){throw new RuntimeException($eid->get_error_message());}}
 switch_theme('mdr');
+// On the first run WordPress booted before this theme was activated. Register
+// its content types now so counts and rewrite rules also work on a fresh DB.
+if(!function_exists('mdr_register_content_types')){require_once get_template_directory().'/functions.php';}
+mdr_register_content_types();
 update_option('blog_public','0');
 update_option('blogdescription','Direito, pessoas e conhecimento.');
 update_option('timezone_string','America/Fortaleza');

@@ -14,12 +14,12 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('mdr', mdr_asset('site.css'), [], wp_get_theme()->get('Version'));
     wp_enqueue_script('mdr', mdr_asset('site.js'), [], wp_get_theme()->get('Version'), true);
 });
-add_action('init', function () {
+function mdr_register_content_types() {
     foreach (['mdr_socio' => ['Sócios', 'Sócio', 'socios'], 'mdr_premio' => ['Reconhecimentos', 'Reconhecimento', 'reconhecimentos']] as $type => $labels) {
         register_post_type($type, [
             'labels' => ['name' => $labels[0], 'singular_name' => $labels[1], 'add_new_item' => 'Adicionar ' . $labels[1], 'edit_item' => 'Editar ' . $labels[1]],
             'public' => true, 'show_in_rest' => true, 'has_archive' => $type === 'mdr_premio',
-            'rewrite' => ['slug' => $labels[2]], 'menu_icon' => $type === 'mdr_socio' ? 'dashicons-groups' : 'dashicons-awards',
+            'rewrite' => ['slug' => $labels[2], 'with_front' => false], 'menu_icon' => $type === 'mdr_socio' ? 'dashicons-groups' : 'dashicons-awards',
             'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'page-attributes'],
         ]);
     }
@@ -30,7 +30,8 @@ add_action('init', function () {
                 'auth_callback' => function ($allowed, $meta_key, $post_id) { return current_user_can('edit_post', $post_id); }]);
         }
     }
-});
+}
+add_action('init', 'mdr_register_content_types');
 add_action('add_meta_boxes', function () {
     add_meta_box('mdr-details', 'Informações do cadastro', function ($post) {
         wp_nonce_field('mdr_details', 'mdr_nonce');
