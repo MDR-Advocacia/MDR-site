@@ -27,7 +27,7 @@ $bodyClass = $bodyClass ?? 'index-page';
     <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link href="/assets/css/main.css?v=1.1" rel="stylesheet">
+    <link href="/assets/css/main.css?v=1.4" rel="stylesheet">
 </head>
 
 <body class="<?php echo htmlspecialchars($bodyClass, ENT_QUOTES, 'UTF-8'); ?>">
@@ -41,13 +41,17 @@ $bodyClass = $bodyClass ?? 'index-page';
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/">Home</a></li>
                     <li><a href="/atuacao">Atuação</a></li>
+                    <li class="dropdown"><a href="#"><span>ESG</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/compliance-e-privacidade">Compliance e Privacidade</a></li>
+                            <li><a href="/diversidade">Diversidade</a></li>
+                            <li><a href="/pacto-global-gptw">Pacto Global e GPTW</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/premios">Prêmios e Certificados</a></li>
-                    <li><a href="/diversidade">Diversidade</a></li>
                     <li><a href="/recuperacao-credito">Recuperação de Crédito</a></li>
-                    <li><a href="https://mdradvocacia.vagas.solides.com.br/">Trabalhe conosco</a></li>
-                    <li><a href="/compliance-e-privacidade">Compliance e Privacidade</a></li>
+                    <li><a href="https://vagas.quarkrh.com.br/httpsmdradvocaciacom" target="_blank" rel="noopener noreferrer">Trabalhe conosco</a></li>
                     <li><a href="http://mdradvocacia.com/interno" target="_blank">Interno</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

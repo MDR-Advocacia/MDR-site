@@ -333,10 +333,10 @@ include '../includes/header.php';
                         </td>
                         <td>
                           <div class="doc-actions">
-                            <button class="doc-action" type="button" data-bs-toggle="modal" data-bs-target="#complianceDocModal" data-doc-title="Política de Privacidade Atualizada" data-doc-text="/assets/docs/compliance/politica-de-privacidade-mdr-atualizada.txt" data-doc-download="/assets/docs/compliance/politica-de-privacidade-mdr-atualizada.docx" aria-label="Visualizar Política de Privacidade Atualizada">
+                            <button class="doc-action" type="button" data-bs-toggle="modal" data-bs-target="#complianceDocModal" data-doc-title="Política de Privacidade Atualizada" data-doc-text="/assets/docs/compliance/politica-de-privacidade-mdr-atualizada.txt" data-doc-download="/assets/docs/compliance/politica-de-privacidade-mdr-atualizada.pdf" aria-label="Visualizar Política de Privacidade Atualizada">
                               <i class="bi bi-eye"></i>
                             </button>
-                            <a class="doc-action" href="/assets/docs/compliance/politica-de-privacidade-mdr-atualizada.docx" download aria-label="Baixar Política de Privacidade Atualizada">
+                            <a class="doc-action" href="/assets/docs/compliance/politica-de-privacidade-mdr-atualizada.pdf" download aria-label="Baixar Política de Privacidade Atualizada">
                               <i class="bi bi-download"></i>
                             </a>
                           </div>
@@ -349,10 +349,10 @@ include '../includes/header.php';
                         </td>
                         <td>
                           <div class="doc-actions">
-                            <button class="doc-action" type="button" data-bs-toggle="modal" data-bs-target="#complianceDocModal" data-doc-title="Aviso de Privacidade - MDR Advocacia" data-doc-text="/assets/docs/compliance/aviso-de-privacidade-mdr.txt" data-doc-download="/assets/docs/compliance/aviso-de-privacidade-mdr.docx" aria-label="Visualizar Aviso de Privacidade - MDR Advocacia">
+                            <button class="doc-action" type="button" data-bs-toggle="modal" data-bs-target="#complianceDocModal" data-doc-title="Aviso de Privacidade - MDR Advocacia" data-doc-text="/assets/docs/compliance/aviso-de-privacidade-mdr.txt" data-doc-download="/assets/docs/compliance/aviso-de-privacidade-mdr.pdf" aria-label="Visualizar Aviso de Privacidade - MDR Advocacia">
                               <i class="bi bi-eye"></i>
                             </button>
-                            <a class="doc-action" href="/assets/docs/compliance/aviso-de-privacidade-mdr.docx" download aria-label="Baixar Aviso de Privacidade - MDR Advocacia">
+                            <a class="doc-action" href="/assets/docs/compliance/aviso-de-privacidade-mdr.pdf" download aria-label="Baixar Aviso de Privacidade - MDR Advocacia">
                               <i class="bi bi-download"></i>
                             </a>
                           </div>

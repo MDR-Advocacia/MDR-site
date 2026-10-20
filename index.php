@@ -19,16 +19,6 @@
             </div>
         </div>
     </section>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app'); 
-  </script>
  <section id="about" class="about section">
     <div class="container">
 
@@ -117,8 +107,9 @@
             <div class="col-12">
                 
                 <script src="https://elfsightcdn.com/platform.js" async></script>
+                <!-- Widget do LinkedIn - Trocar o ID da widget abaixo quando atingir o limite de visualizações -->
                 <div class="elfsight-app-4900c1f0-a8ed-497e-8528-53e3baaf30aa" data-elfsight-app-lazy></div>
-                <!-- Trocar pela nova widget assim que atingir limite -->
+                <!-- Trocar pela nova widget acima assim que atingir limite -->
                 </div>
         </div>
 

@@ -1,6 +1,29 @@
 (function() {
   "use strict";
 
+  function removeVLibras() {
+    document.querySelectorAll([
+      'div[vw]',
+      '[vw]',
+      '[vw-access-button]',
+      '[vw-plugin-wrapper]',
+      '[vp]',
+      '[class^="vw-"]',
+      '[class*=" vw-"]',
+      '[class^="vpw-"]',
+      '[class*=" vpw-"]',
+      '[id*="vlibras" i]',
+      '[class*="vlibras" i]',
+      'script[src*="vlibras" i]',
+      'link[href*="vlibras" i]'
+    ].join(',')).forEach(element => element.remove());
+  }
+
+  removeVLibras();
+  window.addEventListener('load', removeVLibras);
+  setTimeout(removeVLibras, 500);
+  setTimeout(removeVLibras, 1500);
+
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */

@@ -22,8 +22,9 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/">O escritório</a></li>
                         <li><a href="/atuacao">Nossa atuação</a></li>
-                        <li><a href="https://mdradvocacia.vagas.solides.com.br/">Trabalhe conosco</a></li>
+                        <li><a href="https://vagas.quarkrh.com.br/httpsmdradvocaciacom" target="_blank" rel="noopener noreferrer">Trabalhe conosco</a></li>
                         <li><a href="/compliance-e-privacidade">Compliance e Privacidade</a></li>
+                        <li><a href="/pacto-global-gptw">Pacto Global e GPTW</a></li>
                     </ul>
                 </div>
 
@@ -67,6 +68,7 @@
             Compliance, Privacidade e Proteção de Dados
         </a>
     </div>
+    </div>
 </footer>
 
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -81,7 +83,7 @@
 <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js?v=1.1"></script>
 
 </body>
 

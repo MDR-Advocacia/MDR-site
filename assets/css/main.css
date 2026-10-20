@@ -55,6 +55,22 @@ body {
   font-family: var(--default-font);
 }
 
+div[vw],
+[vw],
+[vw-access-button],
+[vw-plugin-wrapper],
+[vp],
+[class^="vw-"],
+[class*=" vw-"],
+[class^="vpw-"],
+[class*=" vpw-"],
+[id*="vlibras" i],
+[class*="vlibras" i] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 a {
   color: #b29d55;
   text-decoration: none;
@@ -222,8 +238,8 @@ h6 {
 
   .navmenu .dropdown ul {
     margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    padding: 10px;
+    background: rgba(23, 40, 59, 0.96);
     display: block;
     position: absolute;
     visibility: hidden;
@@ -231,20 +247,24 @@ h6 {
     top: 130%;
     opacity: 0;
     transition: 0.3s;
-    border-radius: 0;
+    border: 1px solid rgba(178, 157, 85, 0.28);
+    border-radius: 14px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(14px);
   }
 
   .navmenu .dropdown ul li {
-    min-width: 200px;
+    min-width: 245px;
   }
 
   .navmenu .dropdown ul a {
-    padding: 10px 20px;
+    padding: 12px 16px;
     font-size: 15px;
     text-transform: none;
-    color: var(--nav-dropdown-color);
+    color: rgba(255, 255, 255, 0.82);
+    border-radius: 10px;
+    letter-spacing: 0.01em;
   }
 
   .navmenu .dropdown ul a i {
@@ -254,7 +274,9 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(178, 157, 85, 0.22), rgba(86, 184, 230, 0.12));
+    transform: translateX(3px);
   }
 
   .navmenu .dropdown:hover>ul {
@@ -360,12 +382,17 @@ h6 {
     position: static;
     display: none;
     z-index: 99;
-    padding: 10px 0;
+    padding: 8px;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: rgba(23, 40, 59, 0.06);
+    border: 1px solid rgba(178, 157, 85, 0.22);
+    border-radius: 12px;
     box-shadow: none;
     transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul a {
+    border-radius: 9px;
   }
 
   .navmenu .dropdown ul ul {
@@ -2479,31 +2506,32 @@ section,
   justify-content: center; 
 }
 
-form {
+.php-email-form {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
   background: #f9f9f9;
   border-radius: 5px;
 }
-label {
+.php-email-form label {
   margin-bottom: .5em;
   color: #333333;
   display: block;
 }
-input, button {
+.php-email-form input,
+.php-email-form button {
   width: 100%;
   padding: 0.7em;
   margin-bottom: 1em;
   border: 1px solid #CCCCCC;
   border-radius: 4px;
 }
-button {
+.php-email-form button {
   background: #007BFF;
   color: white;
   border: none;
 }
-button:hover {
+.php-email-form button:hover {
   background: #0056b3;
 }
 
@@ -3508,6 +3536,11 @@ button:hover {
     height: auto; 
     border-radius: 8px; 
 }
+.featured-award-item .award-image.award-image-wide img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
 .featured-award-item .award-details h3 { 
     font-size: 24px; 
     font-weight: 700; 
@@ -3586,6 +3619,12 @@ button:hover {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+.seal-item.seal-item-wide {
+    grid-column: span 2;
+}
+.seal-item.seal-item-wide a {
+    aspect-ratio: 16 / 9;
+}
 .seal-item img {
     max-width: 90%;
     max-height: 90%;
@@ -3612,6 +3651,10 @@ button:hover {
     text-align: center;
 }
 .swiper-description .description-logo { max-width: 150px; margin-bottom: 20px; }
+.swiper-description .description-logo.description-logo-wide {
+    width: 100%;
+    max-width: 280px;
+}
 .swiper-description h3 { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #333; }
 .swiper-description p { color: #6c757d; line-height: 1.7; }
 
@@ -3643,6 +3686,10 @@ button:hover {
     transition: transform 0.3s ease;
     cursor: pointer;
     margin-bottom: 15px;
+}
+.certificate-item img.certificate-logo-wide {
+    width: 100%;
+    max-height: 160px;
 }
 .certificate-item img:hover {
     transform: scale(1.08);
