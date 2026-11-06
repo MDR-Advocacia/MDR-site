@@ -72,6 +72,7 @@
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const stage = video.closest('.video-stage');
     const poster = stage.querySelector('.video-placeholder');
+    let userControlled = false;
     const play = () => {
       if (!video.src) video.src = video.dataset.src;
       if (video.error) video.load();
@@ -92,6 +93,7 @@
     video.addEventListener('play', () => { button.textContent = 'Pausar vídeo'; });
     video.addEventListener('pause', () => { button.textContent = 'Reproduzir vídeo'; });
     button.addEventListener('click', () => {
+      userControlled = true;
       if (video.paused) play();
       else video.pause();
     });
@@ -99,9 +101,9 @@
       if (event.matches) video.pause();
     });
     const queueAutoplay = () => {
-      if (reduced.matches || navigator.connection?.saveData || !video.paused) return;
+      if (reduced.matches || navigator.connection?.saveData || !video.paused || userControlled) return;
       const start = () => {
-        if (!reduced.matches && !navigator.connection?.saveData && video.paused) play();
+        if (!reduced.matches && !navigator.connection?.saveData && video.paused && !userControlled) play();
       };
       // Navigation and the high-priority cover paint before the film starts.
       requestAnimationFrame(() => requestAnimationFrame(() => {
