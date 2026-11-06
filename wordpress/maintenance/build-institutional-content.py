@@ -94,6 +94,8 @@ def plain_blocks(root, images=True):
     if root is None:
         return ''
     for node in root.find_all(['h2', 'h3', 'h4', 'p', 'ul', 'ol', 'img']):
+        if node.find_parent('table'):
+            continue  # Document actions are rebuilt beside their section headings.
         if node.find_parent(['p', 'ul', 'ol']):
             continue
         if any(x.get('class') and any(c in x.get('class', []) for c in ['breadcrumbs', 'modal-footer', 'digital-signature']) for x in [node] + list(node.parents)):
@@ -140,7 +142,9 @@ def generate(sources):
     document_links = []
     for title, src in docs:
         document_links.append(paragraph('<strong>' + esc(title) + '</strong><br><a href="' + asset(src) + '" target="_blank" rel="noopener">Consultar PDF ↗</a> · <a href="' + asset(src) + '" download>Baixar documento</a>', True))
-    content += heading('Consulta e download dos documentos') + ''.join(document_links)
+    for title, links in [('Documentos de Privacidade', document_links[:2]), ('Documentos de Compliance', document_links[2:])]:
+        marker = heading(title, 3)
+        content = content.replace(marker, marker + ''.join(links), 1)
     pages.append(page('compliance-e-privacidade', 'Compliance e Privacidade', content, 'Programa de integridade, privacidade, DPO e documentos institucionais.'))
     privacy = heading('Privacidade e proteção de dados') + ''.join(paragraph(''.join(inline(c) for c in p.children), True) for p in root.select('.privacy-overview-card p, .dpo-card p'))
     privacy += heading('Documentos de privacidade') + ''.join(document_links[:2]) + paragraph('Contato da Encarregada: <a href="mailto:dpo@mdradvocacia.com">dpo@mdradvocacia.com</a>.', True)
@@ -187,9 +191,6 @@ def generate(sources):
         part.decompose()
     # The legacy directory is explicitly known to be outdated. Preserve its full
     # content for editorial validation, but never publish it as a current roster.
-    old_directory = str(main)
-    for script in BeautifulSoup(old_directory, 'html.parser').select('script'):
-        script.decompose()
     pages.append(page('equipe-recuperacao-credito', 'Equipe de Recuperação de Crédito — revisão', paragraph('Diretório histórico importado para revisão. Confirmar composição, funções, fotografias e contatos antes de publicar.') + plain_blocks(main), status='draft'))
     if testimonials:
         pages.append(page('depoimentos-revisao', 'Depoimentos — revisão editorial', paragraph('Conteúdo histórico do site original. Confirmar origem e autorização de divulgação; não representa integração atual com avaliações do Google.') + testimonials, status='draft'))
@@ -239,7 +240,7 @@ def generate(sources):
         certificates.append(title)
     content += group('certificate-grid', ''.join(certificate_cards))
     pages.append(page('certificados', 'Histórico e Certificados', content, 'Acervo histórico de reconhecimentos, associações e certificados.'))
-    return {'version': 'institutional-2026-11-06-v1', 'source_origin': ORIGIN, 'pages': pages, 'assets': ASSETS, 'certificates': certificates}
+    return {'version': 'institutional-2026-11-06-v2', 'source_origin': ORIGIN, 'pages': pages, 'assets': ASSETS, 'certificates': certificates}
 
 
 def main():

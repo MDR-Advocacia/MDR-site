@@ -20,7 +20,9 @@ Após backup e deploy, executar explicitamente no laboratório:
     wp eval-file /opt/mdr-maintenance/import-institutional.php --path=/var/www/html
 
 A importação é restrita a WP-CLI/staging, idempotente, preserva páginas já
-existentes e não reinicializa home, sócios, prêmios ou posts. Importa 15 páginas
+existentes e não reinicializa home, sócios, prêmios ou posts. Atualizações do
+importador só revisam conteúdo que ainda coincide com seu hash de origem,
+preservando intervenções editoriais posteriores. Importa 15 páginas
 publicadas para homologação e dois rascunhos históricos (equipe da cobrança e
 depoimentos), que dependem de revisão. A página Certificados é um cadastro
 editorial; sua exibição pública é incorporada ao acervo Reconhecimentos, mantendo

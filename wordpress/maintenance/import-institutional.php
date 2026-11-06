@@ -36,15 +36,27 @@ foreach ($manifest['assets'] as $key=>$spec) {
     $assets['{{asset:'.$key.'}}'] = wp_get_attachment_url($id);
 }
 $assets['{{site}}'] = untrailingslashit(home_url('/'));
-$pages = []; $created = []; $preserved = [];
+$pages = []; $created = []; $updated = []; $preserved = [];
 foreach ($manifest['pages'] as $spec) {
     $content = strtr($spec['content'], $assets);
     if (preg_match('/\{\{(?:asset:|site)/', $content)) { throw new RuntimeException('Unresolved content reference.'); }
     $old = get_page_by_path($spec['slug'], OBJECT, 'page');
     if ($old) {
         $pages[$spec['slug']] = $old->ID;
-        $preserved[] = $spec['slug'];
-        continue; // Never replace existing editorial work.
+        $old_version = get_post_meta($old->ID, 'mdr_institutional_version', true);
+        $old_hash = get_post_meta($old->ID, 'mdr_imported_content_sha256', true);
+        if ($old_version && $old_hash && hash_equals($old_hash, hash('sha256', $old->post_content))) {
+            // Only revise untouched importer-owned content; keep titles, status,
+            // summaries, ordering and all subsequent editorial changes intact.
+            $result = wp_update_post(wp_slash(['ID'=>$old->ID, 'post_content'=>$content]), true);
+            if (is_wp_error($result)) { throw new RuntimeException($result->get_error_message()); }
+            update_post_meta($old->ID, 'mdr_institutional_version', $version);
+            update_post_meta($old->ID, 'mdr_imported_content_sha256', hash('sha256', $content));
+            $updated[] = $spec['slug'];
+        } else {
+            $preserved[] = $spec['slug'];
+        }
+        continue;
     }
     $id = wp_insert_post(wp_slash(['post_type'=>'page', 'post_name'=>$spec['slug'], 'post_title'=>$spec['title'], 'post_content'=>$content, 'post_excerpt'=>$spec['summary'], 'post_status'=>$spec['status'], 'post_author'=>(int)$admins[0], 'comment_status'=>'closed', 'ping_status'=>'closed']), true);
     if (is_wp_error($id)) { throw new RuntimeException($id->get_error_message()); }
@@ -82,4 +94,4 @@ if (in_array($facebook, ['https://facebook.com/marcosdelliribeiro','https://www.
 update_option('mdr_institutional_pages', $pages);
 update_option('mdr_institutional_version', $version);
 flush_rewrite_rules(false);
-echo wp_json_encode(['status'=>'imported', 'version'=>$version, 'created'=>$created, 'existing_preserved'=>$preserved, 'assets'=>count($manifest['assets']), 'certificates'=>count($manifest['certificates'])], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+echo wp_json_encode(['status'=>'imported', 'version'=>$version, 'created'=>$created, 'updated_untouched_imports'=>$updated, 'existing_preserved'=>$preserved, 'assets'=>count($manifest['assets']), 'certificates'=>count($manifest['certificates'])], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
