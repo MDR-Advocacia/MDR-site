@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-06",
+  "optimized_source": {
+    "url": "https://mdradvocacia.com/assets/video/hero-home.mp4",
+    "dimensions": [
+      854,
+      484
+    ],
+    "bytes": 1882701,
+    "sha256": "00f7df15c982f1ff73cba4fa9bb0fd71fa7669760c0fe29f797215901ec6dc12",
+    "video_bitrate_kbps": 652
+  },
+  "better_source": {
+    "url": "https://mdradvocacia.com/assets/video/mdrinstitucional.mp4",
+    "dimensions": [
+      960,
+      544
+    ],
+    "bytes": 6612735,
+    "sha256": "26c84a49b9f4793c831b1c39dc499c5eccf9e9de50b55de63383b09cf7b13af3",
+    "video_bitrate_kbps": 2106
+  },
+  "web_video": {
+    "file": "hero-original.mp4",
+    "bytes": 6054496,
+    "sha256": "4b0b15b15505eada29a6a2c1ccb43fa311f379aa73603e186553f8842921bab7",
+    "video_stream_copy": true,
+    "audio_removed": true,
+    "faststart": true,
+    "elementary_stream_hash": "SHA256=67d438781a3b9f12f2e184020240b71d80c74672a88c0e7b4a3e8d2e6d89a3fe"
+  },
+  "quality_limit": "Highest available reference is 960x544; no upscaling or detail reconstruction claimed."
+}

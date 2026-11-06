@@ -1,5 +1,24 @@
 (() => {
   'use strict';
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 56);
+    window.addEventListener('scroll', updateHeader, {passive: true});
+    updateHeader();
+    if ('IntersectionObserver' in window) {
+      document.querySelectorAll('.site-menu a[href*="#"]').forEach(link => {
+        const url = new URL(link.href);
+        const section = url.pathname === location.pathname && url.hash ? document.getElementById(url.hash.slice(1)) : null;
+        if (!section) return;
+        link.removeAttribute('aria-current');
+        const observer = new IntersectionObserver(entries => {
+          if (entries.some(entry => entry.isIntersecting)) link.setAttribute('aria-current', 'location');
+          else if (link.getAttribute('aria-current') === 'location') link.removeAttribute('aria-current');
+        }, {rootMargin: '-150px 0px -50% 0px'});
+        observer.observe(section);
+      });
+    }
+  }
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#menu-principal');
   const closeMenu = () => {
@@ -65,7 +84,7 @@
     reduced.addEventListener('change', event => {
       if (event.matches) video.pause();
     });
-    if (!reduced.matches) play();
+    if (!reduced.matches && !navigator.connection?.saveData) play();
   }
 })();
 

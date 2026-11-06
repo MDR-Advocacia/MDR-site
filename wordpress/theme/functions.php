@@ -13,8 +13,19 @@ add_action('after_setup_theme', function () {
 function mdr_asset($path) { return get_template_directory_uri() . '/assets/' . ltrim($path, '/'); }
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('mdr', mdr_asset('site.css'), [], wp_get_theme()->get('Version'));
+    wp_enqueue_style('mdr-visual', mdr_asset('visual-review.css'), ['mdr'], wp_get_theme()->get('Version'));
     wp_enqueue_script('mdr', mdr_asset('site.js'), [], wp_get_theme()->get('Version'), true);
 });
+add_filter('wp_nav_menu_objects', function ($items, $args) {
+    if (empty($args->mdr_glass_header)) { return $items; }
+    return array_filter($items, function ($item) { return wp_parse_url($item->url, PHP_URL_FRAGMENT) !== 'contato'; });
+}, 10, 2);
+add_filter('nav_menu_link_attributes', function ($attributes, $item, $args) {
+    if (!empty($args->mdr_glass_header) && wp_parse_url($item->url, PHP_URL_FRAGMENT)) {
+        unset($attributes['aria-current']);
+    }
+    return $attributes;
+}, 10, 3);
 function mdr_register_content_types() {
     foreach (['mdr_socio' => ['Sócios', 'Sócio', 'socios'], 'mdr_premio' => ['Reconhecimentos', 'Reconhecimento', 'reconhecimentos']] as $type => $labels) {
         register_post_type($type, [
