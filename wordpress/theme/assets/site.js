@@ -74,7 +74,7 @@
     const poster = stage.querySelector('.video-placeholder');
     let userControlled = false;
     const play = () => {
-      if (!video.src) video.src = video.dataset.src;
+      if (!video.src) video.src = window.matchMedia('(max-width: 767px)').matches && video.dataset.srcMobile ? video.dataset.srcMobile : video.dataset.src;
       if (video.error) video.load();
       video.muted = true;
       video.play().catch(() => { button.textContent = 'Reproduzir vídeo'; });

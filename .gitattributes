@@ -1,3 +1,5 @@
 *.MOV filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 wordpress/theme/assets/hero-original.mp4 -filter -diff -merge
+wordpress/theme/assets/hero-fullhd.mp4 -filter -diff -merge
+wordpress/theme/assets/hero-mobile.mp4 -filter -diff -merge

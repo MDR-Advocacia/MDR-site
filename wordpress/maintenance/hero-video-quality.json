@@ -1,33 +1,59 @@
 {
   "date": "2026-11-06",
-  "optimized_source": {
-    "url": "https://mdradvocacia.com/assets/video/hero-home.mp4",
+  "source": {
+    "file": "MDR Advocacia Intitucional.mp4",
+    "bytes": 292876812,
+    "sha256": "222c2a917e8edcfd8ead15da1e1be67b187a5cea33dab1e6bf3959945b1375cd",
     "dimensions": [
-      854,
-      484
+      1920,
+      1080
     ],
-    "bytes": 1882701,
-    "sha256": "00f7df15c982f1ff73cba4fa9bb0fd71fa7669760c0fe29f797215901ec6dc12",
-    "video_bitrate_kbps": 652
+    "duration_seconds": 92.759333,
+    "origin": "Arquivo fornecido diretamente por Rildon; original preservado fora do Git."
   },
-  "better_source": {
-    "url": "https://mdradvocacia.com/assets/video/mdrinstitucional.mp4",
-    "dimensions": [
-      960,
-      544
-    ],
-    "bytes": 6612735,
-    "sha256": "26c84a49b9f4793c831b1c39dc499c5eccf9e9de50b55de63383b09cf7b13af3",
-    "video_bitrate_kbps": 2106
-  },
-  "web_video": {
-    "file": "hero-original.mp4",
-    "bytes": 6054496,
-    "sha256": "4b0b15b15505eada29a6a2c1ccb43fa311f379aa73603e186553f8842921bab7",
-    "video_stream_copy": true,
+  "outputs": [
+    {
+      "file": "hero-fullhd.mp4",
+      "bytes": 22955253,
+      "sha256": "3bbff8986b313ababb586dc21a40d2d2871a5f6c7b4f94f207bfbe0cb2d4f212",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "crf": 26
+    },
+    {
+      "file": "hero-mobile.mp4",
+      "bytes": 11440933,
+      "sha256": "e58fb54a986ebf968e41b4bc91be00d1b377582dee578eb66350bc747998a2f0",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "crf": 27
+    },
+    {
+      "file": "hero-poster-hd.webp",
+      "bytes": 135770,
+      "sha256": "c76f21fe1b23b48e483925e547e29b0f63c3d64f50bc288966f0841dba27755d",
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "processing": {
+    "codec": "H.264",
+    "preset": "slow",
     "audio_removed": true,
     "faststart": true,
-    "elementary_stream_hash": "SHA256=67d438781a3b9f12f2e184020240b71d80c74672a88c0e7b4a3e8d2e6d89a3fe"
+    "duration_preserved": true,
+    "no_upscale": true
   },
-  "quality_limit": "Highest available reference is 960x544; no upscaling or detail reconstruction claimed."
+  "loading": "Poster first; video deferred; <=767px receives 720p; reduced motion and Save-Data respected.",
+  "encoding_limits": {
+    "desktop_maxrate": "2M",
+    "mobile_maxrate": "1M",
+    "pixel_format": "yuv420p"
+  }
 }
