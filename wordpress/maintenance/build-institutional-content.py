@@ -124,9 +124,17 @@ def generate(sources):
     pages = []
     s = soup('diversidade')
     intro = s.select_one('#diversidade')
-    for card in intro.select('.card'):
-        card.decompose()
-    content = plain_blocks(intro, images=False)
+    # The old page duplicated each committee title in cards and modal windows.
+    # Keep the introduction once, then put each complete front in its details.
+    introduction = []
+    for node in intro.find_all(['h2', 'h3', 'p']):
+        if node.name == 'h3':
+            break
+        if node.name == 'h2':
+            introduction.append(heading(node.get_text(' ', strip=True)))
+        else:
+            introduction.append(paragraph(''.join(inline(c) for c in node.children), True))
+    content = ''.join(introduction) + heading('Conheça nosso Comitê')
     content += paragraph('<a href="https://youtu.be/Q-72lIY8QN8" target="_blank" rel="noopener noreferrer">Assistir ao manifesto de Diversidade e Inclusão no YouTube ↗</a>', True)
     photos = ['comite-generos.jpg', 'comite-pcd.jpg', 'comite-racial.jpg', 'comite-lgbt.jpg', 'comite-religiao.jpg']
     for modal, photo in zip(s.select('main .modal'), photos):
