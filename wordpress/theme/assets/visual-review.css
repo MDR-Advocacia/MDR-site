@@ -161,7 +161,7 @@ body.home .site-header:not(.is-scrolled) { background: transparent; border-color
 .site-footer a:not(.brand):hover,.preview a:hover { color: #fff1cb; text-decoration: underline; text-underline-offset: 4px; }
 .practice-grid a:hover { background: #80601d0b; }
 .button.outline:hover,.category-links a:hover { background: #80601d0d; border-color: var(--link-accent); }
-.contact-links a { color: var(--link-accent); }
+.contact .text-link,.contact-links a { color: var(--link-on-dark); }
 .contact-links a:hover { text-decoration: underline; text-underline-offset: 6px; }
 .partner-card h3 a:hover { color: var(--link-on-dark); }
 a:focus-visible,button:focus-visible { outline: 2px solid #b28b39; outline-offset: 5px; }
