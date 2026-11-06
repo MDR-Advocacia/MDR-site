@@ -68,3 +68,37 @@
     if (!reduced.matches) play();
   }
 })();
+
+(() => {
+  'use strict';
+  const dialog = document.getElementById('certificate-lightbox');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const image = dialog.querySelector('img');
+  const caption = dialog.querySelector('.certificate-caption');
+  const original = dialog.querySelector('.certificate-original');
+  document.querySelectorAll('.certificate-zoom').forEach(link => {
+    link.setAttribute('aria-haspopup', 'dialog');
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const thumb = link.querySelector('img');
+      if (!thumb) return;
+      event.preventDefault();
+      image.src = link.href;
+      image.alt = thumb.alt;
+      caption.textContent = thumb.alt;
+      original.href = link.href;
+      dialog.showModal();
+      document.documentElement.classList.add('dialog-open');
+      dialog.addEventListener('close', () => {
+        document.documentElement.classList.remove('dialog-open');
+        image.removeAttribute('src');
+        link.focus({preventScroll:true});
+      }, {once:true});
+    });
+  });
+  dialog.querySelector('button').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
+})();
