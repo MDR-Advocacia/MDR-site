@@ -143,3 +143,9 @@ body.home .site-header:not(.is-scrolled) { background: transparent; border-color
 @media(prefers-reduced-transparency:reduce) {
   .site-header nav,.header-contact,.menu-toggle,.video-caption,.partner-card { background: #192f43; -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+
+/* The cover stays painted until an actual video frame is ready. */
+.video-placeholder{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1;pointer-events:none;opacity:1;transition:opacity .5s ease}
+.video-stage .video-shade{z-index:2}
+.video-stage.is-video-ready .video-placeholder{opacity:0}
+@media(prefers-reduced-motion:reduce){.video-placeholder{transition:none}}

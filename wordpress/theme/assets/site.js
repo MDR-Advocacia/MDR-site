@@ -70,11 +70,25 @@
   const button = document.querySelector('#video-toggle');
   if (video && button) {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const stage = video.closest('.video-stage');
+    const poster = stage.querySelector('.video-placeholder');
     const play = () => {
       if (!video.src) video.src = video.dataset.src;
+      if (video.error) video.load();
       video.muted = true;
       video.play().catch(() => { button.textContent = 'Reproduzir vídeo'; });
     };
+    const revealFrame = () => {
+      if (video.readyState >= 2 && !video.paused) stage.classList.add('is-video-ready');
+    };
+    video.addEventListener('playing', () => {
+      if ('requestVideoFrameCallback' in video) video.requestVideoFrameCallback(revealFrame);
+      else revealFrame();
+    });
+    video.addEventListener('error', () => {
+      stage.classList.remove('is-video-ready');
+      button.textContent = 'Tentar vídeo novamente';
+    });
     video.addEventListener('play', () => { button.textContent = 'Pausar vídeo'; });
     video.addEventListener('pause', () => { button.textContent = 'Reproduzir vídeo'; });
     button.addEventListener('click', () => {
@@ -84,7 +98,26 @@
     reduced.addEventListener('change', event => {
       if (event.matches) video.pause();
     });
-    if (!reduced.matches && !navigator.connection?.saveData) play();
+    const queueAutoplay = () => {
+      if (reduced.matches || navigator.connection?.saveData || !video.paused) return;
+      const start = () => {
+        if (!reduced.matches && !navigator.connection?.saveData && video.paused) play();
+      };
+      // Navigation and the high-priority cover paint before the film starts.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if ('requestIdleCallback' in window) window.requestIdleCallback(start, {timeout: 1600});
+        else window.setTimeout(start, 120);
+      }));
+    };
+    const afterPageLoad = () => {
+      if (!poster || poster.complete) queueAutoplay();
+      else {
+        poster.addEventListener('load', queueAutoplay, {once: true});
+        poster.addEventListener('error', queueAutoplay, {once: true});
+      }
+    };
+    if (document.readyState === 'complete') afterPageLoad();
+    else window.addEventListener('load', afterPageLoad, {once: true});
   }
 })();
 
