@@ -77,7 +77,7 @@ function mdr_social($id) {
 }
 function mdr_post_card() { ?>
 <article class="article-card">
-  <a class="cover-link" href="<?php the_permalink(); ?>"><?php if (has_post_thumbnail()) { the_post_thumbnail('large'); } else { $cover=get_post_meta(get_the_ID(),'mdr_demo_cover',true); if(!in_array($cover,['negocios.svg','esg.svg','institucional.svg'],true)){$cover='institucional.svg';} ?><img src="<?php echo esc_url(mdr_asset($cover)); ?>" alt="" loading="lazy"><?php } ?><span class="cover-arrow" aria-hidden="true">↗</span></a>
+  <a class="cover-link" href="<?php the_permalink(); ?>"><?php if (has_post_thumbnail()) { the_post_thumbnail('large'); } else { $cover=get_post_meta(get_the_ID(),'mdr_demo_cover',true); if(!in_array($cover,['negocios.svg','esg.svg','institucional.svg'],true)){$cover='institucional.svg';} ?><img src="<?php echo esc_url(mdr_asset($cover)); ?>" alt="" loading="lazy"><?php } ?></a>
   <div class="meta"><span><?php $c=get_the_category(); echo esc_html($c ? $c[0]->name : 'Institucional'); ?></span><time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date('d.m.Y')); ?></time></div>
   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><p><?php echo esc_html(get_the_excerpt()); ?></p>
   <?php if (get_post_meta(get_the_ID(),'mdr_demo',true)) { ?><span class="demo-label">Conteúdo demonstrativo</span><?php } ?>

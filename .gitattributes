@@ -3,3 +3,5 @@
 wordpress/theme/assets/hero-original.mp4 -filter -diff -merge
 wordpress/theme/assets/hero-fullhd.mp4 -filter -diff -merge
 wordpress/theme/assets/hero-mobile.mp4 -filter -diff -merge
+wordpress/theme/assets/hero-clean-desktop.mp4 -filter -diff -merge
+wordpress/theme/assets/hero-clean-mobile.mp4 -filter -diff -merge

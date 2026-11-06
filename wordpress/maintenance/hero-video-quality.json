@@ -55,5 +55,49 @@
     "desktop_maxrate": "2M",
     "mobile_maxrate": "1M",
     "pixel_format": "yuv420p"
+  },
+  "background_treatment_2026_11_06": {
+    "date": "2026-11-06",
+    "background_video": {
+      "source": "Original Full HD enviado por Rildon, preservado",
+      "crop_pixels": {
+        "top": 128,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "desktop_dimensions": [
+        1920,
+        952
+      ],
+      "mobile_dimensions": [
+        1280,
+        634
+      ],
+      "end_seconds": 86.5,
+      "corner_logo_removed_by_reframing": true,
+      "outro_excluded_from_background_only": true,
+      "blur_inpainting_or_generated_pixels": false,
+      "audio": false,
+      "faststart": true,
+      "outputs": [
+        {
+          "file": "hero-clean-desktop.mp4",
+          "bytes": 21684619,
+          "sha256": "720af752f5a49165ae77d0aeed6191129b90595520400342d7dd1d03f3dd431f"
+        },
+        {
+          "file": "hero-clean-mobile.mp4",
+          "bytes": 10820793,
+          "sha256": "dcbe5904584de1a5df3b9c950a4dbb0fd0d1487ab519f7839db24c69dda60a2e"
+        },
+        {
+          "file": "hero-poster-clean.webp",
+          "bytes": 135702,
+          "sha256": "01e64e1b271e980837bc4bfa3741f29edbb095d24a149ef4597dba89f92a2c81"
+        }
+      ]
+    },
+    "full_video_link": "hero-fullhd.mp4 remains the complete 92.76 second film; its original logos are preserved."
   }
 }
