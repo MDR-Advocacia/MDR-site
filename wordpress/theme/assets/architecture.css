@@ -32,7 +32,7 @@
 
 /* More transparent navy glass, with solid fallbacks for accessibility. */
 .site-header{background:#132438b8}
-.site-header.is-scrolled{background:#0d1d2e9e;-webkit-backdrop-filter:blur(20px) saturate(1.1);backdrop-filter:blur(20px) saturate(1.1);box-shadow:0 10px 30px #00111b12}
+.site-header.is-scrolled{background:#0d1d2e9e;box-shadow:0 10px 30px #00111b12}
 .site-header nav{background:linear-gradient(135deg,#203b504f,#122b4066);border-color:#ffffff40;box-shadow:0 15px 40px #0717251c,inset 0 1px 0 #ffffff24;-webkit-backdrop-filter:blur(28px) saturate(1.15);backdrop-filter:blur(28px) saturate(1.15)}
 .header-contact,.menu-toggle{background:linear-gradient(135deg,#2c465b66,#132d424d);border-color:#ffffff52;-webkit-backdrop-filter:blur(24px) saturate(1.15);backdrop-filter:blur(24px) saturate(1.15);box-shadow:0 10px 30px #0014241c,inset 0 1px 0 #ffffff24}
 .site-header.is-scrolled nav{background:#142d4073}
