@@ -3,6 +3,7 @@ if (!defined('ABSPATH')) { exit; }
 require_once __DIR__.'/inc-institutional.php';
 require_once __DIR__.'/inc-preview-layout.php';
 require_once __DIR__.'/inc-blog.php';
+require_once __DIR__.'/inc-contact.php';
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -26,13 +27,17 @@ add_filter('wp_nav_menu_objects', function ($items, $args) {
     $paths=['about'=>'orienta','atuacao'=>'atuacao','blog'=>'blog','esg'=>'compromissos','reconhecimentos'=>'premiacoes'];
     $kept=[];
     foreach($items as $item){
-        $fragment=wp_parse_url($item->url,PHP_URL_FRAGMENT);if($fragment==='contato'){continue;}
+        $fragment=wp_parse_url($item->url,PHP_URL_FRAGMENT);if($fragment==='contato'||untrailingslashit($item->url)===untrailingslashit(mdr_jobs_url())){continue;}
         $path=trim((string)wp_parse_url($item->url,PHP_URL_PATH),'/');$anchor=$paths[$path]??$fragment;if($anchor==='socios'){$anchor='quem-somos';}
         if(isset($order[$anchor])){$item->url=$anchor==='blog'?home_url('/blog/'):home_url('/#'.$anchor);if($anchor==='orienta'){$item->title='O que nos orienta';}if($anchor==='quem-somos'){$item->title='Quem somos';}$item->menu_order=$order[$anchor];}
         $kept[]=$item;
     }
     usort($kept,fn($a,$b)=>$a->menu_order<=>$b->menu_order);return $kept;
 }, 10, 2);
+add_filter('wp_nav_menu_items',function($items,$args){
+    if (empty($args->mdr_glass_header)) { return $items; }
+    return $items.'<li class="menu-careers"><a href="'.esc_url(mdr_jobs_url()).'" target="_blank" rel="noopener noreferrer">Trabalhe conosco</a></li>';
+},10,2);
 add_filter('nav_menu_link_attributes', function ($attributes, $item, $args) {
     if (!empty($args->mdr_glass_header) && wp_parse_url($item->url, PHP_URL_FRAGMENT)) {
         unset($attributes['aria-current']);

@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) { exit; }
 
 function mdr_home_nav_items() {
-    return ['Reconhecimentos'=>'premiacoes','Quem somos'=>'quem-somos','Compromissos'=>'compromissos','Atuação'=>'atuacao','O que nos orienta'=>'orienta','Blog'=>'blog'];
+    return ['Reconhecimentos'=>'premiacoes','Quem somos'=>'quem-somos','Compromissos'=>'compromissos','Atuação'=>'atuacao','O que nos orienta'=>'orienta','Blog'=>'blog','Trabalhe conosco'=>'jobs'];
 }
 // Keep the home editor as the source; move only the office presentation at render time.
 function mdr_home_editorial_sections($post) {

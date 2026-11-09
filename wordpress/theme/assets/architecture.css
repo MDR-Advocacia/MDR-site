@@ -63,3 +63,28 @@
 .essence-section .mvv>.eyebrow{display:none}
 .essence-section .home-content .mvv{background:transparent}
 @media(max-width:781px){.who-intro .wp-block-columns{gap:28px}.who-intro .intro-photo img{max-height:300px}.who-intro{margin-bottom:38px}.partner-subheading{padding-top:28px}.partners .who-intro p{font-size:12px}.partner-subheading h2{font-size:27px}}
+
+/* Contact details have one home location; the footer keeps institutional identity. */
+.contact-unified{grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.1fr);gap:38px;align-items:start}
+.contact-unified .contact-heading{grid-column:1/-1}.contact-heading h2{margin:0}
+.contact-addresses h3{font-size:15px;margin-bottom:10px}.contact-addresses p{font-size:12px;line-height:1.85;margin-bottom:23px}.contact-addresses .contact-hours{margin-bottom:0}
+.contact-unified .contact-links{align-self:start;gap:13px}.contact-unified .contact-links a{font-size:clamp(16px,1.2vw,22px);line-height:1.6}.contact-unified .contact-links>a:first-child{margin-bottom:12px}
+.contact-map{min-width:0}.map-frame{height:250px;border:1px solid #ffffff38;border-radius:20px;overflow:hidden;background:#14283b}
+.map-placeholder{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px;gap:12px;text-align:center;background:radial-gradient(ellipse at 50% 20%,#44647744,transparent 75%)}
+.map-placeholder>svg{color:#e1cb8b;flex:none}.contact .map-placeholder p{margin:0;font-size:12px}
+.map-placeholder button{border:1px solid #d8c68d99;border-radius:999px;background:#ffffff0d;color:#f0db9e;font-size:11px;padding:13px 18px;line-height:1.5}.map-placeholder button:hover{background:#ffffff1c}
+.map-frame iframe{border:0;display:block;width:100%;height:100%}.contact .map-notice{font-size:10px;line-height:1.6;margin:12px 0 0;color:#c3cdd6}.map-route{display:inline-block;font-size:10px;margin-top:9px;color:#e6ce8e}
+.site-footer .footer-grid{grid-template-columns:minmax(0,.9fr) minmax(0,.9fr) minmax(0,1.2fr);gap:50px}
+.site-footer .footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:18px}.site-footer nav.footer-links{margin-top:0}
+.site-footer h2{font-size:12px}.site-footer p,.site-footer a:not(.brand){font-size:11px}
+/* Newsletter is a layout preview only: no form action, enabled input or external script. */
+.newsletter-section{padding-top:0;padding-bottom:64px}
+.newsletter-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);align-items:center;gap:48px;max-width:1198px;margin:auto;padding:36px 40px;border:1px solid #ccd2ca;border-radius:24px;background:linear-gradient(130deg,#ffffffa8,#eceee58c);box-shadow:0 12px 32px #142b4007}
+.newsletter-copy .eyebrow{margin-bottom:12px}.newsletter-copy h2{font-size:clamp(26px,2.1vw,34px);letter-spacing:-.7px;margin-bottom:13px}.newsletter-copy>p:last-child{font-size:12px;line-height:1.8;color:#63717b;margin-bottom:0}
+.newsletter-placeholder label{display:block;font-size:11px;margin-bottom:10px}.newsletter-controls{display:flex;gap:10px}.newsletter-controls input{width:100%;min-width:0;border:1px solid #b9c4c6;border-radius:999px;background:#ffffffb3;padding:14px 18px;font-size:12px;color:#65727a;opacity:1;-webkit-text-fill-color:#65727a}.newsletter-controls button{white-space:nowrap;border:0;border-radius:999px;padding:14px 20px;background:#243f50;color:#fff;font-size:12px;opacity:.72;cursor:default}
+#newsletter-status{font-size:10px;line-height:1.7;color:#68747a;margin:12px 0 0}
+.site-header .menu-careers a{color:#fff0c1}
+@media(min-width:1351px) and (max-width:1550px){.site-header nav a{font-size:14px;padding-inline:8px}}
+@media(max-width:1100px){.contact-unified{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.contact-unified .contact-map{grid-column:1/-1}.map-frame{height:250px}.site-footer .footer-grid{gap:30px}}
+@media(max-width:800px){.newsletter-card{grid-template-columns:1fr;gap:26px;padding:28px}.site-footer .footer-grid{grid-template-columns:1fr 1fr}.site-footer .footer-grid>div:last-child{grid-column:1/-1}}
+@media(max-width:600px){.contact-unified{grid-template-columns:1fr;gap:30px}.contact-unified .contact-map{grid-column:auto}.contact-unified .contact-links a{font-size:18px}.map-frame{height:240px}.site-footer .footer-grid{grid-template-columns:1fr;gap:28px}.newsletter-section{padding-bottom:46px}.newsletter-card{padding:24px 21px;border-radius:20px}.newsletter-controls{flex-wrap:wrap}.newsletter-controls input{flex:1 1 180px}.newsletter-controls button{flex:none}.newsletter-copy h2{font-size:27px}}

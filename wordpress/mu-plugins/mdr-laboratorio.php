@@ -24,7 +24,7 @@ add_action('send_headers', function () {
     header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
     header('X-Frame-Options: SAMEORIGIN');
     if (!is_admin() && $GLOBALS['pagenow'] !== 'wp-login.php') {
-        header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src 'self'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'");
+        header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src 'self' https://www.google.com/maps/embed; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'");
     }
 });
 function mdr_audit_event($event, $object=0, $actor=null) {
@@ -52,7 +52,7 @@ add_action('admin_menu',function(){
         echo '</table>';submit_button();echo '</form></div>';
     });
 });
-function mdr_institutional_fields(){return ['home_awards_count'=>'Destaques de reconhecimentos na home (1 a 12)','oab'=>'Registro OAB','cnpj'=>'CNPJ','matrix'=>'Endereço da matriz','postal_code'=>'CEP','branch'=>'Endereço da filial','phone'=>'Telefone','whatsapp'=>'WhatsApp','email'=>'E-mail de contato','hours'=>'Horário de atendimento','maps'=>'Link Google Maps','dpo_name'=>'Encarregada','dpo_substitute'=>'Substituto','dpo_email'=>'E-mail DPO','social_linkedin'=>'LinkedIn institucional','social_instagram'=>'Instagram institucional','social_facebook'=>'Facebook institucional'];}
+function mdr_institutional_fields(){return ['home_awards_count'=>'Destaques de reconhecimentos na home (1 a 12)','oab'=>'Registro OAB','cnpj'=>'CNPJ','matrix'=>'Endereço da matriz','postal_code'=>'CEP','branch'=>'Endereço da filial','phone'=>'Telefone principal','phone_secondary'=>'Telefone adicional','whatsapp'=>'WhatsApp','email'=>'E-mail de contato','hours'=>'Horário de atendimento','maps'=>'Link Google Maps','dpo_name'=>'Encarregada','dpo_substitute'=>'Substituto','dpo_email'=>'E-mail DPO','social_linkedin'=>'LinkedIn institucional','social_instagram'=>'Instagram institucional','social_facebook'=>'Facebook institucional'];}
 add_action('admin_init',function(){foreach(mdr_institutional_fields() as $key=>$label){$sanitize=(str_starts_with($key,'social_')||$key==='maps')?'esc_url_raw':(str_contains($key,'email')?'sanitize_email':'sanitize_text_field');register_setting('mdr_institucional','mdr_'.$key,['type'=>'string','sanitize_callback'=>$sanitize]);}});
 add_action('admin_notices',function(){if(current_user_can('edit_posts')){echo '<div class="notice notice-info"><p><strong>Laboratório privado MDR.</strong> E-mails externos e comentários estão desativados. Artigos de exemplo são demonstrativos. Os documentos institucionais seguem no site atual.</p></div>';}});
 add_action('pre_get_posts',function($q){if(!is_admin()&&$q->is_main_query()&&$q->is_post_type_archive('mdr_premio')){$q->set('posts_per_page',12);$q->set('orderby','menu_order');$q->set('order','ASC');}});

@@ -47,6 +47,18 @@
     });
   }
 
+  // No third-party iframe or request is created before an explicit map click.
+  document.querySelectorAll('[data-map-load]').forEach(button => {
+    button.addEventListener('click', () => {
+      const url=new URL(button.dataset.mapSrc,location.href);
+      if (url.protocol!=='https:' || url.hostname!=='www.google.com' || url.pathname!=='/maps/embed') return;
+      const map=button.closest('[data-contact-map]'),frame=map.querySelector('[data-map-frame]');
+      const iframe=document.createElement('iframe');
+      iframe.title='Localização da matriz MDR Advocacia';iframe.referrerPolicy='no-referrer';iframe.src=url.href;
+      frame.replaceChildren(iframe);map.dataset.mapLoaded='true';
+    },{once:true});
+  });
+
   // Real profile URLs remain usable without JavaScript and in a new tab.
   document.querySelectorAll('[data-profile-dialog]').forEach(link => {
     const dialog = document.getElementById(link.dataset.profileDialog);
