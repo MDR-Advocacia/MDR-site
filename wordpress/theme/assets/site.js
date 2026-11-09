@@ -5,7 +5,7 @@
     const updateHeader = () => {
       header.classList.toggle('is-scrolled', window.scrollY > 56);
       const brand=header.querySelector('.brand'),center=brand.getBoundingClientRect().top+brand.getBoundingClientRect().height/2;
-      const onDark=[...document.querySelectorAll('.video-section,.contact,.site-footer')].some(region=>{const r=region.getBoundingClientRect();return r.top<=center&&r.bottom>=center;});
+      const onDark=[...document.querySelectorAll('.video-section,.partners,.contact,.site-footer')].some(region=>{const r=region.getBoundingClientRect();return r.top<=center&&r.bottom>=center;});
       header.classList.toggle('logo-on-light',!onDark);
     };
     window.addEventListener('scroll', updateHeader, {passive: true});
