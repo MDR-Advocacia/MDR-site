@@ -40,3 +40,10 @@
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.site-header,.site-header.is-scrolled,.site-header nav,.header-contact,.menu-toggle{background:#192f43}.carousel-arrow,.carousel-motion{background:#f9faf7}}
 @media(prefers-reduced-transparency:reduce){.site-header,.site-header.is-scrolled,.site-header nav,.header-contact,.menu-toggle{background:#192f43;-webkit-backdrop-filter:none;backdrop-filter:none}.carousel-arrow,.carousel-motion{background:#f9faf7;-webkit-backdrop-filter:none;backdrop-filter:none}.award-track .award-image{background:#f6f6f0}}
 @media(forced-colors:active){.carousel-arrow,.carousel-motion,.award-track .award-image{border:1px solid ButtonText}.trophy-cutout:before{display:none}}
+
+/* Keep the compact navigation aligned with the right edge of its trigger. */
+.site-header{--menu-inset:clamp(22px,4vw,76px);grid-template-columns:auto minmax(0,1fr)}
+.header-navigation{justify-self:end}
+@media(max-width:1350px){.site-header nav{left:auto;right:var(--menu-inset);width:min(300px,calc(100vw - 2 * var(--menu-inset)))}}
+@media(max-width:600px){.site-header{--menu-inset:18px}}
+@media(max-width:370px){.site-header{--menu-inset:14px}}
