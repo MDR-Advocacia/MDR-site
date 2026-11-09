@@ -2,7 +2,7 @@
 
 ## Publicar ou editar
 
-Em **Posts**, abra uma publicação. Use o título, o texto e o campo **Resumo** do WordPress. O site apresenta até500caracteres na lista do blog e até180na home, encerrando por palavra. Sem resumo manual, aproveita o início do texto. Rascunho, agendamento e revisão continuam no editor do WordPress.
+Em **Posts**, abra uma publicação. Use o título, o texto e o campo **Resumo** do WordPress. O site apresenta até500caracteres na lista do blog e até120na home, encerrando por palavra. Sem resumo manual, aproveita o início do texto. Rascunho, agendamento e revisão continuam no editor do WordPress.
 
 **Imagem destacada** é o banner do artigo completo (apresentação2:1). Em **Autoria e chamada da home**, escolha uma **miniatura quadrada** opcional para a home (1:1) e uma **faixa para a lista do blog** (4:1, metade da altura anterior). Sem arquivo próprio para uma dessas chamadas, o site usa o recorte central da Imagem destacada. Para artes com texto ou rostos, prefira arquivos preparados para cada formato. Os três campos usam a Biblioteca de mídia; os originais permanecem nela. Não é obrigatório produzir três artes para toda publicação.
 
@@ -14,7 +14,7 @@ Os sócios já cadastrados aparecem como opções e reutilizam nome, foto, biogr
 
 ## Dar destaque na home
 
-Em **Posts → Destaques da home**, escolha até três publicações já publicadas, na ordem desejada. **Salvar destaques** aplica a seleção. As vagas livres recebem as publicações mais recentes, sem repetir as fixadas. O blog mantém sua ordem por data de publicação, sem ser reordenado pelos destaques da home.
+Em **Posts → Destaques da home**, escolha até três publicações já publicadas, na ordem desejada. **Salvar destaques** aplica a seleção. A home apresenta até quatro chamadas compactas, com miniaturas quadradas. Até três podem ser fixadas; as vagas restantes recebem as publicações mais recentes, sem repetir as fixadas. Com menos de quatro publicações, as imagens conservam o tamanho compacto. O blog mantém sua ordem por data de publicação, sem ser reordenado pelos destaques da home.
 
 Para retirar uma fixação, selecione **Preencher com publicação recente**. Publicações removidas de circulação ou protegidas por senha não são exibidas como destaques. A tela recusa duplicatas, rascunhos, mais de três escolhas e uma seleção desatualizada desde a abertura do formulário; nesse caso, recarregue e confira antes de salvar. Essa tela exige permissão editorial para editar publicações de outras pessoas (Editor/Administrador), sem conceder administração do ambiente.
 

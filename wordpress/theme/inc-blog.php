@@ -58,8 +58,8 @@ function mdr_blog_image($id,$square=false,$listing=false) {
 }
 function mdr_home_blog_ids() {
     $ids=mdr_editorial_featured_ids();
-    if (count($ids)<3) {
-        $recent=get_posts(['post_type'=>'post','post_status'=>'publish','has_password'=>false,'numberposts'=>3-count($ids),'post__not_in'=>$ids,'orderby'=>['date'=>'DESC','ID'=>'DESC'],'ignore_sticky_posts'=>true,'fields'=>'ids']);
+    if (count($ids)<4) {
+        $recent=get_posts(['post_type'=>'post','post_status'=>'publish','has_password'=>false,'numberposts'=>4-count($ids),'post__not_in'=>$ids,'orderby'=>['date'=>'DESC','ID'=>'DESC'],'ignore_sticky_posts'=>true,'fields'=>'ids']);
         $ids=array_merge($ids,$recent);
     }
     return $ids;
@@ -69,7 +69,7 @@ function mdr_post_card() {
     <article class="article-card home-blog-card">
       <a class="cover-link" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr('Ler '.get_the_title()); ?>"><?php mdr_blog_image($id,true); ?></a>
       <div class="meta"><span><?php $categories=get_the_category();echo esc_html($categories?$categories[0]->name:'Institucional'); ?></span><time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date('d.m.Y')); ?></time></div>
-      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><p><?php echo esc_html(mdr_blog_excerpt($id,180)); ?></p>
+      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><p><?php echo esc_html(mdr_blog_excerpt($id,120)); ?></p>
       <?php mdr_blog_byline($id);if (get_post_meta($id,'mdr_demo',true)) { ?><span class="demo-label">Conteúdo demonstrativo</span><?php } ?>
     </article>
     <?php
