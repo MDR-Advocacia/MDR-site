@@ -10,7 +10,7 @@ body .site-header,body.home .site-header,body .site-header.is-scrolled{backgroun
 .site-header nav,.site-header.is-scrolled nav,.site-header.logo-on-light nav,.site-header nav.open,.site-header .menu-toggle,.site-header.logo-on-light .menu-toggle{background:var(--header-glass);border-color:#ffffff40;box-shadow:0 12px 30px #06142412,inset 0 1px 0 #ffffff26;-webkit-backdrop-filter:var(--header-blur);backdrop-filter:var(--header-blur)}
 .site-header.logo-on-light nav a,.site-header.logo-on-light .menu-toggle{color:#fff}
 @supports ((mask-image:url("logo.png")) or (-webkit-mask-image:url("logo.png"))) and ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
- .site-header .brand::before{content:"";position:absolute;inset:0;background:var(--brand-glass);-webkit-mask:url("logo.png") center/100% 100% no-repeat;mask:url("logo.png") center/100% 100% no-repeat;-webkit-backdrop-filter:var(--header-blur);backdrop-filter:var(--header-blur);pointer-events:none}
+ .site-header .brand::before{content:"";position:absolute;inset:0;background:var(--brand-glass);-webkit-mask:url("logo.png") center/100% 100% no-repeat;mask:url("logo.png") center/100% 100% no-repeat;-webkit-backdrop-filter:var(--header-blur);backdrop-filter:var(--header-blur);pointer-events:none;transform:translateZ(0);clip-path:inset(0)}
  .site-header .brand img,.site-header.logo-on-light .brand img{opacity:0;filter:none}
 }
 .site-header nav a:hover,.site-header nav a:focus-visible,.site-header nav a[aria-current]{color:#fff0c1;background:#0a22332e}
@@ -70,3 +70,6 @@ a.blog-banner:hover img{transform:scale(1.015)}
  .site-header.logo-on-light .brand img{filter:brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(1116%) hue-rotate(169deg) brightness(94%) contrast(89%)}
  .site-header nav,.site-header.is-scrolled nav,.site-header.logo-on-light nav,.site-header nav.open,.site-header .menu-toggle,.site-header.logo-on-light .menu-toggle{background:#192f43;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
+
+.site-header nav{clip-path:inset(0 round 999px)}
+@media(max-width:1350px){.site-header nav{clip-path:inset(0 round 24px)}}
