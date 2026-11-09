@@ -1,7 +1,7 @@
 /* Floating navigation and the editorial reading layout. */
 body .site-header,body.home .site-header,body .site-header.is-scrolled{background:transparent;border-color:transparent;box-shadow:none;pointer-events:none}
 .site-header .brand,.site-header .header-navigation{pointer-events:auto}
-/* One glass recipe; the brand clips the backdrop to its original alpha silhouette. */
+/* One glass recipe; the brand clips the backdrop to a vector traced from its original alpha silhouette. */
 .site-header{--header-glass:linear-gradient(135deg,rgba(22,43,58,.62),rgba(22,43,58,.48));--header-blur:blur(14px) saturate(1.1);--brand-glass:linear-gradient(135deg,rgba(255,255,255,.62),rgba(255,255,255,.48))}
 .site-header.logo-on-light{--brand-glass:var(--header-glass)}
 .site-header .brand{justify-self:start;position:relative}
@@ -9,8 +9,8 @@ body .site-header,body.home .site-header,body .site-header.is-scrolled{backgroun
 .site-header.logo-on-light .brand img{filter:brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(1116%) hue-rotate(169deg) brightness(94%) contrast(89%);opacity:.9}
 .site-header nav,.site-header.is-scrolled nav,.site-header.logo-on-light nav,.site-header nav.open,.site-header .menu-toggle,.site-header.logo-on-light .menu-toggle{background:var(--header-glass);border-color:#ffffff40;box-shadow:0 12px 30px #06142412,inset 0 1px 0 #ffffff26;-webkit-backdrop-filter:var(--header-blur);backdrop-filter:var(--header-blur)}
 .site-header.logo-on-light nav a,.site-header.logo-on-light .menu-toggle{color:#fff}
-@supports ((mask-image:url("logo.png")) or (-webkit-mask-image:url("logo.png"))) and ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
- .site-header .brand::before{content:"";position:absolute;inset:0;background:var(--brand-glass);-webkit-mask:url("logo.png") center/100% 100% no-repeat;mask:url("logo.png") center/100% 100% no-repeat;-webkit-backdrop-filter:var(--header-blur);backdrop-filter:var(--header-blur);pointer-events:none;transform:translateZ(0);clip-path:inset(0)}
+@supports (clip-path:url("#mdr-brand-silhouette")) and ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .site-header .brand::before{content:"";position:absolute;inset:0;background:var(--brand-glass);-webkit-backdrop-filter:var(--header-blur);backdrop-filter:var(--header-blur);pointer-events:none;transform:translateZ(0);clip-path:url("#mdr-brand-silhouette")}
  .site-header .brand img,.site-header.logo-on-light .brand img{opacity:0;filter:none}
 }
 .site-header nav a:hover,.site-header nav a:focus-visible,.site-header nav a[aria-current]{color:#fff0c1;background:#0a22332e}

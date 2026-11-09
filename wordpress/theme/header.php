@@ -4,6 +4,7 @@
 <body <?php body_class(); ?>><?php wp_body_open(); ?>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <div class="preview"><span><i aria-hidden="true"></i>Prévia privada · MDR Advocacia</span><a href="https://mdradvocacia.com" target="_blank" rel="noopener">Visitar site atual</a></div>
+<?php get_template_part('inc-brand-clip'); ?>
 <header class="site-header">
  <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="MDR Advocacia — início"><img src="<?php echo esc_url(mdr_asset('logo.png')); ?>" width="240" height="103" alt="MDR Advocacia"></a>
  <div class="header-navigation">
