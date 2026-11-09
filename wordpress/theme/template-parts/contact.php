@@ -2,14 +2,14 @@
 <section class="section contact contact-unified" id="contato" aria-labelledby="contact-title">
  <div class="contact-heading"><p class="eyebrow">Contato</p><h2 id="contact-title">Vamos conversar</h2></div>
  <div class="contact-addresses">
-  <h3>Matriz</h3><p><?php echo esc_html(get_option('mdr_matrix')); ?><br>CEP <?php echo esc_html(get_option('mdr_postal_code')); ?></p>
-  <h3>Filial</h3><p><?php echo esc_html(get_option('mdr_branch')); ?></p>
+  <a class="contact-location" href="<?php echo esc_url(mdr_contact_location_url('matrix')); ?>" target="_blank" rel="noopener noreferrer" aria-label="Abrir localização da matriz no Maps"><?php echo mdr_contact_icon('pin'); ?><div><h3>Matriz</h3><p><?php echo esc_html(get_option('mdr_matrix')); ?><br>CEP <?php echo esc_html(get_option('mdr_postal_code')); ?></p></div></a>
+  <a class="contact-location" href="<?php echo esc_url(mdr_contact_location_url('branch')); ?>" target="_blank" rel="noopener noreferrer" aria-label="Abrir localização da filial no Maps"><?php echo mdr_contact_icon('pin'); ?><div><h3>Filial</h3><p><?php echo esc_html(get_option('mdr_branch')); ?></p></div></a>
   <p class="contact-hours"><?php echo esc_html(get_option('mdr_hours')); ?></p>
  </div>
  <div class="contact-links" aria-label="Canais de contato">
   <a href="mailto:<?php echo esc_attr(get_option('mdr_email')); ?>"><?php echo esc_html(get_option('mdr_email')); ?></a>
   <?php foreach (mdr_contact_numbers() as $number) { $digits=mdr_phone_digits($number['value']);if (!$digits) { continue; }$label=mdr_format_phone($number['value']); ?>
-   <a <?php if ($number['whatsapp']) { ?>class="contact-whatsapp" aria-label="<?php echo esc_attr('WhatsApp: '.$label); ?>" target="_blank" rel="noopener noreferrer"<?php } ?> href="<?php echo esc_url($number['whatsapp']?'https://wa.me/'.$digits:'tel:+'.$digits); ?>"><?php if ($number['whatsapp']) { ?><svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="<?php echo esc_url(mdr_asset('social-icons.svg#whatsapp')); ?>"></use></svg><?php } ?><?php echo esc_html($label); ?></a>
+   <a <?php if ($number['whatsapp']) { ?>class="contact-whatsapp" aria-label="<?php echo esc_attr('WhatsApp: '.$label); ?>" target="_blank" rel="noopener noreferrer"<?php } else { ?>class="contact-phone"<?php } ?> href="<?php echo esc_url($number['whatsapp']?'https://wa.me/'.$digits:'tel:+'.$digits); ?>"><?php if ($number['whatsapp']) { ?><svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="<?php echo esc_url(mdr_asset('social-icons.svg#whatsapp')); ?>"></use></svg><?php } else { echo mdr_contact_icon('phone'); } ?><?php echo esc_html($label); ?></a>
   <?php } ?>
  </div>
  <div class="contact-map" data-contact-map>
