@@ -1,5 +1,6 @@
 /* Floating navigation and the editorial reading layout. */
-body .site-header,body.home .site-header,body .site-header.is-scrolled{background:transparent;border-color:transparent;box-shadow:none}
+body .site-header,body.home .site-header,body .site-header.is-scrolled{background:transparent;border-color:transparent;box-shadow:none;pointer-events:none}
+.site-header .brand,.site-header .header-navigation{pointer-events:auto}
 .site-header .brand{justify-self:start}
 .site-header .brand img{filter:drop-shadow(0 2px 8px #06142444);transition:filter .2s}
 .site-header.logo-on-light .brand img{filter:brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(1116%) hue-rotate(169deg) brightness(94%) contrast(89%)}
