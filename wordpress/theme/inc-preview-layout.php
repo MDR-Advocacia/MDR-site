@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) { exit; }
 
 function mdr_home_nav_items() {
-    return ['Reconhecimentos'=>'premiacoes','Blog'=>'blog','Sócios'=>'socios','Compromissos'=>'compromissos','Atuação'=>'atuacao','O que nos orienta'=>'orienta'];
+    return ['Reconhecimentos'=>'premiacoes','Sócios'=>'socios','Compromissos'=>'compromissos','Atuação'=>'atuacao','O que nos orienta'=>'orienta','Blog'=>'blog'];
 }
 function mdr_home_icon() {
     return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg>';

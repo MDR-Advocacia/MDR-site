@@ -31,7 +31,7 @@ function mdr_whatsapp_href() {
 }
 function mdr_primary_fallback() {
     echo '<ul class="site-menu"><li><a class="home-link" href="'.esc_url(home_url('/#inicio')).'" aria-label="Início" title="Início">'.mdr_home_icon().'<span class="mobile-home-label">Início</span></a></li>';
-    foreach(mdr_home_nav_items()as $label=>$anchor){echo '<li><a href="'.esc_url(home_url('/#'.$anchor)).'">'.esc_html($label).'</a></li>';}
+    foreach(mdr_home_nav_items()as $label=>$anchor){echo '<li><a href="'.esc_url(home_url($anchor==='blog'?'/blog/':'/#'.$anchor)).'">'.esc_html($label).'</a></li>';}
     echo '</ul>';
 }
 

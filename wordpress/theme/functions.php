@@ -2,6 +2,7 @@
 if (!defined('ABSPATH')) { exit; }
 require_once __DIR__.'/inc-institutional.php';
 require_once __DIR__.'/inc-preview-layout.php';
+require_once __DIR__.'/inc-blog.php';
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -16,17 +17,18 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('mdr', mdr_asset('site.css'), [], wp_get_theme()->get('Version'));
     wp_enqueue_style('mdr-visual', mdr_asset('visual-review.css'), ['mdr'], wp_get_theme()->get('Version'));
     wp_enqueue_style('mdr-architecture', mdr_asset('architecture.css'), ['mdr-visual'], wp_get_theme()->get('Version'));
+    wp_enqueue_style('mdr-blog', mdr_asset('blog.css'), ['mdr-architecture'], wp_get_theme()->get('Version'));
     wp_enqueue_script('mdr', mdr_asset('site.js'), [], wp_get_theme()->get('Version'), true);
 });
 add_filter('wp_nav_menu_objects', function ($items, $args) {
     if (empty($args->mdr_glass_header)) { return $items; }
-    $order=['premiacoes'=>0,'blog'=>1,'socios'=>2,'compromissos'=>3,'atuacao'=>4,'orienta'=>5];
+    $order=['premiacoes'=>0,'socios'=>1,'compromissos'=>2,'atuacao'=>3,'orienta'=>4,'blog'=>5];
     $paths=['about'=>'orienta','atuacao'=>'atuacao','blog'=>'blog','esg'=>'compromissos','reconhecimentos'=>'premiacoes'];
     $kept=[];
     foreach($items as $item){
         $fragment=wp_parse_url($item->url,PHP_URL_FRAGMENT);if($fragment==='contato'){continue;}
         $path=trim((string)wp_parse_url($item->url,PHP_URL_PATH),'/');$anchor=$paths[$path]??$fragment;
-        if(isset($order[$anchor])){$item->url=home_url('/#'.$anchor);if($anchor==='orienta'){$item->title='O que nos orienta';}$item->menu_order=$order[$anchor];}
+        if(isset($order[$anchor])){$item->url=$anchor==='blog'?home_url('/blog/'):home_url('/#'.$anchor);if($anchor==='orienta'){$item->title='O que nos orienta';}$item->menu_order=$order[$anchor];}
         $kept[]=$item;
     }
     usort($kept,fn($a,$b)=>$a->menu_order<=>$b->menu_order);return $kept;
@@ -35,6 +37,7 @@ add_filter('nav_menu_link_attributes', function ($attributes, $item, $args) {
     if (!empty($args->mdr_glass_header) && wp_parse_url($item->url, PHP_URL_FRAGMENT)) {
         unset($attributes['aria-current']);
     }
+    if (!empty($args->mdr_glass_header) && untrailingslashit($item->url)===untrailingslashit(home_url('/blog/')) && (is_home()||is_singular('post')||is_category()||is_tag()||is_date()||is_search())) { $attributes['aria-current']='page'; }
     return $attributes;
 }, 10, 3);
 function mdr_register_content_types() {
@@ -86,11 +89,3 @@ function mdr_social($id) {
         mdr_social_icon($key,get_post_meta($id,'mdr_'.$key,true),$label.' de '.get_the_title($id));
     }
 }
-function mdr_post_card() { ?>
-<article class="article-card">
-  <a class="cover-link" href="<?php the_permalink(); ?>"><?php if (has_post_thumbnail()) { the_post_thumbnail('large'); } else { $cover=get_post_meta(get_the_ID(),'mdr_demo_cover',true); if(!in_array($cover,['negocios.svg','esg.svg','institucional.svg'],true)){$cover='institucional.svg';} ?><img src="<?php echo esc_url(mdr_asset($cover)); ?>" alt="" loading="lazy"><?php } ?></a>
-  <div class="meta"><span><?php $c=get_the_category(); echo esc_html($c ? $c[0]->name : 'Institucional'); ?></span><time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date('d.m.Y')); ?></time></div>
-  <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><p><?php echo esc_html(get_the_excerpt()); ?></p>
-  <?php if (get_post_meta(get_the_ID(),'mdr_demo',true)) { ?><span class="demo-label">Conteúdo demonstrativo</span><?php } ?>
-</article>
-<?php }
