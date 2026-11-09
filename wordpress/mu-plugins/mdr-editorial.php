@@ -8,7 +8,7 @@ add_action('init', function () {
         'public'=>false, 'show_ui'=>true, 'show_in_menu'=>'edit.php', 'show_in_rest'=>true,
         'supports'=>['title','editor','excerpt','thumbnail','revisions'], 'map_meta_cap'=>true,
     ]);
-    foreach (['mdr_blog_byline'=>'string','mdr_blog_authors'=>'array','mdr_blog_square'=>'integer'] as $key=>$type) {
+    foreach (['mdr_blog_byline'=>'string','mdr_blog_authors'=>'array','mdr_blog_square'=>'integer','mdr_blog_strip'=>'integer'] as $key=>$type) {
         register_post_meta('post', $key, ['type'=>$type,'single'=>true,'show_in_rest'=>false,'revisions_enabled'=>true,
             'auth_callback'=>function ($allowed,$meta_key,$post_id) { return current_user_can('edit_post',$post_id); }]);
     }
@@ -39,6 +39,7 @@ function mdr_editorial_save_post_fields($id, $input) {
     update_post_meta($id,'mdr_blog_byline',$mode);
     update_post_meta($id,'mdr_blog_authors',$authors);
     update_post_meta($id,'mdr_blog_square',mdr_editorial_image_id($input['mdr_blog_square']??0));
+    update_post_meta($id,'mdr_blog_strip',mdr_editorial_image_id($input['mdr_blog_strip']??0));
     return true;
 }
 add_action('add_meta_boxes_post', function () {
@@ -57,6 +58,8 @@ add_action('add_meta_boxes_post', function () {
         echo '</div><p><a href="'.esc_url(admin_url('edit.php?post_type=mdr_autor')).'">Gerenciar outros autores e suas fotos</a></p></fieldset><hr>';
         $image=mdr_editorial_image_id(get_post_meta($post->ID,'mdr_blog_square',true));
         echo '<div data-editorial-image><p><strong>Miniatura quadrada para a home (opcional)</strong></p><p>O banner usa a Imagem destacada do post. Sem miniatura própria, a home usa essa mesma imagem em recorte quadrado. Use o campo Resumo para escrever a chamada; ele também será limitado na apresentação.</p><div data-image-preview>'.($image?wp_get_attachment_image($image,'thumbnail'):'' ).'</div><input data-image-id type="hidden" name="mdr_blog_square" value="'.esc_attr($image).'"><p><button type="button" class="button" data-select-image>Escolher miniatura</button> <button type="button" class="button-link-delete" data-remove-image>Remover miniatura</button></p></div>';
+        $strip=mdr_editorial_image_id(get_post_meta($post->ID,'mdr_blog_strip',true));
+        echo '<hr><div data-editorial-image data-image-title="Faixa para a lista do blog"><p><strong>Faixa para a lista do blog (opcional)</strong></p><p>Formato4:1, mais baixo e discreto. Sem imagem própria, a lista usa o recorte central da Imagem destacada. O artigo completo mantém o banner2:1, e a home usa a miniatura1:1.</p><div data-image-preview>'.($strip?wp_get_attachment_image($strip,'thumbnail'):'').'</div><input data-image-id type="hidden" name="mdr_blog_strip" value="'.esc_attr($strip).'"><p><button type="button" class="button" data-select-image>Escolher faixa</button> <button type="button" class="button-link-delete" data-remove-image>Remover faixa</button></p></div>';
         echo '<p><a href="'.esc_url(admin_url('edit.php?page=mdr-home-featured')).'">Escolher os três destaques da home</a></p>';
     },'post','normal','high');
 });
@@ -72,7 +75,7 @@ add_action('admin_notices',function () {
 add_action('admin_enqueue_scripts',function ($hook) {
     $screen=get_current_screen();
     if (in_array($hook,['post.php','post-new.php'],true) && $screen && $screen->post_type==='post') {
-        wp_enqueue_media();wp_enqueue_script('mdr-editorial-media',plugins_url('mdr-editorial/media.js',__FILE__),['media-views'],'1.0.0',true);
+        wp_enqueue_media();wp_enqueue_script('mdr-editorial-media',plugins_url('mdr-editorial/media.js',__FILE__),['media-views'],'1.0.1',true);
     }
 });
 

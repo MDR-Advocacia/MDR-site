@@ -4,7 +4,7 @@
 
 Em **Posts**, abra uma publicação. Use o título, o texto e o campo **Resumo** do WordPress. O site apresenta até500caracteres na lista do blog e até180na home, encerrando por palavra. Sem resumo manual, aproveita o início do texto. Rascunho, agendamento e revisão continuam no editor do WordPress.
 
-**Imagem destacada** é o banner horizontal (apresentação2:1). Em **Autoria e chamada da home**, escolha uma **miniatura quadrada** opcional (apresentação1:1). Sem miniatura própria, o site usa o banner com recorte central. Para artes com texto ou rostos, prefira arquivos preparados para cada formato. A seleção usa a Biblioteca de mídia; o arquivo original permanece nela.
+**Imagem destacada** é o banner do artigo completo (apresentação2:1). Em **Autoria e chamada da home**, escolha uma **miniatura quadrada** opcional para a home (1:1) e uma **faixa para a lista do blog** (4:1, metade da altura anterior). Sem arquivo próprio para uma dessas chamadas, o site usa o recorte central da Imagem destacada. Para artes com texto ou rostos, prefira arquivos preparados para cada formato. Os três campos usam a Biblioteca de mídia; os originais permanecem nela. Não é obrigatório produzir três artes para toda publicação.
 
 ## Assinar
 

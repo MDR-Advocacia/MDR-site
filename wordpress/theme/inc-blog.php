@@ -49,8 +49,8 @@ function mdr_blog_byline($id) {
     }
     echo '</div>';
 }
-function mdr_blog_image($id,$square=false) {
-    $attachment=$square?mdr_editorial_image_id(get_post_meta($id,'mdr_blog_square',true)):0;
+function mdr_blog_image($id,$square=false,$listing=false) {
+    $attachment=($square||$listing)?mdr_editorial_image_id(get_post_meta($id,$square?'mdr_blog_square':'mdr_blog_strip',true)):0;
     $attachment=$attachment?:get_post_thumbnail_id($id);
     if ($attachment) { echo wp_get_attachment_image($attachment,$square?'medium_large':'large',['loading'=>'lazy','alt'=>'']);return; }
     $cover=get_post_meta($id,'mdr_demo_cover',true);if (!in_array($cover,['negocios.svg','esg.svg','institucional.svg'],true)) { $cover='institucional.svg'; }
@@ -77,7 +77,7 @@ function mdr_post_card() {
 function mdr_blog_list_entry() {
     $id=get_the_ID(); ?>
     <article class="blog-entry">
-      <a class="blog-banner" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr('Ler '.get_the_title()); ?>"><?php mdr_blog_image($id); ?></a>
+      <a class="blog-banner" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr('Ler '.get_the_title()); ?>"><?php mdr_blog_image($id,false,true); ?></a>
       <div class="blog-entry-meta"><span><?php $cats=get_the_category();echo esc_html($cats?$cats[0]->name:'Institucional'); ?></span><time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date('d \d\e F \d\e Y')); ?></time></div>
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       <?php mdr_blog_byline($id); ?>
