@@ -19,6 +19,7 @@ function mdr_contact_map_embed_url() { return 'https://www.google.com/maps/embed
 
 function mdr_contact_location_url($unit) {
     if ($unit==='matrix') { return get_option('mdr_maps'); }
+    $branch=get_option('mdr_maps_branch');if($branch){return $branch;}
     return 'https://www.google.com/maps/search/?api=1&query='.rawurlencode(get_option('mdr_branch'));
 }
 function mdr_contact_icon($name) {
