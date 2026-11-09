@@ -20,7 +20,7 @@ function mdr_layout_content($post) {
     return str_replace([' ↗','↗'], '', apply_filters('the_content', serialize_blocks($blocks)));
 }
 function mdr_award_visual($post) {
-    $samples=['award-panama'=>'trofeu-laqi-transparente.webp','award-fenalaw2025'=>'trofeu-fenalaw-transparente.webp'];
+    $samples=['award-panama'=>'trofeu-laqi-transparente.webp','award-fenalaw2025'=>'trofeu-fenalaw-transparente.webp','award-gptw'=>'trofeu-ab2l2025-transparente.webp','award-fenalaw'=>'trofeu-ab2l2024-transparente.webp','award-bb'=>'trofeu-bb1-transparente.webp','award-bb2'=>'trofeu-bb2-transparente.webp','award-ativos'=>'trofeu-ativos-transparente.webp','award-bb3'=>'trofeu-bb3-transparente.webp','award-bb4'=>'trofeu-law2024-transparente.webp'];
     if (isset($samples[$post->post_name]) && file_exists(__DIR__.'/assets/'.$samples[$post->post_name])) {
         $url=mdr_asset($samples[$post->post_name]);
         return '<span class="trophy-cutout" style="--trophy-mask:url('.esc_url($url).')"><img src="'.esc_url($url).'" alt="'.esc_attr($post->post_title).'" width="1280" height="1280" loading="lazy"></span>';
@@ -47,14 +47,18 @@ function mdr_recognition_section() {
     <section class="section recognition recognition-showcase" id="premiacoes" aria-labelledby="recognition-title">
       <div class="section-heading"><div><p class="eyebrow">Reconhecimentos institucionais</p><h2 id="recognition-title">Uma trajetória reconhecida</h2></div><a class="button outline" href="<?php echo esc_url(get_post_type_archive_link('mdr_premio')); ?>">Histórico e certificados</a></div>
       <div class="award-carousel" data-award-carousel role="region" aria-roledescription="carrossel" aria-label="Reconhecimentos da MDR">
-        <div class="carousel-toolbar"><p>Conquistas que fazem parte da nossa história.</p><div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Reconhecimentos anteriores">Anterior</button><span data-carousel-position aria-live="off"></span><button type="button" data-carousel-next aria-label="Próximos reconhecimentos">Próximo</button><button type="button" data-carousel-toggle aria-pressed="false">Pausar apresentação</button></div></div>
-        <div class="award-track" tabindex="0" aria-label="Lista de reconhecimentos; deslize para explorar">
+        <div class="carousel-toolbar"><p>Conquistas que fazem parte da nossa história.</p><div class="carousel-status"><span data-carousel-position aria-live="off"></span><button class="carousel-motion" type="button" data-carousel-toggle aria-pressed="false" aria-label="Pausar apresentação" title="Pausar apresentação"><svg class="pause-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg><svg class="play-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg></button></div></div>
+        <div class="carousel-stage">
+        <button class="carousel-arrow carousel-prev" type="button" data-carousel-prev aria-label="Reconhecimento anterior" aria-controls="award-track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+        <div class="award-track" id="award-track" tabindex="0" aria-label="Lista de reconhecimentos; deslize para explorar">
         <?php foreach($awards as $i=>$award){ ?>
           <article class="award-card" role="group" aria-roledescription="slide" aria-label="<?php echo esc_attr(($i+1).' de '.count($awards)); ?>">
             <a class="award-image" href="<?php echo esc_url(get_permalink($award)); ?>" data-profile-dialog="detail-<?php echo esc_attr($award->ID); ?>" aria-label="Conhecer <?php echo esc_attr($award->post_title); ?>"><?php echo mdr_award_visual($award); ?></a>
             <p class="eyebrow"><?php echo esc_html(get_post_meta($award->ID,'mdr_subtitle',true)); ?></p><h3><a href="<?php echo esc_url(get_permalink($award)); ?>" data-profile-dialog="detail-<?php echo esc_attr($award->ID); ?>"><?php echo esc_html($award->post_title); ?></a></h3>
           </article>
         <?php } ?>
+        </div>
+        <button class="carousel-arrow carousel-next" type="button" data-carousel-next aria-label="Próximo reconhecimento" aria-controls="award-track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
         </div>
       </div>
       <?php foreach($awards as $award){mdr_detail_dialog($award);} ?>

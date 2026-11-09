@@ -1,0 +1,86 @@
+{
+  "tool": "image_gen built-in",
+  "date": "2026-11-09",
+  "mode": "background-extraction; preserve inscriptions and originals",
+  "assets": [
+    {
+      "id": "ab2l2025",
+      "source": "uGl9PK5",
+      "inscriptions": "2025; CERTIFICAÇÃO AB2L INFINITE DE INOVAÇÃO JURÍDICA; AB2L; MARCOS DÉLLI RIBEIRO SOCIEDADE INDIVIDUAL DE ADVOCACIA; ESCRITÓRIO DE ADVOCACIA",
+      "prompt": "Use case: background-extraction. Edit the supplied trophy photo for a website. Remove ONLY the off-white studio background and floor shadow, producing a true transparent RGBA cutout, preserving the original square framing. Keep the EXACT trophy geometry, silhouette, perspective, material, colors, surface lighting, logos and every inscription intact. Do not redesign, redraw or correct any text. Keep glass/acrylic interior surfaces with original milky tint and etched details; do not erase the trophy itself. Remove backdrop seen through actual empty holes (especially the Banco do Brasil cutout logo) so the true hollow center remains open. No white rectangular background, no border, no added halo, no cropping. Critical inscriptions to preserve from the source: 2025; CERTIFICAÇÃO AB2L INFINITE DE INOVAÇÃO JURÍDICA; AB2L; MARCOS DÉLLI RIBEIRO SOCIEDADE INDIVIDUAL DE ADVOCACIA; ESCRITÓRIO DE ADVOCACIA.",
+      "file": "wordpress/theme/assets/trofeu-ab2l2025-transparente.webp",
+      "source_generated": "exec-f1e604d3-e04e-469e-8e87-415c34792fdb.png",
+      "sha256": "fd9f42f14f8f82dfdbabc871ac349447f5fae3baec17d4aba6c26c467c0df3c9",
+      "bytes": 188060,
+      "alpha": true
+    },
+    {
+      "id": "ab2l2024",
+      "source": "xukxCS7",
+      "inscriptions": "AB2L; 2024; CERTIFICADO AB2L INFINITE DE INOVAÇÃO JURÍDICA ESCRITÓRIO 2024; MDR ADVOCACIA",
+      "prompt": "Use case: background-extraction. Edit the supplied trophy photo for a website. Remove ONLY the off-white studio background and floor shadow, producing a true transparent RGBA cutout, preserving the original square framing. Keep the EXACT trophy geometry, silhouette, perspective, material, colors, surface lighting, logos and every inscription intact. Do not redesign, redraw or correct any text. Keep glass/acrylic interior surfaces with original milky tint and etched details; do not erase the trophy itself. Remove backdrop seen through actual empty holes (especially the Banco do Brasil cutout logo) so the true hollow center remains open. No white rectangular background, no border, no added halo, no cropping. Critical inscriptions to preserve from the source: AB2L; 2024; CERTIFICADO AB2L INFINITE DE INOVAÇÃO JURÍDICA ESCRITÓRIO 2024; MDR ADVOCACIA.",
+      "file": "wordpress/theme/assets/trofeu-ab2l2024-transparente.webp",
+      "source_generated": "exec-3bd21bf8-deaa-4a03-b8cc-a5232b1b3581.png",
+      "sha256": "2a5e100138e58de24f7d090f2c877aee585ec80aa5c02252f4cbe83d5f63e789",
+      "bytes": 155162,
+      "alpha": true
+    },
+    {
+      "id": "bb1",
+      "source": "25sP8ch",
+      "inscriptions": "1º Lugar; Melhor Performance Geral; Carteira entre 20 mil e 55 mil processos; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS; 1º Semestre de 2025; Diretoria Jurídica; Banco do Brasil S.A.",
+      "prompt": "Use case: background-extraction. Edit the supplied trophy photo for a website. Remove ONLY the off-white studio background and floor shadow, producing a true transparent RGBA cutout, preserving the original square framing. Keep the EXACT trophy geometry, silhouette, perspective, material, colors, surface lighting, logos and every inscription intact. Do not redesign, redraw or correct any text. Keep glass/acrylic interior surfaces with original milky tint and etched details; do not erase the trophy itself. Remove backdrop seen through actual empty holes (especially the Banco do Brasil cutout logo) so the true hollow center remains open. No white rectangular background, no border, no added halo, no cropping. Critical inscriptions to preserve from the source: 1º Lugar; Melhor Performance Geral; Carteira entre 20 mil e 55 mil processos; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS; 1º Semestre de 2025; Diretoria Jurídica; Banco do Brasil S.A..",
+      "file": "wordpress/theme/assets/trofeu-bb1-transparente.webp",
+      "source_generated": "exec-b046848d-9fee-4f9a-9de2-1eca3f61e3d0.png",
+      "sha256": "2b90a24094b6525f177b19c730b829f2b078a9eeb21a1603dd80b0ce7731edc6",
+      "bytes": 151654,
+      "alpha": true
+    },
+    {
+      "id": "bb2",
+      "source": "0weKyil",
+      "inscriptions": "1º Lugar; Melhor Performance Geral; Carteira entre 20 mil e 50 mil processos; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS; 2º Semestre de 2024; Diretoria Jurídica; Banco do Brasil S.A.",
+      "prompt": "Use case: background-extraction. Edit the supplied trophy photo for a website. Remove ONLY the off-white studio background and floor shadow, producing a true transparent RGBA cutout, preserving the original square framing. Keep the EXACT trophy geometry, silhouette, perspective, material, colors, surface lighting, logos and every inscription intact. Do not redesign, redraw or correct any text. Keep glass/acrylic interior surfaces with original milky tint and etched details; do not erase the trophy itself. Remove backdrop seen through actual empty holes (especially the Banco do Brasil cutout logo) so the true hollow center remains open. No white rectangular background, no border, no added halo, no cropping. Critical inscriptions to preserve from the source: 1º Lugar; Melhor Performance Geral; Carteira entre 20 mil e 50 mil processos; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS; 2º Semestre de 2024; Diretoria Jurídica; Banco do Brasil S.A..",
+      "file": "wordpress/theme/assets/trofeu-bb2-transparente.webp",
+      "source_generated": "exec-fa45a3d6-cd9d-4581-8145-559b1c19c5fe.png",
+      "sha256": "0e849deea9d11acf8bf55728e7b6795fe42333fa69c0ee6d015d108e92ee88a9",
+      "bytes": 156432,
+      "alpha": true
+    },
+    {
+      "id": "ativos",
+      "source": "MfwyKBR",
+      "inscriptions": "Ativos; Securitização de Créditos Gestão de Cobrança; MDR ADVOCACIA; 1º semestre de 2024; LOTE 4",
+      "prompt": "Use case: background-extraction. Edit the supplied trophy photo for a website. Remove ONLY the off-white studio background and floor shadow, producing a true transparent RGBA cutout, preserving the original square framing. Keep the EXACT trophy geometry, silhouette, perspective, material, colors, surface lighting, logos and every inscription intact. Do not redesign, redraw or correct any text. Keep glass/acrylic interior surfaces with original milky tint and etched details; do not erase the trophy itself. Remove backdrop seen through actual empty holes (especially the Banco do Brasil cutout logo) so the true hollow center remains open. No white rectangular background, no border, no added halo, no cropping. Critical inscriptions to preserve from the source: Ativos; Securitização de Créditos Gestão de Cobrança; MDR ADVOCACIA; 1º semestre de 2024; LOTE 4.",
+      "file": "wordpress/theme/assets/trofeu-ativos-transparente.webp",
+      "source_generated": "exec-ac90f0ca-5abf-422a-b05c-bce516a1e43c.png",
+      "sha256": "7c6a2628c03314b0d6efa287e6068f93fe9a84c66c420bfa7354b82e602a1f8c",
+      "bytes": 87534,
+      "alpha": true
+    },
+    {
+      "id": "bb3",
+      "source": "lAGM1ZT",
+      "inscriptions": "Melhor Performance Geral; 3º Colocado; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS; 1º Semestre de 2024; Diretoria Jurídica; Banco do Brasil S.A.",
+      "prompt": "Use case: background-extraction. Edit the supplied trophy photo for a website. Remove ONLY the off-white studio background and floor shadow, producing a true transparent RGBA cutout, preserving the original square framing. Keep the EXACT trophy geometry, silhouette, perspective, material, colors, surface lighting, logos and every inscription intact. Do not redesign, redraw or correct any text. Keep glass/acrylic interior surfaces with original milky tint and etched details; do not erase the trophy itself. Remove backdrop seen through actual empty holes (especially the Banco do Brasil cutout logo) so the true hollow center remains open. No white rectangular background, no border, no added halo, no cropping. Critical inscriptions to preserve from the source: Melhor Performance Geral; 3º Colocado; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS; 1º Semestre de 2024; Diretoria Jurídica; Banco do Brasil S.A..",
+      "file": "wordpress/theme/assets/trofeu-bb3-transparente.webp",
+      "source_generated": "exec-bd525059-cd6b-46b7-8278-42d21ca7b839.png",
+      "sha256": "473345cc1336378929937e129bf9bea64e3087a95e011d0812b71d78ae232424",
+      "bytes": 144344,
+      "alpha": true
+    },
+    {
+      "id": "law2024",
+      "source": "1rpTCP5",
+      "inscriptions": "LATIN AMERICAN QUALITY INSTITUTE; CONDECORA A:; THE LAW AWARDS 2024 - BRAZIL; MARCOS DELLI RIBEIRO RODRIGUES ADVOGADOS & ASSOCIADOS",
+      "prompt": "Recorte fotográfico deste troféu, com fundo externo transparente. Preserve toda a peça como está na fotografia: proporções, materiais, reflexos, letras e logotipos. O painel escuro da parte superior, inclusive o círculo preto central, é uma superfície sólida do troféu e deve permanecer completo e opaco. Remova apenas o fundo do estúdio ao redor da silhueta externa e a sombra no chão. Preserve a superfície de vidro e todas as inscrições. Sem acrescentar nenhum elemento, sem mudar o enquadramento.",
+      "file": "wordpress/theme/assets/trofeu-law2024-transparente.webp",
+      "source_generated": "exec-4304c79e-cc25-408b-9593-f6ffea8f9230.png",
+      "sha256": "271b9fb2155de099acb15c2d861c166ca772b893500d2769d1e28ba85f6f9c4f",
+      "bytes": 123530,
+      "alpha": true,
+      "opaque_center_verified": true
+    }
+  ],
+  "note": "Two existing cutouts preserved; seven added for all remaining physical trophies. Official GPTW artwork unchanged. AB2L round trophy awaits user photo with green LED; no illumination invented."
+}

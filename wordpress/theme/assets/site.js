@@ -172,7 +172,7 @@
     const update=()=>{const {step}=metrics();position.textContent=Math.min(items.length,Math.round(track.scrollLeft/step)+1)+' / '+items.length;};
     const suspended=()=>userPaused||hovered||focused||!visible||document.hidden||reduced.matches||!!document.querySelector('dialog[open]');
     const advance=(direction)=>{const {step,end}=metrics();let target=track.scrollLeft+direction*step;if(direction>0&&track.scrollLeft>=end-3)target=0;if(direction<0&&track.scrollLeft<=3)target=end;track.scrollTo({left:Math.max(0,Math.min(end,target)),behavior:reduced.matches?'auto':'smooth'});};
-    const schedule=()=>{clearTimeout(timer);if(!suspended())timer=setTimeout(()=>{if(!suspended())advance(1);schedule();},7000);toggle.textContent=userPaused?'Continuar apresentação':(reduced.matches?'Apresentação manual':'Pausar apresentação');toggle.setAttribute('aria-pressed',String(userPaused));};
+    const schedule=()=>{clearTimeout(timer);if(!suspended())timer=setTimeout(()=>{if(!suspended())advance(1);schedule();},7000);const paused=userPaused||reduced.matches;const label=paused?'Continuar apresentação':'Pausar apresentação';toggle.dataset.paused=String(paused);toggle.setAttribute('aria-label',reduced.matches?'Movimento reduzido: apresentação manual':label);toggle.title=toggle.getAttribute('aria-label');toggle.setAttribute('aria-pressed',String(paused));toggle.disabled=reduced.matches;};
     carousel.querySelector('[data-carousel-next]').addEventListener('click',()=>{userPaused=true;advance(1);schedule();});
     carousel.querySelector('[data-carousel-prev]').addEventListener('click',()=>{userPaused=true;advance(-1);schedule();});
     toggle.addEventListener('click',()=>{userPaused=!userPaused;schedule();});
