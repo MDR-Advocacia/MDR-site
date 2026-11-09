@@ -1,0 +1,26 @@
+{
+  "tool": "image_gen built-in",
+  "date": "2026-11-09",
+  "prompt": "Use case: background-extraction. Remove ONLY off-white studio background and floor shadow; true RGBA transparent cutout. Keep exact trophy silhouette, camera, geometry, materials, lighting, colors and all original logos/inscriptions. No redesign, no border/halo, no invented lettering, no crop. Preserve acrylic edges and internal face; original square framing.",
+  "specific_invariants": {
+    "laqi": "Presidents Choice Awards, LATIN AMERICAN QUALITY INSTITUTE, 2025, Since 2001, MDR ADVOCACIA",
+    "fenalaw": "Prêmio Análise DNA+ FENALAW 2025, 1º LUGAR GESTÃO, MDR Advocacia"
+  },
+  "purpose": "Two non-destructive visual cutout samples for protected staging; originals and official seals preserved.",
+  "assets": [
+    {
+      "file": "wordpress/theme/assets/trofeu-laqi-transparente.webp",
+      "source_generated": "exec-2259975c-0e47-497b-ae7f-21ed13e34e4f.png",
+      "bytes": 94380,
+      "sha256": "dbf9c89f34e3f463b43277ea003c8ebffa82ca6db778cc52182c5c1671f54670",
+      "alpha": true
+    },
+    {
+      "file": "wordpress/theme/assets/trofeu-fenalaw-transparente.webp",
+      "source_generated": "exec-c4a0cfe1-41a2-4bd7-8447-df2d45ce6519.png",
+      "bytes": 101926,
+      "sha256": "6a7e7b9f0d11ec7074e8c3e7d9199964ace3768860c638433b2e467cd2912e98",
+      "alpha": true
+    }
+  ]
+}

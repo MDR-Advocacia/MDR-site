@@ -49,10 +49,12 @@
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       dialog.showModal();
+      document.dispatchEvent(new Event('mdr-dialog-change'));
       document.documentElement.classList.add('dialog-open');
       dialog.addEventListener('close', () => {
         document.documentElement.classList.remove('dialog-open');
         link.focus({ preventScroll: true });
+        document.dispatchEvent(new Event('mdr-dialog-change'));
       }, { once: true });
     });
   });
@@ -154,5 +156,39 @@
   dialog.addEventListener('click', event => {
     const bounds = dialog.getBoundingClientRect();
     if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
+})();
+
+(() => {
+  'use strict';
+  document.querySelectorAll('[data-award-carousel]').forEach(carousel => {
+    const track=carousel.querySelector('.award-track'), items=[...track.children], toggle=carousel.querySelector('[data-carousel-toggle]'), position=carousel.querySelector('[data-carousel-position]');
+    if(!items.length){carousel.hidden=true;return;}
+    const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+    let userPaused=false, hovered=false, focused=false, visible=false, timer=null;
+    const metrics=()=>({step:items[0]?.getBoundingClientRect().width+parseFloat(getComputedStyle(track).gap||0),end:Math.max(0,track.scrollWidth-track.clientWidth)});
+    const update=()=>{const {step}=metrics();position.textContent=Math.min(items.length,Math.round(track.scrollLeft/step)+1)+' / '+items.length;};
+    const suspended=()=>userPaused||hovered||focused||!visible||document.hidden||reduced.matches||!!document.querySelector('dialog[open]');
+    const advance=(direction)=>{const {step,end}=metrics();let target=track.scrollLeft+direction*step;if(direction>0&&track.scrollLeft>=end-3)target=0;if(direction<0&&track.scrollLeft<=3)target=end;track.scrollTo({left:Math.max(0,Math.min(end,target)),behavior:reduced.matches?'auto':'smooth'});};
+    const schedule=()=>{clearTimeout(timer);if(!suspended())timer=setTimeout(()=>{if(!suspended())advance(1);schedule();},7000);toggle.textContent=userPaused?'Continuar apresentação':(reduced.matches?'Apresentação manual':'Pausar apresentação');toggle.setAttribute('aria-pressed',String(userPaused));};
+    carousel.querySelector('[data-carousel-next]').addEventListener('click',()=>{userPaused=true;advance(1);schedule();});
+    carousel.querySelector('[data-carousel-prev]').addEventListener('click',()=>{userPaused=true;advance(-1);schedule();});
+    toggle.addEventListener('click',()=>{userPaused=!userPaused;schedule();});
+    carousel.addEventListener('mouseenter',()=>{hovered=true;schedule();});carousel.addEventListener('mouseleave',()=>{hovered=false;schedule();});
+    carousel.addEventListener('focusin',()=>{focused=true;schedule();});carousel.addEventListener('focusout',event=>{if(!carousel.contains(event.relatedTarget)){focused=false;schedule();}});
+    track.addEventListener('pointerdown',()=>{userPaused=true;schedule();},{passive:true});
+    track.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update,{passive:true});
+    document.addEventListener('visibilitychange',schedule);document.addEventListener('mdr-dialog-change',schedule);reduced.addEventListener('change',schedule);
+    if('IntersectionObserver'in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule();},{threshold:.2}).observe(carousel);else visible=true;
+    update();schedule();
+  });
+  document.querySelectorAll('[data-share-card]').forEach(button=>{
+    button.addEventListener('click',async()=>{
+      const status=button.closest('.digital-card-intro').querySelector('.share-status');
+      try{if(navigator.share){await navigator.share({title:button.dataset.title,url:button.dataset.url});status.textContent='';}
+      else if(navigator.clipboard){await navigator.clipboard.writeText(button.dataset.url);status.textContent='Link do cartão copiado.';}
+      else{status.textContent='Compartilhe este endereço: '+button.dataset.url;}}
+      catch(error){if(error.name!=='AbortError')status.textContent='Compartilhe o endereço desta página pelo navegador.';}
+    });
   });
 })();

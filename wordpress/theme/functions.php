@@ -1,6 +1,7 @@
 <?php
 if (!defined('ABSPATH')) { exit; }
 require_once __DIR__.'/inc-institutional.php';
+require_once __DIR__.'/inc-preview-layout.php';
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -14,11 +15,21 @@ function mdr_asset($path) { return get_template_directory_uri() . '/assets/' . l
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('mdr', mdr_asset('site.css'), [], wp_get_theme()->get('Version'));
     wp_enqueue_style('mdr-visual', mdr_asset('visual-review.css'), ['mdr'], wp_get_theme()->get('Version'));
+    wp_enqueue_style('mdr-architecture', mdr_asset('architecture.css'), ['mdr-visual'], wp_get_theme()->get('Version'));
     wp_enqueue_script('mdr', mdr_asset('site.js'), [], wp_get_theme()->get('Version'), true);
 });
 add_filter('wp_nav_menu_objects', function ($items, $args) {
     if (empty($args->mdr_glass_header)) { return $items; }
-    return array_filter($items, function ($item) { return wp_parse_url($item->url, PHP_URL_FRAGMENT) !== 'contato'; });
+    $order=['premiacoes'=>0,'blog'=>1,'socios'=>2,'compromissos'=>3,'atuacao'=>4,'orienta'=>5];
+    $paths=['about'=>'orienta','atuacao'=>'atuacao','blog'=>'blog','esg'=>'compromissos','reconhecimentos'=>'premiacoes'];
+    $kept=[];
+    foreach($items as $item){
+        $fragment=wp_parse_url($item->url,PHP_URL_FRAGMENT);if($fragment==='contato'){continue;}
+        $path=trim((string)wp_parse_url($item->url,PHP_URL_PATH),'/');$anchor=$paths[$path]??$fragment;
+        if(isset($order[$anchor])){$item->url=home_url('/#'.$anchor);if($anchor==='orienta'){$item->title='O que nos orienta';}$item->menu_order=$order[$anchor];}
+        $kept[]=$item;
+    }
+    usort($kept,fn($a,$b)=>$a->menu_order<=>$b->menu_order);return $kept;
 }, 10, 2);
 add_filter('nav_menu_link_attributes', function ($attributes, $item, $args) {
     if (!empty($args->mdr_glass_header) && wp_parse_url($item->url, PHP_URL_FRAGMENT)) {

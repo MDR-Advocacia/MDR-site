@@ -9,7 +9,7 @@
  <div class="header-navigation">
   <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">Menu <span aria-hidden="true">☰</span></button>
   <nav id="menu-principal" aria-label="Principal">
-   <?php wp_nav_menu(['theme_location'=>'primary', 'container'=>false, 'items_wrap'=>'<ul class="site-menu">%3$s</ul>', 'depth'=>1, 'fallback_cb'=>'mdr_primary_fallback', 'mdr_glass_header'=>true]); ?>
+   <?php wp_nav_menu(['theme_location'=>'primary', 'container'=>false, 'items_wrap'=>'<ul class="site-menu"><li><a class="home-link" href="'.esc_url(home_url('/#inicio')).'" aria-label="Início" title="Início">'.mdr_home_icon().'<span class="mobile-home-label">Início</span></a></li>%3$s</ul>', 'depth'=>1, 'fallback_cb'=>'mdr_primary_fallback', 'mdr_glass_header'=>true]); ?>
   </nav>
  </div>
  <a class="header-contact" href="<?php echo esc_url(home_url('/#contato')); ?>"><span aria-hidden="true"></span>Contato</a>

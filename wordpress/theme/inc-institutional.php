@@ -30,9 +30,9 @@ function mdr_whatsapp_href() {
     return $digits ? 'https://wa.me/'.$digits : '';
 }
 function mdr_primary_fallback() {
-    foreach (['O escritório'=>'/about/', 'Atuação'=>'/atuacao/', 'Sócios'=>'/#socios', 'Reconhecimentos'=>'/reconhecimentos/', 'Compromissos'=>'/esg/', 'Blog'=>'/blog/', 'Contato'=>'/#contato'] as $label=>$route) {
-        echo '<a href="'.esc_url(home_url($route)).'">'.esc_html($label).'</a>';
-    }
+    echo '<ul class="site-menu"><li><a class="home-link" href="'.esc_url(home_url('/#inicio')).'" aria-label="Início" title="Início">'.mdr_home_icon().'<span class="mobile-home-label">Início</span></a></li>';
+    foreach(mdr_home_nav_items()as $label=>$anchor){echo '<li><a href="'.esc_url(home_url('/#'.$anchor)).'">'.esc_html($label).'</a></li>';}
+    echo '</ul>';
 }
 
 // Legacy public routes stay inside the staging site and never loop back to
@@ -56,6 +56,7 @@ add_action('wp_head', function () {
     $description = $id ? get_post_field('post_excerpt', $id) : '';
     if (!$description && $id) { $description = wp_strip_all_tags(strip_shortcodes(get_post_field('post_content', $id))); }
     $description = wp_html_excerpt(trim(preg_replace('/\s+/', ' ', $description ?: get_bloginfo('description'))), 170, '…');
+    if (is_page('pacto-global-gptw')) { $description='Participação da MDR no Pacto Global da ONU e compromissos com os Dez Princípios.'; }
     $url = is_front_page() ? home_url('/') : ($id ? get_permalink($id) : get_post_type_archive_link('mdr_premio'));
     $image = $id ? get_the_post_thumbnail_url($id, 'large') : false;
     if (!$image) { $image = mdr_asset('hero-poster.webp'); }
