@@ -22,13 +22,13 @@ add_action('wp_enqueue_scripts', function () {
 });
 add_filter('wp_nav_menu_objects', function ($items, $args) {
     if (empty($args->mdr_glass_header)) { return $items; }
-    $order=['premiacoes'=>0,'socios'=>1,'compromissos'=>2,'atuacao'=>3,'orienta'=>4,'blog'=>5];
+    $order=['premiacoes'=>0,'quem-somos'=>1,'compromissos'=>2,'atuacao'=>3,'orienta'=>4,'blog'=>5];
     $paths=['about'=>'orienta','atuacao'=>'atuacao','blog'=>'blog','esg'=>'compromissos','reconhecimentos'=>'premiacoes'];
     $kept=[];
     foreach($items as $item){
         $fragment=wp_parse_url($item->url,PHP_URL_FRAGMENT);if($fragment==='contato'){continue;}
-        $path=trim((string)wp_parse_url($item->url,PHP_URL_PATH),'/');$anchor=$paths[$path]??$fragment;
-        if(isset($order[$anchor])){$item->url=$anchor==='blog'?home_url('/blog/'):home_url('/#'.$anchor);if($anchor==='orienta'){$item->title='O que nos orienta';}$item->menu_order=$order[$anchor];}
+        $path=trim((string)wp_parse_url($item->url,PHP_URL_PATH),'/');$anchor=$paths[$path]??$fragment;if($anchor==='socios'){$anchor='quem-somos';}
+        if(isset($order[$anchor])){$item->url=$anchor==='blog'?home_url('/blog/'):home_url('/#'.$anchor);if($anchor==='orienta'){$item->title='O que nos orienta';}if($anchor==='quem-somos'){$item->title='Quem somos';}$item->menu_order=$order[$anchor];}
         $kept[]=$item;
     }
     usort($kept,fn($a,$b)=>$a->menu_order<=>$b->menu_order);return $kept;

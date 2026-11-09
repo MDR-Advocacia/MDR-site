@@ -2,7 +2,20 @@
 if (!defined('ABSPATH')) { exit; }
 
 function mdr_home_nav_items() {
-    return ['Reconhecimentos'=>'premiacoes','Sócios'=>'socios','Compromissos'=>'compromissos','Atuação'=>'atuacao','O que nos orienta'=>'orienta','Blog'=>'blog'];
+    return ['Reconhecimentos'=>'premiacoes','Quem somos'=>'quem-somos','Compromissos'=>'compromissos','Atuação'=>'atuacao','O que nos orienta'=>'orienta','Blog'=>'blog'];
+}
+// Keep the home editor as the source; move only the office presentation at render time.
+function mdr_home_editorial_sections($post) {
+    $parts=['intro'=>[], 'principles'=>[]];
+    foreach (parse_blocks($post->post_content) as $block) {
+        $attrs=$block['attrs'];
+        $intro=($attrs['anchor']??'')==='escritorio' || preg_match('/(?:^|\s)intro-block(?:\s|$)/', $attrs['className']??'');
+        $parts[$intro?'intro':'principles'][]=$block;
+    }
+    return array_map(function($blocks) {
+        $html=apply_filters('the_content',serialize_blocks($blocks));
+        return preg_replace('~<(\/?)h1(\b[^>]*)>~i','<$1h2$2>',$html);
+    },$parts);
 }
 function mdr_home_icon() {
     return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg>';
@@ -167,7 +180,7 @@ function mdr_card_data($post) {
     return ['name'=>get_the_title($post),'role'=>get_post_meta($post->ID,'mdr_role',true),'email'=>$email?:sanitize_email(get_option('mdr_email')),'phone'=>$phone?:get_option('mdr_phone'),'personal_contact'=>(bool)($email||$phone),'url'=>get_permalink($post)];
 }
 add_action('template_redirect',function(){
-    if(is_page('about')){wp_safe_redirect(home_url('/#orienta'),302);exit;}
+    if(is_page('about')){wp_safe_redirect(home_url('/#quem-somos'),302);exit;}
     if(!is_singular('mdr_socio')||($_GET['mdr_vcard']??'')!=='1'){return;}
     $post=get_queried_object();if($post->post_status!=='publish'){return;}$d=mdr_card_data($post);
     $escape=function($text){return str_replace(["\\","\r","\n",';',','],["\\\\",'',"\\n","\\;","\\,"],wp_strip_all_tags($text));};

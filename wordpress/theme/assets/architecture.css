@@ -47,3 +47,19 @@
 @media(max-width:1350px){.site-header{grid-template-columns:auto minmax(0,1fr)}.header-navigation{justify-self:end}.site-header nav{left:auto;right:var(--menu-inset);width:min(300px,calc(100vw - 2 * var(--menu-inset)))}}
 @media(max-width:600px){.site-header{--menu-inset:18px}}
 @media(max-width:370px){.site-header{--menu-inset:14px}}
+
+/* About the office and its partners share one institutional introduction. */
+.who-intro{margin-bottom:62px}
+.who-intro>.wp-block-group{padding:0;background:transparent}
+.who-intro .wp-block-columns{gap:clamp(30px,4vw,72px);align-items:center}
+.who-intro .intro-photo{margin:0;border-radius:22px;overflow:hidden}
+.who-intro .intro-photo img{width:100%;aspect-ratio:4/3;max-height:410px;object-fit:cover}
+.who-intro .eyebrow{display:none}
+.who-intro h2{font-size:clamp(28px,2.7vw,40px);line-height:1.2;letter-spacing:-.8px;margin-bottom:23px}
+.partners .who-intro p{color:#d0d8df;font-size:13px;line-height:1.9}
+.who-intro p:last-child{margin-bottom:0}
+.partner-subheading{padding-top:38px;border-top:1px solid #ffffff26}
+.partner-subheading h2{font-size:30px;letter-spacing:-.7px}
+.essence-section .mvv>.eyebrow{display:none}
+.essence-section .home-content .mvv{background:transparent}
+@media(max-width:781px){.who-intro .wp-block-columns{gap:28px}.who-intro .intro-photo img{max-height:300px}.who-intro{margin-bottom:38px}.partner-subheading{padding-top:28px}.partners .who-intro p{font-size:12px}.partner-subheading h2{font-size:27px}}
