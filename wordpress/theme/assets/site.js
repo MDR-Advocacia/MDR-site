@@ -5,20 +5,22 @@
     const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 56);
     window.addEventListener('scroll', updateHeader, {passive: true});
     updateHeader();
-    if ('IntersectionObserver' in window) {
-      document.querySelectorAll('.site-menu a[href*="#"]').forEach(link => {
-        const url = new URL(link.href);
-        const section = url.pathname === location.pathname && url.hash ? document.getElementById(url.hash.slice(1)) : null;
-        if (!section) return;
-        link.removeAttribute('aria-current');
-        const observer = new IntersectionObserver(entries => {
-          if (entries.some(entry => entry.isIntersecting)) link.setAttribute('aria-current', 'location');
-          else if (link.getAttribute('aria-current') === 'location') link.removeAttribute('aria-current');
-        }, {rootMargin: '-150px 0px -50% 0px'});
-        observer.observe(section);
-      });
-    }
+    const sectionLinks = [...document.querySelectorAll('.site-menu a[href*="#"]')].map(link => {
+      const url=new URL(link.href);
+      const section=url.pathname===location.pathname&&url.hash?document.getElementById(url.hash.slice(1)):null;
+      link.removeAttribute('aria-current');return {link,section};
+    }).filter(item=>item.section);
+    let spyQueued=false;
+    const updateCurrent=()=>{
+      spyQueued=false;if(!sectionLinks.length)return;
+      const boundary=header.getBoundingClientRect().bottom+30;
+      const current=sectionLinks.filter(item=>item.section.getBoundingClientRect().top<=boundary).sort((a,b)=>b.section.getBoundingClientRect().top-a.section.getBoundingClientRect().top)[0]||sectionLinks[0];
+      sectionLinks.forEach(item=>{if(item===current)item.link.setAttribute('aria-current','location');else item.link.removeAttribute('aria-current');});
+    };
+    const queueSpy=()=>{if(!spyQueued){spyQueued=true;requestAnimationFrame(updateCurrent);}};
+    window.addEventListener('scroll',queueSpy,{passive:true});window.addEventListener('resize',queueSpy,{passive:true});window.addEventListener('load',queueSpy,{once:true});updateCurrent();
   }
+
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#menu-principal');
   const closeMenu = () => {
