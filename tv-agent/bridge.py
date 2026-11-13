@@ -61,6 +61,7 @@ def execute(command):
             try:tv.request('media.controls/stop')
             except RuntimeError:pass
             target='http://192.168.0.33:8097/'+{'dynamic':'player.html','clips':'clips.html','continuous':'continuo.html?canal=v3'}[mode]
+            target+=('&' if '?' in target else '?')+'run='+str(int(command['id']))
             tv.request('system.launcher/open',{'target':target})
             if mode=='continuous':
                 time.sleep(2);tv.button('ENTER')
