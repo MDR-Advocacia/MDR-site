@@ -77,3 +77,11 @@ Manhattan: TV 192.168.70.73, player interno 192.168.0.33:8098, usando as rotas e
 O material fornecido por Rildon no pendrive tem160segundos/1920×1080, oito blocos de20segundos. As sete declarações e a tela das auditorias foram transcritas sem paráfrase e conferidas contra160quadros/116trechos. As artes do vídeo não são mídias da programação: somente texto no padrão MDR. Guardar fonte e comparação em diretório privado da frente, sem Git. Sete itens330–336 e auditorias341 permanecem rascunhos da campanha8. Os seis complementos do briefing inicial ficam em campanha separada para validação, sem misturar propostas com a fonte recebida.
 
 O material informa auditoria interna12/novembro e externa18/novembro, sem ano impresso; manter as datas e a redação futura do original até revisão. Não gerar contagem regressiva ou alegar certificação por inferência. A prévia mostra esse ponto para revisão. Rodapés completos e blocos de texto são mantidos no render; blocos curtos de data/explicação não devem ser partidos entre telas.
+
+### Carregamento e estado da homologação
+
+A imagem gerada do próprio item permanece durante a preparação/buffering do vídeo. É servida apenas para a TV daquela unidade, com a mesma validade e autorização da fila; esvaziar a fila remove a imagem anterior. O render conserva o JPEG junto do vídeo no cache, com quota e invalidação existentes. O sinal de início identifica a instância da página, sem pressionar teclas periodicamente.
+
+O modo por itens é o candidato do laboratório; o vídeo contínuo permanece como recuperação técnica explícita, sem permissão para a recepção escolher outros modos. Não apresentar os112minutos do ensaio Capim como2horas homologadas: Rildon pediu o teste pontual de áudio e o ensaio foi interrompido antes do limite. Ele confirmou som nas duas TVs e o retorno a volume0 foi conferido. Áudio pontual não se tornou recurso automático nem publicação recorrente.
+
+Na Manhattan, a configuração física e seus limites estão em CONFIGURACAO_TV.md da frente. A tela de descanso não oferece Nunca; a reprodução nativa evita inatividade nos intervalos observados. Barra do navegador/tela cheia exigem comprovação por modelo; não considerar uma solicitação aceita como sucesso dessa opção. Nenhum modo de serviço, firmware ou proteção oculta foi alterado.

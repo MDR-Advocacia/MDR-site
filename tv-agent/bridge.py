@@ -41,10 +41,10 @@ def load_state():
 
 def execute(command):
     action=command['action'];result={'id':command['id'],'ok':False,'message':'Comando não permitido.'}
-    if action not in ('start','start_dynamic','start_clips','volume','mute','capture','status','off'):return result
+    if action not in ('start','start_dynamic','start_clips','start_continuous','volume','mute','capture','status','off'):return result
     tv=None
     try:
-        if action in ('start','start_dynamic','start_clips'):
+        if action in ('start','start_dynamic','start_clips','start_continuous'):
             c=config()
             try:tv=TV()
             except (OSError,ConnectionError):
@@ -61,6 +61,7 @@ def execute(command):
             power=tv.request('com.webos.service.tvpower/power/getPowerState').get('state','Unknown')
             if power=='Screen Saver':tv.button('HOME')
             mode=c.get('default_mode','continuous') if action=='start' else ('clips' if action=='start_clips' else 'dynamic')
+            if action=='start_continuous':mode='continuous'
             try:tv.request('media.controls/stop')
             except RuntimeError:pass
             origin=c.get('player_origin','http://192.168.0.33:8097')
@@ -71,9 +72,22 @@ def execute(command):
             tv.request('system.launcher/open',{'target':target})
             if mode=='continuous':
                 time.sleep(2);tv.button('ENTER')
+            elif mode=='clips':
+                # Wait for acknowledgement from this exact page instance; no key keepalive.
+                deadline=time.time()+12;ready=False
+                while time.time()<deadline:
+                    try:
+                        beat=json.loads((STATE/'player-heartbeat.json').read_text())
+                        ready=beat.get('run')==str(command['id'])
+                    except (OSError,ValueError):ready=False
+                    if ready:break
+                    time.sleep(.25)
+                # No repeated key presses: this is an acknowledgement, not a keepalive.
             # Read-only state checks do not claim that the desired pixels are on screen.
             app=tv.request('com.webos.applicationManager/getForegroundAppInfo').get('appId','')
-            result.update(ok=True,message='URL enviada; navegador '+('confirmado. A imagem exige conferência.' if app=='com.webos.app.browser' else 'ainda não confirmado.'))
+            message='URL enviada; navegador '+('confirmado. A imagem exige conferência.' if app=='com.webos.app.browser' else 'ainda não confirmado.')
+            if mode=='clips':message='Player respondeu à abertura. Confira a imagem.' if ready else 'URL enviada; sinal do player ainda não confirmado.'
+            result.update(ok=True,message=message)
         else:
             tv=TV()
             if action=='volume':

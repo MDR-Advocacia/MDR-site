@@ -27,7 +27,9 @@ def current_clips():
                 if c['id']!=item['id'] or c.get('item_version')!=version:continue
                 if not re.fullmatch(r'[a-f0-9]{64}(?:-base)?\.mp4',c['file']):continue
                 if not (bridge.STATE/'clips'/c['file']).is_file():continue
-                rows.append({**c,'url':'/clips/'+c['file']})
+                poster=c.get('poster','')
+                poster='/frames/'+poster if re.fullmatch(r'[a-f0-9]{64}\.jpg',poster) and (bridge.STATE/'clips'/poster).is_file() else ''
+                rows.append({**c,'url':'/clips/'+c['file'],'poster':poster})
         return {'version':p['version'],'clips':rows}
     except (OSError,ValueError,KeyError):return {'version':'waiting','clips':[]}
 
@@ -39,9 +41,13 @@ class Handler(legacy.Handler):
         except (BrokenPipeError,ConnectionResetError):pass
     def do_GET(self):
         path=self.path.split('?',1)[0]
-        if path in ('/player.html','/player.js','/player.css','/api/program','/clips.html','/clips.js','/api/clips') or path.startswith(('/cache/','/clips/')):
+        if path in ('/player.html','/player.js','/player.css','/api/program','/clips.html','/clips.js','/api/clips') or path.startswith(('/cache/','/clips/','/frames/')):
             if not self.device():self.send_error(403);return
             if path=='/api/clips':self.respond(json.dumps(current_clips()).encode());return
+            if path.startswith('/frames/'):
+                allowed={c.get('poster') for c in current_clips()['clips']}
+                if path not in allowed:self.send_error(404);return
+                self.serve_range(bridge.STATE/'clips'/path[8:],'image/jpeg');return
             if path.startswith('/clips/'):
                 name=path[7:]
                 if name not in {c['file'] for c in current_clips()['clips']}:self.send_error(404);return
@@ -87,7 +93,7 @@ class Handler(legacy.Handler):
         except (BrokenPipeError,ConnectionResetError):pass
     def do_HEAD(self):
         path=self.path.split('?',1)[0]
-        if path.startswith(('/cache/','/api/program','/player','/clips','/api/clips')):
+        if path.startswith(('/cache/','/api/program','/player','/clips','/api/clips','/frames/')):
             self.send_error(405);return
         super().do_HEAD()
     def do_POST(self):
@@ -95,8 +101,9 @@ class Handler(legacy.Handler):
         length=int(self.headers.get('Content-Length','0'))
         if not 0<length<=2000:self.send_error(400);return
         try:
-            d=json.loads(self.rfile.read(length));safe={k:str(d.get(k,''))[:100] for k in ('at','version','item','status')}
-            safe['received_at']=time.time();bridge.atomic(bridge.STATE/'player-heartbeat.json',json.dumps(safe).encode());self.respond(b'{"ok":true}')
+            d=json.loads(self.rfile.read(length));safe={k:str(d.get(k,''))[:100] for k in ('at','run','version','item','status')}
+            safe['received_at']=time.time();bridge.atomic(bridge.STATE/'player-heartbeat.json',json.dumps(safe).encode())
+            self.respond(b'{"ok":true}')
         except (ValueError,TypeError):self.send_error(400)
 
 if __name__=='__main__':

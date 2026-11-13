@@ -9,6 +9,7 @@ import hashlib,json,os,subprocess,time,math
 
 STATE=Path(os.environ.get('STATE_DIRECTORY','/var/lib/mdr-tv-mvp'))
 OUT=STATE/'clips';OUT.mkdir(exist_ok=True)
+RENDERER_VERSION='campaign-v3-poster-v1'
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 BOLD='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 Image.MAX_IMAGE_PIXELS=24000000
@@ -112,9 +113,9 @@ def prepare(program):
             for n,lines in enumerate(text_pages):
                 secs=item['seconds'];key=digest(['campaign-frame-v3' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
                 base=OUT/(key+'-base.mp4')
-                keep.add(base.name)
+                jpg=OUT/(key+'.jpg');keep.update([base.name,jpg.name])
+                if not jpg.exists():frame(item,asset,head,lines,n,len(text_pages),jpg)
                 if not base.exists():
-                    jpg=OUT/(key+'.jpg');frame(item,asset,head,lines,n,len(text_pages),jpg)
                     tmp=OUT/(key+'-base.tmp.mp4')
                     run(ff+['-loop','1','-framerate','5','-i',str(jpg),'-t',str(secs),'-vf','format=yuv420p','-r','5','-c:v','libx264','-threads','1','-preset','veryfast','-tune','stillimage','-an','-movflags','+faststart',str(tmp)])
                     tmp.replace(base)
@@ -129,10 +130,10 @@ def prepare(program):
                         run(ff+['-i',str(base),'-stream_loop','-1','-ss',str(audio_offset),'-i',str(music[track]),'-t',str(secs),'-map','0:v:0','-map','1:a:0','-c:v','copy','-af','volume='+str(min(.3,settings.get('volume',14)/100)),'-c:a','aac','-b:a','96k','-ar','44100','-movflags','+faststart',str(tmp)])
                         tmp.replace(output)
                     audio=True
-                clips.append({'id':item['id'],'item_version':digest(item),'file':output.name,'seconds':secs,'end':item.get('end',0),'audio':audio})
+                clips.append({'id':item['id'],'item_version':digest(item),'file':output.name,'poster':jpg.name,'seconds':secs,'end':item.get('end',0),'audio':audio})
                 offset+=secs
                 atomic(STATE/'preparation.json',json.dumps({'state':'preparing','prepared':len(clips),'source_version':program['version'],'at':time.time()}).encode())
-    atomic(STATE/'clips.json',json.dumps({'version':program['version'],'clips':clips,'prepared_at':time.time()}).encode())
+    atomic(STATE/'clips.json',json.dumps({'version':program['version'],'renderer_version':RENDERER_VERSION,'clips':clips,'prepared_at':time.time()}).encode())
     # Remove obsolete derivatives only after atomically publishing the ready queue.
     keep.update(c['file'] for c in clips)
     for path in OUT.iterdir():
@@ -142,9 +143,9 @@ def main():
     while True:
         try:
             p=json.loads((STATE/'program.json').read_text())
-            try:previous=json.loads((STATE/'clips.json').read_text())['version']
-            except (OSError,ValueError,KeyError):previous=None
-            if p['version']!=previous:prepare(p)
+            try:previous=json.loads((STATE/'clips.json').read_text())
+            except (OSError,ValueError):previous={}
+            if p['version']!=previous.get('version') or previous.get('renderer_version')!=RENDERER_VERSION:prepare(p)
         except Exception as exc:atomic(STATE/'preparation.json',json.dumps({'state':'error','error':type(exc).__name__,'at':time.time()}).encode())
         time.sleep(15)
 if __name__=='__main__':main()

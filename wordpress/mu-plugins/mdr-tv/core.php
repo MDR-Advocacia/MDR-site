@@ -91,7 +91,7 @@ function mdr_tv_parse_fields($input) {
 }
 function mdr_tv_queue($action,$value=null,$unit='capim') {
     if(!mdr_tv_unit_allowed($unit))return new WP_Error('permission','Unidade não autorizada.');
-    $allowed=['start','start_dynamic','start_clips','volume','mute','capture','status','off'];
+    $allowed=['start','start_dynamic','start_clips','start_continuous','volume','mute','capture','status','off'];
     if(!in_array($action,$allowed,true))return new WP_Error('action','Comando inválido.');
     if(!current_user_can('mdr_tv_start') || ($action!=='start'&&!current_user_can('mdr_tv_control')))return new WP_Error('permission','Sem permissão.');
     if($action==='volume'&&(!is_numeric($value)||$value<0||$value>50))return new WP_Error('volume','Volume permitido:0a50.');

@@ -55,9 +55,9 @@ function mdr_tv_dashboard(){
     }
     if(current_user_can('mdr_tv_control')){
         echo '<h2>Controle técnico</h2><p>Comandos são registrados; uma solicitação aceita não comprova a ação na tela.</p>';
-        foreach(['status'=>'Consultar estado','capture'=>'Obter captura real','start_dynamic'=>'Abrir player HTML para teste','start_clips'=>'Testar programação por itens (experimental)'] as $value=>$label){mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="'.esc_attr($value).'">';submit_button($label,'secondary','submit',false);echo '</form><br>';}
+        foreach(['status'=>'Consultar estado','capture'=>'Obter captura real','start_dynamic'=>'Abrir player HTML para teste','start_clips'=>'Abrir programação por itens (homologação)','start_continuous'=>'Abrir vídeo de recuperação'] as $value=>$label){mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="'.esc_attr($value).'">';submit_button($label,'secondary','submit',false);echo '</form><br>';}
         mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="volume"><label>Volume da TV (0–50): <input name="value" type="number" min="0" max="50" value="15"></label> ';submit_button('Ajustar volume','secondary','submit',false);echo '</form>';
-        if(!empty($state['capture_at'])){echo '<h3>Captura real</h3><p>'.esc_html($state['capture_at']).' UTC · captura pontual, não transmissão ao vivo.</p><img style="width:100%;max-width:900px;transform:scaleY(-1)" alt="Última captura da TV" src="'.esc_url(wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_capture&tv_unit='.$unit),'mdr_tv_capture')).'">';}
+        if(!empty($state['capture_at'])){echo '<h3>Captura real</h3><p>'.esc_html($state['capture_at']).' UTC · captura pontual, não transmissão ao vivo.</p><img style="width:100%;max-width:900px;'.($unit==='capim'?'transform:scaleY(-1)':'').'" alt="Última captura da TV" src="'.esc_url(wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_capture&tv_unit='.$unit),'mdr_tv_capture')).'">';}
     }
     echo '</div>';
 }
