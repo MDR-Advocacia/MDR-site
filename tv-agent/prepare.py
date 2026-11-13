@@ -40,12 +40,13 @@ def wrap(text,font,width):
     return lines
 def pages(item):
     campaign=item.get('format')=='campaign'
-    title=item['title'];body=item['text'];head=wrap(title,ImageFont.truetype(BOLD,60 if campaign else 42),1500 if campaign else 790)
+    wide_campaign=campaign and not item.get('assets')
+    title=item['title'];body=item['text'];head=wrap(title,ImageFont.truetype(BOLD,60 if wide_campaign else 42),1500 if wide_campaign else 790)
     if campaign and not body.strip() and any(a['mime'].startswith('image/') for a in item.get('assets',[])):return [],[[]]
-    if len(head)>(3 if campaign else 4):body=title+'\n\n'+body;head=['SGI MDR' if campaign else 'MDR em pauta']
+    if len(head)>(3 if wide_campaign else 4):body=title+'\n\n'+body;head=['SGI MDR' if campaign else 'MDR em pauta']
     elif body.startswith(title):body=body[len(title):].lstrip()
-    lines=wrap(body,ImageFont.truetype(FONT,42 if campaign else 31),1500 if campaign else 790)
-    per_page=max(3 if campaign else 7,math.floor(((600-len(head)*70)/60) if campaign else ((680-len(head)*54)/45)))
+    lines=wrap(body,ImageFont.truetype(FONT,42 if wide_campaign else 31),1500 if wide_campaign else 790)
+    per_page=max(3 if wide_campaign else 7,math.floor(((600-len(head)*70)/60) if wide_campaign else ((680-len(head)*54)/45)))
     return head,[lines[i:i+per_page] for i in range(0,len(lines),per_page)] or [[]]
 def frame(item,asset,head,lines,page,total,target):
     image=Image.new('RGB',(1920,1080),(20,39,59));d=ImageDraw.Draw(image)
@@ -59,7 +60,7 @@ def frame(item,asset,head,lines,page,total,target):
     except OSError:pass
     d.text((410,70),'SGI · POLÍTICA DA QUALIDADE' if campaign else 'EM PAUTA · MDR ADVOCACIA',font=ImageFont.truetype(FONT,25),fill='#ddc58a')
     d.line((60,160,1860,160),fill='#526372',width=1)
-    if campaign:
+    if campaign and not asset:
         x=160;y=245
         for line in head:d.text((x,y),line,font=ImageFont.truetype(BOLD,60),fill='white');y+=70
         y+=45
