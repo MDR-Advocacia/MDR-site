@@ -71,3 +71,9 @@ Capim e Manhattan possuem opções, comandos, estados e capturas separados. Cada
 Cada agente usa seu processo, porta, cache, credencial SSAP, IP permitido e chave HMAC. O identificador de unidade integra a assinatura; uma chave de outra unidade não autoriza leitura de mídia, confirmação ou consumo de comandos. A ponte original de Capim é mantida durante a transição. Apenas mídias da fila publicada da própria unidade são entregues ao dispositivo, excluindo rascunhos e ocultos.
 
 Manhattan: TV 192.168.70.73, player interno 192.168.0.33:8098, usando as rotas existentes. Capim conserva 8097. Nenhum novo túnel, porta pública ou comando HTTP de entrada foi criado. Pareamento não comprova WOL nem reprodução prolongada: registrar os testes físicos separadamente. A campanha SGI permanece minuta até validação de conteúdo e materiais.
+
+### Política da Qualidade — fonte de Érica
+
+O material fornecido por Rildon no pendrive tem160segundos/1920×1080, oito blocos de20segundos. As sete declarações e a tela das auditorias foram transcritas sem paráfrase e conferidas contra160quadros/116trechos. As artes do vídeo não são mídias da programação: somente texto no padrão MDR. Guardar fonte e comparação em diretório privado da frente, sem Git. Sete itens330–336 e auditorias341 permanecem rascunhos da campanha8. Os seis complementos do briefing inicial ficam em campanha separada para validação, sem misturar propostas com a fonte recebida.
+
+O material informa auditoria interna12/novembro e externa18/novembro, sem ano impresso; manter as datas e a redação futura do original até revisão. Não gerar contagem regressiva ou alegar certificação por inferência. A prévia mostra esse ponto para revisão. Rodapés completos e blocos de texto são mantidos no render; blocos curtos de data/explicação não devem ser partidos entre telas.

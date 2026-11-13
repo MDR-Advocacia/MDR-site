@@ -47,6 +47,18 @@ def pages(item):
     elif body.startswith(title):body=body[len(title):].lstrip()
     lines=wrap(body,ImageFont.truetype(FONT,42 if wide_campaign else 31),1500 if wide_campaign else 790)
     per_page=max(3 if wide_campaign else 7,math.floor(((600-len(head)*70)/60) if wide_campaign else ((680-len(head)*54)/45)))
+    if wide_campaign:
+        # Preserve short semantic blocks (e.g. audit date + explanation) together.
+        result=[];current=[]
+        for paragraph in body.split('\n\n'):
+            block=wrap(paragraph,ImageFont.truetype(FONT,42),1500)
+            if current and len(current)+1+len(block)>per_page:result.append(current);current=[]
+            while len(block)>per_page:
+                result.append(block[:per_page]);block=block[per_page:]
+            if current:current.append('')
+            current.extend(block)
+        if current:result.append(current)
+        return head,result or [[]]
     return head,[lines[i:i+per_page] for i in range(0,len(lines),per_page)] or [[]]
 def frame(item,asset,head,lines,page,total,target):
     image=Image.new('RGB',(1920,1080),(20,39,59));d=ImageDraw.Draw(image)
@@ -58,14 +70,17 @@ def frame(item,asset,head,lines,page,total,target):
     try:
         logo=Image.open('/opt/mdr-tv-mvp/public/assets/mdr-logo.png').convert('RGBA');logo.thumbnail((255,100));image.paste(logo,(65,35),logo)
     except OSError:pass
-    d.text((410,70),'SGI · POLÍTICA DA QUALIDADE' if campaign else 'EM PAUTA · MDR ADVOCACIA',font=ImageFont.truetype(FONT,25),fill='#ddc58a')
+    d.text((410,70),item.get('source','SGI · POLÍTICA DA QUALIDADE') if campaign else 'EM PAUTA · MDR ADVOCACIA',font=ImageFont.truetype(FONT,25),fill='#ddc58a')
     d.line((60,160,1860,160),fill='#526372',width=1)
     if campaign and not asset:
+        d.rounded_rectangle((100,205,1820,885),radius=34,fill='#1c3248',outline='#405568',width=2)
         x=160;y=245
         for line in head:d.text((x,y),line,font=ImageFont.truetype(BOLD,60),fill='white');y+=70
         y+=45
         for line in lines:d.text((x,y),line,font=ImageFont.truetype(FONT,42),fill='#e1e8ee');y+=60
-        d.text((160,990),item.get('source','SGI MDR')[:100],font=ImageFont.truetype(FONT,22),fill='#ddc58a')
+        footer=wrap(item.get('credit','MDR Advocacia'),ImageFont.truetype(FONT,20),1570)
+        if len(footer)>4:raise ValueError('Rodapé da campanha excede a área legível; revise sem cortar o texto')
+        for i,line in enumerate(footer):d.text((160,930+i*26),line,font=ImageFont.truetype(FONT,20),fill='#ddc58a')
         d.text((1740,990),str(page+1)+' / '+str(total),font=ImageFont.truetype(FONT,20),fill='#b9c8d3')
         image.save(target,'JPEG',quality=92);return
     if asset and asset['mime'].startswith('image/'):
@@ -95,7 +110,7 @@ def prepare(program):
         for asset in assets:
             # Real video is handled by the HTML player until its normalization is tested.
             for n,lines in enumerate(text_pages):
-                secs=item['seconds'];key=digest(['campaign-frame-v2' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
+                secs=item['seconds'];key=digest(['campaign-frame-v3' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
                 base=OUT/(key+'-base.mp4')
                 keep.add(base.name)
                 if not base.exists():
