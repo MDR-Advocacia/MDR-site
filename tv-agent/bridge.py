@@ -38,10 +38,10 @@ def load_state():
 
 def execute(command):
     action=command['action'];result={'id':command['id'],'ok':False,'message':'Comando não permitido.'}
-    if action not in ('start','start_dynamic','volume','mute','capture','status','off'):return result
+    if action not in ('start','start_dynamic','start_clips','volume','mute','capture','status','off'):return result
     tv=None
     try:
-        if action in ('start','start_dynamic'):
+        if action in ('start','start_dynamic','start_clips'):
             c=config()
             try:tv=TV()
             except (OSError,ConnectionError):
@@ -55,9 +55,15 @@ def execute(command):
                     try:tv=TV();break
                     except (OSError,ConnectionError):pass
                 if tv is None:raise ValueError('TV sem resposta após tentativa de Wake-on-LAN')
-            mode=c.get('default_mode','continuous') if action=='start' else 'dynamic'
-            target='http://192.168.0.33:8097/'+('player.html' if mode=='dynamic' else 'continuo.html?canal=v3')
+            power=tv.request('com.webos.service.tvpower/power/getPowerState').get('state','Unknown')
+            if power=='Screen Saver':tv.button('HOME')
+            mode=c.get('default_mode','continuous') if action=='start' else ('clips' if action=='start_clips' else 'dynamic')
+            try:tv.request('media.controls/stop')
+            except RuntimeError:pass
+            target='http://192.168.0.33:8097/'+{'dynamic':'player.html','clips':'clips.html','continuous':'continuo.html?canal=v3'}[mode]
             tv.request('system.launcher/open',{'target':target})
+            if mode=='continuous':
+                time.sleep(2);tv.button('ENTER')
             # Read-only state checks do not claim that the desired pixels are on screen.
             app=tv.request('com.webos.applicationManager/getForegroundAppInfo').get('appId','')
             result.update(ok=True,message='URL enviada; navegador '+('confirmado. A imagem exige conferência.' if app=='com.webos.app.browser' else 'ainda não confirmado.'))
@@ -90,6 +96,9 @@ def update_once():
         # Only explicit status/capture commands touch SSAP. Polling cannot prevent screensaver.
         payload={k:state[k] for k in ('received_version','power','app') if k in state}
         payload['results']=state.get('results',[])
+        try:
+            beat=json.loads((STATE/'player-heartbeat.json').read_text());payload['player']=beat.get('status','');payload['player_seen']=str(int(beat.get('received_at',0)))
+        except (OSError,ValueError):pass
         incoming=json.loads(request('/bridge/sync',json.dumps(payload).encode()))
         state['results']=[]
         manifest=incoming['manifest'];cache=STATE/'cache';cache.mkdir(exist_ok=True)

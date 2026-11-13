@@ -2,6 +2,7 @@
 if (!defined('ABSPATH')) { exit; }
 add_action('admin_menu',function(){
     add_menu_page('TV corporativa','TV corporativa','mdr_tv_start','mdr-tv','mdr_tv_dashboard','dashicons-desktop',25);
+    add_submenu_page('mdr-tv','Operação e programação','Operação e programação','mdr_tv_start','mdr-tv','mdr_tv_dashboard',0);
     add_submenu_page('mdr-tv','Arquivos privados','Arquivos privados','mdr_tv_manage','mdr-tv-files','mdr_tv_files_page');
 });
 add_action('admin_menu',function(){
@@ -32,6 +33,7 @@ function mdr_tv_dashboard(){
     echo '<h2>Última comunicação do serviço</h2><p>'.esc_html(!empty($state['at'])?$state['at'].' UTC':'Ainda não houve comunicação autenticada.').'</p>';
     echo '<p>'.esc_html(!empty($state['received_version'])?'Programação recebida: '.substr($state['received_version'],0,12):'Programação ainda não confirmada pelo serviço.').'</p>';
     echo '<p>'.esc_html('Estado informado: '.($state['power']??'não consultado').' · Aplicativo: '.($state['app']??'não consultado')).'</p>';
+    if(!empty($state['player_seen']))echo '<p>Último sinal do player: '.esc_html(gmdate('d/m/Y H:i:s',(int)$state['player_seen'])).' UTC · '.esc_html($state['player']??'').'. Não comprova a imagem física da tela.</p>';
     $commands=get_posts(['post_type'=>'mdr_tv_command','post_status'=>['private','draft'],'numberposts'=>8,'orderby'=>'ID','order'=>'DESC']);
     echo '<h2>Comandos recentes</h2><table class="widefat striped" style="max-width:1000px"><thead><tr><th>Solicitado</th><th>Comando</th><th>Resultado</th></tr></thead><tbody>';
     foreach($commands as $p){$r=get_post_meta($p->ID,'mdr_tv_result',true);echo '<tr><td>'.esc_html($p->post_date).'</td><td>'.esc_html($p->post_title).'</td><td>'.esc_html($r?($r['message']??'Recebido'):($p->post_status==='draft'?'Em execução; confirmação pendente':'Aguardando serviço; expira em2min')).'</td></tr>';}
@@ -43,7 +45,7 @@ function mdr_tv_dashboard(){
     }
     if(current_user_can('mdr_tv_control')){
         echo '<h2>Controle técnico</h2><p>Comandos são registrados; uma solicitação aceita não comprova a ação na tela.</p>';
-        foreach(['status'=>'Consultar estado','capture'=>'Obter captura real','start_dynamic'=>'Abrir player dinâmico para teste'] as $value=>$label){mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="'.esc_attr($value).'">';submit_button($label,'secondary','submit',false);echo '</form><br>';}
+        foreach(['status'=>'Consultar estado','capture'=>'Obter captura real','start_dynamic'=>'Abrir player HTML para teste','start_clips'=>'Testar programação por itens (experimental)'] as $value=>$label){mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="'.esc_attr($value).'">';submit_button($label,'secondary','submit',false);echo '</form><br>';}
         mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="volume"><label>Volume da TV (0–50): <input name="value" type="number" min="0" max="50" value="15"></label> ';submit_button('Ajustar volume','secondary','submit',false);echo '</form>';
         if(!empty($state['capture_at'])){echo '<h3>Captura real</h3><p>'.esc_html($state['capture_at']).' UTC · captura pontual, não transmissão ao vivo.</p><img style="width:100%;max-width:900px;transform:scaleY(-1)" alt="Última captura da TV" src="'.esc_url(wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_capture'),'mdr_tv_capture')).'">';}
     }

@@ -19,7 +19,7 @@ add_action('rest_api_init',function(){
     register_rest_route('mdr-tv/v1','/bridge/sync',['methods'=>'POST','permission_callback'=>'mdr_tv_bridge_auth','callback'=>function($r){
         $d=$r->get_json_params();if(!is_array($d)||strlen($r->get_body())>100000)return new WP_Error('body','Corpo inválido.',['status'=>400]);
         $state=get_option('mdr_tv_bridge_state',[]);$state['at']=gmdate('c');
-        foreach(['power','app','received_version','player','error'] as $k)if(isset($d[$k])&&is_scalar($d[$k]))$state[$k]=substr(sanitize_text_field((string)$d[$k]),0,150);
+        foreach(['power','app','received_version','player','player_seen','error'] as $k)if(isset($d[$k])&&is_scalar($d[$k]))$state[$k]=substr(sanitize_text_field((string)$d[$k]),0,150);
         foreach(array_slice((array)($d['results']??[]),0,10) as $result){
             $id=absint($result['id']??0);$p=get_post($id);
             if(!$p||$p->post_type!=='mdr_tv_command'||$p->post_status!=='draft'||get_post_meta($id,'mdr_tv_result',true))continue;

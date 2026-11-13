@@ -11,6 +11,25 @@ sys.path.append('/opt/mdr-tv-mvp')
 spec=importlib.util.spec_from_file_location('legacy','/opt/mdr-tv-mvp/server.py');legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy)
 DEVICE_HOSTS={'127.0.0.1','192.168.0.33','192.168.30.79'}
 
+def current_clips():
+    """Only serve prepared media still authorized by the current manifest."""
+    import hashlib
+    try:
+        p=json.loads((bridge.STATE/'program.json').read_text())
+        ready=json.loads((bridge.STATE/'clips.json').read_text())
+        if p['valid_until']<=time.time():return {'version':p['version'],'clips':[]}
+        rows=[]
+        for item in p['items']:
+            if item.get('end') and item['end']<=time.time():continue
+            version=hashlib.sha256(json.dumps(item,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+            for c in ready['clips']:
+                if c['id']!=item['id'] or c.get('item_version')!=version:continue
+                if not re.fullmatch(r'[a-f0-9]{64}(?:-base)?\.mp4',c['file']):continue
+                if not (bridge.STATE/'clips'/c['file']).is_file():continue
+                rows.append({**c,'url':'/clips/'+c['file']})
+        return {'version':p['version'],'clips':rows}
+    except (OSError,ValueError,KeyError):return {'version':'waiting','clips':[]}
+
 class Handler(legacy.Handler):
     def device(self):return self.client_address[0] in DEVICE_HOSTS
     def respond(self,data,mime='application/json',code=200):
@@ -19,8 +38,13 @@ class Handler(legacy.Handler):
         except (BrokenPipeError,ConnectionResetError):pass
     def do_GET(self):
         path=self.path.split('?',1)[0]
-        if path in ('/player.html','/player.js','/player.css','/api/program') or path.startswith('/cache/'):
+        if path in ('/player.html','/player.js','/player.css','/api/program','/clips.html','/clips.js','/api/clips') or path.startswith(('/cache/','/clips/')):
             if not self.device():self.send_error(403);return
+            if path=='/api/clips':self.respond(json.dumps(current_clips()).encode());return
+            if path.startswith('/clips/'):
+                name=path[7:]
+                if name not in {c['file'] for c in current_clips()['clips']}:self.send_error(404);return
+                self.serve_range(bridge.STATE/'clips'/name,'video/mp4');return
             if path=='/api/program':
                 p=bridge.STATE/'program.json'
                 if p.is_file():self.respond(p.read_bytes())
@@ -62,7 +86,7 @@ class Handler(legacy.Handler):
         except (BrokenPipeError,ConnectionResetError):pass
     def do_HEAD(self):
         path=self.path.split('?',1)[0]
-        if path.startswith(('/cache/','/api/program','/player')):
+        if path.startswith(('/cache/','/api/program','/player','/clips','/api/clips')):
             self.send_error(405);return
         super().do_HEAD()
     def do_POST(self):

@@ -70,7 +70,7 @@ function mdr_tv_parse_fields($input) {
         'source'=>sanitize_text_field($input['source']??'Material MDR'),'credit'=>sanitize_text_field($input['credit']??'MDR Advocacia')];
 }
 function mdr_tv_queue($action,$value=null) {
-    $allowed=['start','start_dynamic','volume','mute','capture','status','off'];
+    $allowed=['start','start_dynamic','start_clips','volume','mute','capture','status','off'];
     if(!in_array($action,$allowed,true))return new WP_Error('action','Comando inválido.');
     if(!current_user_can('mdr_tv_start') || ($action!=='start'&&!current_user_can('mdr_tv_control')))return new WP_Error('permission','Sem permissão.');
     if($action==='volume'&&(!is_numeric($value)||$value<0||$value>50))return new WP_Error('volume','Volume permitido:0a50.');
