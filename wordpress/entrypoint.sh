@@ -8,6 +8,9 @@ if [ "$1" = apache2-foreground ]; then
   printf '%s:%s\n' "$MDR_PREVIEW_USERNAME" "$MDR_PREVIEW_PASSWORD_HASH" > /run/mdr-preview.htpasswd
   chown root:www-data /run/mdr-preview.htpasswd
   chmod 640 /run/mdr-preview.htpasswd
+  mkdir -p /var/lib/mdr-tv/media
+  chown -R www-data:www-data /var/lib/mdr-tv
+  chmod 700 /var/lib/mdr-tv /var/lib/mdr-tv/media
   cp -a /usr/src/wordpress/. /var/www/html/
   chown -R www-data:www-data /var/www/html/wp-content
 fi

@@ -25,6 +25,7 @@ services:
         define('FORCE_SSL_ADMIN', true);
     volumes:
       - wordpress_data:/var/www/html
+      - tv_private:/var/lib/mdr-tv
     depends_on:
       db:
         condition: service_healthy
@@ -72,5 +73,6 @@ services:
         max-size: 10m
         max-file: '3'
 volumes:
+  tv_private:
   wordpress_data:
   database_data:
