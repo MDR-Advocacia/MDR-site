@@ -2,10 +2,12 @@
 from pathlib import Path
 from http.server import ThreadingHTTPServer
 from functools import partial
+import sys
 import importlib.util,ipaddress,json,mimetypes,os,re,threading,time
 import bridge
 
 ROOT=Path(__file__).resolve().parent
+sys.path.append('/opt/mdr-tv-mvp')
 spec=importlib.util.spec_from_file_location('legacy','/opt/mdr-tv-mvp/server.py');legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy)
 DEVICE_HOSTS={'127.0.0.1','192.168.0.33','192.168.30.79'}
 
