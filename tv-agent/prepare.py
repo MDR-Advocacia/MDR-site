@@ -127,7 +127,7 @@ def prepare(program):
                     output=OUT/(mixkey+'.mp4')
                     if not output.exists():
                         tmp=OUT/(mixkey+'.tmp.mp4')
-                        run(ff+['-i',str(base),'-stream_loop','-1','-ss',str(audio_offset),'-i',str(music[track]),'-t',str(secs),'-map','0:v:0','-map','1:a:0','-c:v','copy','-af','volume='+str(min(.3,settings.get('volume',14)/100)),'-c:a','aac','-b:a','96k','-ar','44100','-movflags','+faststart',str(tmp)])
+                        run(ff+['-i',str(base),'-stream_loop','-1','-ss',format(audio_offset,'.6f'),'-i',str(music[track]),'-t',str(secs),'-map','0:v:0','-map','1:a:0','-c:v','copy','-af','volume='+str(min(.3,settings.get('volume',14)/100)),'-c:a','aac','-b:a','96k','-ar','44100','-movflags','+faststart',str(tmp)])
                         tmp.replace(output)
                     audio=True
                 clips.append({'id':item['id'],'item_version':digest(item),'file':output.name,'poster':jpg.name,'seconds':secs,'end':item.get('end',0),'audio':audio})
