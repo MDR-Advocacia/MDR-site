@@ -39,19 +39,34 @@ def wrap(text,font,width):
         lines.append(current)
     return lines
 def pages(item):
-    title=item['title'];body=item['text'];head=wrap(title,ImageFont.truetype(BOLD,42),790)
-    if len(head)>4:body=title+'\n\n'+body;head=['MDR em pauta']
+    campaign=item.get('format')=='campaign'
+    title=item['title'];body=item['text'];head=wrap(title,ImageFont.truetype(BOLD,60 if campaign else 42),1500 if campaign else 790)
+    if campaign and not body.strip() and any(a['mime'].startswith('image/') for a in item.get('assets',[])):return [],[[]]
+    if len(head)>(3 if campaign else 4):body=title+'\n\n'+body;head=['SGI MDR' if campaign else 'MDR em pauta']
     elif body.startswith(title):body=body[len(title):].lstrip()
-    lines=wrap(body,ImageFont.truetype(FONT,31),790)
-    per_page=max(7,math.floor((680-len(head)*54)/45))
+    lines=wrap(body,ImageFont.truetype(FONT,42 if campaign else 31),1500 if campaign else 790)
+    per_page=max(3 if campaign else 7,math.floor(((600-len(head)*70)/60) if campaign else ((680-len(head)*54)/45)))
     return head,[lines[i:i+per_page] for i in range(0,len(lines),per_page)] or [[]]
 def frame(item,asset,head,lines,page,total,target):
     image=Image.new('RGB',(1920,1080),(20,39,59));d=ImageDraw.Draw(image)
+    campaign=item.get('format')=='campaign'
+    if campaign and asset and asset['mime'].startswith('image/') and not item['text'].strip():
+        with Image.open(STATE/'cache'/asset['hash']) as source:
+            source=ImageOps.exif_transpose(source).convert('RGB');source.thumbnail((1920,1080));image.paste(source,((1920-source.width)//2,(1080-source.height)//2))
+        image.save(target,'JPEG',quality=94);return
     try:
         logo=Image.open('/opt/mdr-tv-mvp/public/assets/mdr-logo.png').convert('RGBA');logo.thumbnail((255,100));image.paste(logo,(65,35),logo)
     except OSError:pass
-    d.text((410,70),'EM PAUTA · MDR ADVOCACIA',font=ImageFont.truetype(FONT,25),fill='#ddc58a')
+    d.text((410,70),'SGI · POLÍTICA DA QUALIDADE' if campaign else 'EM PAUTA · MDR ADVOCACIA',font=ImageFont.truetype(FONT,25),fill='#ddc58a')
     d.line((60,160,1860,160),fill='#526372',width=1)
+    if campaign:
+        x=160;y=245
+        for line in head:d.text((x,y),line,font=ImageFont.truetype(BOLD,60),fill='white');y+=70
+        y+=45
+        for line in lines:d.text((x,y),line,font=ImageFont.truetype(FONT,42),fill='#e1e8ee');y+=60
+        d.text((160,990),item.get('source','SGI MDR')[:100],font=ImageFont.truetype(FONT,22),fill='#ddc58a')
+        d.text((1740,990),str(page+1)+' / '+str(total),font=ImageFont.truetype(FONT,20),fill='#b9c8d3')
+        image.save(target,'JPEG',quality=92);return
     if asset and asset['mime'].startswith('image/'):
         with Image.open(STATE/'cache'/asset['hash']) as source:
             source=ImageOps.exif_transpose(source).convert('RGB');source.thumbnail((900,770))
@@ -79,7 +94,7 @@ def prepare(program):
         for asset in assets:
             # Real video is handled by the HTML player until its normalization is tested.
             for n,lines in enumerate(text_pages):
-                secs=item['seconds'];key=digest(['frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
+                secs=item['seconds'];key=digest(['campaign-frame-v1' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
                 base=OUT/(key+'-base.mp4')
                 keep.add(base.name)
                 if not base.exists():

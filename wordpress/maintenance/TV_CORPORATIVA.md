@@ -42,3 +42,24 @@ atualização automática. Mídias futuras devem vir dos originais/autorização
 Rollback: restaurar imagem/deploy anterior, banco e volume privado do backup
 correspondente. Na VM, restaurar unidade systemd anterior e iniciar mdr-tv-mvp.
 Preservar dados editoriais feitos após a instalação; não restaurar indiscriminadamente.
+
+Prioridade expressa de13/11: a campanha SGI/Política da Qualidade é a primeira
+entrega do mural, conforme a cadeia MURAL DIGITAL e direção de Rildon. Biblioteca
+social e formatos adicionais seguem depois. O encaminhamento trouxe somente a
+faixa de selos da assinatura; Rildon já solicitou o reenvio do material da Érica.
+Não confundir esse arquivo com a arte da campanha nem roteiro sugerido com texto
+aprovado pela Qualidade.
+
+Campanhas são uma taxonomia privada de Conteúdos da TV. O painel permite selecionar
+somente uma campanha, preservando rascunhos, ocultação e expiração fora da fila.
+Campanhas aceitam4–90segundos; posts comuns continuam com mínimo8. Texto de campanha
+usa a tela horizontal, sem a coluna vazia de fotografia. Arte completa com texto
+vazio é exibida inteira, sem novas marcas/textos sobrepostos; o original é preservado.
+Alterações concorrentes da programação são recusadas com pedido de recarga.
+
+Abrir prévia editorial, no conteúdo, mostra a última versão salva, com arquivos na
+ordem e texto completo. É acesso autenticado de edição: nonce de sessão por arquivo,
+capacidade específica e Range validado. A recepção não pode abrir essa biblioteca.
+A prévia não publica nem inicia a TV. Aprovação editorial e liberação continuam com
+Qualidade/Comunicação, usando rascunho e publicação do WordPress; a TI não declara
+uma política, arte, data de auditoria ou certificado aprovado por suposição.

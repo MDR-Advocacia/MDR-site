@@ -24,6 +24,7 @@ function mdr_tv_register() {
     register_post_type('mdr_tv_command',['public'=>false,'publicly_queryable'=>false,'show_ui'=>false,'show_in_rest'=>false,'rewrite'=>false,'query_var'=>false]);
     register_post_type('mdr_tv_event',['public'=>false,'publicly_queryable'=>false,'show_ui'=>false,'show_in_rest'=>false,'rewrite'=>false,'query_var'=>false]);
     register_post_type('mdr_tv_asset',['public'=>false,'publicly_queryable'=>false,'show_ui'=>false,'show_in_rest'=>false,'rewrite'=>false,'query_var'=>false]);
+    register_taxonomy('mdr_tv_campaign',['mdr_tv_item'],['labels'=>['name'=>'Campanhas da TV','singular_name'=>'Campanha'],'public'=>false,'show_ui'=>true,'show_admin_column'=>true,'show_in_rest'=>false,'rewrite'=>false,'query_var'=>false,'capabilities'=>['manage_terms'=>'mdr_tv_manage','edit_terms'=>'mdr_tv_manage','delete_terms'=>'mdr_tv_manage','assign_terms'=>'mdr_tv_manage']]);
 }
 add_action('init','mdr_tv_register');
 function mdr_tv_assets() { return get_posts(['post_type'=>'mdr_tv_asset','post_status'=>'private','numberposts'=>200,'orderby'=>'ID','order'=>'DESC']); }
@@ -39,19 +40,21 @@ function mdr_tv_asset_path($id) {
     $a=mdr_tv_asset_info($id);return $a?mdr_tv_root().'/'.$a['hash']:null;
 }
 function mdr_tv_manifest($now=null) {
-    $now=$now??time();$rows=[];
-    foreach(get_posts(['post_type'=>'mdr_tv_item','post_status'=>'publish','numberposts'=>200]) as $p) {
+    $now=$now??time();$rows=[];$settings=mdr_tv_settings();
+    $query=['post_type'=>'mdr_tv_item','post_status'=>'publish','numberposts'=>200];
+    if(!empty($settings['campaign']))$query['tax_query']=[['taxonomy'=>'mdr_tv_campaign','field'=>'term_id','terms'=>absint($settings['campaign'])]];
+    foreach(get_posts($query) as $p) {
         $m=(array)get_post_meta($p->ID,'mdr_tv',true);
         if (!empty($m['hidden']) || (!empty($m['start'])&&$m['start']>$now) || (!empty($m['end'])&&$m['end']<=$now)) continue;
         $assets=[];foreach((array)($m['assets']??[]) as $id) { $a=mdr_tv_asset_info(absint($id));if($a)$assets[]=$a; }
         $rows[]=['id'=>$p->ID,'title'=>$p->post_title,'text'=>html_entity_decode(wp_strip_all_tags($p->post_content),ENT_QUOTES,'UTF-8'),
-            'format'=>$m['format']??'post','assets'=>$assets,'seconds'=>max(8,min(90,(int)($m['seconds']??18))),
+            'format'=>$m['format']??'post','assets'=>$assets,'seconds'=>max(($m['format']??'post')==='campaign'?4:8,min(90,(int)($m['seconds']??18))),
             'pinned'=>!empty($m['pinned']),'priority'=>(int)($m['priority']??0),'published_at'=>$p->post_date_gmt,
             'end'=>(int)($m['end']??0),'audio'=>!empty($m['audio']),'video'=>!empty($m['video']),
             'source'=>$m['source']??'Material MDR','credit'=>$m['credit']??'MDR Advocacia'];
     }
     usort($rows,function($a,$b){ return ($b['pinned']<=>$a['pinned'])?:($b['priority']<=>$a['priority'])?:strcmp($b['published_at'],$a['published_at'])?:($b['id']<=>$a['id']); });
-    $settings=mdr_tv_settings();$playlist=[];foreach((array)($settings['playlist']??[]) as $id){$a=mdr_tv_asset_info(absint($id));if($a&&str_starts_with($a['mime'],'audio/'))$playlist[]=$a;}
+    $playlist=[];foreach((array)($settings['playlist']??[]) as $id){$a=mdr_tv_asset_info(absint($id));if($a&&str_starts_with($a['mime'],'audio/'))$playlist[]=$a;}
     $data=['items'=>$rows,'settings'=>$settings,'playlist'=>$playlist];
     return ['version'=>hash('sha256',wp_json_encode($data)),'generated_at'=>gmdate('c'),'valid_until'=>$now+600]+$data;
 }
@@ -64,7 +67,7 @@ function mdr_tv_parse_fields($input) {
     foreach(array_slice(explode(',',(string)($input['assets']??'')),0,12) as $id){$id=absint($id);if($id&&!mdr_tv_asset_info($id))return new WP_Error('asset','Arquivo inválido.');if($id)$assets[]=$id;}
     $dates=[];foreach(['start','end'] as $key){$v=trim((string)($input[$key]??''));$dates[$key]=0;if($v){try{$d=new DateTimeImmutable($v,new DateTimeZone('America/Fortaleza'));$dates[$key]=$d->getTimestamp();}catch(Exception $e){return new WP_Error('date','Data inválida.');}}}
     if($dates['start']&&$dates['end']&&$dates['end']<=$dates['start'])return new WP_Error('date_order','O término deve ser posterior ao início.');
-    return $dates+['format'=>$format,'assets'=>array_values(array_unique($assets)),'seconds'=>max(8,min(90,absint($input['seconds']??18))),
+    return $dates+['format'=>$format,'assets'=>array_values(array_unique($assets)),'seconds'=>max($format==='campaign'?4:8,min(90,absint($input['seconds']??18))),
         'priority'=>max(0,min(100,absint($input['priority']??0))),'pinned'=>!empty($input['pinned']),'hidden'=>!empty($input['hidden']),
         'video'=>!empty($input['video']),'audio'=>!empty($input['audio']),
         'source'=>sanitize_text_field($input['source']??'Material MDR'),'credit'=>sanitize_text_field($input['credit']??'MDR Advocacia')];

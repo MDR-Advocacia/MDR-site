@@ -6,3 +6,4 @@ if (!defined('ABSPATH')) { exit; }
 require_once __DIR__.'/mdr-tv/core.php';
 require_once __DIR__.'/mdr-tv/admin.php';
 require_once __DIR__.'/mdr-tv/bridge.php';
+require_once __DIR__.'/mdr-tv/preview.php';

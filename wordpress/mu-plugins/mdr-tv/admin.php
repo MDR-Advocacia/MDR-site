@@ -4,6 +4,7 @@ add_action('admin_menu',function(){
     add_menu_page('TV corporativa','TV corporativa','mdr_tv_start','mdr-tv','mdr_tv_dashboard','dashicons-desktop',25);
     add_submenu_page('mdr-tv','Operação e programação','Operação e programação','mdr_tv_start','mdr-tv','mdr_tv_dashboard',0);
     add_submenu_page('mdr-tv','Arquivos privados','Arquivos privados','mdr_tv_manage','mdr-tv-files','mdr_tv_files_page');
+    add_submenu_page('mdr-tv','Campanhas da TV','Campanhas','mdr_tv_manage','edit-tags.php?taxonomy=mdr_tv_campaign&post_type=mdr_tv_item');
 });
 add_action('admin_menu',function(){
     if(current_user_can('mdr_tv_start')&&!current_user_can('edit_posts')){
@@ -14,6 +15,12 @@ add_action('admin_enqueue_scripts',function(){
     $screen=get_current_screen();if($screen&&($screen->post_type==='mdr_tv_item'||strpos($screen->id,'mdr-tv')!==false)){
         wp_enqueue_script('mdr-tv-editor',plugins_url('mdr-tv/editor.js',dirname(__FILE__).'/../mdr-tv.php'),[],'0.1.0',true);
     }
+});
+add_action('restrict_manage_posts',function($type){
+    if($type==='mdr_tv_item'&&current_user_can('mdr_tv_manage'))wp_dropdown_categories(['taxonomy'=>'mdr_tv_campaign','name'=>'tv_campaign','hide_empty'=>false,'show_option_all'=>'Todas as campanhas','selected'=>absint($_GET['tv_campaign']??0)]);
+});
+add_action('pre_get_posts',function($q){
+    if(is_admin()&&$q->is_main_query()&&$q->get('post_type')==='mdr_tv_item'&&!empty($_GET['tv_campaign'])&&current_user_can('mdr_tv_manage'))$q->set('tax_query',[['taxonomy'=>'mdr_tv_campaign','field'=>'term_id','terms'=>absint($_GET['tv_campaign'])]]);
 });
 function mdr_tv_gallery($name,$values,$audio=false){
     $items=[];foreach(mdr_tv_assets() as $a){$info=mdr_tv_asset_info($a->ID);if($info&&($audio?str_starts_with($info['mime'],'audio/'):!str_starts_with($info['mime'],'audio/')))$items[]=['id'=>$a->ID,'name'=>$a->post_title];}
@@ -40,7 +47,7 @@ function mdr_tv_dashboard(){
     echo '</tbody></table>';
     if(current_user_can('mdr_tv_manage')){
         echo '<h2>Programação</h2><p><a class="button" href="'.esc_url(admin_url('edit.php?post_type=mdr_tv_item')).'">Editar conteúdos</a> <a class="button" href="'.esc_url(admin_url('admin.php?page=mdr-tv-files')).'">Arquivos privados</a></p>';
-        mdr_tv_form_start('settings');echo '<p><label><input type="checkbox" name="music" value="1" '.checked($s['music'],1,false).'> Ativar trilha independente</label></p><p>Escolha faixas privadas autorizadas; sem seleção, usa a trilha instrumental do laboratório.</p>';mdr_tv_gallery('playlist',$s['playlist']??[],true);echo '<p><label>Volume da trilha (0–30%) <input type="number" min="0" max="30" name="volume" value="'.esc_attr($s['volume']).'"></label></p>';submit_button('Salvar programação');echo '</form>';
+        mdr_tv_form_start('settings');echo '<input type="hidden" name="settings_version" value="'.esc_attr(hash('sha256',serialize($s))).'"><p><label>Programação em exibição: ';wp_dropdown_categories(['taxonomy'=>'mdr_tv_campaign','name'=>'campaign','hide_empty'=>false,'show_option_all'=>'Todos os conteúdos publicados','selected'=>absint($s['campaign']??0)]);echo '</label></p><p>Selecione uma campanha para exibir somente seus conteúdos publicados. Rascunhos, ocultos e expirados continuam fora da fila.</p><p><label><input type="checkbox" name="music" value="1" '.checked($s['music'],1,false).'> Ativar trilha independente</label></p><p>Escolha faixas privadas autorizadas; sem seleção, usa a trilha instrumental do laboratório.</p>';mdr_tv_gallery('playlist',$s['playlist']??[],true);echo '<p><label>Volume da trilha (0–30%) <input type="number" min="0" max="30" name="volume" value="'.esc_attr($s['volume']).'"></label></p>';submit_button('Salvar programação');echo '</form>';
         echo '<p><strong>Fontes:</strong> biblioteca própria. Instagram/RD não conectados. Materiais de funcionários exigem autorização e aprovação antes de publicar. Estes conteúdos não são posts públicos do site.</p>';
     }
     if(current_user_can('mdr_tv_control')){
@@ -62,10 +69,12 @@ function mdr_tv_files_page(){
 add_action('add_meta_boxes_mdr_tv_item',function(){add_meta_box('mdr-tv-fields','Exibição e programação','mdr_tv_fields','mdr_tv_item','normal','high');});
 function mdr_tv_fields($post){
     wp_nonce_field('mdr_tv_item','mdr_tv_nonce');$m=(array)get_post_meta($post->ID,'mdr_tv',true);
+    echo '<p><a class="button" target="_blank" rel="noopener" href="'.esc_url(admin_url('admin.php?page=mdr-tv-preview&item='.$post->ID)).'">Abrir prévia editorial</a> Salve as alterações antes de abrir a prévia.</p>';
     echo '<input type="hidden" name="mdr_tv_version" value="'.esc_attr(hash('sha256',serialize($m))).'"><p>Imagens serão exibidas inteiras. Textos são paginados sem reduzir indefinidamente a fonte. Datas e horários em Natal/Fortaleza.</p><table class="form-table">';
     echo '<tr><th>Formato</th><td><select name="mdr_tv[format]">';foreach(['post'=>'Post com imagem e texto','photo'=>'Foto','carousel'=>'Carrossel','story'=>'Story vertical','video'=>'Vídeo/reel','campaign'=>'Campanha'] as $k=>$v)echo '<option value="'.esc_attr($k).'" '.selected($m['format']??'post',$k,false).'>'.esc_html($v).'</option>';echo '</select></td></tr>';
     echo '<tr><th>Imagens/vídeos na ordem</th><td>';mdr_tv_gallery('mdr_tv[assets]',$m['assets']??[]);echo '<p><a href="'.esc_url(admin_url('admin.php?page=mdr-tv-files')).'">Adicionar arquivo privado</a></p></td></tr>';
-    foreach(['seconds'=>['Segundos por tela',18,8,90],'priority'=>['Prioridade',0,0,100]] as $k=>$v)echo '<tr><th>'.esc_html($v[0]).'</th><td><input type="number" name="mdr_tv['.esc_attr($k).']" min="'.$v[2].'" max="'.$v[3].'" value="'.esc_attr($m[$k]??$v[1]).'"></td></tr>';
+    foreach(['seconds'=>['Segundos por tela',18,4,90],'priority'=>['Prioridade',0,0,100]] as $k=>$v)echo '<tr><th>'.esc_html($v[0]).'</th><td><input type="number" name="mdr_tv['.esc_attr($k).']" min="'.$v[2].'" max="'.$v[3].'" value="'.esc_attr($m[$k]??$v[1]).'"></td></tr>';
+    echo '<tr><th>Campanhas</th><td>Cadastre telas curtas a partir de4segundos. Para imagens com a arte completa, deixe o texto vazio: a arte ocupa a tela sem sobreposição. Posts comuns usam no mínimo8segundos.</td></tr>';
     foreach(['start'=>'Início (opcional)','end'=>'Término (opcional)'] as $k=>$label){$date=!empty($m[$k])?wp_date('Y-m-d\TH:i',$m[$k],new DateTimeZone('America/Fortaleza')):'';echo '<tr><th>'.esc_html($label).'</th><td><input type="datetime-local" name="mdr_tv['.esc_attr($k).']" value="'.esc_attr($date).'"></td></tr>';}
     foreach(['source'=>'Origem/referência','credit'=>'Crédito/autoria'] as $k=>$label)echo '<tr><th>'.esc_html($label).'</th><td><input class="regular-text" name="mdr_tv['.esc_attr($k).']" value="'.esc_attr($m[$k]??($k==='source'?'Material MDR':'MDR Advocacia')).'"></td></tr>';
     echo '</table>';foreach(['pinned'=>'Fixar na programação','hidden'=>'Ocultar (prevalece sobre fixado)','video'=>'Reproduzir vídeos; desmarcado mostra o texto/capa quando disponível','audio'=>'Permitir som do vídeo; a trilha será pausada'] as $k=>$label)echo '<p><label><input type="checkbox" name="mdr_tv['.esc_attr($k).']" value="1" '.checked(!empty($m[$k]),true,false).'> '.esc_html($label).'</label></p>';
@@ -84,8 +93,10 @@ function mdr_tv_complete($result,$page='mdr-tv'){
 add_action('admin_post_mdr_tv_command',function(){check_admin_referer('mdr_tv_command');mdr_tv_complete(mdr_tv_queue(sanitize_key($_POST['command']??''),$_POST['value']??null));});
 add_action('admin_post_mdr_tv_settings',function(){
     if(!current_user_can('mdr_tv_manage'))wp_die('Sem permissão.',403);check_admin_referer('mdr_tv_settings');
+    $old=mdr_tv_settings();if(!hash_equals(hash('sha256',serialize($old)),(string)wp_unslash($_POST['settings_version']??'')))mdr_tv_complete(new WP_Error('stale','A programação mudou. Recarregue a página antes de salvar.'));
+    $campaign=absint($_POST['campaign']??0);if($campaign&&!term_exists($campaign,'mdr_tv_campaign'))mdr_tv_complete(new WP_Error('campaign','Campanha indisponível. Recarregue a página.'));
     $ids=[];foreach(array_slice(explode(',',sanitize_text_field(wp_unslash($_POST['playlist']??''))),0,12) as $id){$id=absint($id);$a=mdr_tv_asset_info($id);if($a&&str_starts_with($a['mime'],'audio/'))$ids[]=$id;}
-    update_option('mdr_tv_settings',['music'=>empty($_POST['music'])?0:1,'volume'=>min(30,absint($_POST['volume']??14)),'playlist'=>array_unique($ids)],false);mdr_tv_audit('settings_saved');mdr_tv_complete(true);
+    update_option('mdr_tv_settings',array_merge($old,['campaign'=>$campaign,'music'=>empty($_POST['music'])?0:1,'volume'=>min(30,absint($_POST['volume']??14)),'playlist'=>array_unique($ids)]),false);mdr_tv_audit('settings_saved');mdr_tv_complete(true);
 });
 add_action('admin_post_mdr_tv_upload',function(){
     if(!current_user_can('mdr_tv_manage'))wp_die('Sem permissão.',403);check_admin_referer('mdr_tv_upload');
