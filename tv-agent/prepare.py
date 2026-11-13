@@ -41,7 +41,7 @@ def wrap(text,font,width):
 def pages(item):
     title=item['title'];body=item['text'];head=wrap(title,ImageFont.truetype(BOLD,42),790)
     if len(head)>4:body=title+'\n\n'+body;head=['MDR em pauta']
-    if body.startswith(title):body=body[len(title):].lstrip()
+    elif body.startswith(title):body=body[len(title):].lstrip()
     lines=wrap(body,ImageFont.truetype(FONT,31),790)
     per_page=max(7,math.floor((680-len(head)*54)/45))
     return head,[lines[i:i+per_page] for i in range(0,len(lines),per_page)] or [[]]
@@ -69,7 +69,7 @@ def duration(path):
     r=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(path)],capture_output=True,text=True,timeout=10)
     return max(.1,float(r.stdout.strip()))
 def prepare(program):
-    clips=[];offset=0;settings=program.get('settings',{});tracks=program.get('playlist',[])
+    clips=[];keep=set();offset=0;settings=program.get('settings',{});tracks=program.get('playlist',[])
     music=[(STATE/'cache'/a['hash']) for a in tracks] or [Path('/opt/mdr-tv-mvp/public/assets/ambiente-mdr.wav')]
     lengths=[duration(p) for p in music] if settings.get('music') else []
     ff=['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-threads','1','-filter_threads','1','-y']
@@ -81,6 +81,7 @@ def prepare(program):
             for n,lines in enumerate(text_pages):
                 secs=item['seconds'];key=digest(['frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
                 base=OUT/(key+'-base.mp4')
+                keep.add(base.name)
                 if not base.exists():
                     jpg=OUT/(key+'.jpg');frame(item,asset,head,lines,n,len(text_pages),jpg)
                     tmp=OUT/(key+'-base.tmp.mp4')
@@ -102,7 +103,7 @@ def prepare(program):
                 atomic(STATE/'preparation.json',json.dumps({'state':'preparing','prepared':len(clips),'source_version':program['version'],'at':time.time()}).encode())
     atomic(STATE/'clips.json',json.dumps({'version':program['version'],'clips':clips,'prepared_at':time.time()}).encode())
     # Remove obsolete derivatives only after atomically publishing the ready queue.
-    keep={c['file'] for c in clips}
+    keep.update(c['file'] for c in clips)
     for path in OUT.iterdir():
         if path.name not in keep and path.is_file() and time.time()-path.stat().st_mtime>3600:path.unlink()
     atomic(STATE/'preparation.json',json.dumps({'state':'ready','prepared':len(clips),'source_version':program['version'],'at':time.time()}).encode())
