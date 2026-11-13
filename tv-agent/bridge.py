@@ -26,6 +26,9 @@ def request(path,body=b'',mime='application/json',limit=400000):
     msg='\n'.join([method,route,stamp,nonce,hashlib.sha256(body).hexdigest()])
     headers={'X-MDR-Time':stamp,'X-MDR-Nonce':nonce,'X-MDR-Signature':hmac.new(c['key'].encode(),msg.encode(),hashlib.sha256).hexdigest(),
         'Authorization':'Basic '+base64.b64encode((c['preview_user']+':'+c['preview_password']).encode()).decode(),'Content-Type':mime}
+    if c.get('unit'):
+        headers['X-MDR-Unit']=c['unit']
+        headers['X-MDR-Signature']=hmac.new(c['key'].encode(),(c['unit']+'\n'+msg).encode(),hashlib.sha256).hexdigest()
     req=Request(c['url'].rstrip('/')+'/wp-json'+route,data=body if method=='POST' else None,headers=headers,method=method)
     with build_opener(NoRedirect()).open(req,timeout=20) as response:
         data=response.read(limit+1)
@@ -49,7 +52,7 @@ def execute(command):
                 if len(mac)!=12:raise ValueError('TV sem resposta; Wake-on-LAN não configurado')
                 packet=b'\xff'*6+bytes.fromhex(mac)*16
                 with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as sock:
-                    sock.setsockopt(socket.SOL_SOCKET,socket.SO_BROADCAST,1);sock.sendto(packet,('192.168.30.255',9))
+                    sock.setsockopt(socket.SOL_SOCKET,socket.SO_BROADCAST,1);sock.sendto(packet,(c.get('wake_broadcast','192.168.30.255'),9))
                 for _ in range(8):
                     time.sleep(3)
                     try:tv=TV();break
@@ -60,7 +63,10 @@ def execute(command):
             mode=c.get('default_mode','continuous') if action=='start' else ('clips' if action=='start_clips' else 'dynamic')
             try:tv.request('media.controls/stop')
             except RuntimeError:pass
-            target='http://192.168.0.33:8097/'+{'dynamic':'player.html','clips':'clips.html','continuous':'continuo.html?canal=v3'}[mode]
+            origin=c.get('player_origin','http://192.168.0.33:8097')
+            parsed=urlparse(origin)
+            if parsed.scheme!='http' or parsed.hostname!='192.168.0.33' or parsed.port not in (8097,8098) or parsed.path not in ('','/') or parsed.username or parsed.password or parsed.query or parsed.fragment:raise ValueError('Player interno inválido')
+            target=origin.rstrip('/')+'/' +{'dynamic':'player.html','clips':'clips.html','continuous':'continuo.html?canal=v3'}[mode]
             target+=('&' if '?' in target else '?')+'run='+str(int(command['id']))
             tv.request('system.launcher/open',{'target':target})
             if mode=='continuous':

@@ -95,13 +95,13 @@ def prepare(program):
         for asset in assets:
             # Real video is handled by the HTML player until its normalization is tested.
             for n,lines in enumerate(text_pages):
-                secs=item['seconds'];key=digest(['campaign-frame-v1' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
+                secs=item['seconds'];key=digest(['campaign-frame-v2' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
                 base=OUT/(key+'-base.mp4')
                 keep.add(base.name)
                 if not base.exists():
                     jpg=OUT/(key+'.jpg');frame(item,asset,head,lines,n,len(text_pages),jpg)
                     tmp=OUT/(key+'-base.tmp.mp4')
-                    run(ff+['-loop','1','-framerate','1','-i',str(jpg),'-t',str(secs),'-vf','format=yuv420p','-r','5','-c:v','libx264','-threads','1','-preset','veryfast','-tune','stillimage','-an','-movflags','+faststart',str(tmp)])
+                    run(ff+['-loop','1','-framerate','5','-i',str(jpg),'-t',str(secs),'-vf','format=yuv420p','-r','5','-c:v','libx264','-threads','1','-preset','veryfast','-tune','stillimage','-an','-movflags','+faststart',str(tmp)])
                     tmp.replace(base)
                 output=base;audio=False
                 if lengths:

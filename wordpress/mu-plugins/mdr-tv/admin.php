@@ -26,24 +26,27 @@ function mdr_tv_gallery($name,$values,$audio=false){
     $items=[];foreach(mdr_tv_assets() as $a){$info=mdr_tv_asset_info($a->ID);if($info&&($audio?str_starts_with($info['mime'],'audio/'):!str_starts_with($info['mime'],'audio/')))$items[]=['id'=>$a->ID,'name'=>$a->post_title];}
     echo '<div data-tv-gallery data-items="'.esc_attr(wp_json_encode($items)).'"><input type="hidden" name="'.esc_attr($name).'" value="'.esc_attr(implode(',',(array)$values)).'"><div data-selected></div><select data-choice><option value="">Escolher arquivo privado…</option></select> <button type="button" class="button" data-add>Adicionar à sequência</button></div>';
 }
-function mdr_tv_form_start($action){echo '<form method="post" enctype="multipart/form-data" action="'.esc_url(admin_url('admin-post.php')).'">';wp_nonce_field('mdr_tv_'.$action);echo '<input type="hidden" name="action" value="mdr_tv_'.$action.'">';}
+function mdr_tv_form_start($action){echo '<form method="post" enctype="multipart/form-data" action="'.esc_url(admin_url('admin-post.php')).'">';wp_nonce_field('mdr_tv_'.$action);echo '<input type="hidden" name="action" value="mdr_tv_'.esc_attr($action).'"><input type="hidden" name="tv_unit" value="'.esc_attr(mdr_tv_requested_unit()).'">';}
 function mdr_tv_notice(){
     if(!empty($_GET['tv_ok']))echo '<div class="notice notice-success"><p>Solicitação registrada. Confira o resultado abaixo.</p></div>';
     $error=get_transient('mdr_tv_error_'.get_current_user_id());if($error){delete_transient('mdr_tv_error_'.get_current_user_id());echo '<div class="notice notice-error"><p>'.esc_html($error).'</p></div>';}
 }
 function mdr_tv_dashboard(){
     if(!current_user_can('mdr_tv_start'))return;
-    $state=get_option('mdr_tv_bridge_state',[]);$s=mdr_tv_settings();
+    $unit=mdr_tv_requested_unit();$state=get_option(mdr_tv_option('mdr_tv_bridge_state',$unit),[]);$s=mdr_tv_settings($unit);
     echo '<div class="wrap"><h1>TV corporativa</h1>';mdr_tv_notice();
+    echo '<h2>'.esc_html(mdr_tv_units()[$unit]).'</h2>';
+    foreach(mdr_tv_units() as $id=>$label)if(mdr_tv_unit_allowed($id))echo '<a class="button" href="'.esc_url(admin_url('admin.php?page=mdr-tv&tv_unit='.$id)).'">'.esc_html($label).'</a> ';
+    echo '<p>Cada unidade tem programação, comandos, estado e captura independentes.</p>';
     echo '<div style="background:#fff;border-left:5px solid #b89b58;padding:20px;max-width:850px"><h2>Recepção · iniciar exibição</h2><p>Abra a programação na TV sem navegar pelo controle remoto. O comando é executado pelo serviço interno; este computador não precisa permanecer ligado.</p>';
-    mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="start">';submit_button('▶ Iniciar exibição','primary large','submit',false);echo '</form><p><small>O modo dinâmico só se torna padrão após validação na LG. Até lá, o botão usa o modo contínuo comprovado.</small></p></div>';
+    mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="start">';submit_button('▶ Iniciar exibição','primary large','submit',false);echo '</form><p><small>O modo de exibição é definido pela TI para cada TV durante a homologação.</small></p></div>';
     echo '<h2>Última comunicação do serviço</h2><p>'.esc_html(!empty($state['at'])?$state['at'].' UTC':'Ainda não houve comunicação autenticada.').'</p>';
     echo '<p>'.esc_html(!empty($state['received_version'])?'Programação recebida: '.substr($state['received_version'],0,12):'Programação ainda não confirmada pelo serviço.').'</p>';
     echo '<p>'.esc_html('Estado informado: '.($state['power']??'não consultado').' · Aplicativo: '.($state['app']??'não consultado')).'</p>';
     if(!empty($state['player_seen']))echo '<p>Último sinal do player: '.esc_html(gmdate('d/m/Y H:i:s',(int)$state['player_seen'])).' UTC · '.esc_html($state['player']??'').'. Não comprova a imagem física da tela.</p>';
     $commands=get_posts(['post_type'=>'mdr_tv_command','post_status'=>['private','draft'],'numberposts'=>8,'orderby'=>'ID','order'=>'DESC']);
     echo '<h2>Comandos recentes</h2><table class="widefat striped" style="max-width:1000px"><thead><tr><th>Solicitado</th><th>Comando</th><th>Resultado</th></tr></thead><tbody>';
-    foreach($commands as $p){$r=get_post_meta($p->ID,'mdr_tv_result',true);echo '<tr><td>'.esc_html($p->post_date).'</td><td>'.esc_html($p->post_title).'</td><td>'.esc_html($r?($r['message']??'Recebido'):($p->post_status==='draft'?'Em execução; confirmação pendente':'Aguardando serviço; expira em2min')).'</td></tr>';}
+    foreach($commands as $p){if(mdr_tv_command_unit($p)!==$unit)continue;$r=get_post_meta($p->ID,'mdr_tv_result',true);echo '<tr><td>'.esc_html($p->post_date).'</td><td>'.esc_html($p->post_title).'</td><td>'.esc_html($r?($r['message']??'Recebido'):($p->post_status==='draft'?'Em execução; confirmação pendente':'Aguardando serviço; expira em2min')).'</td></tr>';}
     echo '</tbody></table>';
     if(current_user_can('mdr_tv_manage')){
         echo '<h2>Programação</h2><p><a class="button" href="'.esc_url(admin_url('edit.php?post_type=mdr_tv_item')).'">Editar conteúdos</a> <a class="button" href="'.esc_url(admin_url('admin.php?page=mdr-tv-files')).'">Arquivos privados</a></p>';
@@ -54,7 +57,7 @@ function mdr_tv_dashboard(){
         echo '<h2>Controle técnico</h2><p>Comandos são registrados; uma solicitação aceita não comprova a ação na tela.</p>';
         foreach(['status'=>'Consultar estado','capture'=>'Obter captura real','start_dynamic'=>'Abrir player HTML para teste','start_clips'=>'Testar programação por itens (experimental)'] as $value=>$label){mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="'.esc_attr($value).'">';submit_button($label,'secondary','submit',false);echo '</form><br>';}
         mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="volume"><label>Volume da TV (0–50): <input name="value" type="number" min="0" max="50" value="15"></label> ';submit_button('Ajustar volume','secondary','submit',false);echo '</form>';
-        if(!empty($state['capture_at'])){echo '<h3>Captura real</h3><p>'.esc_html($state['capture_at']).' UTC · captura pontual, não transmissão ao vivo.</p><img style="width:100%;max-width:900px;transform:scaleY(-1)" alt="Última captura da TV" src="'.esc_url(wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_capture'),'mdr_tv_capture')).'">';}
+        if(!empty($state['capture_at'])){echo '<h3>Captura real</h3><p>'.esc_html($state['capture_at']).' UTC · captura pontual, não transmissão ao vivo.</p><img style="width:100%;max-width:900px;transform:scaleY(-1)" alt="Última captura da TV" src="'.esc_url(wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_capture&tv_unit='.$unit),'mdr_tv_capture')).'">';}
     }
     echo '</div>';
 }
@@ -71,6 +74,7 @@ function mdr_tv_fields($post){
     wp_nonce_field('mdr_tv_item','mdr_tv_nonce');$m=(array)get_post_meta($post->ID,'mdr_tv',true);
     echo '<p><a class="button" target="_blank" rel="noopener" href="'.esc_url(admin_url('admin.php?page=mdr-tv-preview&item='.$post->ID)).'">Abrir prévia editorial</a> Salve as alterações antes de abrir a prévia.</p>';
     echo '<input type="hidden" name="mdr_tv_version" value="'.esc_attr(hash('sha256',serialize($m))).'"><p>Imagens serão exibidas inteiras. Textos são paginados sem reduzir indefinidamente a fonte. Datas e horários em Natal/Fortaleza.</p><table class="form-table">';
+    echo '<tr><th>Exibir nas unidades</th><td><select name="mdr_tv[unit]">';foreach(['capim'=>'Capim Macio — matriz','manhattan'=>'Manhattan — Tirol','both'=>'Ambas as unidades'] as $key=>$label)echo '<option value="'.esc_attr($key).'" '.selected($m['unit']??'capim',$key,false).'>'.esc_html($label).'</option>';echo '</select></td></tr>';
     echo '<tr><th>Formato</th><td><select name="mdr_tv[format]">';foreach(['post'=>'Post com imagem e texto','photo'=>'Foto','carousel'=>'Carrossel','story'=>'Story vertical','video'=>'Vídeo/reel','campaign'=>'Campanha'] as $k=>$v)echo '<option value="'.esc_attr($k).'" '.selected($m['format']??'post',$k,false).'>'.esc_html($v).'</option>';echo '</select></td></tr>';
     echo '<tr><th>Imagens/vídeos na ordem</th><td>';mdr_tv_gallery('mdr_tv[assets]',$m['assets']??[]);echo '<p><a href="'.esc_url(admin_url('admin.php?page=mdr-tv-files')).'">Adicionar arquivo privado</a></p></td></tr>';
     foreach(['seconds'=>['Segundos por tela',18,4,90],'priority'=>['Prioridade',0,0,100]] as $k=>$v)echo '<tr><th>'.esc_html($v[0]).'</th><td><input type="number" name="mdr_tv['.esc_attr($k).']" min="'.$v[2].'" max="'.$v[3].'" value="'.esc_attr($m[$k]??$v[1]).'"></td></tr>';
@@ -88,15 +92,15 @@ add_action('save_post_mdr_tv_item',function($id){
 });
 function mdr_tv_complete($result,$page='mdr-tv'){
     if(is_wp_error($result))set_transient('mdr_tv_error_'.get_current_user_id(),$result->get_error_message(),120);
-    wp_safe_redirect(add_query_arg('tv_ok',is_wp_error($result)?0:1,admin_url('admin.php?page='.$page)));exit;
+    wp_safe_redirect(add_query_arg('tv_ok',is_wp_error($result)?0:1,admin_url('admin.php?page='.$page.'&tv_unit='.mdr_tv_requested_unit())));exit;
 }
-add_action('admin_post_mdr_tv_command',function(){check_admin_referer('mdr_tv_command');mdr_tv_complete(mdr_tv_queue(sanitize_key($_POST['command']??''),$_POST['value']??null));});
+add_action('admin_post_mdr_tv_command',function(){check_admin_referer('mdr_tv_command');mdr_tv_complete(mdr_tv_queue(sanitize_key($_POST['command']??''),$_POST['value']??null,mdr_tv_requested_unit()));});
 add_action('admin_post_mdr_tv_settings',function(){
     if(!current_user_can('mdr_tv_manage'))wp_die('Sem permissão.',403);check_admin_referer('mdr_tv_settings');
-    $old=mdr_tv_settings();if(!hash_equals(hash('sha256',serialize($old)),(string)wp_unslash($_POST['settings_version']??'')))mdr_tv_complete(new WP_Error('stale','A programação mudou. Recarregue a página antes de salvar.'));
+    $unit=mdr_tv_requested_unit();$old=mdr_tv_settings($unit);if(!hash_equals(hash('sha256',serialize($old)),(string)wp_unslash($_POST['settings_version']??'')))mdr_tv_complete(new WP_Error('stale','A programação mudou. Recarregue a página antes de salvar.'));
     $campaign=absint($_POST['campaign']??0);if($campaign&&!term_exists($campaign,'mdr_tv_campaign'))mdr_tv_complete(new WP_Error('campaign','Campanha indisponível. Recarregue a página.'));
     $ids=[];foreach(array_slice(explode(',',sanitize_text_field(wp_unslash($_POST['playlist']??''))),0,12) as $id){$id=absint($id);$a=mdr_tv_asset_info($id);if($a&&str_starts_with($a['mime'],'audio/'))$ids[]=$id;}
-    update_option('mdr_tv_settings',array_merge($old,['campaign'=>$campaign,'music'=>empty($_POST['music'])?0:1,'volume'=>min(30,absint($_POST['volume']??14)),'playlist'=>array_unique($ids)]),false);mdr_tv_audit('settings_saved');mdr_tv_complete(true);
+    update_option(mdr_tv_option('mdr_tv_settings',$unit),array_merge($old,['campaign'=>$campaign,'music'=>empty($_POST['music'])?0:1,'volume'=>min(30,absint($_POST['volume']??14)),'playlist'=>array_unique($ids)]),false);mdr_tv_audit('settings_saved');mdr_tv_complete(true);
 });
 add_action('admin_post_mdr_tv_upload',function(){
     if(!current_user_can('mdr_tv_manage'))wp_die('Sem permissão.',403);check_admin_referer('mdr_tv_upload');
@@ -118,6 +122,6 @@ add_action('admin_post_mdr_tv_upload',function(){
 });
 add_action('admin_post_mdr_tv_capture',function(){
     if(!current_user_can('mdr_tv_control'))wp_die('Sem permissão.',403);check_admin_referer('mdr_tv_capture');
-    $p='/var/lib/mdr-tv/capture.jpg';if(!is_readable($p))wp_die('Captura indisponível.',404);
+    $unit=mdr_tv_requested_unit();$p='/var/lib/mdr-tv/capture'.($unit==='capim'?'':'-manhattan').'.jpg';if(!is_readable($p))wp_die('Captura indisponível.',404);
     nocache_headers();header('Content-Type:image/jpeg');header('X-Content-Type-Options:nosniff');readfile($p);exit;
 });

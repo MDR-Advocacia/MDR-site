@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 import os
 import base64,hashlib,json,secrets,socket,ssl,struct,time,urllib.request
 
-HOST='192.168.30.79'
+HOST=os.environ.get('TV_HOST','192.168.30.79')
 KEY_FILE=Path(os.environ['TV_PAIRING_FILE'])
 
 class Socket:

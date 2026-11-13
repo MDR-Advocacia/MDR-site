@@ -1,5 +1,20 @@
 <?php
 if (!defined('ABSPATH')) { exit; }
+function mdr_tv_units() { return ['capim'=>'Capim Macio — matriz','manhattan'=>'Manhattan — Tirol']; }
+function mdr_tv_unit_allowed($unit) {
+    if(!isset(mdr_tv_units()[$unit]))return false;
+    // Reception has only the originally authorized matrix, regardless of forged forms.
+    return current_user_can('mdr_tv_control') || ($unit==='capim' && current_user_can('mdr_tv_start'));
+}
+function mdr_tv_option($base,$unit='capim') { return $unit==='capim'?$base:$base.'_manhattan'; }
+function mdr_tv_command_unit($post) {
+    $data=json_decode($post->post_content,true);return $data['unit']??'capim';
+}
+function mdr_tv_requested_unit() {
+    $unit=sanitize_key($_REQUEST['tv_unit']??'capim');
+    if(!mdr_tv_unit_allowed($unit))wp_die('Unidade não autorizada.',403);
+    return $unit;
+}
 function mdr_tv_root() { return '/var/lib/mdr-tv/media'; }
 function mdr_tv_audit($event,$object=0) {
     wp_insert_post(['post_type'=>'mdr_tv_event','post_status'=>'private','post_title'=>sanitize_key($event),
@@ -28,7 +43,7 @@ function mdr_tv_register() {
 }
 add_action('init','mdr_tv_register');
 function mdr_tv_assets() { return get_posts(['post_type'=>'mdr_tv_asset','post_status'=>'private','numberposts'=>200,'orderby'=>'ID','order'=>'DESC']); }
-function mdr_tv_settings() { return array_merge(['music'=>0,'volume'=>14,'seconds'=>18],(array)get_option('mdr_tv_settings',[])); }
+function mdr_tv_settings($unit='capim') { return array_merge(['music'=>0,'volume'=>14,'seconds'=>18],(array)get_option(mdr_tv_option('mdr_tv_settings',$unit),[])); }
 function mdr_tv_asset_info($id) {
     $a=get_post($id);
     if (!$a || $a->post_type!=='mdr_tv_asset' || $a->post_status!=='private') { return null; }
@@ -39,12 +54,13 @@ function mdr_tv_asset_info($id) {
 function mdr_tv_asset_path($id) {
     $a=mdr_tv_asset_info($id);return $a?mdr_tv_root().'/'.$a['hash']:null;
 }
-function mdr_tv_manifest($now=null) {
-    $now=$now??time();$rows=[];$settings=mdr_tv_settings();
+function mdr_tv_manifest($now=null,$unit='capim') {
+    $now=$now??time();$rows=[];$settings=mdr_tv_settings($unit);
     $query=['post_type'=>'mdr_tv_item','post_status'=>'publish','numberposts'=>200];
     if(!empty($settings['campaign']))$query['tax_query']=[['taxonomy'=>'mdr_tv_campaign','field'=>'term_id','terms'=>absint($settings['campaign'])]];
     foreach(get_posts($query) as $p) {
         $m=(array)get_post_meta($p->ID,'mdr_tv',true);
+        if(!in_array($m['unit']??'capim',[$unit,'both'],true))continue;
         if (!empty($m['hidden']) || (!empty($m['start'])&&$m['start']>$now) || (!empty($m['end'])&&$m['end']<=$now)) continue;
         $assets=[];foreach((array)($m['assets']??[]) as $id) { $a=mdr_tv_asset_info(absint($id));if($a)$assets[]=$a; }
         $rows[]=['id'=>$p->ID,'title'=>$p->post_title,'text'=>html_entity_decode(wp_strip_all_tags($p->post_content),ENT_QUOTES,'UTF-8'),
@@ -61,25 +77,26 @@ function mdr_tv_manifest($now=null) {
 function mdr_tv_parse_fields($input) {
     if(!is_array($input))return new WP_Error('fields','Campos inválidos.');
     foreach($input as $value)if(!is_scalar($value))return new WP_Error('fields','Campo inválido.');
+    $unit=sanitize_key($input['unit']??'capim');if(!in_array($unit,['capim','manhattan','both'],true))return new WP_Error('unit','Unidade inválida.');
     $formats=['post','photo','carousel','story','video','campaign'];
     $format=sanitize_key($input['format']??'post');if(!in_array($format,$formats,true))return new WP_Error('format','Formato inválido.');
     $assets=[];
     foreach(array_slice(explode(',',(string)($input['assets']??'')),0,12) as $id){$id=absint($id);if($id&&!mdr_tv_asset_info($id))return new WP_Error('asset','Arquivo inválido.');if($id)$assets[]=$id;}
     $dates=[];foreach(['start','end'] as $key){$v=trim((string)($input[$key]??''));$dates[$key]=0;if($v){try{$d=new DateTimeImmutable($v,new DateTimeZone('America/Fortaleza'));$dates[$key]=$d->getTimestamp();}catch(Exception $e){return new WP_Error('date','Data inválida.');}}}
     if($dates['start']&&$dates['end']&&$dates['end']<=$dates['start'])return new WP_Error('date_order','O término deve ser posterior ao início.');
-    return $dates+['format'=>$format,'assets'=>array_values(array_unique($assets)),'seconds'=>max($format==='campaign'?4:8,min(90,absint($input['seconds']??18))),
+    return $dates+['unit'=>$unit,'format'=>$format,'assets'=>array_values(array_unique($assets)),'seconds'=>max($format==='campaign'?4:8,min(90,absint($input['seconds']??18))),
         'priority'=>max(0,min(100,absint($input['priority']??0))),'pinned'=>!empty($input['pinned']),'hidden'=>!empty($input['hidden']),
         'video'=>!empty($input['video']),'audio'=>!empty($input['audio']),
         'source'=>sanitize_text_field($input['source']??'Material MDR'),'credit'=>sanitize_text_field($input['credit']??'MDR Advocacia')];
 }
-function mdr_tv_queue($action,$value=null) {
+function mdr_tv_queue($action,$value=null,$unit='capim') {
+    if(!mdr_tv_unit_allowed($unit))return new WP_Error('permission','Unidade não autorizada.');
     $allowed=['start','start_dynamic','start_clips','volume','mute','capture','status','off'];
     if(!in_array($action,$allowed,true))return new WP_Error('action','Comando inválido.');
     if(!current_user_can('mdr_tv_start') || ($action!=='start'&&!current_user_can('mdr_tv_control')))return new WP_Error('permission','Sem permissão.');
     if($action==='volume'&&(!is_numeric($value)||$value<0||$value>50))return new WP_Error('volume','Volume permitido:0a50.');
-    global $wpdb;
-    $active=(int)$wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_type='mdr_tv_command' AND post_status='private' AND post_date_gmt>DATE_SUB(UTC_TIMESTAMP(),INTERVAL 2 MINUTE)");
+    $active=0;foreach(get_posts(['post_type'=>'mdr_tv_command','post_status'=>'private','numberposts'=>200]) as $pending){if(mdr_tv_command_unit($pending)===$unit && strtotime($pending->post_date_gmt.' UTC')>time()-120)$active++;}
     if($active>=5)return new WP_Error('busy','Há comandos recentes na fila; aguarde a confirmação.');
-    $id=wp_insert_post(['post_type'=>'mdr_tv_command','post_status'=>'private','post_title'=>$action,'post_content'=>wp_json_encode(['value'=>$value]),'post_author'=>get_current_user_id()],true);
+    $id=wp_insert_post(['post_type'=>'mdr_tv_command','post_status'=>'private','post_title'=>$action,'post_content'=>wp_json_encode(['value'=>$value,'unit'=>$unit]),'post_author'=>get_current_user_id()],true);
     if(!is_wp_error($id))mdr_tv_audit('command_'.$action,$id);return $id;
 }

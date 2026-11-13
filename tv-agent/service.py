@@ -9,7 +9,8 @@ import bridge
 ROOT=Path(__file__).resolve().parent
 sys.path.append('/opt/mdr-tv-mvp')
 spec=importlib.util.spec_from_file_location('legacy','/opt/mdr-tv-mvp/server.py');legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy)
-DEVICE_HOSTS={'127.0.0.1','192.168.0.33','192.168.30.79'}
+DEVICE_HOSTS={'127.0.0.1','192.168.0.33',os.environ.get('TV_HOST','192.168.30.79')}
+# Separate processes, credential files and caches isolate each TV.
 
 def current_clips():
     """Only serve prepared media still authorized by the current manifest."""

@@ -63,3 +63,11 @@ capacidade específica e Range validado. A recepção não pode abrir essa bibli
 A prévia não publica nem inicia a TV. Aprovação editorial e liberação continuam com
 Qualidade/Comunicação, usando rascunho e publicação do WordPress; a TI não declara
 uma política, arte, data de auditoria ou certificado aprovado por suposição.
+
+## Unidades independentes — 13/11/2026
+
+Capim e Manhattan possuem opções, comandos, estados e capturas separados. Cada item escolhe Capim, Manhattan ou ambas; itens antigos sem campo continuam somente em Capim. A recepção permanece autorizada somente para iniciar Capim, inclusive com formulário adulterado. Administradores/editores selecionam a unidade no painel. A escolha de campanha, trilha e volume é independente.
+
+Cada agente usa seu processo, porta, cache, credencial SSAP, IP permitido e chave HMAC. O identificador de unidade integra a assinatura; uma chave de outra unidade não autoriza leitura de mídia, confirmação ou consumo de comandos. A ponte original de Capim é mantida durante a transição. Apenas mídias da fila publicada da própria unidade são entregues ao dispositivo, excluindo rascunhos e ocultos.
+
+Manhattan: TV 192.168.70.73, player interno 192.168.0.33:8098, usando as rotas existentes. Capim conserva 8097. Nenhum novo túnel, porta pública ou comando HTTP de entrada foi criado. Pareamento não comprova WOL nem reprodução prolongada: registrar os testes físicos separadamente. A campanha SGI permanece minuta até validação de conteúdo e materiais.
