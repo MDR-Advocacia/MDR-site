@@ -3,8 +3,12 @@ if (!defined('ABSPATH')) { exit; }
 function mdr_tv_units() { return ['capim'=>'Capim Macio — matriz','manhattan'=>'Manhattan — Tirol']; }
 function mdr_tv_unit_allowed($unit) {
     if(!isset(mdr_tv_units()[$unit]))return false;
-    // Reception has only the originally authorized matrix, regardless of forged forms.
-    return current_user_can('mdr_tv_control') || ($unit==='capim' && current_user_can('mdr_tv_start'));
+    if(current_user_can('mdr_tv_control'))return true;
+    if(!current_user_can('mdr_tv_start'))return false;
+    // Existing reception access stays matrix-only. Additional units are assigned
+    // explicitly by an administrator, never accepted from the submitted form.
+    $units=get_user_meta(get_current_user_id(),'mdr_tv_units',true);
+    return in_array($unit,is_array($units)?$units:['capim'],true);
 }
 function mdr_tv_option($base,$unit='capim') { return $unit==='capim'?$base:$base.'_manhattan'; }
 function mdr_tv_command_unit($post) {
