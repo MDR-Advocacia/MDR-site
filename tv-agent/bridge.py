@@ -13,7 +13,12 @@ class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs): raise ValueError('Redirecionamento remoto recusado')
 
 def atomic(path,data):
-    tmp=path.with_suffix(path.suffix+'.tmp');tmp.write_bytes(data);tmp.chmod(0o600);tmp.replace(path)
+    # Heartbeats can arrive concurrently while one browser instance replaces
+    # another. Each writer needs its own temporary file before atomic rename.
+    tmp=path.with_name(path.name+'.'+secrets.token_hex(8)+'.tmp')
+    try:tmp.write_bytes(data);tmp.chmod(0o600);tmp.replace(path)
+    finally:
+        if tmp.exists():tmp.unlink()
 
 def config():
     c=json.loads(CONFIG.read_text());u=urlparse(c['url'])
