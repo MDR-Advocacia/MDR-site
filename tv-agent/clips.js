@@ -1,5 +1,8 @@
 (function(){'use strict';
 var video=document.getElementById('screen'),message=document.getElementById('message'),label=document.getElementById('message-text'),button=document.getElementById('start'),fallback=document.getElementById('fallback'),list=[],index=0,version='',active=null,busy=false,lastSwitch=0,lastMoved=0,lastPosition=-1,sequence=0;
+var countdown=document.getElementById('countdown'),countdownTarget=0,serverOffset=0;
+function tickCountdown(){if(!countdown)return;countdown.hidden=!countdownTarget||!list.length;if(countdown.hidden)return;var left=Math.max(0,Math.floor(countdownTarget-(Date.now()+serverOffset)/1000)),values={days:Math.floor(left/86400),hours:Math.floor(left%86400/3600),minutes:Math.floor(left%3600/60),seconds:left%60};for(var k in values){var e=document.getElementById('cd-'+k);if(e)e.textContent=('0'+values[k]).slice(-2);}var label=document.getElementById('cd-target');if(label)label.textContent=left?'18 NOVEMBRO · 08H · FORTALEZA (UTC−3)':'HORÁRIO PROGRAMADO ALCANÇADO · 18 NOV · 08H';}
+setInterval(tickCountdown,1000);
 var run=(/[?&]run=([0-9]+)/.exec(typeof location==='undefined'?'':location.search)||[])[1]||'';
 function beat(status){var x=new XMLHttpRequest();x.open('POST','/api/player-heartbeat',true);x.setRequestHeader('Content-Type','application/json');x.send(JSON.stringify({at:Date.now(),run:run,version:version,item:active?active.id:0,status:status+' #'+sequence+' t='+Math.round(video.currentTime||0)+'/'+Math.round(video.duration||0)+' paused='+video.paused+' ended='+video.ended+' ready='+video.readyState+' frames='+(video.webkitDecodedFrameCount||0)}));}
 function showStart(){message.style.display='block';label.textContent='Selecione para iniciar a programação.';button.hidden=false;}
@@ -17,7 +20,7 @@ video.onplaying=function(){poster(false);message.style.display='none';beat('play
 video.onwaiting=function(){poster(true);beat('waiting');};
 video.onended=next;video.onerror=function(){if(active&&video.error){poster(true);beat('media_error');setTimeout(next,2000);}};
 button.onclick=function(){play();message.style.display='none';};
-function refresh(){if(busy)return;busy=true;var x=new XMLHttpRequest();x.open('GET','/api/clips',true);x.timeout=15000;x.onload=function(){busy=false;if(x.status!==200)return;try{var p=JSON.parse(x.responseText);list=p.clips;version=p.version;if(!active||!list.some(function(c){return c.id===active.id&&c.url===active.url;})){index=0;next();}beat(video.paused?'paused':'playing');}catch(e){}};x.onerror=x.ontimeout=function(){busy=false;};x.send();}
+function refresh(){if(busy)return;busy=true;var x=new XMLHttpRequest();x.open('GET','/api/clips',true);x.timeout=15000;x.onload=function(){busy=false;if(x.status!==200)return;try{var p=JSON.parse(x.responseText);list=p.clips;version=p.version;countdownTarget=p.countdown&&typeof p.countdown.target==='number'?p.countdown.target:0;if(typeof p.server_time==='number')serverOffset=p.server_time*1000-Date.now();tickCountdown();if(!active||!list.some(function(c){return c.id===active.id&&c.url===active.url;})){index=0;next();}beat(video.paused?'paused':'playing');}catch(e){}};x.onerror=x.ontimeout=function(){busy=false;};x.send();}
 setInterval(function(){
  if(!active)return;
  var position=video.currentTime||0,now=Date.now();

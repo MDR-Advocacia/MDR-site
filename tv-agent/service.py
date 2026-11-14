@@ -30,7 +30,9 @@ def current_clips():
                 poster=c.get('poster','')
                 poster='/frames/'+poster if re.fullmatch(r'[a-f0-9]{64}\.jpg',poster) and (bridge.STATE/'clips'/poster).is_file() else ''
                 rows.append({**c,'url':'/clips/'+c['file'],'poster':poster})
-        return {'version':p['version'],'clips':rows}
+        target=p.get('settings',{}).get('countdown_target',0)
+        countdown={'target':target,'label':'AUDITORIA EXTERNA · ISO 9001'} if isinstance(target,int) and 0<target<4102444800 and rows else None
+        return {'version':p['version'],'clips':rows,'countdown':countdown,'server_time':time.time()}
     except (OSError,ValueError,KeyError):return {'version':'waiting','clips':[]}
 
 class Handler(legacy.Handler):

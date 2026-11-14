@@ -9,7 +9,7 @@ import hashlib,json,os,subprocess,time,math
 
 STATE=Path(os.environ.get('STATE_DIRECTORY','/var/lib/mdr-tv-mvp'))
 OUT=STATE/'clips';OUT.mkdir(exist_ok=True)
-RENDERER_VERSION='campaign-v3-poster-v1'
+RENDERER_VERSION='campaign-v4-native-video'
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 BOLD='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 Image.MAX_IMAGE_PIXELS=24000000
@@ -100,6 +100,16 @@ def frame(item,asset,head,lines,page,total,target):
 def duration(path):
     r=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(path)],capture_output=True,text=True,timeout=10)
     return max(.1,float(r.stdout.strip()))
+def video_base(source,target,secs):
+    probe=subprocess.run(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=codec_name,width,height,pix_fmt','-of','json',str(source)],capture_output=True,text=True,timeout=10)
+    if probe.returncode:raise ValueError('Vídeo inválido')
+    streams=json.loads(probe.stdout).get('streams',[])
+    if not streams:raise ValueError('Arquivo sem vídeo')
+    v=streams[0]
+    native=(v.get('codec_name')=='h264' and v.get('width')==1920 and v.get('height')==1080 and v.get('pix_fmt')=='yuv420p')
+    args=['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-threads','1','-filter_threads','1','-y','-i',str(source),'-t',str(secs),'-map','0:v:0','-an']
+    args+=['-c:v','copy'] if native else ['-vf','scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=24,format=yuv420p','-c:v','libx264','-threads','1','-preset','veryfast','-profile:v','main','-level:v','4.1']
+    run(args+['-movflags','+faststart',str(target)])
 def prepare(program):
     clips=[];keep=set();offset=0;settings=program.get('settings',{});tracks=program.get('playlist',[])
     music=[(STATE/'cache'/a['hash']) for a in tracks] or [Path('/opt/mdr-tv-mvp/public/assets/ambiente-mdr.wav')]
@@ -109,15 +119,24 @@ def prepare(program):
         if item.get('end') and item['end']<=time.time():continue
         assets=item.get('assets') or [None];head,text_pages=pages(item)
         for asset in assets:
-            # Real video is handled by the HTML player until its normalization is tested.
-            for n,lines in enumerate(text_pages):
+            native_video=bool(asset and asset['mime']=='video/mp4')
+            for n,lines in enumerate([[]] if native_video else text_pages):
                 secs=item['seconds'];key=digest(['campaign-frame-v3' if item.get('format')=='campaign' else 'frame-v1',item['title'],head,lines,asset['hash'] if asset else '',secs,item.get('credit'),item.get('source')])
                 base=OUT/(key+'-base.mp4')
                 jpg=OUT/(key+'.jpg');keep.update([base.name,jpg.name])
-                if not jpg.exists():frame(item,asset,head,lines,n,len(text_pages),jpg)
+                if native_video:
+                    key=digest(['native-video-v1',asset['hash'],secs]);base=OUT/(key+'-base.mp4');jpg=OUT/(key+'.jpg');keep.update([base.name,jpg.name])
+                if not jpg.exists():
+                    if native_video:
+                        tmp=OUT/(key+'.tmp.jpg')
+                        poster_at=min(2.5,max(0,duration(STATE/'cache'/asset['hash'])-.1))
+                        run(ff+['-ss',format(poster_at,'.6f'),'-i',str(STATE/'cache'/asset['hash']),'-frames:v','1','-q:v','2',str(tmp)])
+                        tmp.replace(jpg)
+                    else:frame(item,asset,head,lines,n,len(text_pages),jpg)
                 if not base.exists():
                     tmp=OUT/(key+'-base.tmp.mp4')
-                    run(ff+['-loop','1','-framerate','5','-i',str(jpg),'-t',str(secs),'-vf','format=yuv420p','-r','5','-c:v','libx264','-threads','1','-preset','veryfast','-tune','stillimage','-an','-movflags','+faststart',str(tmp)])
+                    if native_video:video_base(STATE/'cache'/asset['hash'],tmp,secs)
+                    else:run(ff+['-loop','1','-framerate','5','-i',str(jpg),'-t',str(secs),'-vf','format=yuv420p','-r','5','-c:v','libx264','-threads','1','-preset','veryfast','-tune','stillimage','-an','-movflags','+faststart',str(tmp)])
                     tmp.replace(base)
                 output=base;audio=False
                 if lengths:
