@@ -1,6 +1,6 @@
 <?php
 if (!defined('ABSPATH')) { exit; }
-function mdr_tv_units() { return ['capim'=>'Capim Macio — matriz','manhattan'=>'Manhattan — Tirol']; }
+function mdr_tv_units() { return ['capim'=>'Capim Macio — matriz','manhattan'=>'Manhattan — Tirol','capim70'=>'Capim Macio — TV 192.168.30.70']; }
 function mdr_tv_unit_allowed($unit) {
     if(!isset(mdr_tv_units()[$unit]))return false;
     if(current_user_can('mdr_tv_control'))return true;
@@ -10,7 +10,18 @@ function mdr_tv_unit_allowed($unit) {
     $units=get_user_meta(get_current_user_id(),'mdr_tv_units',true);
     return in_array($unit,is_array($units)?$units:['capim'],true);
 }
-function mdr_tv_option($base,$unit='capim') { return $unit==='capim'?$base:$base.'_manhattan'; }
+function mdr_tv_option($base,$unit='capim') {
+    if(!isset(mdr_tv_units()[$unit]))throw new InvalidArgumentException('TV inválida.');
+    return $unit==='capim'?$base:$base.'_'.$unit;
+}
+function mdr_tv_capture_path($unit='capim') {
+    if(!isset(mdr_tv_units()[$unit]))throw new InvalidArgumentException('TV inválida.');
+    return '/var/lib/mdr-tv/capture'.($unit==='capim'?'':'-'.$unit).'.jpg';
+}
+function mdr_tv_content_targets($unit) {
+    // Both matrix TVs share matrix content; each keeps its own controls/cache.
+    return $unit==='capim70'?['capim70','capim','both']:[$unit,'both'];
+}
 function mdr_tv_command_unit($post) {
     $data=json_decode($post->post_content,true);return $data['unit']??'capim';
 }
@@ -64,7 +75,7 @@ function mdr_tv_manifest($now=null,$unit='capim') {
     if(!empty($settings['campaign']))$query['tax_query']=[['taxonomy'=>'mdr_tv_campaign','field'=>'term_id','terms'=>absint($settings['campaign'])]];
     foreach(get_posts($query) as $p) {
         $m=(array)get_post_meta($p->ID,'mdr_tv',true);
-        if(!in_array($m['unit']??'capim',[$unit,'both'],true))continue;
+        if(!in_array($m['unit']??'capim',mdr_tv_content_targets($unit),true))continue;
         if (!empty($m['hidden']) || (!empty($m['start'])&&$m['start']>$now) || (!empty($m['end'])&&$m['end']<=$now)) continue;
         $assets=[];foreach((array)($m['assets']??[]) as $id) { $a=mdr_tv_asset_info(absint($id));if($a)$assets[]=$a; }
         $rows[]=['id'=>$p->ID,'title'=>$p->post_title,'text'=>html_entity_decode(wp_strip_all_tags($p->post_content),ENT_QUOTES,'UTF-8'),
@@ -81,7 +92,7 @@ function mdr_tv_manifest($now=null,$unit='capim') {
 function mdr_tv_parse_fields($input) {
     if(!is_array($input))return new WP_Error('fields','Campos inválidos.');
     foreach($input as $value)if(!is_scalar($value))return new WP_Error('fields','Campo inválido.');
-    $unit=sanitize_key($input['unit']??'capim');if(!in_array($unit,['capim','manhattan','both'],true))return new WP_Error('unit','Unidade inválida.');
+    $unit=sanitize_key($input['unit']??'capim');if(!in_array($unit,array_merge(array_keys(mdr_tv_units()),['both']),true))return new WP_Error('unit','Unidade inválida.');
     $formats=['post','photo','carousel','story','video','campaign'];
     $format=sanitize_key($input['format']??'post');if(!in_array($format,$formats,true))return new WP_Error('format','Formato inválido.');
     $assets=[];

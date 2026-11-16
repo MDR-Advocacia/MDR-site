@@ -85,3 +85,9 @@ A imagem gerada do próprio item permanece durante a preparação/buffering do v
 O modo por itens é o candidato do laboratório; o vídeo contínuo permanece como recuperação técnica explícita, sem permissão para a recepção escolher outros modos. Não apresentar os112minutos do ensaio Capim como2horas homologadas: Rildon pediu o teste pontual de áudio e o ensaio foi interrompido antes do limite. Ele confirmou som nas duas TVs e o retorno a volume0 foi conferido. Áudio pontual não se tornou recurso automático nem publicação recorrente.
 
 Na Manhattan, a configuração física e seus limites estão em CONFIGURACAO_TV.md da frente. A tela de descanso não oferece Nunca; a reprodução nativa evita inatividade nos intervalos observados. Barra do navegador/tela cheia exigem comprovação por modelo; não considerar uma solicitação aceita como sucesso dessa opção. Nenhum modo de serviço, firmware ou proteção oculta foi alterado.
+
+## Terceira TV da matriz — 16/11/2026
+
+`capim70` identifica a TV192.168.30.70, com player interno8099 e serviço/estado/credenciais próprios. O painel mantém filas, estados e capturas distintos para os três aparelhos; chaves e caminhos existentes de Capim/Manhattan são preservados. A nova TV recebe conteúdos direcionados à matriz, a todas as TVs ou especificamente a ela, com seleção de campanha independente. O alvo legado `both` passa a ser apresentado como Todas as TVs.
+
+O provisionamento adiciona somente a nova chave HMAC e suas opções. Não concede novas unidades a operadores existentes; administradores/editores com controle continuam gerindo os aparelhos. Pareamento exige aceite na TV e o certificado é fixado na credencial privada. Reutilizar os clipes da campanha já preparados evita codificação duplicada; cópias/cache/heartbeat permanecem independentes.

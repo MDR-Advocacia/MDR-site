@@ -52,7 +52,7 @@ add_action('rest_api_init',function(){
     }]);
     register_rest_route('mdr-tv/v1','/bridge/capture',['methods'=>'POST','permission_callback'=>'mdr_tv_bridge_auth','callback'=>function($r){
         $b=$r->get_body();if(strlen($b)>4*1024*1024||!str_starts_with($b,"\xff\xd8")||!@getimagesizefromstring($b))return new WP_Error('image','Captura inválida.',['status'=>400]);
-        $unit=$r->get_header('x-mdr-unit')?:'capim';$option=mdr_tv_option('mdr_tv_bridge_state',$unit);$p='/var/lib/mdr-tv/capture'.($unit==='capim'?'':'-manhattan').'.jpg';$tmp=$p.'.tmp';file_put_contents($tmp,$b,LOCK_EX);chmod($tmp,0600);rename($tmp,$p);
+        $unit=$r->get_header('x-mdr-unit')?:'capim';$option=mdr_tv_option('mdr_tv_bridge_state',$unit);$p=mdr_tv_capture_path($unit);$tmp=$p.'.tmp';file_put_contents($tmp,$b,LOCK_EX);chmod($tmp,0600);rename($tmp,$p);
         $s=get_option($option,[]);$s['capture_at']=gmdate('c');update_option($option,$s,false);return ['stored'=>true];
     }]);
 });

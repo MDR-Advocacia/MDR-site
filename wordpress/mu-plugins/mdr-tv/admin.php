@@ -74,7 +74,7 @@ function mdr_tv_fields($post){
     wp_nonce_field('mdr_tv_item','mdr_tv_nonce');$m=(array)get_post_meta($post->ID,'mdr_tv',true);
     echo '<p><a class="button" target="_blank" rel="noopener" href="'.esc_url(admin_url('admin.php?page=mdr-tv-preview&item='.$post->ID)).'">Abrir prévia editorial</a> Salve as alterações antes de abrir a prévia.</p>';
     echo '<input type="hidden" name="mdr_tv_version" value="'.esc_attr(hash('sha256',serialize($m))).'"><p>Imagens serão exibidas inteiras. Textos são paginados sem reduzir indefinidamente a fonte. Datas e horários em Natal/Fortaleza.</p><table class="form-table">';
-    echo '<tr><th>Exibir nas unidades</th><td><select name="mdr_tv[unit]">';foreach(['capim'=>'Capim Macio — matriz','manhattan'=>'Manhattan — Tirol','both'=>'Ambas as unidades'] as $key=>$label)echo '<option value="'.esc_attr($key).'" '.selected($m['unit']??'capim',$key,false).'>'.esc_html($label).'</option>';echo '</select></td></tr>';
+    echo '<tr><th>Exibir nas unidades</th><td><select name="mdr_tv[unit]">';foreach((mdr_tv_units()+['both'=>'Todas as TVs']) as $key=>$label)echo '<option value="'.esc_attr($key).'" '.selected($m['unit']??'capim',$key,false).'>'.esc_html($label).'</option>';echo '</select></td></tr>';
     echo '<tr><th>Formato</th><td><select name="mdr_tv[format]">';foreach(['post'=>'Post com imagem e texto','photo'=>'Foto','carousel'=>'Carrossel','story'=>'Story vertical','video'=>'Vídeo/reel','campaign'=>'Campanha'] as $k=>$v)echo '<option value="'.esc_attr($k).'" '.selected($m['format']??'post',$k,false).'>'.esc_html($v).'</option>';echo '</select></td></tr>';
     echo '<tr><th>Imagens/vídeos na ordem</th><td>';mdr_tv_gallery('mdr_tv[assets]',$m['assets']??[]);echo '<p><a href="'.esc_url(admin_url('admin.php?page=mdr-tv-files')).'">Adicionar arquivo privado</a></p></td></tr>';
     foreach(['seconds'=>['Segundos por tela',18,4,90],'priority'=>['Prioridade',0,0,100]] as $k=>$v)echo '<tr><th>'.esc_html($v[0]).'</th><td><input type="number" name="mdr_tv['.esc_attr($k).']" min="'.$v[2].'" max="'.$v[3].'" value="'.esc_attr($m[$k]??$v[1]).'"></td></tr>';
@@ -122,6 +122,6 @@ add_action('admin_post_mdr_tv_upload',function(){
 });
 add_action('admin_post_mdr_tv_capture',function(){
     if(!current_user_can('mdr_tv_control'))wp_die('Sem permissão.',403);check_admin_referer('mdr_tv_capture');
-    $unit=mdr_tv_requested_unit();$p='/var/lib/mdr-tv/capture'.($unit==='capim'?'':'-manhattan').'.jpg';if(!is_readable($p))wp_die('Captura indisponível.',404);
+    $unit=mdr_tv_requested_unit();$p=mdr_tv_capture_path($unit);if(!is_readable($p))wp_die('Captura indisponível.',404);
     nocache_headers();header('Content-Type:image/jpeg');header('X-Content-Type-Options:nosniff');readfile($p);exit;
 });
