@@ -71,7 +71,7 @@ def execute(command):
             except RuntimeError:pass
             origin=c.get('player_origin','http://192.168.0.33:8097')
             parsed=urlparse(origin)
-            if parsed.scheme!='http' or parsed.hostname!='192.168.0.33' or parsed.port not in (8097,8098) or parsed.path not in ('','/') or parsed.username or parsed.password or parsed.query or parsed.fragment:raise ValueError('Player interno inválido')
+            if parsed.scheme!='http' or parsed.hostname!='192.168.0.33' or parsed.port not in (8097,8098,8099) or parsed.path not in ('','/') or parsed.username or parsed.password or parsed.query or parsed.fragment:raise ValueError('Player interno inválido')
             target=origin.rstrip('/')+'/' +{'dynamic':'player.html','clips':'clips.html','continuous':'continuo.html?canal=v3'}[mode]
             target+=('&' if '?' in target else '?')+'run='+str(int(command['id']))
             tv.request('system.launcher/open',{'target':target})
