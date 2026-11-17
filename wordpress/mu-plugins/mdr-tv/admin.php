@@ -33,8 +33,10 @@ function mdr_tv_notice(){
 }
 function mdr_tv_dashboard(){
     if(!current_user_can('mdr_tv_start'))return;
+    mdr_tv_operator_panel();
+    if(!current_user_can('mdr_tv_control')&&!current_user_can('mdr_tv_manage'))return;
     $unit=mdr_tv_requested_unit();$state=get_option(mdr_tv_option('mdr_tv_bridge_state',$unit),[]);$s=mdr_tv_settings($unit);
-    echo '<div class="wrap"><h1>TV corporativa</h1>';mdr_tv_notice();
+    echo '<details class="mdr-tv-technical"><summary>Administração e diagnóstico técnico</summary><div class="wrap"><h2>TV corporativa</h2>';mdr_tv_notice();
     echo '<h2>'.esc_html(mdr_tv_units()[$unit]).'</h2>';
     foreach(mdr_tv_units() as $id=>$label)if(mdr_tv_unit_allowed($id))echo '<a class="button" href="'.esc_url(admin_url('admin.php?page=mdr-tv&tv_unit='.$id)).'">'.esc_html($label).'</a> ';
     echo '<p>Cada unidade tem programação, comandos, estado e captura independentes.</p>';
@@ -59,7 +61,7 @@ function mdr_tv_dashboard(){
         mdr_tv_form_start('command');echo '<input type="hidden" name="command" value="volume"><label>Volume da TV (0–50): <input name="value" type="number" min="0" max="50" value="15"></label> ';submit_button('Ajustar volume','secondary','submit',false);echo '</form>';
         if(!empty($state['capture_at'])){echo '<h3>Captura real</h3><p>'.esc_html($state['capture_at']).' UTC · captura pontual, não transmissão ao vivo.</p><img style="width:100%;max-width:900px;'.($unit==='capim'?'transform:scaleY(-1)':'').'" alt="Última captura da TV" src="'.esc_url(wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_capture&tv_unit='.$unit),'mdr_tv_capture')).'">';}
     }
-    echo '</div>';
+    echo '</div></details>';
 }
 function mdr_tv_files_page(){
     if(!current_user_can('mdr_tv_manage'))return;

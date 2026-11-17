@@ -108,7 +108,13 @@ function mdr_tv_queue($action,$value=null,$unit='capim') {
     if(!mdr_tv_unit_allowed($unit))return new WP_Error('permission','Unidade não autorizada.');
     $allowed=['start','start_dynamic','start_clips','start_continuous','volume','mute','capture','status','off'];
     if(!in_array($action,$allowed,true))return new WP_Error('action','Comando inválido.');
-    if(!current_user_can('mdr_tv_start') || ($action!=='start'&&!current_user_can('mdr_tv_control')))return new WP_Error('permission','Sem permissão.');
+    if(!current_user_can('mdr_tv_start') || (!in_array($action,['start','capture'],true)&&!current_user_can('mdr_tv_control')))return new WP_Error('permission','Sem permissão.');
+    if(mdr_tv_panel_review())return new WP_Error('panel_review','Controles pausados para validação da interface. Nenhum comando foi enviado à TV.');
+    if(in_array($action,['start','capture'],true)){
+        foreach(get_posts(['post_type'=>'mdr_tv_command','post_status'=>['private','draft'],'numberposts'=>200,'orderby'=>'ID','order'=>'DESC']) as $pending){
+            if(mdr_tv_command_unit($pending)===$unit && $pending->post_title===$action && !get_post_meta($pending->ID,'mdr_tv_result',true) && strtotime($pending->post_date_gmt.' UTC')>time()-150)return $pending->ID;
+        }
+    }
     if($action==='volume'&&(!is_numeric($value)||$value<0||$value>50))return new WP_Error('volume','Volume permitido:0a50.');
     $active=0;foreach(get_posts(['post_type'=>'mdr_tv_command','post_status'=>'private','numberposts'=>200]) as $pending){if(mdr_tv_command_unit($pending)===$unit && strtotime($pending->post_date_gmt.' UTC')>time()-120)$active++;}
     if($active>=5)return new WP_Error('busy','Há comandos recentes na fila; aguarde a confirmação.');
