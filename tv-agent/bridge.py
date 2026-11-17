@@ -108,7 +108,7 @@ def execute(command):
             if mode=='clips':message='Player confirmou reprodução nesta abertura. Confira a imagem.'
             result.update(ok=True,message=message)
         else:
-            tv=TV()
+            if action!='capture':tv=TV()
             if action=='volume':
                 value=int(command.get('value',15))
                 if not 0<=value<=50:raise ValueError('Volume fora do limite')
@@ -120,7 +120,13 @@ def execute(command):
                 app=tv.request('com.webos.applicationManager/getForegroundAppInfo').get('appId','Unknown')
                 result.update(ok=True,message='Energia: '+power+' · '+app,power=power,app=app)
             elif action=='capture':
-                data,mime,status=tv.capture()
+                for attempt in range(2):
+                    try:
+                        tv=TV();data,mime,status=tv.capture();break
+                    except (OSError,ConnectionError):
+                        if tv:tv.close();tv=None
+                        if attempt:raise
+                        time.sleep(2)
                 if mime!='image/jpeg':raise ValueError('Captura PNG exige conversão; nenhum arquivo enviado')
                 request('/bridge/capture',data,'image/jpeg',2000)
                 result.update(ok=True,message='Captura real recebida.',**{'power':status['state'],'app':status['app']})
