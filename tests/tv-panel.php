@@ -18,6 +18,7 @@ $state['player']='playing #1 t=0/0 paused=false ready=0 frames=0';$r=mdr_tv_pane
 $state['player']='playing #1 t=2/22 paused=false ready=4';$state['player_seen']=$now-70;$r=mdr_tv_panel_unit('capim',$state,[],$now);panel_check($r['status']['state']!=='playing','stale player not green');
 $state['at']=gmdate('c',$now-150);$r=mdr_tv_panel_unit('capim',$state,[],$now);panel_check($r['status']['state']==='service_offline','service silence distinct from TV off');
 $fixture_result=['ok'=>false,'message'=>'Falha: ValueError · TV sem resposta após tentativa de Wake-on-LAN'];$r=mdr_tv_panel_command($fixture,$state,$now);panel_check($r['code']==='tv_unreachable'&&strpos($r['message'],'chamado')!==false,'plain language error with support instruction');
+$fixture->post_title='capture';$r=mdr_tv_panel_command($fixture,$state,$now);panel_check($r['code']==='capture_failed'&&strpos($r['message'],'captura anterior')!==false,'capture failure preserves previous image without claiming playback failed');$fixture->post_title='start';
 $fixture_result='';$fixture->post_date_gmt=gmdate('Y-m-d H:i:s',$now-200);$r=mdr_tv_panel_command($fixture,$state,$now);panel_check($r['state']==='error','expired command not indefinitely pending');
 // A process-local fixture proves repeated requests reuse the pending command.
 // Any unexpected insert is rejected before touching the database.

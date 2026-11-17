@@ -20,7 +20,10 @@ function mdr_tv_panel_command($post,$state,$now){
         elseif($post->post_status==='draft')$data=array_merge($data,['state'=>'running','title'=>'Aguardando a TV','message'=>'O serviço recebeu a solicitação e está aguardando a resposta.']);
         return $data;
     }
-    if(empty($result['ok']))return array_merge($data,['state'=>'error'],mdr_tv_panel_error($result['message']??''));
+    if(empty($result['ok'])){
+        if($post->post_title==='capture')return array_merge($data,['state'=>'error','code'=>'capture_failed','title'=>'Imagem não atualizada','message'=>'Não foi possível atualizar a imagem. A captura anterior foi mantida. Se continuar, abra um chamado para a TI.']);
+        return array_merge($data,['state'=>'error'],mdr_tv_panel_error($result['message']??''));
+    }
     if($post->post_title==='capture')return array_merge($data,['state'=>'success','title'=>'Imagem recebida','message'=>'Confira a data e a hora da captura.','code'=>'capture_received']);
     // Old agents reported success after merely sending a URL. Only an explicit
     // playback acknowledgement is a confirmed start; transport acceptance is not.
