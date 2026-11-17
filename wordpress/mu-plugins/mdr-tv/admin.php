@@ -34,6 +34,7 @@ function mdr_tv_notice(){
 function mdr_tv_dashboard(){
     if(!current_user_can('mdr_tv_start'))return;
     mdr_tv_operator_panel();
+    mdr_tv_schedule_panel();
     if(!current_user_can('mdr_tv_control')&&!current_user_can('mdr_tv_manage'))return;
     $unit=mdr_tv_requested_unit();$state=get_option(mdr_tv_option('mdr_tv_bridge_state',$unit),[]);$s=mdr_tv_settings($unit);
     echo '<details class="mdr-tv-technical"><summary>Administração e diagnóstico técnico</summary><div class="wrap"><h2>TV corporativa</h2>';mdr_tv_notice();
