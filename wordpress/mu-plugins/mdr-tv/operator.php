@@ -84,7 +84,7 @@ add_action('admin_post_mdr_tv_panel_image',function(){
 });
 add_action('admin_enqueue_scripts',function($hook){
     if($hook!=='toplevel_page_mdr-tv')return;
-    $base=plugins_url('mdr-tv/',dirname(__FILE__).'/../mdr-tv.php');wp_enqueue_style('mdr-tv-operator',$base.'operator.css',[],'0.2.1');wp_enqueue_script('mdr-tv-operator',$base.'operator.js',[],'0.2.1',true);
+    $base=plugins_url('mdr-tv/',dirname(__FILE__).'/../mdr-tv.php');wp_enqueue_style('mdr-tv-operator',$base.'operator.css',[],'0.2.2');wp_enqueue_script('mdr-tv-operator',$base.'operator.js',[],'0.2.2',true);
     wp_localize_script('mdr-tv-operator','mdrTVPanel',['ajax'=>admin_url('admin-ajax.php'),'nonce'=>wp_create_nonce('mdr_tv_panel'),'support'=>'https://interno.mdradvocacia.com/glpi/','snapshot'=>mdr_tv_panel_snapshot()]);
 });
 add_filter('admin_body_class',function($classes){return (!empty($_GET['page'])&&$_GET['page']==='mdr-tv'&&current_user_can('mdr_tv_start')&&!current_user_can('edit_posts'))?$classes.' mdr-tv-operator-only':$classes;});
