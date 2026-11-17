@@ -65,7 +65,11 @@ add_action('wp_ajax_mdr_tv_panel_snapshot',function(){
 });
 add_action('wp_ajax_mdr_tv_panel_action',function(){
     check_ajax_referer('mdr_tv_panel');if($_SERVER['REQUEST_METHOD']!=='POST')wp_send_json_error(['message'=>'Use POST.'],405);
-    $unit=sanitize_key($_POST['unit']??'');$action=sanitize_key($_POST['command']??'');$result=mdr_tv_panel_queue($unit,$action);
+    $unit=sanitize_key($_POST['unit']??'');$action=sanitize_key($_POST['command']??'');
+    if(!mdr_tv_panel_image_allowed($unit))wp_send_json_error(['code'=>'permission','message'=>'TV não autorizada.'],403);
+    // A tab opened during review must reload before it can issue real commands.
+    if(($_POST['panel_version']??'')!=='0.2.1')wp_send_json_error(['code'=>'panel_reload','message'=>'O painel foi atualizado. Recarregue a página antes de iniciar a TV.'],409);
+    $result=mdr_tv_panel_queue($unit,$action);
     if(is_wp_error($result))wp_send_json_error(['code'=>$result->get_error_code(),'message'=>$result->get_error_message()],$result->get_error_code()==='permission'?403:409);
     wp_send_json_success(['id'=>$result,'unit'=>$unit,'command'=>$action]);
 });
@@ -77,7 +81,7 @@ add_action('admin_post_mdr_tv_panel_image',function(){
 });
 add_action('admin_enqueue_scripts',function($hook){
     if($hook!=='toplevel_page_mdr-tv')return;
-    $base=plugins_url('mdr-tv/',dirname(__FILE__).'/../mdr-tv.php');wp_enqueue_style('mdr-tv-operator',$base.'operator.css',[],'0.2.0');wp_enqueue_script('mdr-tv-operator',$base.'operator.js',[],'0.2.0',true);
+    $base=plugins_url('mdr-tv/',dirname(__FILE__).'/../mdr-tv.php');wp_enqueue_style('mdr-tv-operator',$base.'operator.css',[],'0.2.1');wp_enqueue_script('mdr-tv-operator',$base.'operator.js',[],'0.2.1',true);
     wp_localize_script('mdr-tv-operator','mdrTVPanel',['ajax'=>admin_url('admin-ajax.php'),'nonce'=>wp_create_nonce('mdr_tv_panel'),'support'=>'https://interno.mdradvocacia.com/glpi/','snapshot'=>mdr_tv_panel_snapshot()]);
 });
 add_filter('admin_body_class',function($classes){return (!empty($_GET['page'])&&$_GET['page']==='mdr-tv'&&current_user_can('mdr_tv_start')&&!current_user_can('edit_posts'))?$classes.' mdr-tv-operator-only':$classes;});

@@ -65,6 +65,8 @@ def execute(command):
                 if tv is None:raise ValueError('TV sem resposta após tentativa de Wake-on-LAN')
             power=tv.request('com.webos.service.tvpower/power/getPowerState').get('state','Unknown')
             if power=='Screen Saver':tv.button('HOME')
+            # The corporate display always starts silently, even after wake.
+            tv.request('audio/setVolume',{'volume':0})
             mode=c.get('default_mode','continuous') if action=='start' else ('clips' if action=='start_clips' else 'dynamic')
             if action=='start_continuous':mode='continuous'
             try:tv.request('media.controls/stop')
