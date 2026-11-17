@@ -2,6 +2,7 @@
 $checks=[];function panel_check($value,$label){if(!$value)throw new Exception($label);$GLOBALS['checks'][]=$label;}
 $count_before=wp_count_posts('mdr_tv_command');
 wp_set_current_user(7);$snapshot=mdr_tv_panel_snapshot();panel_check($snapshot['review']===true,'review fails closed');panel_check(count($snapshot['units'])===3,'Jailma sees three authorized TVs');panel_check(mdr_tv_panel_image_allowed('capim70'),'operator may read assigned capture');
+foreach($snapshot['units'] as $tv)if($tv['image']['url'])panel_check(strpos($tv['image']['url'],'&amp;')===false,'JSON image URL has raw query separators '.$tv['id']);
 foreach(['start','capture'] as $a){$r=mdr_tv_panel_queue('capim',$a);panel_check(is_wp_error($r)&&$r->get_error_code()==='panel_review','review blocks '.$a);}
 foreach(['volume','off','status','start_dynamic'] as $a)panel_check(is_wp_error(mdr_tv_panel_queue('capim',$a)),'operator cannot '.$a);
 wp_set_current_user(25);$snapshot=mdr_tv_panel_snapshot();panel_check(count($snapshot['units'])===2,'another operator sees own two TVs');panel_check(!mdr_tv_panel_image_allowed('capim70'),'unassigned capture denied');panel_check(is_wp_error(mdr_tv_panel_queue('capim70','start')),'unassigned TV command denied');

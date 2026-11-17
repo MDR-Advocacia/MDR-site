@@ -41,7 +41,8 @@ function mdr_tv_panel_unit($unit,$state,$posts,$now=null){
     elseif($command&&$command['state']==='error'&&$now-$command['at']<300&&!$playing)$status=['state'=>'error','title'=>$command['title'],'message'=>$command['message']];
     $capture_at=strtotime($state['capture_at']??'')?:0;$path=mdr_tv_capture_path($unit);$exists=$capture_at&&is_readable($path);
     $image=['url'=>'','at'=>$exists?$capture_at:0,'when'=>$exists?mdr_tv_panel_date($capture_at):'Sem captura disponível','stale'=>!$exists||$now-$capture_at>120,'flip'=>$unit==='capim'];
-    if($exists)$image['url']=wp_nonce_url(admin_url('admin-post.php?action=mdr_tv_panel_image&tv_unit='.$unit.'&v='.$capture_at),'mdr_tv_panel_image_'.$unit);
+    // Keep raw query separators in JSON; escape only when emitting HTML.
+    if($exists)$image['url']=add_query_arg('_wpnonce',wp_create_nonce('mdr_tv_panel_image_'.$unit),admin_url('admin-post.php?action=mdr_tv_panel_image&tv_unit='.$unit.'&v='.$capture_at));
     $campaign_id=(int)(mdr_tv_settings($unit)['campaign']??0);$term=$campaign_id?get_term($campaign_id,'mdr_tv_campaign'):null;
     return ['id'=>$unit]+$location+['status'=>$status,'command'=>$command,'captureCommand'=>mdr_tv_panel_command($capture_command,$state,$now),'image'=>$image,'lastSignal'=>$seen?mdr_tv_panel_date($seen):'Nenhum sinal recebido','campaign'=>$term&&!is_wp_error($term)?$term->name:'Programação da unidade'];
 }
