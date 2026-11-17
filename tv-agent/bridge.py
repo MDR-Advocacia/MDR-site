@@ -78,20 +78,32 @@ def execute(command):
             if mode=='continuous':
                 time.sleep(2);tv.button('ENTER')
             elif mode=='clips':
-                # Wait for acknowledgement from this exact page instance; no key keepalive.
-                deadline=time.time()+12;ready=False
-                while time.time()<deadline:
-                    try:
-                        beat=json.loads((STATE/'player-heartbeat.json').read_text())
-                        ready=beat.get('run')==str(command['id'])
-                    except (OSError,ValueError):ready=False
+                # The socket can return before the launcher is ready after wake.
+                # Retry opening once only when this page has not answered.
+                ready=False;answered=False
+                for attempt in range(2):
+                    if attempt and not answered:
+                        tv.request('system.launcher/open',{'target':target})
+                    deadline=time.time()+15
+                    while time.time()<deadline:
+                        try:
+                            beat=json.loads((STATE/'player-heartbeat.json').read_text())
+                            answered=(beat.get('run')==str(command['id']) and
+                                      0<=time.time()-float(beat.get('received_at',0))<20)
+                            status=beat.get('status','');fields=set(status.split())
+                            ready=(answered and status.startswith('playing') and
+                                   'paused=false' in fields and
+                                   bool(fields & {'ready=2','ready=3','ready=4'}))
+                        except (OSError,ValueError,TypeError):answered=False
+                        if ready:break
+                        time.sleep(.25)
                     if ready:break
-                    time.sleep(.25)
-                # No repeated key presses: this is an acknowledgement, not a keepalive.
+                if not ready:
+                    raise ValueError('TV acessível, mas a reprodução do mural não foi confirmada; tente Iniciar novamente')
             # Read-only state checks do not claim that the desired pixels are on screen.
             app=tv.request('com.webos.applicationManager/getForegroundAppInfo').get('appId','')
             message='URL enviada; navegador '+('confirmado. A imagem exige conferência.' if app=='com.webos.app.browser' else 'ainda não confirmado.')
-            if mode=='clips':message='Player respondeu à abertura. Confira a imagem.' if ready else 'URL enviada; sinal do player ainda não confirmado.'
+            if mode=='clips':message='Player confirmou reprodução nesta abertura. Confira a imagem.'
             result.update(ok=True,message=message)
         else:
             tv=TV()
