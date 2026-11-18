@@ -32,7 +32,12 @@ def current_clips():
                 rows.append({**c,'url':'/clips/'+c['file'],'poster':poster})
         target=p.get('settings',{}).get('countdown_target',0)
         countdown={'target':target,'label':'AUDITORIA EXTERNA · ISO 9001'} if isinstance(target,int) and 0<target<4102444800 and rows else None
-        return {'version':p['version'],'clips':rows,'countdown':countdown,'server_time':time.time()}
+        event_notice=p.get('settings',{}).get('event_notice')
+        if not (rows and isinstance(event_notice,dict) and
+                all(isinstance(event_notice.get(k),str) and 0<len(event_notice[k])<=100 for k in ('heading','text','date_label')) and
+                all(isinstance(event_notice.get(k),int) for k in ('starts_at','ends_at')) and
+                0<event_notice['starts_at']<event_notice['ends_at']<4102444800):event_notice=None
+        return {'version':p['version'],'clips':rows,'countdown':countdown,'event_notice':event_notice,'server_time':time.time()}
     except (OSError,ValueError,KeyError):return {'version':'waiting','clips':[]}
 
 class Handler(legacy.Handler):
